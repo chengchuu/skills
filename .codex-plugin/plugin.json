@@ -1,0 +1,31 @@
+{
+  "name": "chengchuu-skills",
+  "version": "0.1.0",
+  "description": "Reusable developer workflow skills maintained by Cheng.",
+  "author": {
+    "name": "Cheng",
+    "url": "https://github.com/chengchuu"
+  },
+  "homepage": "https://github.com/chengchuu/skills#readme",
+  "repository": "https://github.com/chengchuu/skills",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "developer-tools",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Cheng's Skills",
+    "shortDescription": "Reusable developer workflow skills",
+    "longDescription": "A skill-only Codex plugin containing reusable workflows maintained by Cheng.",
+    "developerName": "Cheng",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Guidance"
+    ],
+    "defaultPrompt": [
+      "Check whether Mazey already provides the utility I need."
+    ]
+  }
+}

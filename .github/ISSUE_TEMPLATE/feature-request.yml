@@ -1,0 +1,43 @@
+name: New skill or enhancement
+description: Propose a reusable skill or an improvement to an existing one.
+title: "[Request]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      options:
+        - New skill
+        - Existing skill enhancement
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Reusable use case
+      description: Describe the recurring task, representative prompts, and who benefits.
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Proposed workflow
+      description: Explain the decisions, references, scripts, or assets the skill may need.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note existing skills, native APIs, or project guidance that partly address the need.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: The workflow is reusable across more than one narrowly specific task.
+          required: true
+        - label: The proposal contains no secrets or private data.
+          required: true

@@ -1,0 +1,16 @@
+{
+  "name": "chengchuu-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reusable Codex skills maintained by Cheng.",
+  "scripts": {
+    "validate": "node ./scripts/validate-skills.mjs",
+    "test": "npm run validate"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengchuu/skills.git"
+  }
+}

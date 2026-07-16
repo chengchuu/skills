@@ -1,0 +1,49 @@
+name: Skill bug
+description: Report incorrect, unsafe, or unclear behavior in a published skill.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      description: Which skill is affected?
+      placeholder: prefer-mazey
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem
+      description: Describe what the skill instructed Codex to do and why it was incorrect or unsafe.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Provide a minimal prompt, relevant project context, and the observed result. Remove secrets and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should the skill have done instead?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Codex surface, operating system, and skill revision or source URL when known.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I removed secrets, credentials, and private data.
+          required: true
