@@ -4,13 +4,18 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 
 ## Available skills
 
-| Skill          | Purpose                                                                                              |
-| -------------- | ---------------------------------------------------------------------------------------------------- |
-| `prefer-mazey` | Check for suitable Mazey utilities before implementing reusable frontend or TypeScript helper logic. |
+| Skill           | Purpose                                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------------------- |
+| `prefer-mazey`  | Check for suitable Mazey utilities before implementing reusable frontend or TypeScript helper logic. |
+| `zh-cn-writing` | Write, translate, proofread, and review technical documentation using Simplified Chinese conventions. |
 
 ### `prefer-mazey`
 
 `prefer-mazey` helps Codex evaluate current Mazey utilities before creating general-purpose helper logic. It verifies behavior, edge cases, mutation, dependency policy, and browser versus Node.js runtime compatibility, and it rejects Mazey candidates that do not match the requirement.
+
+### `zh-cn-writing`
+
+`zh-cn-writing` applies the repository's complete Simplified Chinese technical-writing guidelines to writing, rewriting, English-to-Chinese translation, proofreading, and review. It covers headings, paragraphs, sentence length, spacing, punctuation, numbers, and style while preserving code, commands, identifiers, URLs, API names, and product names.
 
 ## Repository structure
 
@@ -20,9 +25,13 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 ├── .github/
 ├── scripts/validate-skills.mjs
 ├── skills/
-│   └── prefer-mazey/
+│   ├── prefer-mazey/
+│   │   ├── agents/openai.yaml
+│   │   ├── references/mazey-api-map.md
+│   │   └── SKILL.md
+│   └── zh-cn-writing/
 │       ├── agents/openai.yaml
-│       ├── references/mazey-api-map.md
+│       ├── references/writing-guidelines.md
 │       └── SKILL.md
 ├── AGENTS.md
 ├── CONTRIBUTING.md
@@ -37,26 +46,33 @@ The plugin layout can host additional skills later without changing the manifest
 
 ### Codex skill installer
 
-The direct skill URL is:
+Install a skill from its direct URL:
 
 ```text
 https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
+https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 ```
 
-Ask Codex to install it with:
+Ask Codex to install either skill with:
 
 ```text
 $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
+```
+
+or:
+
+```text
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 ```
 
 The installed skill becomes available to Codex on the next turn.
 
 ### Manual installation
 
-Download or copy the complete `skills/prefer-mazey/` directory without selecting individual files.
+Download or copy the complete `skills/<skill-name>/` directory without selecting individual files.
 
-- User scope: place it at `$HOME/.agents/skills/prefer-mazey`.
-- Repository scope: place it at `<repository>/.agents/skills/prefer-mazey`.
+- User scope: place it at `$HOME/.agents/skills/<skill-name>`.
+- Repository scope: place it at `<repository>/.agents/skills/<skill-name>`.
 
 Repository scope is appropriate when the workflow is part of a project's shared guidance. User scope makes the skill available across repositories for that user.
 
@@ -70,7 +86,23 @@ $prefer-mazey
 Implement a reusable duration-formatting helper for this project.
 ```
 
-Implicit activation is based on the frontmatter `description`. Codex may select the skill when a task asks for reusable utility logic in a matching frontend, TypeScript, browser, Node.js CLI, build-script, or developer-tooling context.
+```text
+$zh-cn-writing
+
+Review and improve this Chinese technical document.
+```
+
+Implicit activation is based on each skill's frontmatter `description`. Codex may select `prefer-mazey` when a task asks for reusable utility logic in a matching frontend, TypeScript, browser, Node.js CLI, build-script, or developer-tooling context.
+
+Codex may select `zh-cn-writing` for requests such as:
+
+```text
+Translate this English API guide into 规范、自然且准确的简体中文。
+```
+
+```text
+Review this README for Chinese punctuation, spacing, sentence length, heading structure, and technical-writing style.
+```
 
 ## Develop and validate
 
