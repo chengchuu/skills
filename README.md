@@ -50,6 +50,9 @@ Install a skill from its direct URL:
 
 ```text
 https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
+```
+
+```text
 https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 ```
 
