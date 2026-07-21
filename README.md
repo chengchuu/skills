@@ -7,6 +7,7 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 | Skill                       | Purpose                                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `prefer-mazey`              | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic. |
+| `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
@@ -32,6 +33,28 @@ $prefer-mazey
 Implement a reusable helper for this project.
 ```
 
+### `prefer-layer`
+
+`prefer-layer` checks the installed `layer-esm` public API before Codex implements custom dialogs, modals, alerts, confirmations, messages, loading indicators, prompts, tabs, tips, or related popup UI. It verifies interaction, callbacks, close behavior, focus and Escape handling, accessibility, trusted HTML, CSP, browser support, TypeScript declarations, and cleanup, and rejects candidates that do not match.
+
+Before using the skill, add `layer-esm` with the target repository's existing package manager:
+
+```bash
+npm install layer-esm
+# or: pnpm add layer-esm
+# or: yarn add layer-esm
+```
+
+Skip installation when the repository already depends on `layer-esm`. The skill detects the existing package manager when possible, recommends only the matching command, and never installs packages unless the user explicitly requests it.
+
+Invoke the skill explicitly:
+
+```text
+$prefer-layer
+
+Implement a confirmation dialog before deleting an item.
+```
+
 ### `zh-cn-writing`
 
 `zh-cn-writing` applies the repository's complete Simplified Chinese technical-writing guidelines to writing, rewriting, English-to-Chinese translation, proofreading, and review. It selects document-type guidance and a small set of normalized examples to adapt structure, tone, vocabulary, and detail without copying distinctive wording or treating old articles as technical facts. It covers tutorials, installation and configuration, troubleshooting, technical analysis, API and integration guides, tool guides, deployment and operations, best practices, reference documents, and structured general articles while preserving code, commands, identifiers, URLs, API names, and product names.
@@ -51,6 +74,10 @@ Implement a reusable helper for this project.
 │   ├── prefer-mazey/
 │   │   ├── agents/openai.yaml
 │   │   ├── references/mazey-api-map.md
+│   │   └── SKILL.md
+│   ├── prefer-layer/
+│   │   ├── agents/openai.yaml
+│   │   ├── references/layer-api-map.md
 │   │   └── SKILL.md
 │   ├── zh-cn-restaurant-reviews/
 │   │   ├── agents/openai.yaml
@@ -95,6 +122,10 @@ https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
 ```
 
 ```text
+https://github.com/chengchuu/skills/tree/main/skills/prefer-layer
+```
+
+```text
 https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 ```
 
@@ -102,10 +133,16 @@ https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
 ```
 
-Ask Codex to install either skill with:
+Ask Codex to install a skill with:
 
 ```text
 $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
+```
+
+or:
+
+```text
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/prefer-layer
 ```
 
 or:
@@ -131,9 +168,17 @@ Download or copy the complete `skills/<skill-name>/` directory without selecting
 
 Repository scope is appropriate when the workflow is part of a project's shared guidance. User scope makes the skill available across repositories for that user.
 
+For example, manually install the complete public copy of `prefer-layer` as either `$HOME/.agents/skills/prefer-layer/` or `<repository>/.agents/skills/prefer-layer/`. Do not copy only `SKILL.md`; its API map and agent metadata are part of the skill.
+
 ## Use the skill
 
 Explicit invocation names the skill in the prompt:
+
+```text
+$prefer-layer
+
+Implement a confirmation dialog before deleting an item.
+```
 
 ```text
 $zh-cn-writing
@@ -162,6 +207,16 @@ $zh-cn-restaurant-reviews
 ```
 
 Implicit activation is based on each skill's frontmatter `description`. Codex may select `prefer-mazey` when a task asks for reusable utility logic in a matching frontend, TypeScript, browser, Node.js CLI, build-script, or developer-tooling context.
+
+Codex may select `prefer-layer` for requests such as:
+
+```text
+Add a loading dialog while the request is running, then show a success message.
+```
+
+```text
+Show a tooltip next to the invalid form field.
+```
 
 Codex may select `zh-cn-writing` for requests such as:
 
@@ -208,7 +263,9 @@ The canonical `prefer-mazey` skill is maintained in the Mazey repository under `
 
 The public copy in this repository is synchronized from Mazey. Changes to the skill should be made in the Mazey source first so they are not overwritten.
 
-Contributors should propose canonical `prefer-mazey` changes in [chengchuu/mazey](https://github.com/chengchuu/mazey) and then synchronize the complete skill directory. Other skills may be authored directly in this repository.
+Contributors should propose canonical `prefer-mazey` changes in [chengchuu/mazey](https://github.com/chengchuu/mazey) and then synchronize the complete skill directory. Skills without an external canonical source may be authored directly in this repository.
+
+The canonical `prefer-layer` skill is maintained in the layer-esm repository under `.agents/skills/prefer-layer/`. The public `skills/prefer-layer/` directory is a synchronized copy, not an independent implementation. Contributors should make skill changes in [chengchuu/layer-esm](https://github.com/chengchuu/layer-esm/tree/main/.agents/skills/prefer-layer) and run its synchronization command before updating this repository.
 
 ## Contributing and license
 

@@ -25,6 +25,10 @@ Do not include secrets, credentials, private data, absolute machine-specific pat
 
 `prefer-mazey` is synchronized from the [Mazey repository](https://github.com/chengchuu/mazey/tree/main/.agents/skills/prefer-mazey). Make canonical changes there first. The public `skills/prefer-mazey/` copy may be overwritten by synchronization, so public-copy-only pull requests should instead explain or link the corresponding Mazey change.
 
+## `prefer-layer` source of truth
+
+`prefer-layer` is synchronized from the [layer-esm repository](https://github.com/chengchuu/layer-esm/tree/main/.agents/skills/prefer-layer). Make canonical changes there first. The public `skills/prefer-layer/` copy may be overwritten by synchronization, so public-copy-only pull requests should instead explain or link the corresponding layer-esm change.
+
 ## Validate and submit
 
 Run:

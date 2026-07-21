@@ -13,7 +13,7 @@ This repository distributes reusable Codex skills as a skill-only plugin. Preser
 - Do not add secrets, absolute machine-specific paths, temporary files, or unrelated project material.
 - Avoid adding dependencies; validation and maintenance scripts should use Node.js built-ins when practical.
 
-The public `skills/prefer-mazey/` directory is synchronized from the canonical Mazey source at `.agents/skills/prefer-mazey/`. Make canonical changes in the Mazey repository first, then run its synchronization command. Do not make public-copy-only edits that the next synchronization will overwrite.
+The public `skills/prefer-mazey/` directory is synchronized from the canonical Mazey source at `.agents/skills/prefer-mazey/`. The public `skills/prefer-layer/` directory is synchronized from the canonical layer-esm source at `.agents/skills/prefer-layer/`. Make canonical changes in the owning package repository first, then run its synchronization command. Do not make public-copy-only edits that the next synchronization will overwrite.
 
 ## Validation
 
