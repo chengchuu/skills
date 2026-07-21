@@ -1,4 +1,4 @@
 interface:
   display_name: "简体中文技术写作"
-  short_description: "用于编写、翻译、校对和审阅简体中文技术文档的规范指南"
-  default_prompt: "Use $zh-cn-writing to review and improve this Chinese technical document."
+  short_description: "依据正式规范和精选案例编写自然准确的简体中文技术内容"
+  default_prompt: "Use $zh-cn-writing to write or improve Simplified Chinese technical content using the formal rules and the most relevant style examples."

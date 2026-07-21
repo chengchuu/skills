@@ -1,0 +1,4 @@
+interface:
+  display_name: "简体中文餐厅评价"
+  short_description: "依据真实用餐信息和手写案例生成自然的简体中文餐厅评价"
+  default_prompt: "Use $zh-cn-restaurant-reviews to write a natural Simplified Chinese restaurant review from these dining facts."
