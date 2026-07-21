@@ -7,7 +7,7 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 | Skill                       | Purpose                                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `prefer-mazey`              | Check for suitable Mazey utilities before implementing reusable frontend or TypeScript helper logic. |
-| `zh-cn-writing`             | Write, translate, proofread, and review technical documentation using Simplified Chinese conventions. |
+| `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
 ### `prefer-mazey`
@@ -16,7 +16,7 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 
 ### `zh-cn-writing`
 
-`zh-cn-writing` applies the repository's complete Simplified Chinese technical-writing guidelines to writing, rewriting, English-to-Chinese translation, proofreading, and review. It covers headings, paragraphs, sentence length, spacing, punctuation, numbers, and style while preserving code, commands, identifiers, URLs, API names, and product names.
+`zh-cn-writing` applies the repository's complete Simplified Chinese technical-writing guidelines to writing, rewriting, English-to-Chinese translation, proofreading, and review. It selects document-type guidance and a small set of normalized examples to adapt structure, tone, vocabulary, and detail without copying distinctive wording or treating old articles as technical facts. It covers tutorials, installation and configuration, troubleshooting, technical analysis, API and integration guides, tool guides, deployment and operations, best practices, reference documents, and structured general articles while preserving code, commands, identifiers, URLs, API names, and product names.
 
 ### `zh-cn-restaurant-reviews`
 
@@ -46,7 +46,16 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 │   │   └── SKILL.md
 │   └── zh-cn-writing/
 │       ├── agents/openai.yaml
-│       ├── references/writing-guidelines.md
+│       ├── references/
+│       │   ├── examples/
+│       │   ├── document-types.md
+│       │   ├── output-workflows.md
+│       │   ├── personal-style.md
+│       │   ├── README.md
+│       │   ├── source-manifest.md
+│       │   ├── taxonomy.md
+│       │   └── writing-guidelines.md
+│       ├── scripts/validate-references.mjs
 │       └── SKILL.md
 ├── AGENTS.md
 ├── CONTRIBUTING.md
@@ -121,6 +130,12 @@ Review and improve this Chinese technical document.
 ```
 
 ```text
+$zh-cn-writing
+
+保持技术内容不变，参考我常用的故障排查文章结构重写这篇文章。
+```
+
+```text
 $zh-cn-restaurant-reviews
 
 根据以下信息生成一条大众点评评价：
@@ -137,6 +152,10 @@ $zh-cn-restaurant-reviews
 Implicit activation is based on each skill's frontmatter `description`. Codex may select `prefer-mazey` when a task asks for reusable utility logic in a matching frontend, TypeScript, browser, Node.js CLI, build-script, or developer-tooling context.
 
 Codex may select `zh-cn-writing` for requests such as:
+
+```text
+根据以下信息写一篇结构清晰、可验证的简体中文技术教程。
+```
 
 ```text
 Translate this English API guide into 规范、自然且准确的简体中文。
