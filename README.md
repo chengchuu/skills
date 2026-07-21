@@ -6,13 +6,31 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 
 | Skill                       | Purpose                                                                                              |
 | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `prefer-mazey`              | Check for suitable Mazey utilities before implementing reusable frontend or TypeScript helper logic. |
+| `prefer-mazey`              | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic. |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
 ### `prefer-mazey`
 
 `prefer-mazey` helps Codex evaluate current Mazey utilities before creating general-purpose helper logic. It verifies behavior, edge cases, mutation, dependency policy, and browser versus Node.js runtime compatibility, and it rejects Mazey candidates that do not match the requirement.
+
+Before using the skill, add `mazey` to the target project with its existing package manager:
+
+```bash
+npm install mazey
+# or: pnpm add mazey
+# or: yarn add mazey
+```
+
+Skip this step when the repository already depends on `mazey`. The skill detects the package manager when possible and recommends the matching command, but it does not install packages unless the user explicitly requests installation.
+
+Then invoke the skill:
+
+```text
+$prefer-mazey
+
+Implement a reusable helper for this project.
+```
 
 ### `zh-cn-writing`
 
@@ -116,12 +134,6 @@ Repository scope is appropriate when the workflow is part of a project's shared 
 ## Use the skill
 
 Explicit invocation names the skill in the prompt:
-
-```text
-$prefer-mazey
-
-Implement a reusable duration-formatting helper for this project.
-```
 
 ```text
 $zh-cn-writing

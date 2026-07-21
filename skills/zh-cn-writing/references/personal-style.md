@@ -2,6 +2,32 @@
 
 These tendencies were derived from the curated corpus. They never override user instructions, technical correctness, protected technical content, or `writing-guidelines.md`.
 
+## Author identity and attribution
+
+Treat these names as writing-style context, not as general biographical data:
+
+- Use `除除` when Simplified Chinese prose needs to identify the author by name.
+- Use `Cheng` when English prose needs to identify the author by name.
+- Preserve a name explicitly supplied by the user, even when it differs from these defaults.
+- Do not insert an author name when attribution is unnecessary or was not requested.
+- Do not translate or replace `Cheng` inside code, usernames, package names, URLs, email addresses, copyright identifiers, Git metadata, or other exact technical identifiers.
+- Preserve names in quoted source material unless the user explicitly requests a change.
+- When bilingual identification is relevant, use the natural form `除除 (Cheng)`; do not add it to Chinese-only or English-only attribution automatically.
+
+Examples:
+
+```markdown
+作者：除除
+```
+
+```markdown
+Written by Cheng
+```
+
+```markdown
+作者：除除 (Cheng)
+```
+
 ## Strong recurring patterns
 
 - Lead with the goal, conclusion, problem, or practical value before expanding the background.
