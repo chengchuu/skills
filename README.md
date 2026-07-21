@@ -4,10 +4,11 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 
 ## Available skills
 
-| Skill           | Purpose                                                                                              |
-| --------------- | ---------------------------------------------------------------------------------------------------- |
-| `prefer-mazey`  | Check for suitable Mazey utilities before implementing reusable frontend or TypeScript helper logic. |
-| `zh-cn-writing` | Write, translate, proofread, and review technical documentation using Simplified Chinese conventions. |
+| Skill                       | Purpose                                                                                              |
+| --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `prefer-mazey`              | Check for suitable Mazey utilities before implementing reusable frontend or TypeScript helper logic. |
+| `zh-cn-writing`             | Write, translate, proofread, and review technical documentation using Simplified Chinese conventions. |
+| `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
 ### `prefer-mazey`
 
@@ -16,6 +17,10 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 ### `zh-cn-writing`
 
 `zh-cn-writing` applies the repository's complete Simplified Chinese technical-writing guidelines to writing, rewriting, English-to-Chinese translation, proofreading, and review. It covers headings, paragraphs, sentence length, spacing, punctuation, numbers, and style while preserving code, commands, identifiers, URLs, API names, and product names.
+
+### `zh-cn-restaurant-reviews`
+
+`zh-cn-restaurant-reviews` generates, rewrites, and improves Simplified Chinese restaurant reviews using only facts supplied by the user. Its handwritten examples are organized by country or region and restaurant category, with metadata for cuisine, sentiment, tone, length, occasion, and topics. It supports natural restaurant comments, dining records, and requests targeting 大众点评、小红书, or Google Maps without inventing dishes, prices, locations, waits, service experiences, or personal reactions.
 
 ## Repository structure
 
@@ -28,6 +33,16 @@ Reusable developer workflow skills maintained by Cheng. This repository is packa
 │   ├── prefer-mazey/
 │   │   ├── agents/openai.yaml
 │   │   ├── references/mazey-api-map.md
+│   │   └── SKILL.md
+│   ├── zh-cn-restaurant-reviews/
+│   │   ├── agents/openai.yaml
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   ├── output-formats.md
+│   │   │   ├── README.md
+│   │   │   ├── source-manifest.md
+│   │   │   ├── taxonomy.md
+│   │   │   └── writing-rules.md
 │   │   └── SKILL.md
 │   └── zh-cn-writing/
 │       ├── agents/openai.yaml
@@ -56,6 +71,10 @@ https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
 https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 ```
 
+```text
+https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
+```
+
 Ask Codex to install either skill with:
 
 ```text
@@ -66,6 +85,12 @@ or:
 
 ```text
 $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
+```
+
+or:
+
+```text
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
 ```
 
 The installed skill becomes available to Codex on the next turn.
@@ -95,6 +120,20 @@ $zh-cn-writing
 Review and improve this Chinese technical document.
 ```
 
+```text
+$zh-cn-restaurant-reviews
+
+根据以下信息生成一条大众点评评价：
+
+- 国家：日本
+- 城市：东京
+- 类型：日式烧肉
+- 推荐菜：牛舌、横膈膜
+- 人均：180 元
+- 等位：20 分钟
+- 整体评价：满意
+```
+
 Implicit activation is based on each skill's frontmatter `description`. Codex may select `prefer-mazey` when a task asks for reusable utility logic in a matching frontend, TypeScript, browser, Node.js CLI, build-script, or developer-tooling context.
 
 Codex may select `zh-cn-writing` for requests such as:
@@ -105,6 +144,20 @@ Translate this English API guide into 规范、自然且准确的简体中文。
 
 ```text
 Review this README for Chinese punctuation, spacing, sentence length, heading structure, and technical-writing style.
+```
+
+Codex may select `zh-cn-restaurant-reviews` for requests such as:
+
+```text
+根据这些用餐信息，写一条自然的中文 Google Maps 餐厅评价。
+```
+
+```text
+优化下面的餐厅评价，使内容更自然，但不要增加原文没有提到的事实。
+```
+
+```text
+参考日本咖啡店相关案例的风格，生成一条 80～120 字的小红书文案。
 ```
 
 ## Develop and validate
