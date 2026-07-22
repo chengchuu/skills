@@ -247,3 +247,32 @@
 ### Review
 
 明泰谷泰国餐厅的冬阴功汤酸辣适中，鲜美的海鲜与香茅味道完美融合，令人回味无穷。咖喱牛腩软烂入味，咖喱香气浓郁，搭配米饭非常美味。虾酱空心菜清脆爽口，虾酱的咸香提升了整体风味。这三道菜品无论是口感还是香气都让人十分满意。
+
+## Example: 越由臻•融合菜(七莘红点城店)
+
+- Country: China
+- Region: Shanghai
+- Category: Chinese regional cuisine
+- Cuisine: Cantonese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Location, environment, atmosphere, service, dish
+- Recommended dishes: 雪菜黄鱼
+- Source: User-provided review, 2026-07-22
+
+### Available facts
+
+- 餐厅是位于中国上海的粤菜餐厅越由臻•融合菜(七莘红点城店)，具体位置在七莘路红点城五楼。
+- 该评价发布于大众点评。
+- 环境不错，商务氛围浓厚。
+- 服务员主动周到，餐前提供了水果。
+- 天气很热，服务员送来了冰柠檬水。
+- 雪菜黄鱼没有刺，用户对此给出“超级好评”。
+- 用户认为从餐前水果到冰柠檬水，服务细节照顾得很周到。
+
+### Review
+
+餐厅位于七莘路红点城五楼，环境不错，商务氛围浓厚。服务员主动周到，餐前提供了水果。天气很热，服务员还贴心地送来了冰柠檬水。雪菜黄鱼没有刺，这一点超级好评。从餐前水果到冰柠檬水，服务细节都照顾得很周到。
