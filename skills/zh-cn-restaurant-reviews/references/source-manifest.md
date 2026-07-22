@@ -1,6 +1,6 @@
 # 来源清单
 
-本清单覆盖 `temp/examples/` 下全部 49 个 Markdown 文件。最终案例中的 `Source` 保留仓库相对路径；原文件未被修改或删除。
+本清单覆盖 `temp/examples/` 下全部 49 个 Markdown 文件，并记录用户在对话中明确要求收录的新增评价。最终案例中的 `Source` 保留仓库相对路径或用户提供日期；原文件未被修改或删除。
 
 ## 单篇来源
 
@@ -61,13 +61,20 @@
 | `temp/examples/prompts/Note-Comment-26-0426-to-0427_v02.md` | 与上一行列出的 8 个规范案例文件合并 | 0 | mixed | mixed | 英文内容是 `Comments.md` 对应条目的翻译镜像，并包含通用提示总结；为避免同一案例多文件重复，只保留中文原始案例为规范副本。 |
 | `temp/examples/templates/Restaurant.md` | None | 0 | unknown | Template | 仅为餐厅记录模板，不是实际评价；用于确认源字段，不生成案例。 |
 
+## 用户提供来源
+
+| Source | Final reference file | Examples | Country or region | Categories | Duplicate or uncertainty notes |
+| --- | --- | ---: | --- | --- | --- |
+| User-provided review, 2026-07-22 | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Shanghai | Cantonese cuisine | 越由臻•融合菜(七莘红点城店)；用户补充其位于中国上海、属于粤菜并发布于大众点评；无重复。 |
+
 ## 汇总
 
 - 源文件: 49。
 - 单篇来源: 46，其中 44 个含评价正文，2 个仅含元数据。
 - 汇总文件中的餐饮评价: 36。
-- 最终规范案例: 80。
+- 最终规范案例: 81。
 - 完全或明确重复: 英文提示汇总中的 36 条餐饮翻译与 `Comments.md` 对应中文条目合并，不另建副本。
 - 近重复: 同一经历的 `Note` / `Comment` 长短版本合并为一个规范案例；和府捞面大师店的两条近重复短评合并。不同日期或不同菜品的同品牌评价保留，没有仅因结构相似而删除案例。
-- 国家或地区为 `unknown`: 4 条，分别为未注明地点的海鲜蒸锅、云吞、麦当劳和肯德基评价。
-- 平台为 `unknown`: 全部 80 条，因为源文件均未明确标注发布平台。
+- 国家或地区为 `unknown`: 4 条，分别为未注明国家或地区的海鲜蒸锅、云吞、麦当劳和肯德基评价。
+- 平台为 `大众点评`: 1 条，为用户新增的越由臻•融合菜(七莘红点城店)评价。
+- 平台为 `unknown`: 其余 80 条，因为对应源文件均未明确标注发布平台。

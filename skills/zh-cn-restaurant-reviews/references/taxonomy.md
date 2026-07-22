@@ -16,7 +16,7 @@
 
 当前案例支持以下实用分类:
 
-- `Chinese regional cuisine`: 云南菜、西北菜、川菜、贵州菜、家常菜和港式排档。
+- `Chinese regional cuisine`: 云南菜、西北菜、川菜、贵州菜、粤菜、家常菜和港式排档。
 - `Japanese cuisine`: 定食、寿司、天妇罗、盖饭、烧鸟、居酒屋、日式烧肉、炸牛排和日式小吃。
 - `Korean cuisine`: 嫩豆腐、石锅拌饭、冷面、韩国家庭料理和韩国炸鸡。
 - `Southeast Asian cuisine`: 泰国菜。
