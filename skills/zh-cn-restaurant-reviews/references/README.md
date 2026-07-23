@@ -8,7 +8,7 @@
 - 香港: [examples/hong-kong/cha-chaan-teng.md](examples/hong-kong/cha-chaan-teng.md)。
 - 日本: `examples/japan/`，包含面与饭、烧肉与居酒屋、日式料理、咖啡甜点和其他类型。
 - 韩国: `examples/south-korea/`，包含韩餐、面食、炸鸡和海鲜。
-- 国家不明: `examples/unknown/`。只有来源未给出可靠国家信息的案例才放入此处。
+- 国家不明: `examples/unknown/`。当前没有国家不明案例；保留目录作为未来输入的路由位置。
 
 ## 完整案例文件
 
@@ -16,7 +16,7 @@
 - 香港: [cha-chaan-teng.md](examples/hong-kong/cha-chaan-teng.md)。
 - 日本: [noodles-and-rice.md](examples/japan/noodles-and-rice.md)、[barbecue-izakaya-and-meat.md](examples/japan/barbecue-izakaya-and-meat.md)、[japanese-cuisine.md](examples/japan/japanese-cuisine.md)、[cafes-and-desserts.md](examples/japan/cafes-and-desserts.md)、[western-and-other.md](examples/japan/western-and-other.md)。
 - 韩国: [korean-cuisine-and-noodles.md](examples/south-korea/korean-cuisine-and-noodles.md)、[fried-chicken-and-seafood.md](examples/south-korea/fried-chicken-and-seafood.md)。
-- 国家不明: [fast-food.md](examples/unknown/fast-food.md)、[other.md](examples/unknown/other.md)。
+- 国家不明: 当前没有案例；[fast-food.md](examples/unknown/fast-food.md) 和 [other.md](examples/unknown/other.md) 是预留文件。
 
 ## 按餐厅类型或菜系
 

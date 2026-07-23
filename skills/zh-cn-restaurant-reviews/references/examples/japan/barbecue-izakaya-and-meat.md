@@ -6,7 +6,7 @@
 - Region: Hyogo, Kobe
 - Category: Japanese cuisine
 - Cuisine: Yakitori and izakaya
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Natural conversational
 - Length: Standard
@@ -17,6 +17,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 店铺位于阪急地下美食街。
 - 烧鸟和唐扬鸡使用菜单所写的樱姬鸡。
 - 前菜腌茄子酸爽，氛围轻松。
@@ -31,7 +32,7 @@
 - Region: Hyogo, Kobe
 - Category: Barbecue
 - Cuisine: Japanese barbecue
-- Platform: unknown
+- Platform: 大众点评, 小红书
 - Sentiment: Positive
 - Tone: Natural conversational
 - Length: Standard
@@ -42,6 +43,7 @@
 
 ### Available facts
 
+- 用户确认该评价同时发布于大众点评和小红书。
 - 店铺在舞子公园旁，未预约直接到店。
 - 老板和店员热情并主动介绍。
 - 双人拼盘份量足，黑毛和牛香而不腻。
@@ -56,7 +58,7 @@
 - Region: Osaka
 - Category: Japanese cuisine
 - Cuisine: Yakitori and chicken sashimi
-- Platform: unknown
+- Platform: 小红书
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
@@ -67,6 +69,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于小红书。
 - 店铺主打萨摩土鸡和宫崎地鸡。
 - 鸡肉刺身软嫩，烤鸡块有焦香。
 - 木质装修和灯光形成居酒屋氛围。
@@ -81,7 +84,7 @@
 - Region: Fukuoka
 - Category: Japanese cuisine
 - Cuisine: Yakitori and izakaya
-- Platform: unknown
+- Platform: 小红书
 - Sentiment: Positive
 - Tone: Natural conversational
 - Length: Standard
@@ -92,6 +95,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于小红书。
 - 晚上有居酒屋氛围，门口排过队。
 - 点了冷豆腐、串物、炸鸡翅、烤香菇和乌龙茶。
 - 上菜快，价格友好。

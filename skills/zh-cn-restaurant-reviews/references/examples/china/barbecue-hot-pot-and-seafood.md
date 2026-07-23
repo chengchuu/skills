@@ -6,17 +6,18 @@
 - Region: Shanghai
 - Category: Barbecue
 - Cuisine: Korean-style barbecue
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Short
-- Occasion: unknown
+- Occasion: Dinner
 - Main topics: Meat, sauce, charcoal aroma, environment, service
 - Recommended dishes: 特色瘦牛肉、雪花肋条、秘制牛五花
 - Source: `temp/examples/Comments.md`
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评，用餐场合为晚餐。
 - 牛肉鲜嫩，瘦肉不柴，带油花部位不腻。
 - 酱料未遮盖牛肉香，泥炉炭火有独特香味。
 - 环境整洁，服务节奏稳定。
@@ -31,17 +32,18 @@
 - Region: Shanghai
 - Category: Barbecue
 - Cuisine: Japanese barbecue
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Short
-- Occasion: unknown
+- Occasion: Dinner
 - Main topics: Beef, rice, texture
 - Recommended dishes: 黑牛横膈膜、日式牛肉饭、雪花肥牛
 - Source: `temp/examples/Comments.md`
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评，用餐场合为晚餐。
 - 横膈膜肉质鲜嫩。
 - 牛肉饭米饭粒粒分明。
 - 雪花肥牛油脂分布均匀。
@@ -56,7 +58,7 @@
 - Region: Shanghai
 - Category: Hot pot
 - Cuisine: Sichuan-style hot pot
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Reflective
 - Length: Standard
@@ -67,6 +69,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 店铺已经关门。
 - 鸳鸯锅平衡麻辣和清淡。
 - 肥牛、小酥肉和年糕均获正面评价。
@@ -74,3 +77,30 @@
 ### Review
 
 鸳鸯锅的汤底完美平衡麻辣和清淡，肥牛片薄嫩，涮几秒即入口，肉香四溢。小酥肉外酥里嫩，与火锅汤底搭配美味加倍。年糕软糯Q弹，吸满汤汁后更加美味。虽然店已关门，但那一锅鸳鸯火锅的味道依然难忘。
+
+## Example: 海鲜蒸锅大排档
+
+- Country: China
+- Region: Fujian, Xiamen
+- Category: Seafood
+- Cuisine: Seafood cuisine
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Descriptive
+- Length: Standard
+- Occasion: Spring dinner
+- Main topics: Crowd, pricing method, seafood, portion, buffet items
+- Recommended dishes: 蒸海鲜、虾、蟹、龙虾
+- Source: `temp/examples/Comments.md`
+
+### Available facts
+
+- 用户确认该评价来自中国福建厦门，发布于大众点评，用餐场合为春季晚餐。
+- 春天晚上到店，人多，按人头计价。
+- 海鲜一锅蒸，包含虾、蟹、扇贝、鲍鱼和龙虾。
+- 后续有自助皮皮虾和小馒头。
+- 用户确认菜系为海鲜料理。
+
+### Review
+
+海鲜一锅蒸，鲜得不讲理。春天晚上去的内林亚贵大排档，人不少，氛围热闹。海鲜是一锅蒸，按人头算价格，分量很足。虾和蟹特别鲜甜，肉质紧实，吃起来满口海味。扇贝和鲍鱼也处理得干净，蒸得刚好，不腥不柴。龙虾肉弹牙，蘸点酱刚刚好。后面还有自助皮皮虾和小馒头，能加能吃，补得很到位。蒸海鲜这种方式简单直接，吃得就是食材的新鲜和实在。

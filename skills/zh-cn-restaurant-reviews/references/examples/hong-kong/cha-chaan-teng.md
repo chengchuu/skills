@@ -6,7 +6,7 @@
 - Region: Sha Tin
 - Category: Chinese regional cuisine
 - Cuisine: Hong Kong-style cha chaan teng
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Short
@@ -17,6 +17,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 外带招牌干炒牛河。
 - 份量足，河粉干爽，牛肉滑嫩。
 - 服务员热情。
@@ -31,7 +32,7 @@
 - Region: Sha Tin
 - Category: Chinese regional cuisine
 - Cuisine: Hong Kong-style cha chaan teng
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Mixed
 - Tone: Restrained practical
 - Length: Short
@@ -42,6 +43,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 早餐时段人多但不需要排队。
 - 服务员忙不过来。
 - 汤底浓郁，牛肉片嫩滑。

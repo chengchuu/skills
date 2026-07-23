@@ -57,7 +57,7 @@
 
 | Original path | Final reference file | Examples | Country or region | Categories | Duplicate or uncertainty notes |
 | --- | --- | ---: | --- | --- | --- |
-| `temp/examples/Comments.md` | `references/examples/china/chinese-regional-cuisine.md`<br>`references/examples/china/noodles-and-dumplings.md`<br>`references/examples/china/barbecue-hot-pot-and-seafood.md`<br>`references/examples/china/japanese-and-korean-cuisine.md`<br>`references/examples/china/western-and-fast-food.md`<br>`references/examples/china/cafes-tea-and-desserts.md`<br>`references/examples/unknown/fast-food.md`<br>`references/examples/unknown/other.md` | 36 | China and unknown | Chinese regional cuisine, Japanese cuisine, Southeast Asian cuisine, noodles, fast food, cafe and tea, barbecue, hot pot, seafood | 提取 36 条餐饮评价；13 条酒店、景点、商场、零售、医疗等非餐饮评价未纳入。同一标题下的 `Note` 与 `Comment` 视为同一经历的长短版本；DG COFFEE、和府捞面大师店、土笋冻、伊然一面和上上谦均只保留一份规范正文，其中和府捞面大师店的两条近重复短评合并。同一品牌或门店的不同菜品、不同日期评价分别保留。 |
+| `temp/examples/Comments.md` | `references/examples/china/chinese-regional-cuisine.md`<br>`references/examples/china/noodles-and-dumplings.md`<br>`references/examples/china/barbecue-hot-pot-and-seafood.md`<br>`references/examples/china/japanese-and-korean-cuisine.md`<br>`references/examples/china/western-and-fast-food.md`<br>`references/examples/china/cafes-tea-and-desserts.md` | 36 | China | Chinese regional cuisine, Japanese cuisine, Southeast Asian cuisine, noodles, fast food, cafe and tea, barbecue, hot pot, seafood | 提取 36 条餐饮评价；13 条酒店、景点、商场、零售、医疗等非餐饮评价未纳入。同一标题下的 `Note` 与 `Comment` 视为同一经历的长短版本；DG COFFEE、和府捞面大师店、土笋冻、伊然一面和上上谦均只保留一份规范正文，其中和府捞面大师店的两条近重复短评合并。同一品牌或门店的不同菜品、不同日期评价分别保留。 |
 | `temp/examples/prompts/Note-Comment-26-0426-to-0427_v02.md` | 与上一行列出的 8 个规范案例文件合并 | 0 | mixed | mixed | 英文内容是 `Comments.md` 对应条目的翻译镜像，并包含通用提示总结；为避免同一案例多文件重复，只保留中文原始案例为规范副本。 |
 | `temp/examples/templates/Restaurant.md` | None | 0 | unknown | Template | 仅为餐厅记录模板，不是实际评价；用于确认源字段，不生成案例。 |
 
@@ -65,7 +65,55 @@
 
 | Source | Final reference file | Examples | Country or region | Categories | Duplicate or uncertainty notes |
 | --- | --- | ---: | --- | --- | --- |
-| User-provided review, 2026-07-22 | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Shanghai | Cantonese cuisine | 越由臻•融合菜(七莘红点城店)；用户补充其位于中国上海、属于粤菜并发布于大众点评；无重复。 |
+| User-provided review, 2026-07-22 | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Shanghai | Cantonese cuisine | 越由臻•融合菜(七莘红点城店)；用户补充其位于中国上海、属于粤菜、发布于大众点评，用餐场合为午餐；无重复。 |
+
+## 人工分类记录
+
+| Example | Source | Confirmed metadata | Remaining unknown |
+| --- | --- | --- | --- |
+| 麦当劳两款小食 | `temp/examples/Comments.md` | China; Shanghai; 大众点评; Lunch | None |
+| 肯德基多款汉堡与炸鸡 | `temp/examples/Comments.md` | China; Shanghai; 大众点评; Lunch | None |
+| 海鲜蒸锅大排档 | `temp/examples/Comments.md` | China; Fujian, Xiamen; Seafood cuisine; 大众点评; Spring dinner | None |
+| 两种云吞 | `temp/examples/Comments.md` | China; Shanghai; 大众点评; Dinner | None |
+| 泥炉烤肉 | `temp/examples/Comments.md` | 大众点评; Dinner | None |
+| 日式烤肉三道菜 | `temp/examples/Comments.md` | 大众点评; Dinner | None |
+| 已停业的串串香火锅 | `temp/examples/Comments.md` | 大众点评 | None |
+| 夏日西瓜茶饮 | `temp/examples/Comments.md` | 大众点评 | None |
+| 徐家汇咖啡午后 | `temp/examples/Comments.md` | 大众点评 | None |
+| 古风茶室午后 | `temp/examples/Comments.md` | 大众点评 | None |
+| 手打柠檬茶 | `temp/examples/Comments.md` | 大众点评; Afternoon tea | None |
+| 厦门土笋冻小吃 | `temp/examples/Comments.md` | 大众点评 | None |
+| 云南热炒聚餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 上海小笼包午餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 清真西北菜午餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 川菜聚餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 港式排档炒饭 | `temp/examples/Comments.md` | 大众点评 | None |
+| 火腿鸡蛋炒饭快餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 家常菜组合一 | `temp/examples/Comments.md` | 大众点评; Dinner | None |
+| 家常菜组合二 | `temp/examples/Comments.md` | 大众点评 | None |
+| 贵州酸辣风味 | `temp/examples/Comments.md` | 大众点评; Dinner | None |
+| 泰国菜三道组合 | `temp/examples/Comments.md` | 大众点评; Lunch | None |
+| 常去日式食堂的变化 | `temp/examples/Comments.md` | 大众点评 | None |
+| 精致日料午市套餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 金华一根面晚餐 | `temp/examples/25-0503_Food_潘周家一根面.md` | 大众点评 | None |
+| 春夜骨汤面 | `temp/examples/Comments.md` | 大众点评 | None |
+| 厦门海鲜沙茶面 | `temp/examples/Comments.md` | 大众点评 | None |
+| 一人食油拌面 | `temp/examples/Comments.md` | 大众点评 | None |
+| 酸甜汤面快餐 | `temp/examples/Comments.md` | 大众点评 | None |
+| 两款和府捞面 | `temp/examples/Comments.md` | 大众点评 | None |
+| 烤肉披萨与柠檬茶 | `temp/examples/Comments.md` | 大众点评; Lunch | None |
+| 两款披萨 | `temp/examples/Comments.md` | 大众点评; Dinner | None |
+| 平价意式餐厅 | `temp/examples/Comments.md` | 大众点评 | None |
+| 鸡堡与肉酱披萨 | `temp/examples/Comments.md` | 大众点评; Dinner | None |
+| 肯德基早餐粥 | `temp/examples/Comments.md` | 大众点评 | None |
+| 肯德基多品类快餐 | `temp/examples/Comments.md` | 大众点评; Breakfast | None |
+| 肯德基环境与洗手区 | `temp/examples/Comments.md` | 大众点评; Lunch | None |
+| 沙田干炒牛河外带 | `temp/examples/25-0408_Food_金好.md` | 大众点评 | None |
+| 沙田茶餐厅早餐 | `temp/examples/25-0409_Food_叉烧大王.md` | 大众点评 | None |
+| 神户烧鸟与唐扬鸡 | `temp/examples/25-0303-1929-Food-Hibitoridori.md` | 大众点评 | None |
+| 舞子黑毛和牛烧肉 | `temp/examples/25-0304-1223-Food-味鉄.md` | 大众点评; 小红书 | None |
+| 大阪地鸡居酒屋 | `temp/examples/25-0306-2013-Food-Sakidoriya.md` | 小红书 | None |
+| 福冈居民区烧鸟 | `temp/examples/25-0606-1919-Food-Rakugaki.md` | 小红书 | None |
 
 ## 汇总
 
@@ -75,6 +123,7 @@
 - 最终规范案例: 81。
 - 完全或明确重复: 英文提示汇总中的 36 条餐饮翻译与 `Comments.md` 对应中文条目合并，不另建副本。
 - 近重复: 同一经历的 `Note` / `Comment` 长短版本合并为一个规范案例；和府捞面大师店的两条近重复短评合并。不同日期或不同菜品的同品牌评价保留，没有仅因结构相似而删除案例。
-- 国家或地区为 `unknown`: 4 条，分别为未注明国家或地区的海鲜蒸锅、云吞、麦当劳和肯德基评价。
-- 平台为 `大众点评`: 1 条，为用户新增的越由臻•融合菜(七莘红点城店)评价。
-- 平台为 `unknown`: 其余 80 条，因为对应源文件均未明确标注发布平台。
+- 国家或地区为 `unknown`: 0 条。
+- 平台包含 `大众点评`: 42 条；明细见案例字段与人工分类记录。
+- 平台包含 `小红书`: 3 条；明细见案例字段与人工分类记录。
+- 平台为 `unknown`: 其余 37 条，因为对应源文件均未明确标注发布平台。

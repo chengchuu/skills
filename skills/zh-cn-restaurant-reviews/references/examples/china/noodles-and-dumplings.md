@@ -6,7 +6,7 @@
 - Region: Zhejiang, Jinhua
 - Category: Noodles
 - Cuisine: Local Chinese
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Short
@@ -17,6 +17,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 晚餐时段人气旺。
 - 店家服务热情。
 - 一根面劲道，汤头鲜美。
@@ -31,7 +32,7 @@
 - Region: Shanghai
 - Category: Noodles
 - Cuisine: Chinese noodles
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Detailed
@@ -42,6 +43,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 骨汤面带药材味，面条筋道，笋片脆爽。
 - 鸡肉块配橙汁，环境安静，灯光柔和。
 - 上菜快，服务员主动收拾桌面。
@@ -57,7 +59,7 @@
 - Region: Fujian, Xiamen
 - Category: Noodles
 - Cuisine: Minnan
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
@@ -68,6 +70,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 汤底有沙茶香和微甜，面条筋道。
 - 虾和花蛤新鲜，无腥味。
 - 小店环境简单。
@@ -82,7 +85,7 @@
 - Region: Shanghai
 - Category: Noodles
 - Cuisine: Chinese noodles
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
@@ -93,6 +96,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 油拌面筋道，白小螺紧实，配冰可乐。
 - 店内一人一位并有隔板。
 - 服务贴心但不打扰。
@@ -107,7 +111,7 @@
 - Region: Shanghai
 - Category: Noodles
 - Cuisine: Chinese noodles
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Short
@@ -118,6 +122,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 汤底酸甜浓郁，带香草清香。
 - 肉片鲜嫩，面条爽滑。
 - 店铺在公司楼下，上菜快。
@@ -132,7 +137,7 @@
 - Region: Shanghai
 - Category: Noodles
 - Cuisine: Chinese noodles
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Standard
@@ -143,6 +148,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 草本骨汤浓郁，软骨酥烂，面条筋道。
 - 肉酱拌面咸香，面条分量变多。
 - 高峰期服务和上菜仍有效率。
@@ -150,3 +156,29 @@
 ### Review
 
 和府捞面的草本骨汤软骨面汤头浓郁，软骨炖得酥烂入味，搭配筋道的面条，口感非常丰富。北海道风味肉酱拌面则是另一种风味，肉酱咸香适中，拌匀后每一口都充满满足感。现在的面条分量变多了，显然能感受到店家的用心。服务态度很好，上菜速度也很快，在用餐高峰期依然保持效率。位于杨浦国华广场，环境整洁舒适。
+
+## Example: 两种云吞
+
+- Country: China
+- Region: Shanghai
+- Category: Noodles and dumplings
+- Cuisine: Chinese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Descriptive
+- Length: Short
+- Occasion: Dinner
+- Main topics: Filling, texture, broth
+- Recommended dishes: 玉米鲜肉云吞、鸡肉云吞
+- Source: `temp/examples/Comments.md`
+
+### Available facts
+
+- 用户确认该评价来自中国上海，发布于大众点评，用餐场合为晚餐。
+- 玉米鲜肉云吞皮薄馅多。
+- 鸡肉云吞肉质滑嫩。
+- 汤头清爽不油腻。
+
+### Review
+
+玉米鲜肉云吞皮薄馅多，玉米的清甜与鲜肉的香嫩完美结合，每一口都充满鲜美的汁水。鸡肉云吞则肉质滑嫩，搭配特制的汤底更加鲜香可口。云吞大小适中，入口柔软又有弹性，汤头清爽不油腻。

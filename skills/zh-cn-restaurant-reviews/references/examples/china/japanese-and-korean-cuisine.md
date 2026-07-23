@@ -6,7 +6,7 @@
 - Region: Shanghai
 - Category: Japanese cuisine
 - Cuisine: Japanese
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Mixed
 - Tone: Reflective
 - Length: Standard
@@ -17,6 +17,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 菜品味道稳定，份量足，是常去的店。
 - 最近服务员和后厨的气氛显得紧绷。
 - 味道未变，但整体用餐感受变沉重。
@@ -31,7 +32,7 @@
 - Region: Shanghai
 - Category: Japanese cuisine
 - Cuisine: Japanese
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Short
@@ -42,6 +43,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 午市套餐包含牛肉饭、寿司、味增汤、海鲜蒸蛋和色拉。
 - 分量刚好。
 - 环境安静整洁，座位旁有浴缸设计。

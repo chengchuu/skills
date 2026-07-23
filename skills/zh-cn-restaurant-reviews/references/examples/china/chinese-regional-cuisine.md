@@ -6,7 +6,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Yunnan
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Detailed
@@ -17,6 +17,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 店铺位于商场二楼，环境舒适。
 - 点了油闷鸡、黑松露蒸蛋、肉沫茼蒿和碳烤包浆豆腐。
 - 服务员及时添水，态度贴心。
@@ -33,7 +34,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Jiangnan dim sum
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Standard
@@ -44,6 +45,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 鲜肉小笼包皮薄馅多，鲜虾小馄饨虾仁弹牙。
 - 夏天中午人气较高，但上餐快。
 - 店内整洁明亮，服务有礼。
@@ -58,7 +60,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Halal Northwest Chinese
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
@@ -69,6 +71,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 炝炒莲花白清脆，砂窝老豆腐软嫩。
 - 午餐时间人不少，但翻桌快。
 - 餐厅宽敞、明亮、整洁。
@@ -83,7 +86,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Sichuan
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
@@ -94,6 +97,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 干锅牛蛙香辣，玉米烙外脆里糯。
 - 夏天中午店内空调充足。
 - 环境宽敞，上菜快，服务热情。
@@ -108,7 +112,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Hong Kong-style
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
@@ -119,6 +123,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 黑松露炒饭粒粒分明，锅气足，不油腻。
 - 店铺干净，餐具消毒到位。
 - 服务有礼，不打扰。
@@ -133,7 +138,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Chinese fried rice
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Short
@@ -144,6 +149,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 门店面积不大，客人多，通常需要拼桌。
 - 炒饭上桌快，米饭颗粒分明，锅气足。
 - 分量多，性价比不错。
@@ -158,17 +164,18 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Chinese home-style
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
-- Occasion: unknown
+- Occasion: Dinner
 - Main topics: Dishes, taste, texture
 - Recommended dishes: 肥西老母鸡汤、卤鸡腿、番茄炒蛋、酸菜鱼、农家蒸蛋
 - Source: `temp/examples/Comments.md`
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评，用餐场合为晚餐。
 - 评价涉及鸡汤、卤鸡腿、番茄炒蛋、酸菜鱼和蒸蛋。
 - 酸菜鱼片无刺，蒸蛋适合拌饭。
 
@@ -182,7 +189,7 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Chinese home-style
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Restrained practical
 - Length: Short
@@ -193,6 +200,7 @@
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评。
 - 番茄炒蛋酸甜，酸菜鱼无刺，蒸蛋嫩滑。
 - 店铺干净整洁，清理餐桌速度快。
 
@@ -206,17 +214,18 @@
 - Region: Shanghai
 - Category: Chinese regional cuisine
 - Cuisine: Guizhou
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Standard
-- Occasion: unknown
+- Occasion: Dinner
 - Main topics: Dishes, taste, environment
 - Recommended dishes: 凯里酸汤鱼、烧椒鸡、酸萝卜
 - Source: `temp/examples/Comments.md`
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评，用餐场合为晚餐。
 - 酸汤鱼酸香，烧椒鸡有葱油香，酸萝卜清脆。
 - 店铺有贵州特色，环境整洁舒适。
 
@@ -230,17 +239,18 @@
 - Region: Shanghai
 - Category: Southeast Asian cuisine
 - Cuisine: Thai
-- Platform: unknown
+- Platform: 大众点评
 - Sentiment: Positive
 - Tone: Descriptive
 - Length: Short
-- Occasion: unknown
+- Occasion: Lunch
 - Main topics: Dishes, taste, texture
 - Recommended dishes: 冬阴功汤、咖喱牛腩、虾酱空心菜
 - Source: `temp/examples/Comments.md`
 
 ### Available facts
 
+- 用户确认该评价发布于大众点评，用餐场合为午餐。
 - 冬阴功汤酸辣适中，带海鲜和香茅味。
 - 咖喱牛腩软烂，空心菜清脆。
 
@@ -258,7 +268,7 @@
 - Sentiment: Positive
 - Tone: Natural conversational
 - Length: Standard
-- Occasion: unknown
+- Occasion: Lunch
 - Main topics: Location, environment, atmosphere, service, dish
 - Recommended dishes: 雪菜黄鱼
 - Source: User-provided review, 2026-07-22
@@ -267,6 +277,7 @@
 
 - 餐厅是位于中国上海的粤菜餐厅越由臻•融合菜(七莘红点城店)，具体位置在七莘路红点城五楼。
 - 该评价发布于大众点评。
+- 用户确认用餐场合为午餐。
 - 环境不错，商务氛围浓厚。
 - 服务员主动周到，餐前提供了水果。
 - 天气很热，服务员送来了冰柠檬水。
