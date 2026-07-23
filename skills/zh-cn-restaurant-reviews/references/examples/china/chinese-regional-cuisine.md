@@ -287,3 +287,31 @@
 ### Review
 
 餐厅位于七莘路红点城五楼，环境不错，商务氛围浓厚。服务员主动周到，餐前提供了水果。天气很热，服务员还贴心地送来了冰柠檬水。雪菜黄鱼没有刺，这一点超级好评。从餐前水果到冰柠檬水，服务细节都照顾得很周到。
+
+## Example: 明档现煲煲仔饭
+
+- Country: China
+- Region: Shanghai
+- Category: Chinese regional cuisine
+- Cuisine: unknown
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Practical
+- Length: Standard
+- Occasion: unknown
+- Main topics: Open kitchen, wait, ingredients, rice, crispy rice, soup
+- Recommended dishes: 煲仔饭
+- Source: User-provided review, 2026-07-23 (煲仔饭)
+
+### Available facts
+
+- 煲仔饭采用明档现煲，制作过程看得见。
+- 到店不用等位，点单后等十几分钟就能上桌。
+- 煲仔饭用料足，腊肠咸甜油润。
+- 香米粒粒分明，拌入酱汁后很入味。
+- 锅底锅巴焦脆不硬。
+- 一份煲仔饭搭配一盅汤，用户认为内容丰富、搭配合适，吃完很满足。
+
+### Review
+
+这家煲仔饭制作过程看得见。到店不用等位，点单后等十几分钟就能上桌，时间不算久。煲仔饭用料很足，打开后能看到咸甜油润的腊肠，配料和米饭铺得很实在。香米煲得粒粒分明，淋上酱汁后仔细拌匀，酱汁融进米饭里，每一口都很入味。锅底一圈锅巴是亮点，焦脆却不硬，和上面的香米一起吃，能感受到两种不同口感。一份煲仔饭配上一盅汤，内容丰富，搭配也很合适，吃完很满足。

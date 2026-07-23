@@ -66,6 +66,10 @@
 | Source | Final reference file | Examples | Country or region | Categories | Duplicate or uncertainty notes |
 | --- | --- | ---: | --- | --- | --- |
 | User-provided review, 2026-07-22 | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Shanghai | Cantonese cuisine | 越由臻•融合菜(七莘红点城店)；用户补充其位于中国上海、属于粤菜、发布于大众点评，用餐场合为午餐；无重复。 |
+| User-provided review, 2026-07-23 | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 大众点评 100 字评价；正文按用户要求省略店名，并禁用“整体”“体验”“令人满意”；无重复。 |
+| User-provided review, 2026-07-23 (煲仔饭) | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Shanghai | Chinese regional cuisine; cuisine unknown | 煲仔皇腊味煲仔饭(上海万象城店)；发布于大众点评，正文 173 个字符，用餐场合与具体菜系未提供；无重复。 |
+| User-provided review, 2026-07-23 (汉堡肉) | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 肉肉大米(七宝领展广场店)；发布于大众点评，一人食，正文 178 个字符；保留调味偏淡和菜品种类不丰富的反馈；无重复。 |
+| User-provided review, 2026-07-23 (天妇罗) | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 天天·天妇罗专门店(领展广场店)；发布于大众点评，正文 190 个字符；保留汤品发现小虫子的卫生反馈，用餐场合未提供；无重复。 |
 
 ## 人工分类记录
 
@@ -120,10 +124,10 @@
 - 源文件: 49。
 - 单篇来源: 46，其中 44 个含评价正文，2 个仅含元数据。
 - 汇总文件中的餐饮评价: 36。
-- 最终规范案例: 81。
+- 最终规范案例: 85。
 - 完全或明确重复: 英文提示汇总中的 36 条餐饮翻译与 `Comments.md` 对应中文条目合并，不另建副本。
 - 近重复: 同一经历的 `Note` / `Comment` 长短版本合并为一个规范案例；和府捞面大师店的两条近重复短评合并。不同日期或不同菜品的同品牌评价保留，没有仅因结构相似而删除案例。
 - 国家或地区为 `unknown`: 0 条。
-- 平台包含 `大众点评`: 42 条；明细见案例字段与人工分类记录。
+- 平台包含 `大众点评`: 46 条；明细见案例字段与人工分类记录。
 - 平台包含 `小红书`: 3 条；明细见案例字段与人工分类记录。
 - 平台为 `unknown`: 其余 37 条，因为对应源文件均未明确标注发布平台。
