@@ -1,6 +1,6 @@
-# Cheng's Codex Skills
+# Codex Skills
 
-Reusable developer workflow skills maintained by Cheng. This repository is packaged as a skill-only Codex plugin: `.codex-plugin/plugin.json` points at independent skills under `skills/` and does not configure apps, connectors, MCP servers, or hooks.
+Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.codex-plugin/plugin.json` manifest points at independent skills under `skills/` and does not configure apps, connectors, MCP servers, or hooks.
 
 ## Available skills
 
