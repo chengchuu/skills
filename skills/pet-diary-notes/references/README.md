@@ -8,15 +8,19 @@ Use progressive disclosure. The files under `examples/` are distributable handwr
 2. Read only the relevant rules and language sections.
 3. Read the smallest relevant example set, normally one category file.
 4. Read `pet-profile.md` only when Dudu's identity matters.
-5. Never load all examples for a routine request and never use an example fact as a fact about a new video.
+5. Never load all examples for a routine request and never use an example fact as a fact about a new entry.
 
 ## Task routing
 
 | Request | Read |
 | --- | --- |
-| General generation or rewrite | [writing-rules.md](writing-rules.md), requested language sections in [language-guides.md](language-guides.md) |
+| General pet diary note, rewrite, or short daily record | [writing-rules.md](writing-rules.md), requested language sections in [language-guides.md](language-guides.md) |
+| Plog or photo caption | [output-formats.md](output-formats.md), photo-post guidance in [language-guides.md](language-guides.md), and the nearest content-category example |
+| Vlog or video caption | [output-formats.md](output-formats.md), video-post guidance in [language-guides.md](language-guides.md), and the nearest content-category example |
+| Milestone record | Milestone rules in [writing-rules.md](writing-rules.md) and [examples/growth-and-milestones.md](examples/growth-and-milestones.md) |
 | Translation | Multilingual consistency rules plus source and target sections in [language-guides.md](language-guides.md) |
-| Exact artifact or platform format | [output-formats.md](output-formats.md) |
+| Language-specific output | Requested language section in [language-guides.md](language-guides.md) |
+| Exact artifact or platform-specific format | [output-formats.md](output-formats.md) |
 | Dudu identity, gender, names, dates, or profile | [pet-profile.md](pet-profile.md) |
 | Health or recovery note | Health sections in [writing-rules.md](writing-rules.md) and [examples/health-and-recovery.md](examples/health-and-recovery.md) |
 | AI or fictional story | Generated-content rules and [examples/ai-storytelling.md](examples/ai-storytelling.md) |

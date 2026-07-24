@@ -125,7 +125,7 @@ async function main() {
   }
 
   if (errors.length) {
-    console.error(`Pet Vlog reference validation failed with ${errors.length} error${errors.length === 1 ? "" : "s"}:`);
+    console.error(`Pet diary reference validation failed with ${errors.length} error${errors.length === 1 ? "" : "s"}:`);
     for (const error of errors) console.error(`- ${error}`);
     process.exitCode = 1;
     return;
@@ -134,6 +134,6 @@ async function main() {
 }
 
 main().catch(error => {
-  console.error(`Pet Vlog reference validation failed: ${error.message}`);
+  console.error(`Pet diary reference validation failed: ${error.message}`);
   process.exitCode = 1;
 });

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pet Diary Notes"
+  short_description: "Write multilingual pet captions and short Plog or Vlog records"
+  default_prompt: "Use $pet-diary-notes to write a factual multilingual diary-style pet caption or short Plog or Vlog record."

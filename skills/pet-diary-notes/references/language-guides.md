@@ -1,10 +1,10 @@
 # Language guides
 
-The three languages should describe the same underlying scene, not mirror one another sentence by sentence.
+The three languages should describe the same underlying scene, not mirror one another sentence by sentence. Apply the same natural-language principles to photo posts, video posts, short diary entries, Plogs, and Vlogs; do not add motion to a photo request or social-media hooks to a platform-neutral diary note.
 
 ## Simplified Chinese (`zh-CN`)
 
-- Use natural, compact social-video Chinese with full-width punctuation.
+- Use natural, compact Simplified Chinese with full-width punctuation. Photo notes and general diary entries may be quieter than short-video copy.
 - Prefer short noun phrases, small questions, or scene-led titles. Descriptions commonly run one or two short sentences.
 - Choose `猫猫` for intimate owner voice, `小猫` only when age or requested framing supports it, and `猫咪` for neutral social copy. Omit `嘟嘟` and name-led forms such as `嘟嘟的` by default, even when the identity field names her; use them only when the user explicitly requests the name in the artifact.
 - Warm words such as `治愈`, `温柔`, `陪伴`, `软软`, and `乖巧` recur, but vary them and tie them to observable details.

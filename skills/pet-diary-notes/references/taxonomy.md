@@ -25,7 +25,7 @@ Secondary categories remain reusable scene concepts: blanket, belly-up, nap, gaz
 - Regions/cities supported in this corpus: `Shanghai`, `Kyoto`.
 - Locations: `Guilin Park`, `Gion`, `Indoor home`, `Office`, `Unknown`, `Fictional generated scene`, `Fictional city`, `Fictional office`, `Fictional indoor scene`.
 - Use a real country for an AI scene only when the source explicitly anchors its setting, as the Gion/Kyoto example does.
-- A profile address is not the default location of a new video.
+- A profile address is not the default location of a new entry.
 
 ## Other dimensions
 
@@ -35,7 +35,7 @@ Secondary categories remain reusable scene concepts: blanket, belly-up, nap, gaz
 - Pet behavior/activity: use observable source wording; choose `unspecified` when the title gives only a mood.
 - Languages: `zh-CN`, `en`, `ja-JP`.
 - Platforms: `YouTube Shorts`, `TikTok`, `Instagram Reels`, `小红书`, `Bilibili`, `Other`, `unknown`.
-- Formats: title only, title and description, full Vlog note, platform-ready short caption, health note, AI story caption, translation, rewrite, review.
+- Formats: `diary-note`, `plog`, `vlog`, `photo-caption`, `video-caption`, `title-only`, `caption-only`, `multilingual-entry`, `milestone-note`, `health-note`, `ai-story`, `translation`, `rewrite`, `review`.
 - Content type: `Real-life`, `AI-generated fictional scene`, `unknown`.
 - Health: `Not stated`, `Supplied condition`, `Supplied care`, `Recovery status`, `Ambiguous health tag`.
 
@@ -47,3 +47,4 @@ Secondary categories remain reusable scene concepts: blanket, belly-up, nap, gaz
 4. Keep AI version labels. Similar concepts are separate when action, BGM, language availability, or wording meaningfully changes.
 5. Repeated titles are not duplicates by themselves. Merge only exact whole-example duplicates and record the decision.
 6. Mark missing language blocks explicitly. Never synthesize a missing historical translation inside the corpus.
+7. Choose one general format label plus a more specific label only when both affect routing, such as `plog` with `photo-caption`; do not create labels for minor layout variations.

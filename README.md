@@ -10,7 +10,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
-| `pet-vlog-writing`          | Generate, rewrite, translate, and review factual cat Vlog notes in Chinese, English, and Japanese. |
+| `pet-diary-notes`           | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples. |
 
 ### `prefer-mazey`
 
@@ -64,9 +64,9 @@ Implement a confirmation dialog before deleting an item.
 
 `zh-cn-restaurant-reviews` generates, rewrites, and improves Simplified Chinese restaurant reviews using only facts supplied by the user. Its handwritten examples are organized by country or region and restaurant category, with metadata for cuisine, sentiment, tone, length, occasion, and topics. It supports natural restaurant comments, dining records, and requests targeting 大众点评、小红书, or Google Maps without inventing dishes, prices, locations, waits, service experiences, or personal reactions.
 
-### `pet-vlog-writing`
+### `pet-diary-notes`
 
-`pet-vlog-writing` creates, rewrites, translates, and reviews pet-cat Vlog titles, descriptions, BGM notes, and hashtags in Simplified Chinese, English, and Japanese. It adapts natural language and platform-ready structure from curated handwritten examples while preserving supplied names, dates, locations, health facts, fictional status, and other exact details.
+`pet-diary-notes` creates, rewrites, translates, and reviews diary-style pet titles, captions, descriptions, short records, BGM notes, and hashtags in Simplified Chinese, English, and Japanese. It supports Plogs, Vlogs, photo captions, video captions, daily records, milestones, health notes, and AI-generated pet stories while preserving supplied facts and adapting naturally across languages.
 
 ## Repository structure
 
@@ -84,7 +84,7 @@ Implement a confirmation dialog before deleting an item.
 │   │   ├── agents/openai.yaml
 │   │   ├── references/layer-api-map.md
 │   │   └── SKILL.md
-│   ├── pet-vlog-writing/
+│   ├── pet-diary-notes/
 │   │   ├── agents/openai.yaml
 │   │   ├── references/
 │   │   │   ├── examples/
@@ -154,7 +154,7 @@ https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
 ```
 
 ```text
-https://github.com/chengchuu/skills/tree/main/skills/pet-vlog-writing
+https://github.com/chengchuu/skills/tree/main/skills/pet-diary-notes
 ```
 
 Ask Codex to install a skill with:
@@ -184,7 +184,7 @@ $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh
 or:
 
 ```text
-$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pet-vlog-writing
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pet-diary-notes
 ```
 
 The installed skill becomes available to Codex on the next turn.
@@ -237,14 +237,14 @@ $zh-cn-restaurant-reviews
 ```
 
 ```text
-$pet-vlog-writing
+$pet-diary-notes
 
-根据以下场景生成中文、英文和日文猫咪 Vlog 文案：
+根据以下场景生成中文、英文和日文宠物日记文案：
 
-- 猫咪：嘟嘟
+- 宠物：嘟嘟
+- 内容形式：Plog
 - 场景：趴在窗边看雨
 - 氛围：安静、治愈
-- 平台：YouTube Shorts
 - BGM：未指定
 ```
 
@@ -288,10 +288,10 @@ Codex may select `zh-cn-restaurant-reviews` for requests such as:
 参考日本咖啡店相关案例的风格，生成一条 80～120 字的小红书文案。
 ```
 
-Codex may select `pet-vlog-writing` for requests such as:
+Codex may select `pet-diary-notes` for requests such as:
 
 ```text
-Generate Chinese, English, and Japanese titles and captions for a sleepy cat video.
+Generate Chinese, English, and Japanese diary-style captions for photos and videos of my sleepy cat.
 ```
 
 ## Develop and validate

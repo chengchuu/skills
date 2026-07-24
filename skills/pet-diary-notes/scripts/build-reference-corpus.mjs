@@ -307,7 +307,7 @@ function manifestMarkdown(examples) {
   });
   return `# Source manifest
 
-This manifest maps every Vlog section in \`temp/pet-examples/pet.md\` to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\` to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
@@ -362,7 +362,7 @@ async function main() {
     const entrySet = new Set(entries.map(([heading]) => heading));
     const selected = examples.filter(example => entrySet.has(example.heading));
     const title = categoryFor(file);
-    const content = `# ${title} examples\n\nHandwritten examples are preserved as style evidence. Metadata uses \`unknown\` when the source does not support a narrower value. Do not transfer example facts into a new video.\n\n${selected.map(exampleMarkdown).join("\n\n")}\n`;
+    const content = `# ${title} examples\n\nHandwritten examples are preserved as style evidence. Metadata uses \`unknown\` when the source does not support a narrower value. Do not transfer example facts into a new entry.\n\n${selected.map(exampleMarkdown).join("\n\n")}\n`;
     await writeFile(path.join(examplesRoot, file), content);
   }
   await writeFile(manifestPath, manifestMarkdown(examples));
