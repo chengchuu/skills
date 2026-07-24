@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multilingual Pet Vlog"
+  short_description: "Write factual cat Vlog notes in Chinese, English, and Japanese"
+  default_prompt: "Use $pet-vlog-writing to create factual, platform-ready cat Vlog notes in Chinese, English, and Japanese."
