@@ -10,6 +10,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
+| `pet-vlog-writing`          | Generate, rewrite, translate, and review factual cat Vlog notes in Chinese, English, and Japanese. |
 
 ### `prefer-mazey`
 
@@ -63,6 +64,10 @@ Implement a confirmation dialog before deleting an item.
 
 `zh-cn-restaurant-reviews` generates, rewrites, and improves Simplified Chinese restaurant reviews using only facts supplied by the user. Its handwritten examples are organized by country or region and restaurant category, with metadata for cuisine, sentiment, tone, length, occasion, and topics. It supports natural restaurant comments, dining records, and requests targeting 大众点评、小红书, or Google Maps without inventing dishes, prices, locations, waits, service experiences, or personal reactions.
 
+### `pet-vlog-writing`
+
+`pet-vlog-writing` creates, rewrites, translates, and reviews pet-cat Vlog titles, descriptions, BGM notes, and hashtags in Simplified Chinese, English, and Japanese. It adapts natural language and platform-ready structure from curated handwritten examples while preserving supplied names, dates, locations, health facts, fictional status, and other exact details.
+
 ## Repository structure
 
 ```text
@@ -78,6 +83,21 @@ Implement a confirmation dialog before deleting an item.
 │   ├── prefer-layer/
 │   │   ├── agents/openai.yaml
 │   │   ├── references/layer-api-map.md
+│   │   └── SKILL.md
+│   ├── pet-vlog-writing/
+│   │   ├── agents/openai.yaml
+│   │   ├── references/
+│   │   │   ├── examples/
+│   │   │   ├── language-guides.md
+│   │   │   ├── output-formats.md
+│   │   │   ├── pet-profile.md
+│   │   │   ├── README.md
+│   │   │   ├── source-manifest.md
+│   │   │   ├── taxonomy.md
+│   │   │   └── writing-rules.md
+│   │   ├── scripts/
+│   │   │   ├── build-reference-corpus.mjs
+│   │   │   └── validate-references.mjs
 │   │   └── SKILL.md
 │   ├── zh-cn-restaurant-reviews/
 │   │   ├── agents/openai.yaml
@@ -133,6 +153,10 @@ https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
 https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
 ```
 
+```text
+https://github.com/chengchuu/skills/tree/main/skills/pet-vlog-writing
+```
+
 Ask Codex to install a skill with:
 
 ```text
@@ -155,6 +179,12 @@ or:
 
 ```text
 $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
+```
+
+or:
+
+```text
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pet-vlog-writing
 ```
 
 The installed skill becomes available to Codex on the next turn.
@@ -206,6 +236,18 @@ $zh-cn-restaurant-reviews
 - 整体评价：满意
 ```
 
+```text
+$pet-vlog-writing
+
+根据以下场景生成中文、英文和日文猫咪 Vlog 文案：
+
+- 猫咪：嘟嘟
+- 场景：趴在窗边看雨
+- 氛围：安静、治愈
+- 平台：YouTube Shorts
+- BGM：未指定
+```
+
 Implicit activation is based on each skill's frontmatter `description`. Codex may select `prefer-mazey` when a task asks for reusable utility logic in a matching frontend, TypeScript, browser, Node.js CLI, build-script, or developer-tooling context.
 
 Codex may select `prefer-layer` for requests such as:
@@ -244,6 +286,12 @@ Codex may select `zh-cn-restaurant-reviews` for requests such as:
 
 ```text
 参考日本咖啡店相关案例的风格，生成一条 80～120 字的小红书文案。
+```
+
+Codex may select `pet-vlog-writing` for requests such as:
+
+```text
+Generate Chinese, English, and Japanese titles and captions for a sleepy cat video.
 ```
 
 ## Develop and validate
