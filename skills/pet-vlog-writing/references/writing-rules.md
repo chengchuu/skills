@@ -2,7 +2,8 @@
 
 ## Strong recurring rules
 
-- Build every caption from observable or explicitly supplied facts. Preserve names, dates, places, BGM titles, health details, and version labels exactly.
+- Build every caption from observable or explicitly supplied facts. Preserve dates, places, BGM titles, health details, and version labels exactly.
+- Omit the pet's name from titles, descriptions, and hashtags by default. A supplied identity selects the correct profile and grammar; it does not authorize name-bearing copy. Include the exact name only when the user explicitly requests naming, attribution, or branding.
 - Write from a close pet-owner viewpoint with short, image-led titles and compact descriptions.
 - Keep multilingual versions aligned on the same core scene while adapting syntax and idiom naturally.
 - Prefer one or two concrete movements or visible details: eyes, tucked paws, tail flicks, fur, belly-up posture, small steps, grooming, peeking, kneading, or meowing.
@@ -54,8 +55,9 @@
 ## Hashtags
 
 1. Select tags supported by species, scene, content type, mood, and platform.
-2. Keep Chinese, English, and Japanese blocks separate. Allow established platform terms or proper names across languages only when natural.
-3. Preserve branded or campaign tags exactly.
-4. Choose one English casing convention within a set; do not mix `#cat`, `#Cat`, and `#CatVlog` inconsistently.
-5. Remove exact duplicates before rendering.
-6. For a compact version, concatenate the same ordered tags with no whitespace. Do not silently change the set.
+2. Do not turn a supplied pet identity into a name hashtag. Add a pet-name or branded-name tag only when explicitly requested.
+3. Keep Chinese, English, and Japanese blocks separate. Allow established platform terms or requested proper names across languages only when natural.
+4. Preserve explicitly supplied branded or campaign tags exactly.
+5. Choose one English casing convention within a set; do not mix `#cat`, `#Cat`, and `#CatVlog` inconsistently.
+6. Remove exact duplicates before rendering.
+7. For a compact version, concatenate the same ordered tags with no whitespace. Do not silently change the set.

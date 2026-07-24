@@ -6,7 +6,7 @@ The three languages should describe the same underlying scene, not mirror one an
 
 - Use natural, compact social-video Chinese with full-width punctuation.
 - Prefer short noun phrases, small questions, or scene-led titles. Descriptions commonly run one or two short sentences.
-- Choose `猫猫` for intimate owner voice, `小猫` for youth or cuteness, `猫咪` for neutral social copy, and `嘟嘟` only when identity is confirmed and naming fits the requested style.
+- Choose `猫猫` for intimate owner voice, `小猫` only when age or requested framing supports it, and `猫咪` for neutral social copy. Omit `嘟嘟` and name-led forms such as `嘟嘟的` by default, even when the identity field names her; use them only when the user explicitly requests the name in the artifact.
 - Warm words such as `治愈`, `温柔`, `陪伴`, `软软`, and `乖巧` recur, but vary them and tie them to observable details.
 - Use playful contrast sparingly: `小小…大大…`, mock job titles, or a serious title for a silly action.
 - Avoid unsupported inner states. Replace `她很幸福/她爱我` with observable wording such as `她眯着眼趴着` or `她靠在我身边` unless the interpretation is supplied.
@@ -18,7 +18,7 @@ The three languages should describe the same underlying scene, not mirror one an
 
 - Write idiomatic English from the facts, not a literal Chinese translation.
 - Use concise title case for titles by default: `A Sleepy Afternoon`, `Blanket Mode Activated`. Preserve intentional stylization and exact proper nouns.
-- Use `cat` neutrally, `kitten` only when age or requested style supports it, `kitty` for casual playful tone, `she` for confirmed Dudu, and `Dudu` only when identity is relevant.
+- Use `cat` neutrally, `kitten` only when age or requested style supports it, `kitty` for casual playful tone, and `she` for confirmed female identity. Omit `Dudu` and possessives such as `Dudu's` by default; use them only when the user explicitly requests the name in the artifact.
 - Prefer `soothing`, `comforting`, `calm`, or a concrete image over the direct calque `healing` in prose. `#Healing` may remain a corpus-style tag when appropriate.
 - Avoid literal internet-language translations, awkward absolutes, and unsupported mind-reading.
 - Use one English hashtag casing strategy per set. PascalCase improves multiword readability (`#SleepyCat`); lowercase is acceptable when the requested platform style uses it.
@@ -29,7 +29,7 @@ The three languages should describe the same underlying scene, not mirror one an
 ## Japanese (`ja-JP`)
 
 - Write compact, natural Japanese captions rather than translating Chinese syntax.
-- Use `猫` neutrally, `子猫` only when age or cute framing supports it, and `ドゥドゥ` only when identity is confirmed.
+- Use `猫` neutrally and `子猫` only when age or requested framing supports it. Omit `ドゥドゥ` and name-led forms such as `ドゥドゥの` by default; use them only when the user explicitly requests the name in the artifact.
 - Titles can be short noun phrases (`丸い後頭部`), active scene phrases (`毛布の結界、発動中`), or a restrained mixed-language title when the source format supports it.
 - Use Japanese punctuation and natural endings such as `〜している`, `〜な時間`, `〜みたい`, or a noun-ending title. Avoid stacking explanatory clauses.
 - Keep cute or humorous wordplay readable. Cat-speech forms such as `ニャ` are optional and should not become the default.

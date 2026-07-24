@@ -14,7 +14,7 @@ Use this file only when the request identifies Dudu or explicitly asks for the s
 - Stored emoji pair: `🐾💖`.
 - Copyright rule: cat videos do not need a closing copyright line because the cat is considered recognizable.
 
-Do not automatically add the name, category label, emoji, owner wording, or copyright statement. Use them only when the requested format calls for them.
+Do not automatically add the name, category label, emoji, owner wording, or copyright statement. A request field identifying the pet as Dudu does not by itself authorize `嘟嘟`, `Dudu`, `ドゥドゥ`, their possessive forms, or name hashtags in the output. Use them only when the user explicitly requests naming, attribution, or branding.
 
 ## Historical milestones
 

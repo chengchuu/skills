@@ -2,6 +2,12 @@
 
 Use only requested sections. Labels may be `zh`, `en`, and `jp` when the user follows the source convention.
 
+## Pet-name behavior
+
+- Treat a supplied pet name as identity context only.
+- Omit pet names, possessive name forms, and name hashtags from every format by default.
+- Include the exact name only when the user explicitly asks for naming, attribution, a branded series title, or a branded hashtag.
+
 ## Title only
 
 - Required: scene and target language.
@@ -87,4 +93,4 @@ jp:
 - Required: source text, source/target languages, requested artifact.
 - Optional: platform, tone, length, facts that must remain exact.
 - Preserve factual strength and omissions. Naturalize idiom, syntax, title rhythm, and tags independently.
-- Do not introduce a description, BGM, tag, location, or pet name absent from the source unless requested.
+- Do not introduce a description, BGM, tag, location, or pet name unless requested. A pet name present only in an identity field remains omitted from the rewritten or translated artifact by default.
