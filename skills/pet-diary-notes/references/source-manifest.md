@@ -1,6 +1,6 @@
 # Source manifest
 
-This manifest maps every Vlog section in `temp/pet-examples/pet.md` to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in `temp/pet-examples/pet.md` to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 

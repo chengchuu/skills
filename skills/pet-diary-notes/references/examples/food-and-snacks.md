@@ -1,6 +1,6 @@
 # Food and snacks examples
 
-Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new video.
+Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
 ## Example: 25-1218 Enjoying Corn Time
 
