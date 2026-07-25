@@ -27,6 +27,7 @@ const groups = {
     ["25-0602 Tired All the Time", "Sofa nap", "Guilin Park", "Sleeping on a sofa"],
   ],
   "companionship-and-affection.md": [
+    ["User-provided: 圆眼睛里的好奇心", "Curious gaze", "Shanghai", "Showing a curious, round-eyed expression"],
     ["26-0207-Completely-Unguarded", "Tucked paws and gaze", "Unknown", "Sitting with paws tucked and looking"],
     ["25-1126-The-Most-Healing-Kitten-in-the-World", "Healing portrait", "Unknown", "Unspecified"],
     ["25-1121-A-Cat-Loves-You", "Affection and companionship", "Unknown", "Small affectionate and companionable moments"],
@@ -93,6 +94,30 @@ const groups = {
   ],
 };
 
+const supplementalExamples = [
+  {
+    heading: "User-provided: 圆眼睛里的好奇心",
+    body: `zh:
+圆眼睛里的好奇心
+好奇又软萌的小表情，让这一刻格外治愈。
+BGM: Every Second
+#猫咪 #可爱猫咪 #猫咪日常 #好奇心 #治愈
+
+en:
+A Quiet, Curious Gaze
+The quiet curiosity in this little moment feels soft and comforting.
+BGM: Every Second
+#Cat #CuteCat #CatLife #CuriousCat #Gentle
+
+jp:
+まんまるな瞳の好奇心
+好奇心が伝わる表情に、そっと癒やされるひとときです。
+BGM: Every Second
+#猫 #かわいい猫 #猫のいる暮らし #好奇心 #癒し`,
+  },
+];
+const supplementalHeadings = new Set(supplementalExamples.map(example => example.heading));
+
 const repeatedGroups = new Map([
   ["26-0407-A-Sleepy-Afternoon", "Repeated Chinese title with 25-0707; different descriptions and English titles"],
   ["25-0707 Sticky Little Baby", "Repeated Chinese title with 26-0407; different descriptions and English titles"],
@@ -129,6 +154,7 @@ function parseSource(markdown) {
 }
 
 function parseDate(heading) {
+  if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
   const match = /^(\d{2})-(\d{2})(\d{2})/.exec(heading);
   return match ? `20${match[1]}-${match[2]}-${match[3]}` : "unknown";
 }
@@ -186,6 +212,9 @@ function categoryFor(file) {
 }
 
 function dimensions(file, heading) {
+  if (heading === "User-provided: 圆眼睛里的好奇心") {
+    return { country: "China", region: "Shanghai", city: "Shanghai", mood: "Healing", tone: "Cute and gentle" };
+  }
   if (file === "ai-storytelling.md") {
     if (heading === "26-0323 AI Ninja v01") {
       return { country: "Japan", region: "unknown", city: "Kyoto", mood: "Dramatic", tone: "Cinematic" };
@@ -221,9 +250,25 @@ function healthStatus(heading) {
 }
 
 function platformFor(heading) {
+  if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
   return heading === "26-0225-Blanket-Mode-Activated"
     ? "YouTube Shorts indicated by an additional #shorts hashtag variant"
     : "unknown";
+}
+
+function contentTypeFor(file, heading) {
+  if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
+  return file === "ai-storytelling.md" ? "AI-generated fictional scene" : "Real-life";
+}
+
+function sourcePathFor(heading) {
+  return supplementalHeadings.has(heading)
+    ? "User-provided skill example"
+    : "`temp/pet-examples/pet.md`";
+}
+
+function petIdentityFor(heading) {
+  return heading === "User-provided: 圆眼睛里的好奇心" ? "嘟嘟" : null;
 }
 
 function formatLanguage(label, block) {
@@ -248,7 +293,7 @@ function exampleMarkdown(example) {
   const { preface, blocks } = parseLanguageBlocks(example.body);
   const languages = Object.keys(blocks);
   const bgm = [...new Set(Object.values(blocks).flatMap(block => block.bgm))];
-  const contentType = detail.file === "ai-storytelling.md" ? "AI-generated fictional scene" : "Real-life";
+  const contentType = contentTypeFor(detail.file, example.heading);
   const lines = [
     `## Example: ${example.heading}`,
     "",
@@ -262,6 +307,7 @@ function exampleMarkdown(example) {
     `- City: ${dims.city}`,
     `- Location: ${detail.location}`,
     `- Languages: ${languages.map(language => ({ zh: "zh-CN", en: "en", jp: "ja-JP" })[language]).join(", ")}`,
+    ...(petIdentityFor(example.heading) ? [`- Pet identity: ${petIdentityFor(example.heading)}`] : []),
     `- BGM: ${bgm.length ? bgm.join(" / ") : "Not supplied"}`,
     `- Mood: ${dims.mood}`,
     `- Tone: ${dims.tone}`,
@@ -270,7 +316,7 @@ function exampleMarkdown(example) {
     `- Health-related status: ${healthStatus(example.heading)}`,
     `- Content type: ${contentType}`,
     `- Platform: ${platformFor(example.heading)}`,
-    "- Source path: `temp/pet-examples/pet.md`",
+    `- Source path: ${sourcePathFor(example.heading)}`,
   ];
   if (preface) lines.push(`- Source preface: ${preface.replace(/\n+/g, " / ")}`);
   lines.push("");
@@ -294,6 +340,7 @@ function missingFields(example) {
   if (platformFor(example.heading) === "unknown") missing.push("platform");
   if (detail.location === "Unknown") missing.push("location");
   if (!Object.values(blocks).some(block => block.bgm.length)) missing.push("BGM");
+  if (contentTypeFor(detail.file, example.heading) === "unknown") missing.push("real-life or AI-generated status");
   return missing.length ? missing.join(", ") : "none";
 }
 
@@ -303,19 +350,29 @@ function manifestMarkdown(examples) {
     const dims = dimensions(detail.file, example.heading);
     const languages = parseLanguages(example.body).map(language => ({ zh: "zh-CN", en: "en", jp: "ja-JP" })[language]).join(", ");
     const repeated = repeatedGroups.get(example.heading);
-    return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${dims.country} | ${detail.location} | ${detail.file === "ai-storytelling.md" ? "AI-generated" : "Real-life"} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${repeated ? "High for identity; medium for relationship" : "High"} | ${repeated ?? "No duplicate detected"} |`;
+    const contentType = contentTypeFor(detail.file, example.heading);
+    const confidence = supplementalHeadings.has(example.heading)
+      ? "High"
+      : repeated
+        ? "High for identity; medium for relationship"
+        : "High";
+    const notes = supplementalHeadings.has(example.heading)
+      ? "Pet identity supplied as 嘟嘟; real-life status supplied by user"
+      : repeated ?? "No duplicate detected";
+    return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${dims.country} | ${detail.location} | ${contentType} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${confidence} | ${notes} |`;
   });
   return `# Source manifest
 
-This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\` to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\` and separately supplied user example to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
-- Source sections: ${examples.length}
+- Source sections from \`temp/pet-examples/pet.md\`: ${examples.length - supplementalExamples.length}
+- Supplemental user-provided examples: ${supplementalExamples.length}
 - Curated examples: ${examples.length}
 - Merge decisions: none; every distinct source section is retained.
 - Language availability: zh-CN ${examples.filter(example => parseLanguages(example.body).includes("zh")).length}, en ${examples.filter(example => parseLanguages(example.body).includes("en")).length}, ja-JP ${examples.filter(example => parseLanguages(example.body).includes("jp")).length}.
-- Content types: real-life ${examples.filter(example => !example.heading.includes(" AI ")).length}, AI-generated ${examples.filter(example => example.heading.includes(" AI ")).length}.
+- Content types: real-life ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "Real-life").length}, AI-generated ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "AI-generated fictional scene").length}, unknown ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "unknown").length}.
 
 ## Section mapping
 
@@ -348,7 +405,7 @@ ${rows.join("\n")}
 
 async function main() {
   const source = await readFile(sourcePath, "utf8");
-  const examples = parseSource(source);
+  const examples = [...supplementalExamples, ...parseSource(source)];
   const classified = new Set(Object.values(groups).flat().map(([heading]) => heading));
   const sourceHeadings = new Set(examples.map(example => example.heading));
   const missing = examples.filter(example => !classified.has(example.heading)).map(example => example.heading);

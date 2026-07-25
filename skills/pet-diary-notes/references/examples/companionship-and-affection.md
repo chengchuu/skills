@@ -2,6 +2,83 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: User-provided: 圆眼睛里的好奇心
+
+- Source heading: `User-provided: 圆眼睛里的好奇心`
+- Source date: 2025-06-01
+- Version: none
+- Category: Companionship and affection
+- Secondary category: Curious gaze
+- Country: China
+- Region: Shanghai
+- City: Shanghai
+- Location: Shanghai
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- BGM: Every Second
+- Mood: Healing
+- Tone: Cute and gentle
+- Pet behavior: Showing a curious, round-eyed expression
+- Pet activity: Showing a curious, round-eyed expression
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: User-provided skill example
+
+### Chinese
+
+#### Title
+
+圆眼睛里的好奇心
+
+#### Description
+
+好奇又软萌的小表情，让这一刻格外治愈。
+
+#### BGM
+
+Every Second
+
+#### Hashtags
+
+#猫咪 #可爱猫咪 #猫咪日常 #好奇心 #治愈
+
+### English
+
+#### Title
+
+A Quiet, Curious Gaze
+
+#### Description
+
+The quiet curiosity in this little moment feels soft and comforting.
+
+#### BGM
+
+Every Second
+
+#### Hashtags
+
+#Cat #CuteCat #CatLife #CuriousCat #Gentle
+
+### Japanese
+
+#### Title
+
+まんまるな瞳の好奇心
+
+#### Description
+
+好奇心が伝わる表情に、そっと癒やされるひとときです。
+
+#### BGM
+
+Every Second
+
+#### Hashtags
+
+#猫 #かわいい猫 #猫のいる暮らし #好奇心 #癒し
+
 ## Example: 26-0207-Completely-Unguarded
 
 - Source heading: `26-0207-Completely-Unguarded`

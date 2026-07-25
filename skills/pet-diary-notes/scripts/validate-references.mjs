@@ -86,7 +86,7 @@ async function main() {
   const headings = allBlocks.map(block => block.heading);
   const duplicates = headings.filter((heading, index) => headings.indexOf(heading) !== index);
   if (duplicates.length) report(`Duplicate curated headings: ${[...new Set(duplicates)].join(", ")}`);
-  if (headings.length !== 60) report(`Expected 60 curated examples, found ${headings.length}.`);
+  if (headings.length !== 61) report(`Expected 61 curated examples, found ${headings.length}.`);
 
   for (const block of allBlocks) {
     for (const field of ["- Category:", "- Languages:", "- Content type:", "- Source path:"]) {
@@ -106,7 +106,9 @@ async function main() {
     const source = await readFile(sourcePath, "utf8");
     const originals = sourceHeadings(source);
     const missing = originals.filter(heading => !headings.includes(heading));
-    const extra = headings.filter(heading => !originals.includes(heading));
+    const extra = allBlocks
+      .filter(block => !originals.includes(block.heading) && block.body.includes("- Source path: `temp/pet-examples/pet.md`"))
+      .map(block => block.heading);
     if (missing.length) report(`Source headings missing from corpus: ${missing.join(", ")}`);
     if (extra.length) report(`Curated headings missing from source: ${extra.join(", ")}`);
     const curatedByHeading = new Map(allBlocks.map(block => [block.heading, block.body]));

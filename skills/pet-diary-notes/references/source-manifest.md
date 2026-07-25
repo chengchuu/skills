@@ -1,19 +1,21 @@
 # Source manifest
 
-This manifest maps every pet diary source section in `temp/pet-examples/pet.md` to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in `temp/pet-examples/pet.md` and separately supplied user example to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
-- Source sections: 60
-- Curated examples: 60
+- Source sections from `temp/pet-examples/pet.md`: 60
+- Supplemental user-provided examples: 1
+- Curated examples: 61
 - Merge decisions: none; every distinct source section is retained.
-- Language availability: zh-CN 60, en 59, ja-JP 42.
-- Content types: real-life 50, AI-generated 10.
+- Language availability: zh-CN 61, en 60, ja-JP 43.
+- Content types: real-life 51, AI-generated 10, unknown 0.
 
 ## Section mapping
 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | Country | Location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `User-provided: 圆眼睛里的好奇心` | 2025-06-01 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | China | Shanghai | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; real-life status supplied by user |
 | `26-0407-A-Sleepy-Afternoon` | 2026-04-07 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Repeated or versioned | Keep distinct | country, region, city, platform, location, BGM | High for identity; medium for relationship | Repeated Chinese title with 25-0707; different descriptions and English titles |
 | `26-0225-Blanket-Mode-Activated` | 2026-02-25 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Unique | Keep distinct | country, region, city, location | High | No duplicate detected |
 | `26-0225-Cozy-Blanket-Kitty` | 2026-02-25 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Unique | Keep distinct | country, region, city, platform, location | High | No duplicate detected |
@@ -64,16 +66,16 @@ This manifest maps every pet diary source section in `temp/pet-examples/pet.md` 
 | `25-0605 Don't Even Think Once` | 2025-06-05 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Unique | Keep distinct | country, region, city, platform, location, BGM | High | No duplicate detected |
 | `25-0603 Moments with a Little Cat` | 2025-06-03 | none | Daily life and office | [daily-life-and-office.md](examples/daily-life-and-office.md) | zh-CN, en, ja-JP | Unknown | Indoor home | Real-life | Unique | Keep distinct | country, region, city, platform, BGM | High | No duplicate detected |
 | `25-0602 Tired All the Time` | 2025-06-02 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | China | Guilin Park | Real-life | Unique | Keep distinct | platform, BGM | High | No duplicate detected |
-| `26-0328 AI Sword v01` | 2026-03-28 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional generated scene | AI-generated | Unique | Keep distinct | region, city, platform, BGM | High | No duplicate detected |
-| `26-0324 AI Monster v01` | 2026-03-24 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional generated scene | AI-generated | Unique | Keep distinct | Japanese, region, city, platform, BGM | High | No duplicate detected |
-| `26-0323 AI Ninja v01` | 2026-03-23 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | Japan | Gion | AI-generated | Unique | Keep distinct | Japanese, region, platform, BGM | High | No duplicate detected |
-| `26-0320 AI Dance v02` | 2026-03-20 | v02 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional generated scene | AI-generated | Repeated or versioned | Keep distinct | Japanese, region, city, platform | High for identity; medium for relationship | Versioned dance concept with different BGM and movement |
-| `26-0320 AI Dance v01` | 2026-03-20 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional generated scene | AI-generated | Repeated or versioned | Keep distinct | region, city, platform | High for identity; medium for relationship | Versioned dance concept with different BGM and movement |
-| `26-0322 AI City v01` | 2026-03-22 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional city | AI-generated | Unique | Keep distinct | region, city, platform, BGM | High | No duplicate detected |
-| `26-0319 AI CEO v02` | 2026-03-19 | v02 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN | AI or fictional setting | Fictional office | AI-generated | Repeated or versioned | Keep distinct | English, Japanese, region, city, platform, BGM | High for identity; medium for relationship | Versioned concept; Chinese-only shorter variant |
-| `26-0319 AI CEO v01` | 2026-03-19 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional office | AI-generated | Repeated or versioned | Keep distinct | Japanese, region, city, platform, BGM | High for identity; medium for relationship | Versioned concept; trilingual availability differs |
-| `26-0319 AI Phone v03` | 2026-03-19 | v03 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional indoor scene | AI-generated | Repeated or versioned | Keep distinct | Japanese, region, city, platform, BGM | High for identity; medium for relationship | English block repeats v01; Chinese version text differs |
-| `26-0318 AI Phone v01` | 2026-03-18 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional indoor scene | AI-generated | Repeated or versioned | Keep distinct | region, city, platform, BGM | High for identity; medium for relationship | English block repeats v03; Chinese version text differs |
+| `26-0328 AI Sword v01` | 2026-03-28 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional generated scene | AI-generated fictional scene | Unique | Keep distinct | region, city, platform, BGM | High | No duplicate detected |
+| `26-0324 AI Monster v01` | 2026-03-24 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional generated scene | AI-generated fictional scene | Unique | Keep distinct | Japanese, region, city, platform, BGM | High | No duplicate detected |
+| `26-0323 AI Ninja v01` | 2026-03-23 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | Japan | Gion | AI-generated fictional scene | Unique | Keep distinct | Japanese, region, platform, BGM | High | No duplicate detected |
+| `26-0320 AI Dance v02` | 2026-03-20 | v02 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional generated scene | AI-generated fictional scene | Repeated or versioned | Keep distinct | Japanese, region, city, platform | High for identity; medium for relationship | Versioned dance concept with different BGM and movement |
+| `26-0320 AI Dance v01` | 2026-03-20 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional generated scene | AI-generated fictional scene | Repeated or versioned | Keep distinct | region, city, platform | High for identity; medium for relationship | Versioned dance concept with different BGM and movement |
+| `26-0322 AI City v01` | 2026-03-22 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional city | AI-generated fictional scene | Unique | Keep distinct | region, city, platform, BGM | High | No duplicate detected |
+| `26-0319 AI CEO v02` | 2026-03-19 | v02 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN | AI or fictional setting | Fictional office | AI-generated fictional scene | Repeated or versioned | Keep distinct | English, Japanese, region, city, platform, BGM | High for identity; medium for relationship | Versioned concept; Chinese-only shorter variant |
+| `26-0319 AI CEO v01` | 2026-03-19 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional office | AI-generated fictional scene | Repeated or versioned | Keep distinct | Japanese, region, city, platform, BGM | High for identity; medium for relationship | Versioned concept; trilingual availability differs |
+| `26-0319 AI Phone v03` | 2026-03-19 | v03 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en | AI or fictional setting | Fictional indoor scene | AI-generated fictional scene | Repeated or versioned | Keep distinct | Japanese, region, city, platform, BGM | High for identity; medium for relationship | English block repeats v01; Chinese version text differs |
+| `26-0318 AI Phone v01` | 2026-03-18 | v01 | AI storytelling | [ai-storytelling.md](examples/ai-storytelling.md) | zh-CN, en, ja-JP | AI or fictional setting | Fictional indoor scene | AI-generated fictional scene | Repeated or versioned | Keep distinct | region, city, platform, BGM | High for identity; medium for relationship | English block repeats v03; Chinese version text differs |
 
 ## Duplicate and version decisions
 
