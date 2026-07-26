@@ -1,21 +1,22 @@
 # Source manifest
 
-This manifest maps every pet diary source section in `temp/pet-examples/pet.md` and separately supplied user example to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in `temp/pet-examples/pet.md` and separately supplied user examples to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
 - Source sections from `temp/pet-examples/pet.md`: 60
-- Supplemental user-provided examples: 1
-- Curated examples: 61
+- Supplemental user-provided examples: 2
+- Curated examples: 62
 - Merge decisions: none; every distinct source section is retained.
-- Language availability: zh-CN 61, en 60, ja-JP 43.
-- Content types: real-life 51, AI-generated 10, unknown 0.
+- Language availability: zh-CN 62, en 61, ja-JP 44.
+- Content types: real-life 52, AI-generated 10, unknown 0.
 
 ## Section mapping
 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | Country | Location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `User-provided: 圆眼睛里的好奇心` | 2025-06-01 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | China | Shanghai | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; real-life status supplied by user |
+| `User-provided: 猫砂盆里的乖巧日常` | 2025-07-10 | none | Daily life and office | [daily-life-and-office.md](examples/daily-life-and-office.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Unique | Keep distinct | country, region, city, location | High | Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context |
 | `26-0407-A-Sleepy-Afternoon` | 2026-04-07 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Repeated or versioned | Keep distinct | country, region, city, platform, location, BGM | High for identity; medium for relationship | Repeated Chinese title with 25-0707; different descriptions and English titles |
 | `26-0225-Blanket-Mode-Activated` | 2026-02-25 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Unique | Keep distinct | country, region, city, location | High | No duplicate detected |
 | `26-0225-Cozy-Blanket-Kitty` | 2026-02-25 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | Unknown | Unknown | Real-life | Unique | Keep distinct | country, region, city, platform, location | High | No duplicate detected |

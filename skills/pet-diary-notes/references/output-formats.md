@@ -32,7 +32,7 @@ jp:
 
 - Required: observable scene and target language.
 - Optional: mood, tone, platform, content form, and pet identity.
-- Length: usually one or two concise sentences.
+- Length: exactly one concise sentence unless the user explicitly requests another length.
 - Hashtags/BGM: omit unless requested.
 - Mistake to avoid: turning a quiet diary observation into promotional copy.
 
@@ -40,7 +40,7 @@ jp:
 
 - Required: observable scene and languages.
 - Optional: mood, pet identity, location, length.
-- Length: one title plus one or two concise sentences.
+- Length: one title plus exactly one description sentence unless the user explicitly requests another length.
 - Hashtags/BGM: omit unless requested.
 - Mistake to avoid: making each language literal or adding facts in only one version.
 
@@ -48,7 +48,7 @@ jp:
 
 - Required: one or more supplied observations and target language.
 - Optional: title, date, milestone, mood, BGM, and hashtags.
-- Length: one short title or one to three sentences.
+- Length: one short title or one sentence; if both are requested, keep the description to one sentence.
 - Platform: optional; do not force social-media hooks or tags.
 - Mistake to avoid: inventing what happened before or after the recorded moment.
 
@@ -64,6 +64,7 @@ jp:
 - Required: supplied video event and target language.
 - Optional: title, sequence, platform, location, mood, BGM, and hashtags.
 - Order: title when requested → concise event description → BGM if supplied → hashtags if requested.
+- Keep the description to exactly one sentence unless the user explicitly requests another length.
 - Preserve the supplied event sequence; do not invent actions between clips.
 
 ## Full multilingual entry
@@ -71,7 +72,7 @@ jp:
 - Required: scene, requested languages, real-life or generated status.
 - Optional: pet identity, diary/Plog/Vlog form, platform, mood, location, BGM, tags, compact tags.
 - Order within each language: title, description, BGM if supplied, spaced hashtags, compact hashtags if requested.
-- Recommended length: title plus 1–2 sentences and 4–10 relevant tags per language.
+- Recommended length: title plus exactly one description sentence and 4–10 relevant tags per language.
 - Mistake to avoid: changing the scene, proper nouns, or fictional status between languages.
 
 ```text

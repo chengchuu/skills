@@ -15,7 +15,7 @@ Create natural `zh-CN`, `en`, and `ja-JP` diary-style captions, short pet record
 4. Read [references/pet-profile.md](references/pet-profile.md) only when Dudu's identity or stable profile matters. Never assume an unnamed cat is Dudu.
 5. Read the relevant sections of [references/writing-rules.md](references/writing-rules.md), [references/language-guides.md](references/language-guides.md), and [references/output-formats.md](references/output-formats.md).
 6. Select the smallest relevant example file, normally one. Learn structure, rhythm, tone, vocabulary, and hashtag practice without copying distinctive sentences or transferring example facts.
-7. Draft each language naturally from the same fact set. Adapt rather than translate literally, but keep the event, places, dates, BGM, health status, and fictional status consistent. If naming was explicitly requested, keep the name consistent too.
+7. Draft each language naturally from the same fact set. Keep every description to exactly one sentence unless the user explicitly requests a different length or a careful health note requires additional qualified sentences. Adapt rather than translate literally, but keep the event, places, dates, BGM, health status, and fictional status consistent. If naming was explicitly requested, keep the name consistent too.
 8. Deduplicate hashtags, keep language blocks separate, and create a no-space compact version only when requested. Add `#shorts` only for a requested or clearly required Shorts format.
 9. Verify that no behavior, emotion, health condition, location, food, date, treatment, recovery timeline, photo detail, or video event was invented.
 10. Return only the requested artifact unless the user asks for explanation, analysis, or alternatives.

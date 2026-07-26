@@ -7,7 +7,7 @@
 - Write from a close pet-owner viewpoint with short, image-led titles and compact descriptions; use a quieter diary rhythm when no promotional platform format is requested.
 - Keep multilingual versions aligned on the same core scene while adapting syntax and idiom naturally.
 - Prefer one or two concrete movements or visible details: eyes, tucked paws, tail flicks, fur, belly-up posture, small steps, grooming, peeking, kneading, or meowing.
-- Keep titles concise. Descriptions usually use one or two sentences; longer explanatory blocks appear mainly in health notes.
+- Keep titles concise. Write each description as exactly one sentence by default, including every language in a multilingual entry. Use additional sentences only when the user explicitly requests them or a careful health note needs them to preserve factual qualifiers.
 - Deduplicate tags. Keep spaced tags separated by one space; render compact tags with no spaces or line breaks between tags.
 - Omit BGM when none is supplied. Preserve exact capitalization, punctuation, artist names, and parenthetical text when it is supplied.
 - Do not append copyright text by default.

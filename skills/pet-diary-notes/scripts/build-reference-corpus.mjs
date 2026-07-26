@@ -71,6 +71,7 @@ const groups = {
     ["25-1026 From Kitten to Boss Cat", "Growth comparison", "Unknown", "Kitten-to-cat comparison"],
   ],
   "daily-life-and-office.md": [
+    ["User-provided: 猫砂盆里的乖巧日常", "Litter box routine", "Unknown", "Using the litter box and covering it afterward"],
     ["25-0901-Keyboard-Guardian", "Office cat", "Office", "Patrolling a desk"],
     ["25-1106 Round Little Head", "Physical detail", "Unknown", "Showing the back of the head"],
     ["25-1028 A Busy Little Life", "Daily routine", "Unknown", "Chasing sunlight, watching outside, and grooming"],
@@ -115,6 +116,26 @@ jp:
 BGM: Every Second
 #猫 #かわいい猫 #猫のいる暮らし #好奇心 #癒し`,
   },
+  {
+    heading: "User-provided: 猫砂盆里的乖巧日常",
+    body: `zh:
+猫砂盆里的乖巧日常
+安静地上完厕所，再认真地把猫砂埋好，乖乖完成自己的小日常。
+BGM：biubiubiu
+#猫咪 #猫咪日常 #猫砂盆 #乖巧猫咪 #宠物日记
+
+en:
+A Neat Little Litter Box Routine
+A quiet trip to the litter box ends with carefully covering everything up like a well-behaved little cat.
+BGM: biubiubiu
+#Cat #CatLife #LitterBoxRoutine #WellBehavedCat #PetDiary
+
+jp:
+おりこうさんのトイレ時間
+静かにトイレを済ませたあとは、きちんと砂をかけて、今日もおりこうさんにできました。
+BGM：biubiubiu
+#猫 #猫のいる暮らし #猫トイレ #おりこうさん #ペット日記`,
+  },
 ];
 const supplementalHeadings = new Set(supplementalExamples.map(example => example.heading));
 
@@ -155,6 +176,7 @@ function parseSource(markdown) {
 
 function parseDate(heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
+  if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
   const match = /^(\d{2})-(\d{2})(\d{2})/.exec(heading);
   return match ? `20${match[1]}-${match[2]}-${match[3]}` : "unknown";
 }
@@ -177,11 +199,12 @@ function parseLanguageBlocks(body) {
     const end = labels[index + 1]?.index ?? body.length;
     const lines = body.slice(start, end).trim().split(/\r?\n/).map(line => line.trim()).filter(Boolean);
     const hashtagLines = lines.filter(line => line.startsWith("#"));
-    const contentLines = lines.filter(line => !line.startsWith("#") && !line.startsWith("BGM:"));
+    const bgmLines = lines.filter(line => /^BGM[:：]/.test(line));
+    const contentLines = lines.filter(line => !line.startsWith("#") && !/^BGM[:：]/.test(line));
     blocks[label] = {
       title: contentLines.shift() ?? "",
       description: contentLines,
-      bgm: lines.filter(line => line.startsWith("BGM:")).map(line => line.slice(4).trim()),
+      bgm: bgmLines.map(line => line.replace(/^BGM[:：]\s*/, "")),
       hashtags: hashtagLines,
     };
   }
@@ -224,6 +247,9 @@ function dimensions(file, heading) {
   if (heading === "25-0602 Tired All the Time") {
     return { country: "China", region: "Shanghai", city: "Shanghai", mood: "Relaxed", tone: "Gentle" };
   }
+  if (heading === "User-provided: 猫砂盆里的乖巧日常") {
+    return { country: "Unknown", region: "unknown", city: "unknown", mood: "Calm", tone: "Well-behaved and cute" };
+  }
   const presets = {
     "sleep-and-relaxation.md": ["Healing", "Gentle"],
     "companionship-and-affection.md": ["Healing", "Warm"],
@@ -251,6 +277,7 @@ function healthStatus(heading) {
 
 function platformFor(heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
+  if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
   return heading === "26-0225-Blanket-Mode-Activated"
     ? "YouTube Shorts indicated by an additional #shorts hashtag variant"
     : "unknown";
@@ -258,6 +285,8 @@ function platformFor(heading) {
 
 function contentTypeFor(file, heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
+  if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
+  if (supplementalHeadings.has(heading)) return "unknown";
   return file === "ai-storytelling.md" ? "AI-generated fictional scene" : "Real-life";
 }
 
@@ -268,7 +297,14 @@ function sourcePathFor(heading) {
 }
 
 function petIdentityFor(heading) {
-  return heading === "User-provided: 圆眼睛里的好奇心" ? "嘟嘟" : null;
+  return [
+    "User-provided: 圆眼睛里的好奇心",
+    "User-provided: 猫砂盆里的乖巧日常",
+  ].includes(heading) ? "嘟嘟" : null;
+}
+
+function formatFor(heading) {
+  return heading === "User-provided: 猫砂盆里的乖巧日常" ? "Vlog" : null;
 }
 
 function formatLanguage(label, block) {
@@ -308,6 +344,7 @@ function exampleMarkdown(example) {
     `- Location: ${detail.location}`,
     `- Languages: ${languages.map(language => ({ zh: "zh-CN", en: "en", jp: "ja-JP" })[language]).join(", ")}`,
     ...(petIdentityFor(example.heading) ? [`- Pet identity: ${petIdentityFor(example.heading)}`] : []),
+    ...(formatFor(example.heading) ? [`- Format: ${formatFor(example.heading)}`] : []),
     `- BGM: ${bgm.length ? bgm.join(" / ") : "Not supplied"}`,
     `- Mood: ${dims.mood}`,
     `- Tone: ${dims.tone}`,
@@ -332,6 +369,7 @@ function missingFields(example) {
   const dims = dimensions(detail.file, example.heading);
   const { blocks } = parseLanguageBlocks(example.body);
   const missing = [];
+  if (parseDate(example.heading) === "unknown") missing.push("source date");
   if (!languages.includes("en")) missing.push("English");
   if (!languages.includes("jp")) missing.push("Japanese");
   if (dims.country === "Unknown") missing.push("country");
@@ -357,13 +395,15 @@ function manifestMarkdown(examples) {
         ? "High for identity; medium for relationship"
         : "High";
     const notes = supplementalHeadings.has(example.heading)
-      ? "Pet identity supplied as 嘟嘟; real-life status supplied by user"
+      ? example.heading === "User-provided: 猫砂盆里的乖巧日常"
+        ? "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context"
+        : "Pet identity supplied as 嘟嘟; real-life status supplied by user"
       : repeated ?? "No duplicate detected";
     return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${dims.country} | ${detail.location} | ${contentType} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${confidence} | ${notes} |`;
   });
   return `# Source manifest
 
-This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\` and separately supplied user example to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\` and separately supplied user examples to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
