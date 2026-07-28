@@ -13,9 +13,9 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
   - [Use the skill](#use-the-skill)
     - [`prefer-mazey`](#prefer-mazey)
     - [`prefer-layer`](#prefer-layer)
+    - [`pet-diary-notes`](#pet-diary-notes)
     - [`zh-cn-writing`](#zh-cn-writing)
     - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
-    - [`pet-diary-notes`](#pet-diary-notes)
   - [Develop and validate](#develop-and-validate)
   - [Source of truth](#source-of-truth)
   - [Contributing and license](#contributing-and-license)
@@ -26,9 +26,9 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `prefer-mazey`              | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic. |
 | `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
+| `pet-diary-notes`           | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples. |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
-| `pet-diary-notes`           | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples. |
 
 ## Install a skill
 
@@ -89,6 +89,29 @@ Add a loading dialog while the request is running, then show a success message.
 Show a tooltip next to the invalid form field.
 ```
 
+### `pet-diary-notes`
+
+```text
+$pet-diary-notes
+
+根据以下场景生成中文、英文和日文宠物日记文案：
+
+- 宠物：嘟嘟
+- 内容形式：Plog
+- 场景：趴在窗边看雨
+- 氛围：安静、治愈
+- 内容类型：Real-life
+- 日期：2025-03-07
+- 平台：多平台
+- BGM：未指定
+```
+
+Codex may select `pet-diary-notes` for requests such as:
+
+```text
+Generate Chinese, English, and Japanese diary-style captions for photos and videos of my sleepy cat.
+```
+
 ### `zh-cn-writing`
 
 ```text
@@ -145,29 +168,6 @@ Codex may select `zh-cn-restaurant-reviews` for requests such as:
 
 ```text
 参考日本咖啡店相关案例的风格，生成一条 80～120 字的小红书文案。
-```
-
-### `pet-diary-notes`
-
-```text
-$pet-diary-notes
-
-根据以下场景生成中文、英文和日文宠物日记文案：
-
-- 宠物：嘟嘟
-- 内容形式：Plog
-- 场景：趴在窗边看雨
-- 氛围：安静、治愈
-- 内容类型：Real-life
-- 日期：2025-03-07
-- 平台：多平台
-- BGM：未指定
-```
-
-Codex may select `pet-diary-notes` for requests such as:
-
-```text
-Generate Chinese, English, and Japanese diary-style captions for photos and videos of my sleepy cat.
 ```
 
 ## Develop and validate
