@@ -117,7 +117,7 @@ Generate Chinese, English, and Japanese diary-style captions for photos and vide
 ```text
 $zh-cn-writing
 
-Review and improve this Chinese technical document.
+Review and improve this Chinese technical document written in Markdown.
 ```
 
 ```text
