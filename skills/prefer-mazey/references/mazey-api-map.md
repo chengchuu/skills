@@ -1,10 +1,11 @@
 # Mazey API Map
 
-This discovery index was verified against the flat exports from `src/index.ts` and the defining source modules. It covers all 145 runtime exports in the current repository: 143 functions and 2 console constants. Always confirm the installed Mazey version's declarations or source before use.
+This discovery index was verified against the flat exports from `src/index.ts` and the defining source modules. It covers all 154 runtime exports in the current repository: 152 functions and 2 console constants. Always confirm the installed Mazey version's declarations or source before use.
 
 ## Contents
 
 - [Runtime labels](#runtime-labels)
+- [Package metadata](#package-metadata)
 - [Date and time](#date-and-time)
 - [Function control](#function-control)
 - [Validation and JSON](#validation-and-json)
@@ -31,6 +32,12 @@ This discovery index was verified against the flat exports from `src/index.ts` a
 | Browser-preferred  | Safe or guarded outside a browser, but only meaningful for browser capabilities. Verify its fallback or rejection. |
 | Browser-only       | Directly requires browser or DOM globals. Do not call from a Node.js-only path.                                    |
 
+## Package metadata
+
+| Function                | Purpose                                               | Runtime   | Notes                                                                                                                                |
+| ----------------------- | ----------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `derivePackageMetadata` | Derive package identity, bundle, and install metadata | Universal | Validates manifest identity, normalizes author fields, supports npm/pnpm/Yarn commands, and composes `toJavaScriptGlobalName`.       |
+
 ## Date and time
 
 | Function                  | Purpose                                                   | Runtime            | Notes                                                                                                                                          |
@@ -38,6 +45,8 @@ This discovery index was verified against the flat exports from `src/index.ts` a
 | `mNow`                    | Return the current epoch time in milliseconds             | Universal          | Uses `Date.now()` with an older fallback.                                                                                                      |
 | `getDateDifference`       | Calculate an interval as days, seconds, or English text   | Universal          | Local time for `YYYY-MM-DD HH:mm:ss`; `text` omits zero-valued units; negative or invalid intervals return empty.                              |
 | `formatDurationFromMs`    | Format milliseconds in seconds, minutes, hours, or days   | Universal          | Largest unit; one decimal maximum; negatives and non-finite values become `0 seconds`.                                                         |
+| `parseLocalDateTime`      | Parse an HTML local date-time value strictly              | Universal          | Accepts a four-or-more-digit year, `T`, minutes, optional seconds, and 1-3 fraction digits; uses local fields; invalid input returns `null`.      |
+| `formatLocalDateTime`     | Format a date for an HTML local date-time control         | Universal          | Uses local fields without UTC conversion and pads years to at least four digits; supports minute, second, or millisecond precision.              |
 | `isValidDate`             | Validate date objects, timestamps, and structured strings | Universal          | Numbers are milliseconds; local and zoned ISO-style strings are parsed strictly; locale date strings are rejected.                            |
 | `isToday`                 | Test whether a date is today                              | Universal          | Accepts `Date`, supported strings, and millisecond timestamps; compares local year/month/day; invalid input returns false.                     |
 | `isThisYear`              | Test whether a date is in the current year                | Universal          | Accepts `Date`, supported strings, and millisecond timestamps; compares the local year; invalid input returns false.                           |
@@ -86,7 +95,8 @@ This discovery index was verified against the flat exports from `src/index.ts` a
 | `genUniqueNumString` | Combine current milliseconds with random digits           | Universal          | Not guaranteed unique and not suitable for security identifiers.                                            |
 | `floatToPercent`     | Convert a fraction to a percentage string                 | Universal          | Without `fixSize`, floors after multiplying by 100; with it, uses `toFixed`.                                |
 | `floatFixed`         | Format a number/string to fixed decimals                  | Universal          | Uses `parseFloat(...).toFixed(size)` and returns a string.                                                  |
-| `getFileSize`        | Format bytes using 1024-based units                       | Universal          | Uses ceiling and returns empty for non-positive/non-finite values.                                          |
+| `getFileSize`        | Deprecated alias of `formatByteSize`                      | Universal          | Accepts the same options and returns the same result; use `formatByteSize` in new code.                      |
+| `formatByteSize`     | Format bytes with configurable scale and precision        | Universal          | Defaults to base 1024 and one decimal for scaled values; zero is `0 B`; invalid input returns the configured fallback. |
 | `genHashCode`        | Produce a numeric hash from a string                      | Universal          | Small non-cryptographic signed integer hash.                                                                |
 | `sha256Hex`          | Generate a lowercase SHA-256 hexadecimal digest           | Node.js-compatible | Requires Web Crypto; string input also requires `TextEncoder`; missing APIs and digest failures reject.     |
 | `convert10To26`      | Convert a positive integer to lowercase alphabetic digits | Universal          | Spreadsheet-like `a..z, aa`; floors input; invalid/non-positive returns empty.                              |
@@ -110,6 +120,7 @@ This discovery index was verified against the flat exports from `src/index.ts` a
 
 | Function     | Purpose                                     | Runtime   | Notes                                                                                                                                                              |
 | ------------ | ------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `assignDefined` | Shallowly assign defined own properties  | Universal | Mutates the target; applies sources left to right; safely preserves own `__proto__`; skips `undefined` and excludes inherited, non-enumerable, and symbol keys.      |
 | `deepCopy`   | Deep-copy supported object graphs           | Universal | Handles cycles and common built-ins; custom classes become plain own-property objects; unsupported native objects remain shared references. Does not mutate input. |
 | `deepFreeze` | Recursively freeze enumerable object values | Universal | Mutates state by freezing the original graph; handles cycles; does not traverse symbol/non-enumerable values or Map/Set entries.                                   |
 
@@ -176,18 +187,30 @@ This discovery index was verified against the flat exports from `src/index.ts` a
 | --------------------------- | ---------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `isSafePWAEnv`              | Detect minimum synchronous PWA prerequisites               | Browser-preferred | Safe false outside browser; manifest remains required by default; options can skip it or enforce a same-origin path scope.                                        |
 | `isStandalonePWA`           | Detect standalone PWA presentation                         | Browser-preferred | Uses the standard display-mode query plus the iOS `navigator.standalone` fallback; not installation proof.                                                       |
+| `listenMediaQueryChanges`   | Subscribe to media-query changes                            | Browser-preferred | Accepts a media query or `null`; prefers modern events, supports legacy listeners, and returns idempotent cleanup without implicit globals.                       |
+| `watchServiceWorkerUpdates` | Observe and activate waiting service-worker updates         | Browser-only      | Tracks waiting/installing workers, reports updates only for controlled pages, accepts UI-neutral callbacks, and returns activation/disposal controls.             |
 | `resolveThemePreference`    | Resolve a concrete website theme and display label         | Browser-preferred | Fixed `theme` query > storage > system > `light`; valid query values are persisted when possible; returns only `{ value, label }`; SSR-safe and DOM-independent.     |
 | `setThemePreference`        | Persist a website theme preference                         | Browser-preferred | Writes exact `system`/`light`/`dark`; returns false when storage is unavailable or throws; never mutates DOM or applies a theme.                                   |
 | `resolveLanguagePreference` | Resolve one current UI language and display label          | Browser-preferred | Fixed `lang` query > storage > `navigator.language` > `en`; canonicalizes the tag and returns only `{ value, label }`; ignores `navigator.languages`.              |
 | `setLanguagePreference`     | Canonicalize and persist one website language              | Browser-preferred | Writes the canonical language tag; returns false when storage is unavailable or throws; never mutates DOM or loads translations.                                  |
+| `detectVisitorType`         | Classify supported crawler and automation signals          | Browser-preferred | Crawler UA tokens > automation UA tokens or WebDriver > `unknown`; SSR-safe; heuristic only and never proof of a human visitor.                                   |
 | `getBrowserInfo`            | Classify browser/system from user agent                    | Browser-only      | Reads `window`/`navigator`, caches on `window.MAZEY_BROWSER_INFO`, and is UA/compatibility-sensitive.                                                              |
 | `genBrowserAttrs`           | Convert browser classification fields to attribute strings | Browser-only      | Calls cached `getBrowserInfo`; optional prefix/separator.                                                                                                         |
 | `isSupportWebp`             | Probe WebP image support                                   | Browser-only      | Uses `Image` and caches the Promise result state.                                                                                                                 |
 | `isBrowser`                 | Detect the presence of a browser-like `window` global      | Universal         | Safe in Node.js; only a `true` browser result is cached, while `false` is re-evaluated.                                                                            |
 
-Preference signatures:
+Visitor and preference signatures:
 
 ```ts
+type VisitorType =
+  | "crawler"
+  | "automation"
+  | "unknown";
+
+detectVisitorType(
+  userAgent?: string
+): VisitorType;
+
 resolveThemePreference(
   storageKey: string
 ): PreferenceResult<ResolvedTheme>;
@@ -205,7 +228,27 @@ setLanguagePreference(
   storageKey: string,
   language: string
 ): boolean;
+
+listenMediaQueryChanges(
+  media: MediaQueryList | null,
+  listener: (event: MediaQueryListEvent) => void
+): () => void;
+
+watchServiceWorkerUpdates(
+  registration: ServiceWorkerRegistration,
+  container: ServiceWorkerContainer,
+  callbacks: ServiceWorkerUpdateCallbacks
+): ServiceWorkerUpdateWatcher;
 ```
+
+`detectVisitorType` accepts an optional explicit user agent and otherwise
+guards access to `navigator.userAgent`. It checks focused known crawler tokens
+before explicit automation tokens and `navigator.webdriver === true`. Without
+a supported signal, including during SSR without an explicit user agent, it
+returns `unknown`. That result does not verify a human visitor. User agents can
+be spoofed and WebDriver signals can be hidden, so do not use this heuristic as
+a security boundary; genuine crawler verification requires server-side request
+information and provider-specific validation.
 
 Both resolvers return only a machine-readable `value` and a human-readable
 `label`. Theme values resolve to concrete `light` or `dark`; a stored `system`
@@ -247,9 +290,32 @@ apply preferences to the DOM.
 
 | Function                | Purpose                                           | Runtime   | Notes                                                                                 |
 | ----------------------- | ------------------------------------------------- | --------- | ------------------------------------------------------------------------------------- |
+| `calculateCAGR`         | Calculate an investment's annualized return       | Universal | Exact elapsed duration with a fixed 365-day year; throws for invalid dates, returns, or non-finite results. |
 | `longestComSubstring`   | Return longest common contiguous substring length | Universal | Dynamic programming with O(n\*m) time and memory; empty input returns 0.              |
 | `longestComSubsequence` | Return longest common subsequence length          | Universal | Dynamic programming with O(n\*m) time and memory; empty input returns 0.              |
 | `isHit`                 | Return a probabilistic hit using `Math.random`    | Universal | Evaluates `Math.random() < rate`; does not clamp or provide cryptographic randomness. |
+
+`calculateCAGR` is dependency-free and works in browsers and Node.js without
+browser globals:
+
+```ts
+type InvestmentReturnRate = number | string;
+
+calculateCAGR(
+  startDate: MazeyDate,
+  endDate: MazeyDate,
+  totalReturnRate: InvestmentReturnRate
+): number;
+```
+
+Runtime input type determines the return-rate convention. A number is a decimal
+ratio, so `0.202` means `20.2%`. A string is a percentage value, so `"20.2%"`,
+`"20.2"`, `"+20.2%"`, `"-15.5%"`, and scientific notation such as
+`"2.02e1%"` are accepted and divided by 100. String parsing is strict and
+rejects partial, empty, malformed, and non-finite values. The calculation uses
+exact elapsed milliseconds and a fixed 365-day year. Invalid dates and return
+types throw `TypeError`; non-increasing dates, total returns at or below `-1`,
+and non-finite results throw `RangeError`.
 
 ## Compatibility and low-level exports
 

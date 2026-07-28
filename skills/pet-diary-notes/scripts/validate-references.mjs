@@ -86,7 +86,6 @@ async function main() {
   const headings = allBlocks.map(block => block.heading);
   const duplicates = headings.filter((heading, index) => headings.indexOf(heading) !== index);
   if (duplicates.length) report(`Duplicate curated headings: ${[...new Set(duplicates)].join(", ")}`);
-  if (headings.length !== 61) report(`Expected 61 curated examples, found ${headings.length}.`);
 
   for (const block of allBlocks) {
     for (const field of ["- Category:", "- Languages:", "- Content type:", "- Source path:"]) {
@@ -98,6 +97,12 @@ async function main() {
   }
 
   const manifest = await readFile(manifestPath, "utf8");
+  const declaredCount = Number(/^- Curated examples: (\d+)$/m.exec(manifest)?.[1]);
+  if (!Number.isInteger(declaredCount)) {
+    report("Manifest is missing a valid curated example count.");
+  } else if (headings.length !== declaredCount) {
+    report(`Manifest declares ${declaredCount} curated examples, found ${headings.length}.`);
+  }
   for (const heading of headings) {
     if (!manifest.includes(`| \`${heading}\` |`)) report(`Manifest is missing ${heading}.`);
   }

@@ -2,6 +2,84 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: User-provided: 猫砂盆里的乖巧日常
+
+- Source heading: `User-provided: 猫砂盆里的乖巧日常`
+- Source date: 2025-07-10
+- Version: none
+- Category: Daily life and office
+- Secondary category: Litter box routine
+- Country: Unknown
+- Region: unknown
+- City: unknown
+- Location: Unknown
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: biubiubiu
+- Mood: Calm
+- Tone: Well-behaved and cute
+- Pet behavior: Using the litter box and covering it afterward
+- Pet activity: Using the litter box and covering it afterward
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: User-provided skill example
+
+### Chinese
+
+#### Title
+
+猫砂盆里的乖巧日常
+
+#### Description
+
+安静地上完厕所，再认真地把猫砂埋好，乖乖完成自己的小日常。
+
+#### BGM
+
+biubiubiu
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #猫砂盆 #乖巧猫咪 #宠物日记
+
+### English
+
+#### Title
+
+A Neat Little Litter Box Routine
+
+#### Description
+
+A quiet trip to the litter box ends with carefully covering everything up like a well-behaved little cat.
+
+#### BGM
+
+biubiubiu
+
+#### Hashtags
+
+#Cat #CatLife #LitterBoxRoutine #WellBehavedCat #PetDiary
+
+### Japanese
+
+#### Title
+
+おりこうさんのトイレ時間
+
+#### Description
+
+静かにトイレを済ませたあとは、きちんと砂をかけて、今日もおりこうさんにできました。
+
+#### BGM
+
+biubiubiu
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #猫トイレ #おりこうさん #ペット日記
+
 ## Example: 25-0901-Keyboard-Guardian
 
 - Source heading: `25-0901-Keyboard-Guardian`
