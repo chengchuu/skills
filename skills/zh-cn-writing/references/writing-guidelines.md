@@ -89,6 +89,22 @@
 
 ---
 
+# Markdown
+
+## 自动链接
+
+Markdown 链接的显示文本与目标为完全相同的完整 URL 时，应使用自动链接格式。用一组尖括号包围该 URL，不要重复书写 URL。
+
+```markdown
+错误: [https://example.com](https://example.com)
+
+正确: <https://example.com>
+```
+
+此规则不适用于相对路径、锚点和本地文件。只有显示文本本身是有效的完整 URL 时，才能使用自动链接。
+
+---
+
 # 文本
 
 ## 字间距
