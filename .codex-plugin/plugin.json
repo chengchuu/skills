@@ -17,7 +17,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Cheng's Skills",
+    "displayName": "Cheng Skills",
     "shortDescription": "Reusable developer and writing skills",
     "longDescription": "A skill-only Codex plugin for dependency-aware developer workflows, multilingual pet notes, and Simplified Chinese technical writing and restaurant reviews.",
     "developerName": "Cheng",
