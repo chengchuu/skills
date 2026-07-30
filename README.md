@@ -16,6 +16,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
   - [`prefer-mazey`](#prefer-mazey)
   - [`prefer-layer`](#prefer-layer)
   - [`pet-diary-notes`](#pet-diary-notes)
+  - [`en-technical-writing`](#en-technical-writing)
   - [`zh-cn-writing`](#zh-cn-writing)
   - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
 - [Develop and validate](#develop-and-validate)
@@ -29,6 +30,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | `prefer-mazey`              | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic. |
 | `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
 | `pet-diary-notes`           | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples. |
+| `en-technical-writing`      | Write, translate, polish, and review American English technical documentation using layered mature guidance and optional ecosystem profiles. |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
@@ -149,6 +151,90 @@ Codex may select `pet-diary-notes` for requests such as:
 ```text
 Generate Chinese, English, and Japanese diary-style captions for photos and videos of my sleepy cat.
 ```
+
+### `en-technical-writing`
+
+`en-technical-writing` writes, rewrites, translates, proofreads, and reviews technical documentation. It defaults to American English, follows discoverable project conventions unless the current request overrides them, and preserves technical facts and literals. Google developer documentation provides the primary technical-writing foundation, Microsoft provides the editorial voice, React is an optional ecosystem profile, and controlled personal overrides can refine the result.
+
+The standalone skill is available at <https://github.com/chengchuu/skills/tree/main/skills/en-technical-writing>. Install it with:
+
+```text
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/en-technical-writing
+```
+
+Invoke it explicitly:
+
+```text
+$en-technical-writing
+
+Rewrite this React library README in clear American English.
+
+Requirements:
+
+- Preserve all commands, package names, API names, and documented behavior.
+- Target experienced frontend developers.
+- Use the React documentation profile where appropriate.
+- Keep the introduction concise.
+```
+
+```text
+$en-technical-writing
+
+Translate this Chinese deployment guide into natural American English.
+
+Preserve all commands, paths, environment variables, version numbers, and technical caveats.
+```
+
+Codex may select `en-technical-writing` for requests such as:
+
+```text
+Review this API reference for grammar, terminology, heading structure, and consistency.
+```
+
+```text
+Write a concise troubleshooting guide for this Node.js CLI.
+```
+
+```text
+Improve this React tutorial without changing its technical meaning.
+```
+
+The skill keeps its layers and workflows separate:
+
+```text
+skills/en-technical-writing/
+├── agents/openai.yaml
+├── references/
+│   ├── foundations/
+│   │   ├── google-style.md
+│   │   └── microsoft-voice.md
+│   ├── profiles/react-docs.md
+│   ├── rule-precedence.md
+│   ├── writing-guidelines.md
+│   ├── terminology.md
+│   ├── document-types.md
+│   ├── output-workflows.md
+│   ├── personal-style.md
+│   └── source-manifest.md
+├── scripts/
+│   ├── test-validate-references.mjs
+│   └── validate-references.mjs
+└── SKILL.md
+```
+
+Rule precedence:
+
+```text
+current user instructions
+└── project conventions
+    └── personal style overrides
+        └── matching ecosystem profile
+            └── Google-derived foundation
+                └── Microsoft-derived voice
+                    └── general en-US defaults
+```
+
+Its source manifest records the official [Google developer documentation style guide](https://developers.google.com/style), [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/), and [React documentation](https://react.dev/) pages used to derive the rules.
 
 ### `zh-cn-writing`
 

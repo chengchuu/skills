@@ -16,6 +16,7 @@
   - [`prefer-mazey`](#prefer-mazey)
   - [`prefer-layer`](#prefer-layer)
   - [`pet-diary-notes`](#pet-diary-notes)
+  - [`en-technical-writing`](#en-technical-writing)
   - [`zh-cn-writing`](#zh-cn-writing)
   - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
 - [开发与验证](#开发与验证)
@@ -29,6 +30,7 @@
 | `prefer-mazey` | 实现可复用的前端或 TypeScript 辅助逻辑前，检查项目现有的 Mazey 依赖。 |
 | `prefer-layer` | 实现对话框和弹出式 UI 前，检查项目现有的 layer-esm 依赖。 |
 | `pet-diary-notes` | 根据用户提供的事实，生成多语言宠物文案以及简短的 Plog 或 Vlog 记录。 |
+| `en-technical-writing` | 根据分层的成熟规范和可选的生态系统配置，编写、翻译、润色和审阅美国英语技术文档。 |
 | `zh-cn-writing` | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。 |
 | `zh-cn-restaurant-reviews` | 根据精选人工撰写案例，生成和改写基于事实的简体中文餐厅评价。 |
 
@@ -149,6 +151,92 @@ $pet-diary-notes
 ```text
 Generate Chinese, English, and Japanese diary-style captions for photos and videos of my sleepy cat.
 ```
+
+### `en-technical-writing`
+
+`en-technical-writing` 用于编写、改写、翻译、校对和审阅技术文档。该技能默认使用美国英语。除非当前请求覆盖项目规范，否则遵循可发现的项目规范。技术事实和字面量保持不变。
+
+Google 开发者文档提供主要技术写作基础。Microsoft 提供编辑语气。React 是可选的生态系统配置。受控的个人覆盖规则可以进一步调整结果。
+
+独立技能位于 <https://github.com/chengchuu/skills/tree/main/skills/en-technical-writing>。使用以下命令安装：
+
+```text
+$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/en-technical-writing
+```
+
+显式调用该技能：
+
+```text
+$en-technical-writing
+
+Rewrite this React library README in clear American English.
+
+Requirements:
+
+- Preserve all commands, package names, API names, and documented behavior.
+- Target experienced frontend developers.
+- Use the React documentation profile where appropriate.
+- Keep the introduction concise.
+```
+
+```text
+$en-technical-writing
+
+Translate this Chinese deployment guide into natural American English.
+
+Preserve all commands, paths, environment variables, version numbers, and technical caveats.
+```
+
+以下请求可以激活 `en-technical-writing`：
+
+```text
+Review this API reference for grammar, terminology, heading structure, and consistency.
+```
+
+```text
+Write a concise troubleshooting guide for this Node.js CLI.
+```
+
+```text
+Improve this React tutorial without changing its technical meaning.
+```
+
+该技能将规范层级与工作流分别存放：
+
+```text
+skills/en-technical-writing/
+├── agents/openai.yaml
+├── references/
+│   ├── foundations/
+│   │   ├── google-style.md
+│   │   └── microsoft-voice.md
+│   ├── profiles/react-docs.md
+│   ├── rule-precedence.md
+│   ├── writing-guidelines.md
+│   ├── terminology.md
+│   ├── document-types.md
+│   ├── output-workflows.md
+│   ├── personal-style.md
+│   └── source-manifest.md
+├── scripts/
+│   ├── test-validate-references.mjs
+│   └── validate-references.mjs
+└── SKILL.md
+```
+
+规则优先级：
+
+```text
+当前用户要求
+└── 项目规范
+    └── 个人风格覆盖规则
+        └── 匹配的生态系统配置
+            └── 基于 Google 的基础规范
+                └── 基于 Microsoft 的语气规范
+                    └── 通用 en-US 规范
+```
+
+来源清单记录了用于提炼规则的官方页面。来源包括 [Google 开发者文档风格指南](https://developers.google.com/style)、[Microsoft 写作风格指南](https://learn.microsoft.com/en-us/style-guide/)和 [React 文档](https://react.dev/)。
 
 ### `zh-cn-writing`
 

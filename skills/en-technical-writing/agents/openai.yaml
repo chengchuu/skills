@@ -1,0 +1,4 @@
+interface:
+  display_name: "English Technical Writing"
+  short_description: "Write and review accurate American English technical docs."
+  default_prompt: "Use $en-technical-writing to write or review accurate American English technical documentation."
