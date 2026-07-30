@@ -5,7 +5,7 @@
   "description": "Reusable Codex skills maintained by Cheng.",
   "scripts": {
     "validate": "node ./scripts/validate-skills.mjs",
-    "test": "npm run validate"
+    "test": "npm run validate && node ./skills/en-technical-writing/scripts/test-validate-references.mjs"
   },
   "license": "MIT",
   "repository": {
