@@ -8,8 +8,8 @@
 
 ## Summary
 
-- Source Markdown files analyzed: **76**.
-- Curated normalized examples: **49**.
+- Source Markdown files analyzed: **77**.
+- Curated normalized examples: **50**.
 - Exact byte-for-byte duplicate articles: **0**.
 - Publication or platform variants merged into canonical examples: **21**.
 - English counterparts merged with Chinese style anchors: **3**.
@@ -75,6 +75,7 @@ No byte-exact duplicates were found. Closely related TCloud files were treated a
 | `temp/writing-examples/PWA/26-0503_Workbox_EN.md` | `references/examples/installation-and-configuration-guides.md` | Installation and configuration guide | PWA and service workers | Frontend developers | Formal and explanatory | 0 | Merged English counterpart; Chinese version is the style anchor | High | Useful differences retained only in the normalized characterization. |
 | `temp/writing-examples/PWA/26-0503_Workbox_ZH_Hash.md` | Not curated | Other | PWA and service workers | unknown | Neutral metadata | 0 | Excluded: tag/hash metadata, not an article | High | Retained in the manifest only. |
 | `temp/writing-examples/PWA/26-0503_Workbox_ZH.md` | `references/examples/installation-and-configuration-guides.md` | Installation and configuration guide | PWA and service workers | Frontend developers | Formal and explanatory | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
+| `temp/writing-examples/scp-next/introducing-scp-next-v1.0.19-zh.md` | `references/examples/product-and-tool-guides.md` | Product and tool guide | JavaScript, TypeScript, and Node.js; APIs and developer tools; Linux and server operations | Developers and DevOps engineers | Practical and procedural | 1 | Canonical normalized example | High | Imported from the scp-next release-note guide; structure and reusable tendencies extracted, with no technical facts promoted. |
 | `temp/writing-examples/TCloud/17-0518_Linux_PHP_TCloud.md` | `references/examples/installation-and-configuration-guides.md` | Installation and configuration guide | Linux and server operations | Developers and system administrators | Practical and procedural | 0 | Merged publication/version variant | High | Useful differences retained only in the normalized characterization. |
 | `temp/writing-examples/TCloud/17-0714_SQLServer_TCloud.md` | `references/examples/technical-analysis.md` | Technical analysis and concept explanation | Databases and algorithms | Backend developers | Explanatory and reference-oriented | 0 | Merged publication/version variant | High | Useful differences retained only in the normalized characterization. |
 | `temp/writing-examples/TCloud/18-0102_HTML5_TCloud.md` | `references/examples/api-and-integration-guides.md` | API and integration guide | Frontend and web performance | Frontend developers | Explanatory and practical | 0 | Merged publication/version variant | High | Useful differences retained only in the normalized characterization. |
@@ -101,4 +102,3 @@ No byte-exact duplicates were found. Closely related TCloud files were treated a
 | `temp/writing-examples/webpack/21-0104_webpack_Analyzer.md` | `references/examples/best-practices-guides.md` | Best-practices guide | Build tooling and package management | Frontend developers | Practical and explanatory | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
 | `temp/writing-examples/webpack/26-0418_webpack_EN.md` | `references/examples/technical-analysis.md` | Technical analysis and concept explanation | Build tooling and package management | Frontend developers | Formal and comparative | 0 | Merged English counterpart; Chinese version is the style anchor | High | Useful differences retained only in the normalized characterization. |
 | `temp/writing-examples/webpack/26-0418_webpack_ZH.md` | `references/examples/technical-analysis.md` | Technical analysis and concept explanation | Build tooling and package management | Frontend developers | Formal and comparative | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
-
