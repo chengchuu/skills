@@ -4,21 +4,23 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 
 ## Table of contents
 
-- [Codex Skills](#codex-skills)
-  - [Table of contents](#table-of-contents)
-  - [Available skills](#available-skills)
-  - [Install a skill](#install-a-skill)
-    - [Codex skill installer](#codex-skill-installer)
-    - [Manual installation](#manual-installation)
-  - [Use the skill](#use-the-skill)
-    - [`prefer-mazey`](#prefer-mazey)
-    - [`prefer-layer`](#prefer-layer)
-    - [`pet-diary-notes`](#pet-diary-notes)
-    - [`zh-cn-writing`](#zh-cn-writing)
-    - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
-  - [Develop and validate](#develop-and-validate)
-  - [Source of truth](#source-of-truth)
-  - [Contributing and license](#contributing-and-license)
+- [Table of contents](#table-of-contents)
+- [Available skills](#available-skills)
+- [Install an individual skill](#install-an-individual-skill)
+  - [Codex skill installer](#codex-skill-installer)
+  - [Manual installation](#manual-installation)
+- [Install or update the Codex plugin](#install-or-update-the-codex-plugin)
+  - [Install the plugin](#install-the-plugin)
+  - [Update the plugin](#update-the-plugin)
+- [Use the skill](#use-the-skill)
+  - [`prefer-mazey`](#prefer-mazey)
+  - [`prefer-layer`](#prefer-layer)
+  - [`pet-diary-notes`](#pet-diary-notes)
+  - [`zh-cn-writing`](#zh-cn-writing)
+  - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
+- [Develop and validate](#develop-and-validate)
+- [Source of truth](#source-of-truth)
+- [Contributing and license](#contributing-and-license)
 
 ## Available skills
 
@@ -30,7 +32,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
 | `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
-## Install a skill
+## Install an individual skill
 
 ### Codex skill installer
 
@@ -52,6 +54,42 @@ Download or copy the complete `skills/<skill-name>/` directory without selecting
 Repository scope is appropriate when the workflow is part of a project's shared guidance. User scope makes the skill available across repositories for that user.
 
 For example, manually install the complete public copy of `prefer-layer` as either `$HOME/.agents/skills/prefer-layer/` or `<repository>/.agents/skills/prefer-layer/`. Do not copy only `SKILL.md`; its API map and agent metadata are part of the skill.
+
+## Install or update the Codex plugin
+
+The plugin installs all skills in this repository. The following commands use Codex's default personal marketplace and assume the current directory is this repository's root.
+
+### Install the plugin
+
+Create the personal marketplace entry and plugin directory:
+
+```bash
+python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.py" \
+  chengchuu-skills \
+  --with-marketplace \
+  --with-skills \
+  --category "Developer Tools"
+```
+
+Copy the plugin into the personal plugin directory, then install it:
+
+```bash
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
+codex plugin add chengchuu-skills@personal
+```
+
+### Update the plugin
+
+Refresh the installed source, replace the Codex cachebuster, and reinstall the plugin:
+
+```bash
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
+python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py" \
+  "$HOME/plugins/chengchuu-skills"
+codex plugin add chengchuu-skills@personal
+```
+
+Start a new Codex task after installation or an update so Codex loads the current plugin and skills.
 
 ## Use the skill
 

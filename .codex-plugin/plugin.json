@@ -1,7 +1,7 @@
 {
   "name": "chengchuu-skills",
   "version": "0.1.0",
-  "description": "Reusable developer workflow skills maintained by Cheng.",
+  "description": "Reusable Codex skills.",
   "author": {
     "name": "Cheng",
     "url": "https://github.com/chengchuu"
@@ -12,20 +12,24 @@
   "keywords": [
     "codex",
     "developer-tools",
-    "skills"
+    "skills",
+    "technical-writing"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Cheng's Skills",
-    "shortDescription": "Reusable developer workflow skills",
-    "longDescription": "A skill-only Codex plugin containing reusable workflows maintained by Cheng.",
+    "displayName": "Cheng Skills",
+    "shortDescription": "Reusable developer and writing skills",
+    "longDescription": "A skill-only Codex plugin for dependency-aware developer workflows, multilingual pet notes, and Simplified Chinese technical writing and restaurant reviews.",
     "developerName": "Cheng",
     "category": "Developer Tools",
     "capabilities": [
-      "Guidance"
+      "Guidance",
+      "Write"
     ],
     "defaultPrompt": [
-      "Check whether Mazey already provides the utility I need."
+      "Check an existing Mazey or layer-esm dependency before implementing reusable code.",
+      "Write or improve Simplified Chinese technical documentation.",
+      "Create factual multilingual pet notes or Simplified Chinese restaurant reviews."
     ]
   }
 }

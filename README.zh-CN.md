@@ -1,174 +1,50 @@
-# 除除的 Codex Skills
+# Codex Skills
 
-[English](README.md)
+本仓库将可复用的开发工作流技能发布为纯技能 Codex 插件。`.codex-plugin/plugin.json` 清单指向 `skills/` 下相互独立的技能，不配置应用、连接器、MCP 服务器或钩子。
 
-这是由除除维护的一组可复用开发工作流技能。本仓库以纯技能 Codex 插件的形式发布。`.codex-plugin/plugin.json` 指向 `skills/` 下的独立技能。插件不配置应用、连接器、MCP 服务器或钩子。
+## 目录
+
+- [目录](#目录)
+- [可用技能](#可用技能)
+- [安装单个技能](#安装单个技能)
+  - [Codex Skill Installer](#codex-skill-installer)
+  - [手动安装](#手动安装)
+- [安装或更新 Codex 插件](#安装或更新-codex-插件)
+  - [安装插件](#安装插件)
+  - [更新插件](#更新插件)
+- [使用技能](#使用技能)
+  - [`prefer-mazey`](#prefer-mazey)
+  - [`prefer-layer`](#prefer-layer)
+  - [`pet-diary-notes`](#pet-diary-notes)
+  - [`zh-cn-writing`](#zh-cn-writing)
+  - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
+- [开发与验证](#开发与验证)
+- [唯一事实来源](#唯一事实来源)
+- [贡献与许可证](#贡献与许可证)
 
 ## 可用技能
 
 | 技能 | 用途 |
 | --- | --- |
-| `prefer-mazey` | 编写前端或 TypeScript 辅助逻辑前，先检查 Mazey 工具函数。 |
-| `prefer-layer` | 实现弹出式 UI 前，检查 layer-esm 是否已有合适的功能。 |
-| `zh-cn-writing` | 按正式规范和精选风格案例编写、翻译、润色和审阅简体中文技术文章。 |
-| `zh-cn-restaurant-reviews` | 根据精选的人工撰写案例，生成和改写符合事实的简体中文餐厅评价。 |
+| `prefer-mazey` | 实现可复用的前端或 TypeScript 辅助逻辑前，检查项目现有的 Mazey 依赖。 |
+| `prefer-layer` | 实现对话框和弹出式 UI 前，检查项目现有的 layer-esm 依赖。 |
+| `pet-diary-notes` | 根据用户提供的事实，生成多语言宠物文案以及简短的 Plog 或 Vlog 记录。 |
+| `zh-cn-writing` | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。 |
+| `zh-cn-restaurant-reviews` | 根据精选人工撰写案例，生成和改写基于事实的简体中文餐厅评价。 |
 
-### `prefer-mazey`
-
-`prefer-mazey` 帮助 Codex 在创建通用辅助逻辑前评估当前的 Mazey 工具函数。它会验证行为、边界情况、数据修改和依赖策略。它也会检查浏览器与 Node.js 运行时的兼容性。候选函数不符合要求时，该技能会拒绝使用。
-
-使用该技能前，请通过目标项目现有的包管理器添加 `mazey`：
-
-```bash
-npm install mazey
-# or: pnpm add mazey
-# or: yarn add mazey
-```
-
-如果仓库已经依赖 `mazey`，请跳过这一步。该技能会尽量检测包管理器，并推荐匹配的命令。除非用户明确要求，否则该技能不会安装软件包。
-
-然后调用该技能：
-
-```text
-$prefer-mazey
-
-Implement a reusable helper for this project.
-```
-
-### `prefer-layer`
-
-`prefer-layer` 会先检查已安装的 `layer-esm` 公共 API，再由 Codex 实现自定义弹出式 UI。适用组件包括对话框、模态框、警告框、确认框和消息。该技能也适用于加载指示器、提示框、选项卡和文字提示。
-
-该技能会验证交互、回调、关闭行为、焦点和 Escape 键处理。它还会检查无障碍支持、可信 HTML、CSP 和浏览器支持。此外，它会验证 TypeScript 类型声明及清理行为。候选功能不符合要求时，该技能会拒绝使用。
-
-使用该技能前，请通过目标仓库现有的包管理器添加 `layer-esm`：
-
-```bash
-npm install layer-esm
-# or: pnpm add layer-esm
-# or: yarn add layer-esm
-```
-
-如果仓库已经依赖 `layer-esm`，请跳过安装。该技能会尽量检测现有的包管理器，并且只推荐匹配的命令。除非用户明确要求，否则该技能不会安装软件包。
-
-显式调用该技能：
-
-```text
-$prefer-layer
-
-Implement a confirmation dialog before deleting an item.
-```
-
-### `zh-cn-writing`
-
-`zh-cn-writing` 将仓库内完整的简体中文技术写作规范用于写作、改写、英译中、校对和审阅。它会选择与文档类型匹配的指导和少量规范化案例，用于调整结构、语气、用词和详略。该技能不会复制有辨识度的原句，也不会将旧文章作为技术事实来源。
-
-该技能适用于教程、安装与配置指南、故障排查和技术分析。它也适用于 API 与集成指南、工具指南、部署与运维和最佳实践。参考文档和结构化通用文章也在适用范围内。同时，它会保留代码、命令、标识符、URL、API 名称和产品名称。
-
-### `zh-cn-restaurant-reviews`
-
-`zh-cn-restaurant-reviews` 仅使用用户提供的事实，生成、改写和优化简体中文餐厅评价。该技能按国家或地区及餐厅类别组织人工撰写的案例。案例元数据包括菜系、情感倾向、语气、长度、用餐场景和主题。
-
-该技能适用于自然的餐厅短评和用餐记录。它也适用于面向大众点评、小红书或 Google Maps 的文案。它不会虚构菜品、价格、地点、等位时间、服务体验或个人感受。
-
-## 仓库结构
-
-```text
-.
-├── .codex-plugin/plugin.json
-├── .github/
-├── scripts/validate-skills.mjs
-├── skills/
-│   ├── prefer-mazey/
-│   │   ├── agents/openai.yaml
-│   │   ├── references/mazey-api-map.md
-│   │   └── SKILL.md
-│   ├── prefer-layer/
-│   │   ├── agents/openai.yaml
-│   │   ├── references/layer-api-map.md
-│   │   └── SKILL.md
-│   ├── zh-cn-restaurant-reviews/
-│   │   ├── agents/openai.yaml
-│   │   ├── references/
-│   │   │   ├── examples/
-│   │   │   ├── output-formats.md
-│   │   │   ├── README.md
-│   │   │   ├── source-manifest.md
-│   │   │   ├── taxonomy.md
-│   │   │   └── writing-rules.md
-│   │   └── SKILL.md
-│   └── zh-cn-writing/
-│       ├── agents/openai.yaml
-│       ├── references/
-│       │   ├── examples/
-│       │   ├── document-types.md
-│       │   ├── output-workflows.md
-│       │   ├── personal-style.md
-│       │   ├── README.md
-│       │   ├── source-manifest.md
-│       │   ├── taxonomy.md
-│       │   └── writing-guidelines.md
-│       ├── scripts/validate-references.mjs
-│       └── SKILL.md
-├── AGENTS.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── package.json
-├── README.md
-└── README.zh-CN.md
-```
-
-该插件布局可以继续容纳其他技能，无需修改清单中的路径。
-
-## 安装技能
+## 安装单个技能
 
 ### Codex Skill Installer
 
-通过对应的 URL 安装技能：
-
-```text
-https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
-```
-
-```text
-https://github.com/chengchuu/skills/tree/main/skills/prefer-layer
-```
-
-```text
-https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
-```
-
-```text
-https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
-```
-
-让 Codex 安装技能：
+让 Codex 使用技能的直接 URL 安装技能：
 
 ```text
 $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/prefer-mazey
 ```
 
-或者：
-
-```text
-$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/prefer-layer
-```
-
-或者：
-
-```text
-$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh-cn-writing
-```
-
-或者：
-
-```text
-$skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh-cn-restaurant-reviews
-```
-
 安装完成后，该技能会在 Codex 的下一轮对话中生效。
 
-### 手动安装到 Codex
+### 手动安装
 
 下载或复制完整的 `skills/<skill-name>/` 目录，不要只选择其中的部分文件。
 
@@ -179,29 +55,61 @@ $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/zh
 
 例如，将 `prefer-layer` 的完整公开副本安装到 `$HOME/.agents/skills/prefer-layer/` 或 `<repository>/.agents/skills/prefer-layer/`。不要只复制 `SKILL.md`；API 映射和智能体元数据也属于该技能。
 
-### 安装到 Claude Code
+## 安装或更新 Codex 插件
 
-Claude Code 会从个人目录 `~/.claude/skills/` 和项目目录 `.claude/skills/` 中发现技能。请从本仓库根目录执行以下命令，将 `zh-cn-writing` 安装到个人范围：
+该插件会安装本仓库中的全部技能。以下命令使用 Codex 的默认个人市场，并假定当前目录为本仓库根目录。
 
-```bash
-mkdir -p ~/.claude/skills/zh-cn-writing
-cp -R skills/zh-cn-writing/. ~/.claude/skills/zh-cn-writing/
-```
+### 安装插件
 
-如需与项目成员共享该技能，请安装到当前项目：
+创建个人市场条目和插件目录：
 
 ```bash
-mkdir -p .claude/skills/zh-cn-writing
-cp -R skills/zh-cn-writing/. .claude/skills/zh-cn-writing/
+python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.py" \
+  chengchuu-skills \
+  --with-marketplace \
+  --with-skills \
+  --category "Developer Tools"
 ```
 
-安装其他技能时，请将命令中的 `zh-cn-writing` 替换为相应的技能名称。如果当前会话启动时不存在 `.claude/skills/`，请在首次创建该目录后重启 Claude Code。详细规则参见 [Claude Code Skills 官方文档](https://code.claude.com/docs/en/slash-commands)。
+将插件复制到个人插件目录，然后安装插件：
+
+```bash
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
+codex plugin add chengchuu-skills@personal
+```
+
+### 更新插件
+
+刷新已安装的源文件，替换 Codex 缓存破坏标记，然后重新安装插件：
+
+```bash
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
+python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py" \
+  "$HOME/plugins/chengchuu-skills"
+codex plugin add chengchuu-skills@personal
+```
+
+安装或更新后，请新建一个 Codex 任务，以便 Codex 加载当前插件和技能。
 
 ## 使用技能
 
-### 在 Codex 中使用
+可以显式调用匹配的技能，也可以让 Codex 根据请求自动激活技能。
 
-在提示词中写出技能名称，即可显式调用：
+### `prefer-mazey`
+
+使用 `prefer-mazey` 前，请通过目标项目现有的包管理器添加 `mazey`：
+
+```bash
+npm install mazey
+# or: pnpm add mazey
+# or: yarn add mazey
+```
+
+如果仓库已经依赖 `mazey`，请跳过这一步。该技能会尽量检测包管理器，并推荐匹配的命令。除非用户明确要求，否则该技能不会安装软件包。
+
+每个技能会根据前置元数据中的 `description` 隐式激活。当任务需要为匹配的前端、TypeScript、浏览器、Node.js CLI、构建脚本或开发工具编写可复用辅助逻辑时，Codex 可以选择 `prefer-mazey`。
+
+### `prefer-layer`
 
 ```text
 $prefer-layer
@@ -209,10 +117,45 @@ $prefer-layer
 Implement a confirmation dialog before deleting an item.
 ```
 
+以下请求可以激活 `prefer-layer`：
+
+```text
+Add a loading dialog while the request is running, then show a success message.
+```
+
+```text
+Show a tooltip next to the invalid form field.
+```
+
+### `pet-diary-notes`
+
+```text
+$pet-diary-notes
+
+根据以下场景生成中文、英文和日文宠物日记文案：
+
+- 宠物：嘟嘟
+- 内容形式：Plog
+- 场景：趴在窗边看雨
+- 氛围：安静、治愈
+- 内容类型：Real-life
+- 日期：2025-03-07
+- 平台：多平台
+- BGM：未指定
+```
+
+以下请求可以激活 `pet-diary-notes`：
+
+```text
+Generate Chinese, English, and Japanese diary-style captions for photos and videos of my sleepy cat.
+```
+
+### `zh-cn-writing`
+
 ```text
 $zh-cn-writing
 
-Review and improve this Chinese technical document.
+Review and improve this Chinese technical document written in Markdown.
 ```
 
 ```text
@@ -220,6 +163,22 @@ $zh-cn-writing
 
 保持技术内容不变，参考我常用的故障排查文章结构重写这篇文章。
 ```
+
+以下请求可以激活 `zh-cn-writing`：
+
+```text
+Review this README for Chinese punctuation, spacing, sentence length, heading structure, and technical-writing style.
+```
+
+```text
+Translate this English API guide into 规范、自然且准确的简体中文。
+```
+
+```text
+根据以下信息写一篇结构清晰、可验证的简体中文技术教程。
+```
+
+### `zh-cn-restaurant-reviews`
 
 ```text
 $zh-cn-restaurant-reviews
@@ -233,32 +192,6 @@ $zh-cn-restaurant-reviews
 - 人均：180 元
 - 等位：20 分钟
 - 整体评价：满意
-```
-
-每个技能会根据前置元数据中的 `description` 隐式激活。任务可能需要为前端或 TypeScript 编写通用辅助逻辑。这类需求也可能出现在浏览器、Node.js CLI、构建脚本或开发工具中。此时，Codex 可以选择 `prefer-mazey`。
-
-以下请求可以激活 `prefer-layer`：
-
-```text
-Add a loading dialog while the request is running, then show a success message.
-```
-
-```text
-Show a tooltip next to the invalid form field.
-```
-
-以下请求可以激活 `zh-cn-writing`：
-
-```text
-根据以下信息写一篇结构清晰、可验证的简体中文技术教程。
-```
-
-```text
-Translate this English API guide into 规范、自然且准确的简体中文。
-```
-
-```text
-Review this README for Chinese punctuation, spacing, sentence length, heading structure, and technical-writing style.
 ```
 
 以下请求可以激活 `zh-cn-restaurant-reviews`：
@@ -275,36 +208,6 @@ Review this README for Chinese punctuation, spacing, sentence length, heading st
 参考日本咖啡店相关案例的风格，生成一条 80～120 字的小红书文案。
 ```
 
-### 在 Claude Code 中使用
-
-Claude Code 可以根据 `description` 自动选择匹配的技能。也可以使用斜杠命令显式调用：
-
-```text
-/prefer-mazey
-
-Implement a reusable duration-formatting helper for this project.
-```
-
-```text
-/prefer-layer
-
-Implement a confirmation dialog before deleting an item.
-```
-
-```text
-/zh-cn-writing
-
-Review and improve this Chinese technical document.
-```
-
-```text
-/zh-cn-restaurant-reviews
-
-根据这些用餐信息，写一条自然的中文 Google Maps 餐厅评价。
-```
-
-运行 `/skills` 可以检查 Claude Code 已发现的个人技能、项目技能和插件技能。
-
 ## 开发与验证
 
 本仓库无需安装软件包。仓库验证器仅使用 Node.js 内置模块。
@@ -314,7 +217,7 @@ npm run validate
 npm test
 ```
 
-验证器会检查插件清单、技能布局和前置元数据。它也会检查本地 Markdown 引用、临时文件、疑似密钥和机器专用路径。引用检查仅覆盖可安全检测的情况。
+验证器会检查插件清单、技能布局和前置元数据。它也会检查可安全检测的本地 Markdown 引用、临时文件、疑似密钥和机器专用路径。
 
 ## 唯一事实来源
 
