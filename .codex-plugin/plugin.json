@@ -1,6 +1,6 @@
 {
   "name": "chengchuu-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reusable Codex skills.",
   "author": {
     "name": "Cheng",
@@ -26,6 +26,8 @@
       "Guidance",
       "Write"
     ],
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png",
     "defaultPrompt": [
       "Check an existing Mazey or layer-esm dependency before implementing reusable code.",
       "Write or improve Simplified Chinese technical documentation.",
