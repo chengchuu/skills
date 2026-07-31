@@ -8,8 +8,8 @@
 
 ## Summary
 
-- Source Markdown files analyzed: **77**.
-- Curated normalized examples: **50**.
+- Source Markdown files analyzed: **81**.
+- Curated normalized examples: **54**.
 - Exact byte-for-byte duplicate articles: **0**.
 - Publication or platform variants merged into canonical examples: **21**.
 - English counterparts merged with Chinese style anchors: **3**.
@@ -19,7 +19,7 @@ All source paths are repository-relative provenance records. The installed skill
 
 ## Duplicate and version decisions
 
-No byte-exact duplicates were found. Closely related TCloud files were treated as publication or revision variants of their matching canonical articles. Standard content declarations and publishing wrappers were not extracted as style. The Docker errors, Workbox configuration, and webpack multi-configuration English/Chinese pairs were consolidated into one normalized example per pair; the Chinese article is the style anchor and the English article supplies translation-structure evidence. Metadata-only and embedded-media files were not curated.
+No byte-exact duplicates were found. Closely related TCloud files were treated as publication or revision variants of their matching canonical articles. The four Bootstrap Blueprints lessons were retained as separate canonical examples because each teaches a distinct component or page-building workflow. Standard content declarations and publishing wrappers were not extracted as style. The Docker errors, Workbox configuration, and webpack multi-configuration English/Chinese pairs were consolidated into one normalized example per pair; the Chinese article is the style anchor and the English article supplies translation-structure evidence. Metadata-only and embedded-media files were not curated.
 
 ## File mapping
 
@@ -44,6 +44,10 @@ No byte-exact duplicates were found. Closely related TCloud files were treated a
 | `temp/writing-examples/Frontend/21-0531_Frontend.md` | `references/examples/best-practices-guides.md` | Best-practices guide | Frontend and web performance; Build tooling and package management | Frontend developers and project maintainers | Analytical and comparative | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
 | `temp/writing-examples/Frontend/21-1228_Frontend_Performance.md` | `references/examples/technical-analysis.md` | Technical analysis and concept explanation | Frontend and web performance | Frontend developers | Analytical and explanatory | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
 | `temp/writing-examples/Frontend/24-1027_Frontend_iOS.md` | `references/examples/troubleshooting-guides.md` | Troubleshooting guide | Frontend and web performance | Frontend developers | Diagnostic and explanatory | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
+| `temp/writing-examples/bootstrap-blueprints/lesson-first-waterfall/README.md` | `references/examples/technical-tutorials.md` | Technical tutorial | Frontend and web performance | Beginners and frontend developers | Practical and explanatory | 1 | Canonical normalized example | High | Imported from the Bootstrap Blueprints lesson series; structure and reusable tendencies extracted, with no technical facts promoted. |
+| `temp/writing-examples/bootstrap-blueprints/lesson-fourth-comment/README.md` | `references/examples/technical-tutorials.md` | Technical tutorial | Frontend and web performance | Beginners and frontend developers | Practical and explanatory | 1 | Canonical normalized example | High | Imported from the Bootstrap Blueprints lesson series; structure and reusable tendencies extracted, with no technical facts promoted. |
+| `temp/writing-examples/bootstrap-blueprints/lesson-second-navigation/README.md` | `references/examples/technical-tutorials.md` | Technical tutorial | Frontend and web performance | Beginners and frontend developers | Practical and explanatory | 1 | Canonical normalized example | High | Imported from the Bootstrap Blueprints lesson series; structure and reusable tendencies extracted, with no technical facts promoted. |
+| `temp/writing-examples/bootstrap-blueprints/lesson-third-login/README.md` | `references/examples/technical-tutorials.md` | Technical tutorial | Frontend and web performance | Beginners and frontend developers | Practical and explanatory | 1 | Canonical normalized example | High | Imported from the Bootstrap Blueprints lesson series; structure and reusable tendencies extracted, with no technical facts promoted. |
 | `temp/writing-examples/Git/20-0820_GitLab_CLI.md` | `references/examples/deployment-and-operations-guides.md` | Deployment and operations guide | Git, CI/CD, and release engineering | Developers and DevOps engineers | Practical and procedural | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
 | `temp/writing-examples/Git/20-0911_GitLab_Runner.md` | `references/examples/installation-and-configuration-guides.md` | Installation and configuration guide | Git, CI/CD, and release engineering | DevOps engineers and system administrators | Practical and procedural | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |
 | `temp/writing-examples/Git/21-0225_GitHub_SSH_Keys.md` | `references/examples/installation-and-configuration-guides.md` | Installation and configuration guide | Git, CI/CD, and release engineering | Developers | Practical and procedural | 1 | Canonical normalized example | High | Structure and reusable tendencies extracted; no technical facts promoted. |

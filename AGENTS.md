@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository publishes five reusable Codex skills as the skill-only `chengchuu-skills` plugin. It has no application server or runtime bundle. Codex discovers the manifest, evaluates skill metadata, and loads a matching skill on demand.
+This repository publishes six reusable Codex skills as the skill-only `chengchuu-skills` plugin. It has no application server or runtime bundle. Codex discovers the manifest, evaluates skill metadata, and loads a matching skill on demand.
 
 ## Repository map
 
