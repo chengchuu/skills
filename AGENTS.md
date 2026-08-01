@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository publishes six reusable Codex skills as the skill-only `chengchuu-skills` plugin: `prefer-mazey`, `prefer-layer`, `pet-diary-notes`, `en-technical-writing`, `zh-cn-writing`, and `zh-cn-restaurant-reviews`. It has no application server, compile step, or runtime bundle. Codex discovers the manifest, evaluates skill metadata, and loads a matching skill on demand.
+This repository publishes seven reusable Codex skills as the skill-only `chengchuu-skills` plugin: `prefer-mazey`, `prefer-layer`, `design-project-architecture`, `pet-diary-notes`, `en-technical-writing`, `zh-cn-writing`, and `zh-cn-restaurant-reviews`. It has no application server, compile step, or runtime bundle. Codex discovers the manifest, evaluates skill metadata, and loads a matching skill on demand.
 
 ## Repository map
 
@@ -11,6 +11,7 @@ This repository publishes six reusable Codex skills as the skill-only `chengchuu
 - `skills/*/agents/openai.yaml` contains user-facing metadata. `references/` holds API maps, rules, taxonomies, source manifests, and curated examples. `scripts/` contains corpus builders or reference validators.
 - `scripts/validate-skills.mjs` validates the plugin and every public skill. `npm run validate` runs it directly; `npm test` runs it and then executes the `en-technical-writing` validator regression suite.
 - `skills/en-technical-writing/scripts/` contains its reference validator and validator regression tests. `skills/pet-diary-notes/scripts/` contains its corpus builder and reference validator. `skills/zh-cn-writing/scripts/` contains its reference validator.
+- `skills/design-project-architecture/references/` contains Cheng's technical profile, architecture decision guidance, reusable package and project patterns, and relative provenance labels distilled from a private article corpus. Do not add the corpus's machine-specific source path or treat historical articles as current technical authority.
 - `README.md` defines shared documentation structure and behavior; `README.zh-CN.md` is its synchronized localization.
 - `assets/logo.png` is referenced by the plugin interface. Keep manifest asset paths repository-relative.
 - `.editorconfig` defines formatting. `.github/workflows/validate.yml` runs validation with Node.js 22 on pull requests and pushes to `main`.

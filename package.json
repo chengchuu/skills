@@ -1,8 +1,8 @@
 {
   "name": "chengchuu-skills",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "type": "module",
-  "description": "Reusable Codex skills maintained by Cheng.",
+  "description": "Reusable Codex skills.",
   "scripts": {
     "validate": "node ./scripts/validate-skills.mjs",
     "test": "npm run validate && node ./skills/en-technical-writing/scripts/test-validate-references.mjs"

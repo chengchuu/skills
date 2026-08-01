@@ -1,6 +1,6 @@
 {
   "name": "chengchuu-skills",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "Reusable Codex skills.",
   "author": {
     "name": "Cheng",
@@ -11,6 +11,7 @@
   "license": "MIT",
   "keywords": [
     "codex",
+    "architecture",
     "developer-tools",
     "skills",
     "technical-writing"
@@ -18,8 +19,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Cheng Skills",
-    "shortDescription": "Reusable developer and writing skills",
-    "longDescription": "A skill-only Codex plugin for dependency-aware developer workflows, multilingual pet notes, and Simplified Chinese technical writing and restaurant reviews.",
+    "shortDescription": "Reusable architecture, developer, and writing skills",
+    "longDescription": "A skill-only Codex plugin for project architecture, dependency-aware developer workflows, multilingual pet notes, and English or Simplified Chinese writing.",
     "developerName": "Cheng",
     "category": "Developer Tools",
     "capabilities": [
@@ -29,8 +30,9 @@
     "composerIcon": "./assets/logo.png",
     "logo": "./assets/logo.png",
     "defaultPrompt": [
+      "Design project architecture around requirements, repository constraints, and full-stack experience.",
       "Check an existing Mazey or layer-esm dependency before implementing reusable code.",
-      "Write or improve Simplified Chinese technical documentation.",
+      "Write or improve English or Simplified Chinese technical documentation.",
       "Create factual multilingual pet notes or Simplified Chinese restaurant reviews."
     ]
   }

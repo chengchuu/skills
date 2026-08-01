@@ -15,6 +15,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 - [Use the skill](#use-the-skill)
   - [`prefer-mazey`](#prefer-mazey)
   - [`prefer-layer`](#prefer-layer)
+  - [`design-project-architecture`](#design-project-architecture)
   - [`pet-diary-notes`](#pet-diary-notes)
   - [`en-technical-writing`](#en-technical-writing)
   - [`zh-cn-writing`](#zh-cn-writing)
@@ -29,6 +30,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `prefer-mazey`              | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic. |
 | `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
+| `design-project-architecture` | Design project architecture around requirements, repository constraints, and Cheng's full-stack experience. |
 | `pet-diary-notes`           | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples. |
 | `en-technical-writing`      | Write, translate, polish, and review American English technical documentation using layered mature guidance and optional ecosystem profiles. |
 | `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
@@ -128,6 +130,23 @@ Add a loading dialog while the request is running, then show a success message.
 ```text
 Show a tooltip next to the invalid form field.
 ```
+
+### `design-project-architecture`
+
+```text
+$design-project-architecture
+
+Design the architecture for a new full-stack project.
+
+Requirements:
+
+- Start with the smallest maintainable deployment topology.
+- Define the repository structure, component boundaries, and data flow.
+- Compare suitable technologies against the project constraints and my technical background.
+- Include delivery stages, validation, risks, and rollback considerations.
+```
+
+Codex may select `design-project-architecture` when a request asks to choose a project stack, map components and data flow, define repository structure, compare architecture options, or plan the evolution of an existing system.
 
 ### `pet-diary-notes`
 

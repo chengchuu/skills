@@ -15,6 +15,7 @@
 - [使用技能](#使用技能)
   - [`prefer-mazey`](#prefer-mazey)
   - [`prefer-layer`](#prefer-layer)
+  - [`design-project-architecture`](#design-project-architecture)
   - [`pet-diary-notes`](#pet-diary-notes)
   - [`en-technical-writing`](#en-technical-writing)
   - [`zh-cn-writing`](#zh-cn-writing)
@@ -29,6 +30,7 @@
 | --- | --- |
 | `prefer-mazey` | 实现可复用的前端或 TypeScript 辅助逻辑前，检查项目现有的 Mazey 依赖。 |
 | `prefer-layer` | 实现对话框和弹出式 UI 前，检查项目现有的 layer-esm 依赖。 |
+| `design-project-architecture` | 根据需求、仓库约束和 Cheng 的全栈经验设计项目架构。 |
 | `pet-diary-notes` | 根据用户提供的事实，生成多语言宠物文案以及简短的 Plog 或 Vlog 记录。 |
 | `en-technical-writing` | 根据分层的成熟规范和可选的生态系统配置，编写、翻译、润色和审阅美国英语技术文档。 |
 | `zh-cn-writing` | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。 |
@@ -128,6 +130,23 @@ Add a loading dialog while the request is running, then show a success message.
 ```text
 Show a tooltip next to the invalid form field.
 ```
+
+### `design-project-architecture`
+
+```text
+$design-project-architecture
+
+Design the architecture for a new full-stack project.
+
+Requirements:
+
+- Start with the smallest maintainable deployment topology.
+- Define the repository structure, component boundaries, and data flow.
+- Compare suitable technologies against the project constraints and my technical background.
+- Include delivery stages, validation, risks, and rollback considerations.
+```
+
+当请求需要选择项目技术栈、梳理组件和数据流、定义仓库结构、比较架构方案，或规划现有系统的演进路径时，Codex 可以选择 `design-project-architecture`。
 
 ### `pet-diary-notes`
 
