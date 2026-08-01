@@ -7,7 +7,7 @@ Use these references progressively. The example corpus is distributable style ev
 1. Read [writing-guidelines.md](writing-guidelines.md) for every task. It is the normative language specification.
 2. Read the relevant task section in [output-workflows.md](output-workflows.md).
 3. If document structure matters, read the matching section in [document-types.md](document-types.md).
-4. Read [personal-style.md](personal-style.md) when the user asks for new writing, rewriting, polishing, adaptation to the author's style, or author attribution.
+4. Read [personal-style.md](personal-style.md) whenever the task writes, rewrites, translates, proofreads, or reviews Chinese prose, or requires author attribution. Apply required personal conventions by default and optional tendencies only when suitable.
 5. Use [taxonomy.md](taxonomy.md) to classify a document or add future examples.
 6. Open only the smallest relevant file under [examples/](examples/) needed for the document type and subject.
 
@@ -17,16 +17,16 @@ Do not load every example for every task. Examples guide structure, tone, vocabu
 
 | Task | Required references | Optional references |
 | --- | --- | --- |
-| Write a new article | Formal guidelines, new-writing workflow, document type | Personal style and 1–3 relevant examples |
-| Rewrite or polish | Formal guidelines, rewriting workflow | Personal style and examples matching the source type |
-| English-to-Chinese translation | Formal guidelines, translation workflow | Matching Chinese example and its document type |
-| Proofread | Formal guidelines, proofreading workflow | Document type only when heading review includes information architecture, section order, or audience fit |
-| Language/style review | Formal guidelines, style-review workflow | Personal style |
+| Write a new article | Formal guidelines, new-writing workflow, document type, personal style | 1–3 relevant examples |
+| Rewrite or polish | Formal guidelines, rewriting workflow, personal style | Examples matching the source type |
+| English-to-Chinese translation | Formal guidelines, translation workflow, personal style | Matching Chinese example and its document type |
+| Proofread | Formal guidelines, proofreading workflow, personal style | Document type only when heading review includes information architecture, section order, or audience fit |
+| Language/style review | Formal guidelines, style-review workflow, personal style | Document type when structure is also in scope |
 | Author attribution | Formal guidelines, personal style | Document type only when attribution placement depends on the document structure |
 | Structural review | Structural-review workflow, document type | 1–2 structurally similar examples |
-| Technical review | Technical boundaries in the workflow | Examples only for presentation, never for fact checking |
-| Summarize technical material | Summarization workflow | Matching document type |
-| Turn notes into an article | Conversation-notes workflow, document type | Personal style and 1–3 relevant examples |
+| Technical review | Technical boundaries in the workflow; personal style when Chinese prose is in scope | Examples only for presentation, never for fact checking |
+| Summarize technical material | Summarization workflow, personal style | Matching document type |
+| Turn notes into an article | Conversation-notes workflow, document type, personal style | 1–3 relevant examples |
 
 ## Example index
 

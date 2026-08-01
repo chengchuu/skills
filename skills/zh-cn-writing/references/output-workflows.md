@@ -1,13 +1,13 @@
 # Output workflows
 
-Apply the common safeguards first: establish the requested output, isolate protected technical content, distinguish supplied facts from assumptions, and report unresolved conflicts.
+Apply the common safeguards first: establish the requested output, isolate protected technical content, distinguish supplied facts from assumptions, and report unresolved conflicts. For any workflow that creates, normalizes, proofreads, or assesses Chinese prose, read `personal-style.md`, apply its required conventions by default, and distinguish them from optional tendencies and universal grammar rules.
 
 ## Write a new article
 
 1. Confirm the purpose, document type, audience, scope, tone, and required facts from the prompt.
 2. Choose a structure from `document-types.md`; omit sections that lack evidence.
 3. Use user-provided or verified facts only. Mark missing facts instead of inventing them.
-4. Draft in natural `zh-CN`, then apply the formal guidelines. Read and apply personal-style tendencies when the user requests the author's usual style or style adaptation would materially help.
+4. Draft in natural `zh-CN`, then apply the formal guidelines and required personal conventions. Apply optional personal-style tendencies only when the user requests the author's usual style or style adaptation would materially help.
 5. Review technical boundaries, logical progression, examples, verification, and conclusion.
 
 Expected output: the finished article, followed only when useful by a short list of unresolved factual inputs.
@@ -33,14 +33,14 @@ Expected output: a natural Simplified Chinese translation, plus a short terminol
 ## Proofread
 
 1. Locate specific punctuation, spacing, grammar, sentence-length, heading, paragraph, number, unit, and terminology problems.
-2. Correct only what is supported by the formal guidelines and context.
+2. Correct only what is supported by the formal guidelines, required personal conventions, and context.
 3. Preserve authorial intent and technical content.
 
 Expected output: corrected text, or a findings list with location, issue, rationale, and suggested correction when the user asks for review only.
 
 ## Style review
 
-Separate mandatory guideline violations from optional style improvements. Explain which personal tendencies are applicable and which are not.
+Separate formal-guideline violations, required personal-style inconsistencies, and optional style improvements. Do not present a personal convention as a universal grammar rule.
 
 Expected output: prioritized findings, each with evidence and an actionable revision; do not present preferences as errors.
 
