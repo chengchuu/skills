@@ -60,6 +60,7 @@ const groups = {
     ["25-0721 Kitten Hiccups", "Chicken breast and hiccups", "Unknown", "Eating chicken breast and hiccuping"],
   ],
   "grooming-and-care.md": [
+    ["User-provided: 认真洗脸中", "Face washing", "Unknown", "Washing the face with repeated paw movements"],
     ["25-0731 The Joy of Head Massage", "Head massage", "Unknown", "Receiving a head massage"],
     ["25-0921 Sticky Little Baby", "Bath and dryer", "Unknown", "Sitting in a dryer after a bath"],
     ["25-0703 Relaxed Moments for This Cat", "Head scratches", "Unknown", "Receiving head scratches"],
@@ -136,6 +137,26 @@ jp:
 BGM：biubiubiu
 #猫 #猫のいる暮らし #猫トイレ #おりこうさん #ペット日記`,
   },
+  {
+    heading: "User-provided: 认真洗脸中",
+    body: `zh:
+认真洗脸中
+小爪子一下又一下地擦着脸，努力完成今天的洗脸日常。
+BGM: Rock That Body
+#猫咪 #猫咪日常 #猫咪洗脸 #乖巧猫咪
+
+en:
+A Very Serious Face-Washing Routine
+One careful paw swipe at a time, this cat works hard through the face-washing routine.
+BGM: Rock That Body
+#Cat #CatLife #FaceWashing #GroomingTime
+
+jp:
+一生懸命、顔洗い中
+小さな前足で何度も顔をこすりながら、一生懸命にお手入れしています。
+BGM：Rock That Body
+#猫 #猫のいる暮らし #顔洗い #毛づくろい`,
+  },
 ];
 const supplementalHeadings = new Set(supplementalExamples.map(example => example.heading));
 
@@ -177,6 +198,7 @@ function parseSource(markdown) {
 function parseDate(heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
+  if (heading === "User-provided: 认真洗脸中") return "2025-08-07";
   const match = /^(\d{2})-(\d{2})(\d{2})/.exec(heading);
   return match ? `20${match[1]}-${match[2]}-${match[3]}` : "unknown";
 }
@@ -250,6 +272,9 @@ function dimensions(file, heading) {
   if (heading === "User-provided: 猫砂盆里的乖巧日常") {
     return { country: "Unknown", region: "unknown", city: "unknown", mood: "Calm", tone: "Well-behaved and cute" };
   }
+  if (heading === "User-provided: 认真洗脸中") {
+    return { country: "Unknown", region: "unknown", city: "unknown", mood: "Diligent", tone: "Well-behaved and cute" };
+  }
   const presets = {
     "sleep-and-relaxation.md": ["Healing", "Gentle"],
     "companionship-and-affection.md": ["Healing", "Warm"],
@@ -278,6 +303,7 @@ function healthStatus(heading) {
 function platformFor(heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
+  if (heading === "User-provided: 认真洗脸中") return "多平台";
   return heading === "26-0225-Blanket-Mode-Activated"
     ? "YouTube Shorts indicated by an additional #shorts hashtag variant"
     : "unknown";
@@ -286,6 +312,7 @@ function platformFor(heading) {
 function contentTypeFor(file, heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
+  if (heading === "User-provided: 认真洗脸中") return "Real-life";
   if (supplementalHeadings.has(heading)) return "unknown";
   return file === "ai-storytelling.md" ? "AI-generated fictional scene" : "Real-life";
 }
@@ -300,11 +327,15 @@ function petIdentityFor(heading) {
   return [
     "User-provided: 圆眼睛里的好奇心",
     "User-provided: 猫砂盆里的乖巧日常",
+    "User-provided: 认真洗脸中",
   ].includes(heading) ? "嘟嘟" : null;
 }
 
 function formatFor(heading) {
-  return heading === "User-provided: 猫砂盆里的乖巧日常" ? "Vlog" : null;
+  return [
+    "User-provided: 猫砂盆里的乖巧日常",
+    "User-provided: 认真洗脸中",
+  ].includes(heading) ? "Vlog" : null;
 }
 
 function formatLanguage(label, block) {
@@ -397,7 +428,9 @@ function manifestMarkdown(examples) {
     const notes = supplementalHeadings.has(example.heading)
       ? example.heading === "User-provided: 猫砂盆里的乖巧日常"
         ? "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context"
-        : "Pet identity supplied as 嘟嘟; real-life status supplied by user"
+        : example.heading === "User-provided: 认真洗脸中"
+          ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
+          : "Pet identity supplied as 嘟嘟; real-life status supplied by user"
       : repeated ?? "No duplicate detected";
     return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${dims.country} | ${detail.location} | ${contentType} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${confidence} | ${notes} |`;
   });
