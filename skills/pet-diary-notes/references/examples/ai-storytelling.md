@@ -9,10 +9,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Sword and martial arts
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional generated scene
+- AI location: Fictional generated scene
 - Languages: zh-CN, en, ja-JP
 - BGM: Not supplied
 - Mood: Dramatic or playful
@@ -73,10 +70,7 @@ Amidst swirling leaves, the cat stands tall with a sword, cape billowing in the 
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Giant-cat monster battle
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional generated scene
+- AI location: Fictional generated scene
 - Languages: zh-CN, en
 - BGM: Not supplied
 - Mood: Dramatic or playful
@@ -131,10 +125,7 @@ The cat transforms into a giant warrior, unleashing powerful energy waves to bat
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Ninja in Gion
-- Country: Japan
-- Region: unknown
-- City: Kyoto
-- Location: Gion
+- AI location: Gion
 - Languages: zh-CN, en
 - BGM: Not supplied
 - Mood: Dramatic
@@ -189,10 +180,7 @@ In the rain, the cat ninja moves like a butterfly, cutting through the silence w
 - Version: v02
 - Category: AI storytelling
 - Secondary category: Summer dance
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional generated scene
+- AI location: Fictional generated scene
 - Languages: zh-CN, en
 - BGM: Meow Meow Summer
 - Mood: Dramatic or playful
@@ -255,10 +243,7 @@ Meow Meow Summer
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Egyptian dance
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional generated scene
+- AI location: Fictional generated scene
 - Languages: zh-CN, en, ja-JP
 - BGM: Egyptian Trend
 - Mood: Dramatic or playful
@@ -323,10 +308,7 @@ She stands up and dances with focus, tiny paws moving in perfect rhythm.
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Giant cat over a city
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional city
+- AI location: Fictional city
 - Languages: zh-CN, en, ja-JP
 - BGM: Not supplied
 - Mood: Dramatic or playful
@@ -387,10 +369,7 @@ Looking down at the traffic and people, this giant cat gives off a slightly mena
 - Version: v02
 - Category: AI storytelling
 - Secondary category: Office CEO story
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional office
+- AI location: Fictional office
 - Languages: zh-CN
 - BGM: Not supplied
 - Mood: Dramatic or playful
@@ -427,10 +406,7 @@ Looking down at the traffic and people, this giant cat gives off a slightly mena
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Office CEO story
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional office
+- AI location: Fictional office
 - Languages: zh-CN, en
 - BGM: Not supplied
 - Mood: Dramatic or playful
@@ -485,10 +461,7 @@ With a serious tone and constant paw gestures, this cat CEO surprisingly command
 - Version: v03
 - Category: AI storytelling
 - Secondary category: Midnight phone story
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional indoor scene
+- AI location: Fictional indoor scene
 - Languages: zh-CN, en
 - BGM: Not supplied
 - Mood: Dramatic or playful
@@ -535,10 +508,7 @@ Caught scrolling at night, the cat panics and hides the phone in a split second.
 - Version: v01
 - Category: AI storytelling
 - Secondary category: Midnight phone story
-- Country: AI or fictional setting
-- Region: unknown
-- City: unknown
-- Location: Fictional indoor scene
+- AI location: Fictional indoor scene
 - Languages: zh-CN, en, ja-JP
 - BGM: Not supplied
 - Mood: Dramatic or playful

@@ -39,7 +39,7 @@ jp:
 ## Title and caption
 
 - Required: observable scene and languages.
-- Optional: mood, pet identity, location, length.
+- Optional: mood, pet identity, length.
 - Length: one title plus exactly one description sentence unless the user explicitly requests another length.
 - Hashtags/BGM: omit unless requested.
 - Mistake to avoid: making each language literal or adding facts in only one version.
@@ -55,14 +55,14 @@ jp:
 ## Plog entry
 
 - Required: facts visible across the supplied photo or photo set and target language.
-- Optional: title, date, location, sequence, mood, BGM note, and hashtags.
+- Optional: title, date, sequence, mood, BGM note, and hashtags.
 - Order: title when requested → concise photo-diary caption → BGM if supplied → hashtags if requested.
 - Describe only visible or supplied details; do not introduce motion or a video timeline.
 
 ## Vlog entry
 
 - Required: supplied video event and target language.
-- Optional: title, sequence, platform, location, mood, BGM, and hashtags.
+- Optional: title, sequence, platform, mood, BGM, and hashtags.
 - Order: title when requested → concise event description → BGM if supplied → hashtags if requested.
 - Keep the description to exactly one sentence unless the user explicitly requests another length.
 - Preserve the supplied event sequence; do not invent actions between clips.
@@ -70,7 +70,7 @@ jp:
 ## Full multilingual entry
 
 - Required: scene, requested languages, real-life or generated status.
-- Optional: pet identity, diary/Plog/Vlog form, platform, mood, location, BGM, tags, compact tags.
+- Optional: pet identity, diary/Plog/Vlog form, platform, mood, BGM, tags, compact tags.
 - Order within each language: title, description, BGM if supplied, spaced hashtags, compact hashtags if requested.
 - Recommended length: title plus exactly one description sentence and 4–10 relevant tags per language.
 - Mistake to avoid: changing the scene, proper nouns, or fictional status between languages.
@@ -138,4 +138,4 @@ jp:
 - Required: source text, source/target languages, requested artifact.
 - Optional: platform, tone, length, facts that must remain exact.
 - Preserve factual strength and omissions. Naturalize idiom, syntax, title rhythm, and tags independently.
-- Do not introduce a description, BGM, tag, location, or pet name unless requested. A pet name present only in an identity field remains omitted from the rewritten or translated artifact by default.
+- Do not introduce a description, BGM, tag, AI setting, or pet name unless requested. A pet name present only in an identity field remains omitted from the rewritten or translated artifact by default.

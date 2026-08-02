@@ -2,6 +2,10 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.6.0 - 2026-08-02
+
+- Limited pet diary location metadata to explicitly AI-generated settings and documented Dudu as a fully indoor pet.
+
 ## 0.5.0 - 2026-08-01
 
 - Added `design-project-architecture` with Cheng's full-stack technical profile, architecture decision guidance, article-corpus provenance, and reusable npm package and site architecture patterns.

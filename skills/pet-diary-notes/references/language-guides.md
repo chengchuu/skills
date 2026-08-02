@@ -24,7 +24,7 @@ The three languages should describe the same underlying scene, not mirror one an
 - Use one English hashtag casing strategy per set. PascalCase improves multiword readability (`#SleepyCat`); lowercase is acceptable when the requested platform style uses it.
 - Add `#shorts` only for YouTube Shorts or an explicit request.
 - The corpus contains both `savouring` and mostly spelling-neutral prose. Follow an explicit locale; otherwise avoid locale-sensitive wording or use consistent neutral English.
-- Preserve BGM titles, names, locations, and campaign tags exactly.
+- Preserve BGM titles, names, explicitly supplied AI setting names, and campaign tags exactly.
 
 ## Japanese (`ja-JP`)
 

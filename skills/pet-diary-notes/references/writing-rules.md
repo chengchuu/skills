@@ -2,7 +2,7 @@
 
 ## Strong recurring rules
 
-- Build every diary note, entry, caption, or short record from observable or explicitly supplied facts. Preserve dates, places, BGM titles, health details, and version labels exactly.
+- Build every diary note, entry, caption, or short record from observable or explicitly supplied facts. Preserve dates, explicitly supplied AI setting names, BGM titles, health details, and version labels exactly.
 - Omit the pet's name from titles, descriptions, and hashtags by default. A supplied identity selects the correct profile and grammar; it does not authorize name-bearing copy. Include the exact name only when the user explicitly requests naming, attribution, or branding.
 - Write from a close pet-owner viewpoint with short, image-led titles and compact descriptions; use a quieter diary rhythm when no promotional platform format is requested.
 - Keep multilingual versions aligned on the same core scene while adapting syntax and idiom naturally.
@@ -14,7 +14,8 @@
 
 ## Factual and emotional boundaries
 
-- Do not invent actions, food, locations, dates, weather, props, photo details, camera events, or outcomes.
+- Do not add geography to real-life entries. For AI-generated entries, use only an explicitly supplied setting and do not invent additional places.
+- Do not invent actions, food, dates, weather, props, photo details, camera events, or outcomes.
 - Describe visible expressions neutrally: `看着镜头`, `眯着眼`, `小爪子收着`. Do not convert a look into love, trust, fear, guilt, or understanding unless the user supplies that reading.
 - Light anthropomorphism is acceptable as a title device (`Office Manager`, `CEO`, `剑客`) when the scene or fictional brief supports it. Do not present it as literal cognition.
 - Vary generic praise such as `可爱`, `治愈`, `温柔`, `乖巧`, `小天使`, `healing`, `cute`, and `gentle`. Anchor praise in the actual shot.
@@ -48,7 +49,7 @@
 ## Do not reuse automatically
 
 - Do not copy distinctive metaphors, lyric-like lines, or repeated signature titles from the corpus.
-- Do not reuse source diagnoses, recovery durations, `长女`, tuna, Guilin Park, Gion, office, food, BGM, or behavior in a new entry.
+- Do not reuse source diagnoses, recovery durations, `长女`, tuna, settings, office roles, food, BGM, or behavior in a new entry.
 - Do not repeat unnatural source translations merely for consistency.
 - Do not add generic reach tags unrelated to the scene.
 - Do not add `#shorts` unless the requested platform or format is YouTube Shorts.
