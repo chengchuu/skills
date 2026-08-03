@@ -204,6 +204,32 @@ if (!terminology.includes('American English (`en-US`)')) {
   errors.push('Terminology guidance must declare en-US as the default.');
 }
 
+const writingGuidelines = contents.get('references/writing-guidelines.md') ?? '';
+for (const marker of [
+  'default every table column to left alignment',
+  'Use a leading colon in every separator cell',
+  'Normalize each column to a consistent visual width',
+  'Pad shorter cells with spaces so the pipes align vertically',
+  'CJK ideographs, kana, Hangul syllables, and full-width forms as two',
+  'separator cell the same display width as the padded cells',
+  'fenced code blocks, block quotations, generated files, or protected source content',
+  'For review-only requests',
+]) {
+  if (!writingGuidelines.includes(marker)) {
+    errors.push(`Writing guidelines must include the Markdown table rule marker: ${marker}`);
+  }
+}
+
+const outputWorkflows = contents.get('references/output-workflows.md') ?? '';
+for (const marker of [
+  '[Markdown table alignment and width rule](writing-guidelines.md#lists-tables-and-notices)',
+  'In review-only mode, report alignment or visual-width violations without rewriting',
+]) {
+  if (!outputWorkflows.includes(marker)) {
+    errors.push(`Output workflows must include the Markdown table behavior marker: ${marker}`);
+  }
+}
+
 const manifest = contents.get('references/source-manifest.md') ?? '';
 for (const marker of [
   'All sources were reviewed on 2026-07-30',

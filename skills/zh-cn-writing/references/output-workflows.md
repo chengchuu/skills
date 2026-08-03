@@ -1,6 +1,6 @@
 # Output workflows
 
-Apply the common safeguards first: establish the requested output, isolate protected technical content, distinguish supplied facts from assumptions, and report unresolved conflicts. For any workflow that creates, normalizes, proofreads, or assesses Chinese prose, read `personal-style.md`, apply its required conventions by default, and distinguish them from optional tendencies and universal grammar rules.
+Apply the common safeguards first: establish the requested output, isolate protected technical content, distinguish supplied facts from assumptions, and report unresolved conflicts. For any workflow that creates, normalizes, proofreads, or assesses Chinese prose, read `personal-style.md`, apply its required conventions by default, and distinguish them from optional tendencies and universal grammar rules. When a workflow creates or edits a Markdown table, apply the [Markdown 表格对齐与宽度规则](writing-guidelines.md#表格); for review-only work, report alignment or display-width violations without rewriting the table or file.
 
 ## Write a new article
 

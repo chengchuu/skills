@@ -16,7 +16,7 @@ Do not load every example for every task. Examples guide structure, tone, vocabu
 ## Task routing
 
 | Task | Required references | Optional references |
-| --- | --- | --- |
+|:---|:---|:---|
 | Write a new article | Formal guidelines, new-writing workflow, document type, personal style | 1–3 relevant examples |
 | Rewrite or polish | Formal guidelines, rewriting workflow, personal style | Examples matching the source type |
 | English-to-Chinese translation | Formal guidelines, translation workflow, personal style | Matching Chinese example and its document type |
@@ -25,6 +25,7 @@ Do not load every example for every task. Examples guide structure, tone, vocabu
 | Author attribution | Formal guidelines, personal style | Document type only when attribution placement depends on the document structure |
 | Structural review | Structural-review workflow, document type | 1–2 structurally similar examples |
 | Technical review | Technical boundaries in the workflow; personal style when Chinese prose is in scope | Examples only for presentation, never for fact checking |
+| Markdown 表格任务 | 正式规范、相关工作流 | 目标仓库规范 |
 | Summarize technical material | Summarization workflow, personal style | Matching document type |
 | Turn notes into an article | Conversation-notes workflow, document type, personal style | 1–3 relevant examples |
 

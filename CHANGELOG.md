@@ -2,6 +2,10 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.7.0 - 2026-08-03
+
+- Added consistent left-aligned Markdown table formatting and CJK-aware display-width guidance to the English and Simplified Chinese technical-writing skills.
+
 ## 0.6.0 - 2026-08-02
 
 - Limited pet diary location metadata to explicitly AI-generated settings and documented Dudu as a fully indoor pet.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { appendFile, cp, mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { appendFile, cp, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -29,6 +29,39 @@ async function runCase(name, mutate, expected) {
 }
 
 await runCase('accepts the unmodified skill', async () => {}, status => status === 0);
+
+await runCase(
+  'rejects missing Markdown table alignment guidance',
+  async fixtureRoot => {
+    const guidelinePath = path.join(fixtureRoot, 'references/writing-guidelines.md');
+    const content = await readFile(guidelinePath, 'utf8');
+    await writeFile(guidelinePath, content.replace('default every table column to left alignment', 'format Markdown tables consistently'));
+  },
+  (status, output) => status === 1
+    && output.includes('Markdown table rule marker: default every table column to left alignment'),
+);
+
+await runCase(
+  'rejects missing CJK display-width guidance',
+  async fixtureRoot => {
+    const guidelinePath = path.join(fixtureRoot, 'references/writing-guidelines.md');
+    const content = await readFile(guidelinePath, 'utf8');
+    await writeFile(guidelinePath, content.replace('CJK ideographs, kana, Hangul syllables, and full-width forms as two', 'all visible characters as one'));
+  },
+  (status, output) => status === 1
+    && output.includes('Markdown table rule marker: CJK ideographs, kana, Hangul syllables, and full-width forms as two'),
+);
+
+await runCase(
+  'rejects missing review-only Markdown table behavior',
+  async fixtureRoot => {
+    const workflowPath = path.join(fixtureRoot, 'references/output-workflows.md');
+    const content = await readFile(workflowPath, 'utf8');
+    await writeFile(workflowPath, content.replace('In review-only mode, report alignment or visual-width violations without rewriting', 'In review-only mode, handle violations carefully'));
+  },
+  (status, output) => status === 1
+    && output.includes('Markdown table behavior marker: In review-only mode, report alignment or visual-width violations without rewriting'),
+);
 
 await runCase(
   'accepts query strings and Markdown link titles',
@@ -182,5 +215,5 @@ if (failures.length > 0) {
   }
   process.exitCode = 1;
 } else {
-  console.log('Passed 14 en-technical-writing validator regression tests.');
+  console.log('Passed 17 en-technical-writing validator regression tests.');
 }
