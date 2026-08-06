@@ -61,6 +61,7 @@ Do not choose a runtime before defining workload shape, concurrency, latency, de
 ### Build and Packaging
 
 - Reuse the repository's package manager, module format, bundler, linting, and test conventions when they meet the requirement.
+- When webpack is selected for a new project, prefer webpack 5. For an existing project, preserve its current webpack version unless upgrading to webpack 5 is in scope and configuration, loader and plugin compatibility, dependencies, tests, generated assets, and deployment have been verified.
 - Separate source configuration from generated output.
 - Identify the authority for each identity or configuration value and derive dependent values instead of repeating them. Keep values distinct when their formats or scopes differ, such as package name, repository slug, browser global, artifact filename, site base path, cache namespace, and display name.
 - Keep public entry points, implementations, types, tests, examples, documentation, package metadata, and generated artifacts synchronized as one consumer contract.

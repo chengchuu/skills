@@ -14,9 +14,10 @@ Cheng is an experienced full-stack developer with the following background:
 - Frameworks and libraries: React.js, Vue.js, Bootstrap, and jQuery.
 - React version preference: React 19 when React is selected and project constraints permit it.
 - UI library version preference: Bootstrap 5 when Bootstrap is selected and project constraints permit it.
+- Frontend build-tool version preference: webpack 5 when webpack is selected and project constraints permit it.
 - Web fundamentals: HTML and CSS.
 
-Do not infer an ordering or preferred framework default within these lists. React 19 and Bootstrap 5 are version preferences, not requirements to choose React or Bootstrap. Determine the best fit from the project and ask when another preference would materially change the design.
+Do not infer an ordering or preferred framework or build-tool default within these lists. React 19, Bootstrap 5, and webpack 5 are version preferences, not requirements to choose their respective technologies. Determine the best fit from the project and ask when another preference would materially change the design.
 
 ## Demonstrated Engineering Areas
 
