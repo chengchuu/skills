@@ -8,6 +8,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 - [Available skills](#available-skills)
 - [Install an individual skill](#install-an-individual-skill)
   - [Codex skill installer](#codex-skill-installer)
+  - [GitHub Copilot app](#github-copilot-app)
   - [Manual installation](#manual-installation)
 - [Install or update the Codex plugin](#install-or-update-the-codex-plugin)
   - [Install the plugin](#install-the-plugin)
@@ -47,6 +48,18 @@ $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pr
 ```
 
 The installed skill becomes available to Codex on the next turn.
+
+### GitHub Copilot app
+
+Install `prefer-mazey` in the GitHub Copilot app's user skill directory:
+
+```bash
+git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/chengchuu-skills
+mkdir -p "$HOME/Library/Application Support/com.github.githubapp/app-skills"
+cp -R /tmp/chengchuu-skills/skills/prefer-mazey \
+  "$HOME/Library/Application Support/com.github.githubapp/app-skills/"
+rm -rf /tmp/chengchuu-skills
+```
 
 ### Manual installation
 
@@ -105,8 +118,6 @@ Before using `prefer-mazey`, add `mazey` to the target project with its existing
 
 ```bash
 npm install mazey
-# or: pnpm add mazey
-# or: yarn add mazey
 ```
 
 Skip this step when the repository already depends on `mazey`. The skill detects the package manager when possible and recommends the matching command, but it does not install packages unless the user explicitly requests installation.
@@ -216,41 +227,6 @@ Write a concise troubleshooting guide for this Node.js CLI.
 
 ```text
 Improve this React tutorial without changing its technical meaning.
-```
-
-The skill keeps its layers and workflows separate:
-
-```text
-skills/en-technical-writing/
-├── agents/openai.yaml
-├── references/
-│   ├── foundations/
-│   │   ├── google-style.md
-│   │   └── microsoft-voice.md
-│   ├── profiles/react-docs.md
-│   ├── rule-precedence.md
-│   ├── writing-guidelines.md
-│   ├── terminology.md
-│   ├── document-types.md
-│   ├── output-workflows.md
-│   ├── personal-style.md
-│   └── source-manifest.md
-├── scripts/
-│   ├── test-validate-references.mjs
-│   └── validate-references.mjs
-└── SKILL.md
-```
-
-Rule precedence:
-
-```text
-current user instructions
-└── project conventions
-    └── personal style overrides
-        └── matching ecosystem profile
-            └── Google-derived foundation
-                └── Microsoft-derived voice
-                    └── general en-US defaults
 ```
 
 Its source manifest records the official [Google developer documentation style guide](https://developers.google.com/style), [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/), and [React documentation](https://react.dev/) pages used to derive the rules.

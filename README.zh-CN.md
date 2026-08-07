@@ -8,6 +8,7 @@
 - [可用技能](#可用技能)
 - [安装单个技能](#安装单个技能)
   - [Codex Skill Installer](#codex-skill-installer)
+  - [GitHub Copilot app](#github-copilot-app)
   - [手动安装](#手动安装)
 - [安装或更新 Codex 插件](#安装或更新-codex-插件)
   - [安装插件](#安装插件)
@@ -47,6 +48,18 @@ $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pr
 ```
 
 安装完成后，该技能会在 Codex 的下一轮对话中生效。
+
+### GitHub Copilot app
+
+将 `prefer-mazey` 安装到 GitHub Copilot app 的用户技能目录：
+
+```bash
+git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/chengchuu-skills
+mkdir -p "$HOME/Library/Application Support/com.github.githubapp/app-skills"
+cp -R /tmp/chengchuu-skills/skills/prefer-mazey \
+  "$HOME/Library/Application Support/com.github.githubapp/app-skills/"
+rm -rf /tmp/chengchuu-skills
+```
 
 ### 手动安装
 
@@ -105,8 +118,6 @@ codex plugin add chengchuu-skills@personal
 
 ```bash
 npm install mazey
-# or: pnpm add mazey
-# or: yarn add mazey
 ```
 
 如果仓库已经依赖 `mazey`，请跳过这一步。该技能会尽量检测包管理器，并推荐匹配的命令。除非用户明确要求，否则该技能不会安装软件包。
@@ -218,41 +229,6 @@ Write a concise troubleshooting guide for this Node.js CLI.
 
 ```text
 Improve this React tutorial without changing its technical meaning.
-```
-
-该技能将规范层级与工作流分别存放：
-
-```text
-skills/en-technical-writing/
-├── agents/openai.yaml
-├── references/
-│   ├── foundations/
-│   │   ├── google-style.md
-│   │   └── microsoft-voice.md
-│   ├── profiles/react-docs.md
-│   ├── rule-precedence.md
-│   ├── writing-guidelines.md
-│   ├── terminology.md
-│   ├── document-types.md
-│   ├── output-workflows.md
-│   ├── personal-style.md
-│   └── source-manifest.md
-├── scripts/
-│   ├── test-validate-references.mjs
-│   └── validate-references.mjs
-└── SKILL.md
-```
-
-规则优先级：
-
-```text
-当前用户要求
-└── 项目规范
-    └── 个人风格覆盖规则
-        └── 匹配的生态系统配置
-            └── 基于 Google 的基础规范
-                └── 基于 Microsoft 的语气规范
-                    └── 通用 en-US 规范
 ```
 
 来源清单记录了用于提炼规则的官方页面。来源包括 [Google 开发者文档风格指南](https://developers.google.com/style)、[Microsoft 写作风格指南](https://learn.microsoft.com/en-us/style-guide/)和 [React 文档](https://react.dev/)。
