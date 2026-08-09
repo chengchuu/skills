@@ -2,6 +2,10 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.11.0 - 2026-08-09
+
+- Added conditional greenfield ESLint defaults and formatter-compatibility guidance to `design-project-architecture`.
+
 ## 0.10.0 - 2026-08-09
 
 - Renamed the plugin to `cheng-skills`.

@@ -2,7 +2,7 @@
 
 ## Profile Status
 
-This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, and maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
+This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01, and frontend linting conventions reviewed from Mazey on 2026-08-09. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
 
 ## Directly Supplied Background
 
@@ -15,9 +15,12 @@ Cheng is an experienced full-stack developer with the following background:
 - React version preference: React 19 when React is selected and project constraints permit it.
 - UI library version preference: Bootstrap 5 when Bootstrap is selected and project constraints permit it.
 - Frontend build-tool version preference: webpack 5 when webpack is selected and project constraints permit it.
+- Frontend linting preference: for a greenfield JavaScript or TypeScript project without established conventions, start with the bundled framework-neutral ESLint formatting baseline at warning severity.
 - Web fundamentals: HTML and CSS.
 
 Do not infer an ordering or preferred framework or build-tool default within these lists. React 19, Bootstrap 5, and webpack 5 are version preferences, not requirements to choose their respective technologies. Determine the best fit from the project and ask when another preference would materially change the design.
+
+The ESLint baseline is a conditional greenfield default. Preserve an existing project's lint and formatting contract, and do not introduce ESLint when another maintained tool already owns that responsibility unless the task explicitly changes it.
 
 ## Demonstrated Engineering Areas
 

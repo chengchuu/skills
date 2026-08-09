@@ -11,7 +11,7 @@ Design an architecture that Cheng can build, operate, and evolve. Treat familiar
 
 Read [references/technical-profile.md](references/technical-profile.md) for every architecture task.
 
-Read [references/architecture-decisions.md](references/architecture-decisions.md) when selecting technologies, defining boundaries, planning delivery, or comparing alternatives. Read [references/package-project-patterns.md](references/package-project-patterns.md) when designing or customizing a reusable package, its examples, documentation site, generated artifacts, or release workflow. Read [references/source-manifest.md](references/source-manifest.md) only when the task benefits from knowing which sources support the profile.
+Read [references/architecture-decisions.md](references/architecture-decisions.md) when selecting technologies, defining boundaries, planning delivery, or comparing alternatives. Read [references/package-project-patterns.md](references/package-project-patterns.md) when designing or customizing a reusable package, its examples, documentation site, generated artifacts, or release workflow. Read [references/frontend-eslint-defaults.md](references/frontend-eslint-defaults.md) when a design defines frontend JavaScript or TypeScript linting, formatting, or coding conventions. Read [references/source-manifest.md](references/source-manifest.md) only when the task benefits from knowing which sources support the profile.
 
 ## Workflow
 
@@ -35,6 +35,7 @@ Read [references/architecture-decisions.md](references/architecture-decisions.md
 - Design performance, security, observability, testing, deployment, rollback, and recovery with the architecture rather than appending them after implementation.
 - Preserve compatibility and incremental migration paths when modernizing an existing system.
 - Validate the artifacts users install or deploy, not only source compilation; inspect package contents, generated documentation, static output, migrations, or deployment bundles as applicable.
+- Keep lint and formatting ownership explicit. Do not recommend configurations that produce conflicting fixes or require unrelated repositories to adopt Cheng's greenfield defaults.
 - Prefer reversible delivery: versioned artifacts, controlled migrations, staged rollout, explicit rollback, and retained compatibility where justified.
 - Avoid speculative scale, premature distribution, fashionable dependencies, and infrastructure that the project cannot operate confidently.
 

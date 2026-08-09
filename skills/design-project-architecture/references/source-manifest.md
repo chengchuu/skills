@@ -109,6 +109,12 @@ The following current repository documents were reviewed on 2026-08-01 as a conc
 
 They support the reusable patterns in [package-project-patterns.md](package-project-patterns.md). Treat exact paths, commands, tools, output names, URLs, and deployment behavior as template-specific contracts rather than defaults for unrelated projects.
 
+The following maintained frontend tooling guide was reviewed on 2026-08-09:
+
+- `mazey/guides/ESLINT_RULES.md`
+
+It supports the conditional defaults in [frontend-eslint-defaults.md](frontend-eslint-defaults.md). Treat the rule behavior as Cheng's greenfield preference; verify rule availability and integration against the target project's installed ESLint and formatter contracts.
+
 ## Interpretation Rules
 
 - Directly supplied background outranks source-derived inference.
