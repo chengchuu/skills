@@ -94,6 +94,10 @@ Reject a boundary that only renames files or forwards calls without adding owner
 ## Frontend and Delivery
 
 - Define routing, entry points, state ownership, data fetching, error states, accessibility, browser baseline, and rendering strategy.
+- Preserve an existing design-token and theme-selection contract. For a greenfield theme, define semantic roles and coordinated light and dark values before styling components.
+- When a greenfield frontend needs ready-made colors and has no established brand palette, prefer the bundled blue theme preset; adapt or reject it when product identity or verified accessibility requirements conflict.
+- When a framework exposes theme variables, map them to the semantic contract instead of maintaining unrelated framework and custom palettes. Synchronize alternate color representations required by consumers.
+- Resolve theme preference once and coordinate the root selector, CSS `color-scheme`, browser metadata, accessible control state, and installable-app appearance where applicable. Recalculate contrast after visual inputs change.
 - Version static assets and preserve old assets when cached documents may still reference them.
 - Treat cache keys, invalidation, Service Worker updates, CDN behavior, and offline support as product decisions.
 - Include performance budgets or measurable targets when loading experience matters.

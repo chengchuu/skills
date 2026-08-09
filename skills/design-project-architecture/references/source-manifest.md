@@ -115,6 +115,12 @@ The following maintained frontend tooling guide was reviewed on 2026-08-09:
 
 It supports the conditional defaults in [frontend-eslint-defaults.md](frontend-eslint-defaults.md). Treat the rule behavior as Cheng's greenfield preference; verify rule availability and integration against the target project's installed ESLint and formatter contracts.
 
+The following maintained frontend theme guide was reviewed on 2026-08-10:
+
+- `chengchuu.github.io/guides/THEME_COLOR_SCHEME.md`
+
+It supports the reusable architecture in [frontend-theme-system.md](frontend-theme-system.md) and the exact colors in [frontend-blue-theme-preset.md](frontend-blue-theme-preset.md). Treat its semantic roles, theme coordination, framework mapping, and validation workflow as design evidence. The palette is Cheng's directly selected greenfield preset; preserve existing project branding and theme contracts, and keep unrelated site-specific behavior local to projects with the same requirements.
+
 ## Interpretation Rules
 
 - Directly supplied background outranks source-derived inference.
