@@ -5,17 +5,18 @@ This manifest maps every pet diary source section in `temp/pet-examples/pet.md` 
 ## Coverage
 
 - Source sections from `temp/pet-examples/pet.md`: 60
-- Supplemental user-provided examples: 3
-- Curated examples: 63
+- Supplemental user-provided examples: 4
+- Curated examples: 64
 - Merge decisions: none; every distinct source section is retained.
-- Language availability: zh-CN 63, en 62, ja-JP 45.
-- Content types: real-life 53, AI-generated 10, unknown 0.
+- Language availability: zh-CN 64, en 63, ja-JP 46.
+- Content types: real-life 54, AI-generated 10, unknown 0.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `User-provided: 好奇目光` | 2026-08-08 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
 | `User-provided: 圆眼睛里的好奇心` | 2025-06-01 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; real-life status supplied by user |
 | `User-provided: 猫砂盆里的乖巧日常` | 2025-07-10 | none | Daily life and office | [daily-life-and-office.md](examples/daily-life-and-office.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context |
 | `User-provided: 认真洗脸中` | 2025-08-07 | none | Grooming and care | [grooming-and-care.md](examples/grooming-and-care.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |

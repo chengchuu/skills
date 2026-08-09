@@ -12,19 +12,21 @@ This repository publishes seven reusable skills as the skill-only `cheng-skills`
 - `zh-technical-writing`
 - `zh-restaurant-reviews`
 
-The repository has no application server, compile step, or runtime bundle. Codex reads the plugin manifest, evaluates skill metadata, and loads a matching `SKILL.md` and its linked resources on demand.
+The repository has no application server, compile step, runtime bundle, apps, connectors, MCP servers, or hooks. Codex reads the plugin manifest, evaluates skill metadata, and loads a matching `SKILL.md` and its linked resources on demand.
 
 ## Repository map
 
 - `.codex-plugin/plugin.json` is the plugin entry point. Preserve the `cheng-skills` name and `"skills": "./skills/"` path. Keep its clean release version aligned with `package.json`, keep its interface metadata aligned with the public skills, and keep asset paths repository-relative.
+- `package.json` contains release metadata and the dependency-free `validate` and `test` commands. It defines no runtime dependencies or application build output.
 - `skills/<skill-name>/SKILL.md` is each public skill's entry point. The frontmatter `name` must match the kebab-case directory name, and `description` controls activation.
 - `skills/*/agents/openai.yaml` contains user-facing display metadata and optional icon paths. Keep prompts and descriptions consistent with the corresponding skill, and resolve icon paths from the metadata file without duplicating assets unnecessarily.
 - `skills/*/references/` contains API maps, routing indexes, rules, taxonomies, provenance manifests, and curated examples. `skills/*/scripts/` contains corpus builders and reference validators owned by the corresponding skill.
-- `scripts/validate-skills.mjs` validates the plugin path, public skill layout, frontmatter, local Markdown links, temporary files, symlinks, machine-specific paths, and likely secrets.
-- `README.md` documents skill discovery, individual installation, GitHub Copilot app installation, personal-marketplace plugin installation, usage, and contribution workflows. `README.zh-CN.md` is its synchronized Simplified Chinese localization.
+- `scripts/validate-skills.mjs` validates the plugin path and public skill layout. Within each public skill, it checks frontmatter, local Markdown links, temporary files, symlinks, machine-specific paths, and likely secrets; it also rejects public `SKILL.md` files outside `skills/`.
+- `README.md` documents skill discovery, individual installation, GitHub Copilot app installation, personal-marketplace plugin installation, usage, and contribution workflows. `README.zh-CN.md` is the corresponding Simplified Chinese localization and must stay aligned as described below.
+- `CHANGELOG.md` records release-level changes. `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, and the files under `.github/` define the public contribution, reporting, and review workflows.
 - `assets/logo.png` is the shared plugin logo and is also referenced by skill metadata where needed.
 - `.editorconfig` defines UTF-8, LF line endings, two-space indentation, and final-newline behavior. Markdown files may retain trailing whitespace when it is meaningful.
-- `.github/workflows/validate.yml` runs `npm run validate` with Node.js 22 for pull requests and pushes to `main`. It does not run the full local `npm test` command.
+- `.github/workflows/validate.yml` runs `npm run validate` with Node.js 22 for pull requests and pushes to `main`. It does not run the skill-specific validators, `npm test`, or `git diff --check`; run those locally when required below.
 
 ## Skill ownership and generated content
 
@@ -69,13 +71,16 @@ git diff --check
 
 `npm test` reruns the repository validator and executes the `en-technical-writing` reference-validator regression suite.
 
-After changing bundled references or corpus content, run the validator for the affected skill:
+After changing bundled references or corpus content, run the validator for the affected skill. The English skill also has a regression suite for its validator:
 
 ```bash
 node skills/en-technical-writing/scripts/validate-references.mjs
+node skills/en-technical-writing/scripts/test-validate-references.mjs
 node skills/pet-diary-notes/scripts/validate-references.mjs
 node skills/zh-technical-writing/scripts/validate-references.mjs
 ```
+
+`zh-restaurant-reviews` has no standalone validator. Validate its reference links, taxonomy, formats, and source-manifest coverage with targeted checks in addition to the repository commands.
 
 When the complete pet source is present and intentionally changed, rebuild and then validate its generated corpus:
 
