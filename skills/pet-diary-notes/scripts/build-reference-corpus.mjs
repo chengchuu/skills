@@ -28,6 +28,7 @@ const groups = {
   ],
   "companionship-and-affection.md": [
     ["User-provided: 圆眼睛里的好奇心", "Curious gaze", "Unknown", "Showing a curious, round-eyed expression"],
+    ["User-provided: 好奇目光", "Curious gaze", "Unknown", "Looking curiously at the owner"],
     ["26-0207-Completely-Unguarded", "Tucked paws and gaze", "Unknown", "Sitting with paws tucked and looking"],
     ["25-1126-The-Most-Healing-Kitten-in-the-World", "Healing portrait", "Unknown", "Unspecified"],
     ["25-1121-A-Cat-Loves-You", "Affection and companionship", "Unknown", "Small affectionate and companionable moments"],
@@ -97,6 +98,25 @@ const groups = {
 };
 
 const supplementalExamples = [
+  {
+    heading: "User-provided: 好奇目光",
+    body: `zh:
+好奇目光
+圆圆的眼睛好奇地看着我，这一刻也被轻轻记录下来。
+BGM: Somewhere Only We Know
+#猫咪 #猫咪日常 #好奇猫咪 #宠物日记
+
+en:
+A Curious Look
+Round eyes meet mine with curiosity, captured in one simple little moment.
+BGM: Somewhere Only We Know
+#Cat #CatLife #CuriousCat #PetDiary
+
+jp:
+好奇心いっぱいのまなざし
+BGM: Somewhere Only We Know
+#猫 #猫のいる暮らし #好奇心 #ペット日記`,
+  },
   {
     heading: "User-provided: 圆眼睛里的好奇心",
     body: `zh:
@@ -196,6 +216,7 @@ function parseSource(markdown) {
 }
 
 function parseDate(heading) {
+  if (heading === "User-provided: 好奇目光") return "2026-08-08";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
   if (heading === "User-provided: 认真洗脸中") return "2025-08-07";
@@ -264,6 +285,9 @@ function categoryFor(file) {
 }
 
 function dimensions(file, heading) {
+  if (heading === "User-provided: 好奇目光") {
+    return { mood: "Curious", tone: "Gentle" };
+  }
   if (heading === "User-provided: 圆眼睛里的好奇心") {
     return { mood: "Healing", tone: "Cute and gentle" };
   }
@@ -308,6 +332,7 @@ function healthStatus(heading) {
 }
 
 function platformFor(heading) {
+  if (heading === "User-provided: 好奇目光") return "多平台";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
   if (heading === "User-provided: 认真洗脸中") return "多平台";
@@ -317,6 +342,7 @@ function platformFor(heading) {
 }
 
 function contentTypeFor(file, heading) {
+  if (heading === "User-provided: 好奇目光") return "Real-life";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
   if (heading === "User-provided: 认真洗脸中") return "Real-life";
@@ -332,6 +358,7 @@ function sourcePathFor(heading) {
 
 function petIdentityFor(heading) {
   return [
+    "User-provided: 好奇目光",
     "User-provided: 圆眼睛里的好奇心",
     "User-provided: 猫砂盆里的乖巧日常",
     "User-provided: 认真洗脸中",
@@ -340,6 +367,7 @@ function petIdentityFor(heading) {
 
 function formatFor(heading) {
   return [
+    "User-provided: 好奇目光",
     "User-provided: 猫砂盆里的乖巧日常",
     "User-provided: 认真洗脸中",
   ].includes(heading) ? "Vlog" : null;
@@ -427,7 +455,9 @@ function manifestMarkdown(examples) {
         ? "High for identity; medium for relationship"
         : "High";
     const notes = supplementalHeadings.has(example.heading)
-      ? example.heading === "User-provided: 猫砂盆里的乖巧日常"
+      ? example.heading === "User-provided: 好奇目光"
+        ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
+        : example.heading === "User-provided: 猫砂盆里的乖巧日常"
         ? "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context"
         : example.heading === "User-provided: 认真洗脸中"
           ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
