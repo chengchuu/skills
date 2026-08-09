@@ -1,5 +1,5 @@
 ---
-name: zh-cn-restaurant-reviews
+name: zh-restaurant-reviews
 description: Generate, rewrite, and review Simplified Chinese restaurant reviews using factual dining details and curated handwritten examples organized by country, cuisine, category, platform, sentiment, tone, and length. Use for 大众点评、小红书、Google Maps、餐厅短评、用餐记录和餐饮评价. Do not use for code reviews, technical writing, or unrelated product reviews.
 ---
 

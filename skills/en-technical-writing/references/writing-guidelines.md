@@ -73,6 +73,21 @@ Passive voice is appropriate when the actor is unknown or irrelevant, when the r
 - Use description lists or a table for repeated name-value relationships.
 - Use a table only when readers need to compare information across two dimensions.
 - Introduce a table with a complete sentence and provide meaningful headers.
+- When writing, rewriting, translating, or proofreading editable Markdown, default every table column to left alignment. Use a leading colon in every separator cell.
+- Normalize each column to a consistent visual width based on its longest header or body cell. Pad shorter cells with spaces so the pipes align vertically; do not use tabs.
+- Calculate display width rather than Unicode character count. Count ASCII and other half-width characters as one display column, CJK ideographs, kana, Hangul syllables, and full-width forms as two, and combining marks as zero.
+- Give the corresponding separator cell the same display width as the padded cells in its column. Keep at least the Markdown-required number of hyphens while retaining the leading colon.
+
+  ```markdown
+  | Name    | Description      |
+  |:--------|:-----------------|
+  | App     | Frontend app     |
+  | Service | Backend service  |
+  ```
+
+- Preserve another table alignment when the user or target repository explicitly requires it.
+- Do not alter tables inside fenced code blocks, block quotations, generated files, or protected source content.
+- For review-only requests, report inconsistent display widths or separator alignment without rewriting the table or file.
 - Minimize notices. Use:
   - **Note** for helpful, noncritical information.
   - **Caution** when an action can cause an unwanted outcome.

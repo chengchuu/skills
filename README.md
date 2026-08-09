@@ -1,4 +1,4 @@
-# Codex Skills
+# Cheng Skills
 
 Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.codex-plugin/plugin.json` manifest points at independent skills under `skills/` and does not configure apps, connectors, MCP servers, or hooks.
 
@@ -8,6 +8,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 - [Available skills](#available-skills)
 - [Install an individual skill](#install-an-individual-skill)
   - [Codex skill installer](#codex-skill-installer)
+  - [GitHub Copilot app](#github-copilot-app)
   - [Manual installation](#manual-installation)
 - [Install or update the Codex plugin](#install-or-update-the-codex-plugin)
   - [Install the plugin](#install-the-plugin)
@@ -15,10 +16,11 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 - [Use the skill](#use-the-skill)
   - [`prefer-mazey`](#prefer-mazey)
   - [`prefer-layer`](#prefer-layer)
+  - [`design-project-architecture`](#design-project-architecture)
   - [`pet-diary-notes`](#pet-diary-notes)
   - [`en-technical-writing`](#en-technical-writing)
-  - [`zh-cn-writing`](#zh-cn-writing)
-  - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
+  - [`zh-technical-writing`](#zh-technical-writing)
+  - [`zh-restaurant-reviews`](#zh-restaurant-reviews)
 - [Develop and validate](#develop-and-validate)
 - [Source of truth](#source-of-truth)
 - [Contributing and license](#contributing-and-license)
@@ -29,10 +31,11 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `prefer-mazey`              | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic. |
 | `prefer-layer`              | Check an existing layer-esm dependency before implementing dialog and popup UI.                      |
+| `design-project-architecture` | Design project architecture around requirements, repository constraints, and Cheng's full-stack experience. |
 | `pet-diary-notes`           | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples. |
 | `en-technical-writing`      | Write, translate, polish, and review American English technical documentation using layered mature guidance and optional ecosystem profiles. |
-| `zh-cn-writing`             | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
-| `zh-cn-restaurant-reviews`  | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
+| `zh-technical-writing`      | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples. |
+| `zh-restaurant-reviews`     | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples. |
 
 ## Install an individual skill
 
@@ -45,6 +48,18 @@ $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pr
 ```
 
 The installed skill becomes available to Codex on the next turn.
+
+### GitHub Copilot app
+
+Install `prefer-mazey` in the GitHub Copilot app's user skill directory:
+
+```bash
+git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/cheng-skills
+mkdir -p "$HOME/Library/Application Support/com.github.githubapp/app-skills"
+cp -R /tmp/cheng-skills/skills/prefer-mazey \
+  "$HOME/Library/Application Support/com.github.githubapp/app-skills/"
+rm -rf /tmp/cheng-skills
+```
 
 ### Manual installation
 
@@ -67,7 +82,7 @@ Create the personal marketplace entry and plugin directory:
 
 ```bash
 python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.py" \
-  chengchuu-skills \
+  cheng-skills \
   --with-marketplace \
   --with-skills \
   --category "Developer Tools"
@@ -76,8 +91,8 @@ python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.
 Copy the plugin into the personal plugin directory, then install it:
 
 ```bash
-rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
-codex plugin add chengchuu-skills@personal
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/cheng-skills/"
+codex plugin add cheng-skills@personal
 ```
 
 ### Update the plugin
@@ -85,10 +100,10 @@ codex plugin add chengchuu-skills@personal
 Refresh the installed source, replace the Codex cachebuster, and reinstall the plugin:
 
 ```bash
-rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/cheng-skills/"
 python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py" \
-  "$HOME/plugins/chengchuu-skills"
-codex plugin add chengchuu-skills@personal
+  "$HOME/plugins/cheng-skills"
+codex plugin add cheng-skills@personal
 ```
 
 Start a new Codex task after installation or an update so Codex loads the current plugin and skills.
@@ -103,8 +118,6 @@ Before using `prefer-mazey`, add `mazey` to the target project with its existing
 
 ```bash
 npm install mazey
-# or: pnpm add mazey
-# or: yarn add mazey
 ```
 
 Skip this step when the repository already depends on `mazey`. The skill detects the package manager when possible and recommends the matching command, but it does not install packages unless the user explicitly requests installation.
@@ -128,6 +141,23 @@ Add a loading dialog while the request is running, then show a success message.
 ```text
 Show a tooltip next to the invalid form field.
 ```
+
+### `design-project-architecture`
+
+```text
+$design-project-architecture
+
+Design the architecture for a new full-stack project.
+
+Requirements:
+
+- Start with the smallest maintainable deployment topology.
+- Define the repository structure, component boundaries, and data flow.
+- Compare suitable technologies against the project constraints and my technical background.
+- Include delivery stages, validation, risks, and rollback considerations.
+```
+
+Codex may select `design-project-architecture` when a request asks to choose a project stack, map components and data flow, define repository structure, compare architecture options, or plan the evolution of an existing system.
 
 ### `pet-diary-notes`
 
@@ -199,58 +229,23 @@ Write a concise troubleshooting guide for this Node.js CLI.
 Improve this React tutorial without changing its technical meaning.
 ```
 
-The skill keeps its layers and workflows separate:
-
-```text
-skills/en-technical-writing/
-├── agents/openai.yaml
-├── references/
-│   ├── foundations/
-│   │   ├── google-style.md
-│   │   └── microsoft-voice.md
-│   ├── profiles/react-docs.md
-│   ├── rule-precedence.md
-│   ├── writing-guidelines.md
-│   ├── terminology.md
-│   ├── document-types.md
-│   ├── output-workflows.md
-│   ├── personal-style.md
-│   └── source-manifest.md
-├── scripts/
-│   ├── test-validate-references.mjs
-│   └── validate-references.mjs
-└── SKILL.md
-```
-
-Rule precedence:
-
-```text
-current user instructions
-└── project conventions
-    └── personal style overrides
-        └── matching ecosystem profile
-            └── Google-derived foundation
-                └── Microsoft-derived voice
-                    └── general en-US defaults
-```
-
 Its source manifest records the official [Google developer documentation style guide](https://developers.google.com/style), [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/), and [React documentation](https://react.dev/) pages used to derive the rules.
 
-### `zh-cn-writing`
+### `zh-technical-writing`
 
 ```text
-$zh-cn-writing
+$zh-technical-writing
 
 Review and improve this Chinese technical document written in Markdown.
 ```
 
 ```text
-$zh-cn-writing
+$zh-technical-writing
 
 保持技术内容不变，参考我常用的故障排查文章结构重写这篇文章。
 ```
 
-Codex may select `zh-cn-writing` for requests such as:
+Codex may select `zh-technical-writing` for requests such as:
 
 ```text
 Review this README for Chinese punctuation, spacing, sentence length, heading structure, and technical-writing style.
@@ -264,10 +259,10 @@ Translate this English API guide into 规范、自然且准确的简体中文。
 根据以下信息写一篇结构清晰、可验证的简体中文技术教程。
 ```
 
-### `zh-cn-restaurant-reviews`
+### `zh-restaurant-reviews`
 
 ```text
-$zh-cn-restaurant-reviews
+$zh-restaurant-reviews
 
 根据以下信息生成一条大众点评评价：
 
@@ -280,7 +275,7 @@ $zh-cn-restaurant-reviews
 - 整体评价：满意
 ```
 
-Codex may select `zh-cn-restaurant-reviews` for requests such as:
+Codex may select `zh-restaurant-reviews` for requests such as:
 
 ```text
 根据这些用餐信息，写一条自然的中文 Google Maps 餐厅评价。

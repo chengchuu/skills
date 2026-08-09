@@ -2,6 +2,80 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: User-provided: 认真洗脸中
+
+- Source heading: `User-provided: 认真洗脸中`
+- Source date: 2025-08-07
+- Version: none
+- Category: Grooming and care
+- Secondary category: Face washing
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: Rock That Body
+- Mood: Diligent
+- Tone: Well-behaved and cute
+- Pet behavior: Washing the face with repeated paw movements
+- Pet activity: Washing the face with repeated paw movements
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: User-provided skill example
+
+### Chinese
+
+#### Title
+
+认真洗脸中
+
+#### Description
+
+小爪子一下又一下地擦着脸，努力完成今天的洗脸日常。
+
+#### BGM
+
+Rock That Body
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #猫咪洗脸 #乖巧猫咪
+
+### English
+
+#### Title
+
+A Very Serious Face-Washing Routine
+
+#### Description
+
+One careful paw swipe at a time, this cat works hard through the face-washing routine.
+
+#### BGM
+
+Rock That Body
+
+#### Hashtags
+
+#Cat #CatLife #FaceWashing #GroomingTime
+
+### Japanese
+
+#### Title
+
+一生懸命、顔洗い中
+
+#### Description
+
+小さな前足で何度も顔をこすりながら、一生懸命にお手入れしています。
+
+#### BGM
+
+Rock That Body
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #顔洗い #毛づくろい
+
 ## Example: 25-0731 The Joy of Head Massage
 
 - Source heading: `25-0731 The Joy of Head Massage`
@@ -9,10 +83,6 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Version: none
 - Category: Grooming and care
 - Secondary category: Head massage
-- Country: Unknown
-- Region: unknown
-- City: unknown
-- Location: Unknown
 - Languages: zh-CN, en, ja-JP
 - BGM: Not supplied
 - Mood: Calm
@@ -73,10 +143,6 @@ She quietly enjoys the warmth of my hands, her face calm and content.
 - Version: none
 - Category: Grooming and care
 - Secondary category: Bath and dryer
-- Country: Unknown
-- Region: unknown
-- City: unknown
-- Location: Unknown
 - Languages: zh-CN, en, ja-JP
 - BGM: Not supplied
 - Mood: Calm
@@ -137,10 +203,6 @@ Fresh from her bath, she sits quietly in the dryer, soft and sweet.
 - Version: none
 - Category: Grooming and care
 - Secondary category: Head scratches
-- Country: Unknown
-- Region: unknown
-- City: unknown
-- Location: Unknown
 - Languages: zh-CN, en
 - BGM: Not supplied
 - Mood: Calm

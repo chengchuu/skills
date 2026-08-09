@@ -24,10 +24,10 @@ const groups = {
     ["25-0714 Gentle Dream", "Dream and nap", "Unknown", "Napping"],
     ["25-0701-Healing-Sleep-Face", "Sleeping face", "Unknown", "Sleeping"],
     ["25-0707 Sticky Little Baby", "Afternoon relaxation", "Unknown", "Relaxing"],
-    ["25-0602 Tired All the Time", "Sofa nap", "Guilin Park", "Sleeping on a sofa"],
+    ["25-0602 Tired All the Time", "Sofa nap", "Unknown", "Sleeping on a sofa"],
   ],
   "companionship-and-affection.md": [
-    ["User-provided: 圆眼睛里的好奇心", "Curious gaze", "Shanghai", "Showing a curious, round-eyed expression"],
+    ["User-provided: 圆眼睛里的好奇心", "Curious gaze", "Unknown", "Showing a curious, round-eyed expression"],
     ["26-0207-Completely-Unguarded", "Tucked paws and gaze", "Unknown", "Sitting with paws tucked and looking"],
     ["25-1126-The-Most-Healing-Kitten-in-the-World", "Healing portrait", "Unknown", "Unspecified"],
     ["25-1121-A-Cat-Loves-You", "Affection and companionship", "Unknown", "Small affectionate and companionable moments"],
@@ -60,6 +60,7 @@ const groups = {
     ["25-0721 Kitten Hiccups", "Chicken breast and hiccups", "Unknown", "Eating chicken breast and hiccuping"],
   ],
   "grooming-and-care.md": [
+    ["User-provided: 认真洗脸中", "Face washing", "Unknown", "Washing the face with repeated paw movements"],
     ["25-0731 The Joy of Head Massage", "Head massage", "Unknown", "Receiving a head massage"],
     ["25-0921 Sticky Little Baby", "Bath and dryer", "Unknown", "Sitting in a dryer after a bath"],
     ["25-0703 Relaxed Moments for This Cat", "Head scratches", "Unknown", "Receiving head scratches"],
@@ -72,10 +73,10 @@ const groups = {
   ],
   "daily-life-and-office.md": [
     ["User-provided: 猫砂盆里的乖巧日常", "Litter box routine", "Unknown", "Using the litter box and covering it afterward"],
-    ["25-0901-Keyboard-Guardian", "Office cat", "Office", "Patrolling a desk"],
+    ["25-0901-Keyboard-Guardian", "Office cat", "Unknown", "Patrolling a desk"],
     ["25-1106 Round Little Head", "Physical detail", "Unknown", "Showing the back of the head"],
     ["25-1028 A Busy Little Life", "Daily routine", "Unknown", "Chasing sunlight, watching outside, and grooming"],
-    ["25-0603 Moments with a Little Cat", "Slow home moment", "Indoor home", "Quiet daily moment"],
+    ["25-0603 Moments with a Little Cat", "Slow home moment", "Unknown", "Quiet daily moment"],
   ],
   "costume-and-music.md": [
     ["25-0831 Cat in a Flying Hat", "Costume", "Unknown", "Wearing a flying hat"],
@@ -136,6 +137,26 @@ jp:
 BGM：biubiubiu
 #猫 #猫のいる暮らし #猫トイレ #おりこうさん #ペット日記`,
   },
+  {
+    heading: "User-provided: 认真洗脸中",
+    body: `zh:
+认真洗脸中
+小爪子一下又一下地擦着脸，努力完成今天的洗脸日常。
+BGM: Rock That Body
+#猫咪 #猫咪日常 #猫咪洗脸 #乖巧猫咪
+
+en:
+A Very Serious Face-Washing Routine
+One careful paw swipe at a time, this cat works hard through the face-washing routine.
+BGM: Rock That Body
+#Cat #CatLife #FaceWashing #GroomingTime
+
+jp:
+一生懸命、顔洗い中
+小さな前足で何度も顔をこすりながら、一生懸命にお手入れしています。
+BGM：Rock That Body
+#猫 #猫のいる暮らし #顔洗い #毛づくろい`,
+  },
 ];
 const supplementalHeadings = new Set(supplementalExamples.map(example => example.heading));
 
@@ -177,6 +198,7 @@ function parseSource(markdown) {
 function parseDate(heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
+  if (heading === "User-provided: 认真洗脸中") return "2025-08-07";
   const match = /^(\d{2})-(\d{2})(\d{2})/.exec(heading);
   return match ? `20${match[1]}-${match[2]}-${match[3]}` : "unknown";
 }
@@ -214,7 +236,14 @@ function parseLanguageBlocks(body) {
 function detailsFor(heading) {
   for (const [file, examples] of Object.entries(groups)) {
     const item = examples.find(([candidate]) => candidate === heading);
-    if (item) return { file, secondary: item[1], location: item[2], activity: item[3] };
+    if (item) {
+      return {
+        file,
+        secondary: item[1],
+        aiLocation: file === "ai-storytelling.md" ? item[2] : null,
+        activity: item[3],
+      };
+    }
   }
   throw new Error(`Missing classification for ${heading}`);
 }
@@ -236,19 +265,22 @@ function categoryFor(file) {
 
 function dimensions(file, heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") {
-    return { country: "China", region: "Shanghai", city: "Shanghai", mood: "Healing", tone: "Cute and gentle" };
+    return { mood: "Healing", tone: "Cute and gentle" };
   }
   if (file === "ai-storytelling.md") {
     if (heading === "26-0323 AI Ninja v01") {
-      return { country: "Japan", region: "unknown", city: "Kyoto", mood: "Dramatic", tone: "Cinematic" };
+      return { mood: "Dramatic", tone: "Cinematic" };
     }
-    return { country: "AI or fictional setting", region: "unknown", city: "unknown", mood: "Dramatic or playful", tone: "Cinematic" };
+    return { mood: "Dramatic or playful", tone: "Cinematic" };
   }
   if (heading === "25-0602 Tired All the Time") {
-    return { country: "China", region: "Shanghai", city: "Shanghai", mood: "Relaxed", tone: "Gentle" };
+    return { mood: "Relaxed", tone: "Gentle" };
   }
   if (heading === "User-provided: 猫砂盆里的乖巧日常") {
-    return { country: "Unknown", region: "unknown", city: "unknown", mood: "Calm", tone: "Well-behaved and cute" };
+    return { mood: "Calm", tone: "Well-behaved and cute" };
+  }
+  if (heading === "User-provided: 认真洗脸中") {
+    return { mood: "Diligent", tone: "Well-behaved and cute" };
   }
   const presets = {
     "sleep-and-relaxation.md": ["Healing", "Gentle"],
@@ -262,7 +294,7 @@ function dimensions(file, heading) {
     "costume-and-music.md": ["Playful", "Stylized"],
   };
   const [mood, tone] = presets[file];
-  return { country: "Unknown", region: "unknown", city: "unknown", mood, tone };
+  return { mood, tone };
 }
 
 function healthStatus(heading) {
@@ -278,6 +310,7 @@ function healthStatus(heading) {
 function platformFor(heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
+  if (heading === "User-provided: 认真洗脸中") return "多平台";
   return heading === "26-0225-Blanket-Mode-Activated"
     ? "YouTube Shorts indicated by an additional #shorts hashtag variant"
     : "unknown";
@@ -286,6 +319,7 @@ function platformFor(heading) {
 function contentTypeFor(file, heading) {
   if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
+  if (heading === "User-provided: 认真洗脸中") return "Real-life";
   if (supplementalHeadings.has(heading)) return "unknown";
   return file === "ai-storytelling.md" ? "AI-generated fictional scene" : "Real-life";
 }
@@ -300,11 +334,15 @@ function petIdentityFor(heading) {
   return [
     "User-provided: 圆眼睛里的好奇心",
     "User-provided: 猫砂盆里的乖巧日常",
+    "User-provided: 认真洗脸中",
   ].includes(heading) ? "嘟嘟" : null;
 }
 
 function formatFor(heading) {
-  return heading === "User-provided: 猫砂盆里的乖巧日常" ? "Vlog" : null;
+  return [
+    "User-provided: 猫砂盆里的乖巧日常",
+    "User-provided: 认真洗脸中",
+  ].includes(heading) ? "Vlog" : null;
 }
 
 function formatLanguage(label, block) {
@@ -338,10 +376,7 @@ function exampleMarkdown(example) {
     `- Version: ${parseVersion(example.heading)}`,
     `- Category: ${categoryFor(detail.file)}`,
     `- Secondary category: ${detail.secondary}`,
-    `- Country: ${dims.country}`,
-    `- Region: ${dims.region}`,
-    `- City: ${dims.city}`,
-    `- Location: ${detail.location}`,
+    ...(detail.aiLocation ? [`- AI location: ${detail.aiLocation}`] : []),
     `- Languages: ${languages.map(language => ({ zh: "zh-CN", en: "en", jp: "ja-JP" })[language]).join(", ")}`,
     ...(petIdentityFor(example.heading) ? [`- Pet identity: ${petIdentityFor(example.heading)}`] : []),
     ...(formatFor(example.heading) ? [`- Format: ${formatFor(example.heading)}`] : []),
@@ -366,17 +401,15 @@ function exampleMarkdown(example) {
 function missingFields(example) {
   const languages = parseLanguages(example.body);
   const detail = detailsFor(example.heading);
-  const dims = dimensions(detail.file, example.heading);
   const { blocks } = parseLanguageBlocks(example.body);
   const missing = [];
   if (parseDate(example.heading) === "unknown") missing.push("source date");
   if (!languages.includes("en")) missing.push("English");
   if (!languages.includes("jp")) missing.push("Japanese");
-  if (dims.country === "Unknown") missing.push("country");
-  if (dims.region === "unknown") missing.push("region");
-  if (dims.city === "unknown") missing.push("city");
   if (platformFor(example.heading) === "unknown") missing.push("platform");
-  if (detail.location === "Unknown") missing.push("location");
+  if (detail.file === "ai-storytelling.md" && (!detail.aiLocation || detail.aiLocation === "Unknown")) {
+    missing.push("AI location");
+  }
   if (!Object.values(blocks).some(block => block.bgm.length)) missing.push("BGM");
   if (contentTypeFor(detail.file, example.heading) === "unknown") missing.push("real-life or AI-generated status");
   return missing.length ? missing.join(", ") : "none";
@@ -385,7 +418,6 @@ function missingFields(example) {
 function manifestMarkdown(examples) {
   const rows = examples.map(example => {
     const detail = detailsFor(example.heading);
-    const dims = dimensions(detail.file, example.heading);
     const languages = parseLanguages(example.body).map(language => ({ zh: "zh-CN", en: "en", jp: "ja-JP" })[language]).join(", ");
     const repeated = repeatedGroups.get(example.heading);
     const contentType = contentTypeFor(detail.file, example.heading);
@@ -397,9 +429,12 @@ function manifestMarkdown(examples) {
     const notes = supplementalHeadings.has(example.heading)
       ? example.heading === "User-provided: 猫砂盆里的乖巧日常"
         ? "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context"
-        : "Pet identity supplied as 嘟嘟; real-life status supplied by user"
+        : example.heading === "User-provided: 认真洗脸中"
+          ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
+          : "Pet identity supplied as 嘟嘟; real-life status supplied by user"
       : repeated ?? "No duplicate detected";
-    return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${dims.country} | ${detail.location} | ${contentType} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${confidence} | ${notes} |`;
+    const aiLocation = detail.aiLocation ?? "not applicable";
+    return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${aiLocation} | ${contentType} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${confidence} | ${notes} |`;
   });
   return `# Source manifest
 
@@ -413,11 +448,12 @@ This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\
 - Merge decisions: none; every distinct source section is retained.
 - Language availability: zh-CN ${examples.filter(example => parseLanguages(example.body).includes("zh")).length}, en ${examples.filter(example => parseLanguages(example.body).includes("en")).length}, ja-JP ${examples.filter(example => parseLanguages(example.body).includes("jp")).length}.
 - Content types: real-life ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "Real-life").length}, AI-generated ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "AI-generated fictional scene").length}, unknown ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "unknown").length}.
+- Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
 
-| Original heading | Original date | Version | Final category | Final reference file | Languages | Country | Location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 ${rows.join("\n")}
 
 ## Duplicate and version decisions
@@ -438,7 +474,7 @@ ${rows.join("\n")}
 - \`25-0803 This Is My Cat\` uses masculine Japanese \`ボク\` even though the stable profile says female; preserve it as source variation, not a gender rule.
 - English hashtags alternate between lowercase, Title Case, and PascalCase. Keep one consistent style within a newly generated set.
 - Many headings repeat while descriptions, tags, BGM, or languages change. Similar emotional themes are not treated as duplicates.
-- Most examples do not identify a platform or location. Language never determines country.
+- Real-life examples omit geography. AI location is retained only for generated examples and is never transferred to real-life content.
 - The source table contains terse milestones such as “Kicked!”, “Sat!”, “Press on the tail”, “Eat the human hair”, and “Make a reservation.” Their meaning is uncertain, so they remain historical source notes rather than reusable caption facts.
 `;
 }

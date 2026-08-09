@@ -19,17 +19,16 @@ Use the smallest practical labels. Record unsupported dimensions as `unknown`; d
 
 Secondary categories remain reusable scene concepts: blanket, belly-up, nap, gaze, kneading, meowing, food type, bath/dryer, massage, recovery, growth comparison, office, costume, dance, giant-cat city, action, fantasy, or cinematic workplace story.
 
-## Geography
+## AI location
 
-- Countries: `China`, `Japan`, `Unknown`, `AI or fictional setting`.
-- Regions/cities supported in this corpus: `Shanghai`, `Kyoto`.
-- Locations: `Guilin Park`, `Gion`, `Indoor home`, `Office`, `Unknown`, `Fictional generated scene`, `Fictional city`, `Fictional office`, `Fictional indoor scene`.
-- Use a real country for an AI scene only when the source explicitly anchors its setting, as the Gion/Kyoto example does.
-- A profile address is not the default location of a new entry.
+- Do not classify country, region, city, or location for real-life content. The pet is fully indoor, and geography is not a routing dimension for ordinary diary entries.
+- Record `AI location` only for explicitly generated or fictional content.
+- AI location labels supported in this corpus: `Gion`, `Fictional generated scene`, `Fictional city`, `Fictional office`, `Fictional indoor scene`.
+- A real place name used as an AI setting, such as `Gion`, does not make the depicted event real.
 
 ## Other dimensions
 
-- Scene type: real indoor, real office, real location-based, generated indoor, generated city, generated fantasy/action.
+- Scene type: real-life, generated indoor, generated city, generated fantasy/action.
 - Mood: healing, calm, relaxed, warm, playful, hopeful, dramatic.
 - Tone: gentle, cute, humorous, careful, contrast, stylized, cinematic.
 - Pet behavior/activity: use observable source wording; choose `unspecified` when the title gives only a mood.
@@ -48,3 +47,4 @@ Secondary categories remain reusable scene concepts: blanket, belly-up, nap, gaz
 5. Repeated titles are not duplicates by themselves. Merge only exact whole-example duplicates and record the decision.
 6. Mark missing language blocks explicitly. Never synthesize a missing historical translation inside the corpus.
 7. Choose one general format label plus a more specific label only when both affect routing, such as `plog` with `photo-caption`; do not create labels for minor layout variations.
+8. Omit geography from every real-life classification. Require an `AI location` only when generated content supplies a reusable setting label.

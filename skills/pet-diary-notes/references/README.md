@@ -39,4 +39,4 @@ Use progressive disclosure. The files under `examples/` are distributable handwr
 - Costume, colored light, or music-led styling: [examples/costume-and-music.md](examples/costume-and-music.md)
 - Cinematic, fantasy, action, giant-cat, dance, CEO, or phone stories: [examples/ai-storytelling.md](examples/ai-storytelling.md)
 
-Country and location are metadata filters within these files. Only the source supports China/Shanghai/Guilin Park for one real-life example and Japan/Kyoto/Gion for one generated example; do not infer geography for the others.
+Real-life entries do not use country, region, city, or location metadata because the pet is fully indoor. Read AI examples by `AI location` only when the request explicitly describes a generated setting; never transfer that setting into a real-life entry.

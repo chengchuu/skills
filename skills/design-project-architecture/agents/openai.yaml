@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Project Architecture"
+  short_description: "Design projects around Cheng's full-stack experience"
+  default_prompt: "Use $design-project-architecture to design a project architecture that fits my requirements, repository constraints, and full-stack experience."

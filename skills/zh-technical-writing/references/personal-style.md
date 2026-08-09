@@ -1,6 +1,16 @@
 # Personal style tendencies
 
-These tendencies were derived from the curated corpus. They never override user instructions, technical correctness, protected technical content, or `writing-guidelines.md`.
+This file contains explicit author preferences and tendencies derived from the curated corpus. They never override user instructions, technical correctness, or protected technical content. Required personal conventions are author-specific defaults rather than universal Chinese grammar rules; optional tendencies do not override `writing-guidelines.md`.
+
+## Contents
+
+- [Author identity and attribution](#author-identity-and-attribution)
+- [Required personal convention: software-entity pronouns](#required-personal-convention-software-entity-pronouns)
+- [Strong recurring patterns](#strong-recurring-patterns)
+- [Common but optional tendencies](#common-but-optional-tendencies)
+- [Rare or context-specific tendencies](#rare-or-context-specific-tendencies)
+- [Patterns that should not be reused](#patterns-that-should-not-be-reused)
+- [Observed conflicts with the formal guidelines](#observed-conflicts-with-the-formal-guidelines)
 
 ## Author identity and attribution
 
@@ -27,6 +37,27 @@ Written by Cheng
 ```markdown
 作者：除除 (Cheng)
 ```
+
+## Required personal convention: software-entity pronouns
+
+Treat this as the author's personal style, not as a universal Chinese grammar rule. Apply it by default when writing, rewriting, translating, proofreading, or reviewing editable Simplified Chinese prose:
+
+- When a pronoun's antecedent clearly refers to software, a tool, a system, or a service, use `他`, `他的`, and `他们` instead of `它`, `它的`, and `它们`.
+- Determine the antecedent before editing; never perform an unscoped string replacement.
+- If a human actor and a software entity occur together, or the referent is otherwise ambiguous, repeat the entity name or rewrite the sentence instead of forcing `他` or `他们`.
+- Do not apply the convention inside code blocks, inline code, commands, paths, URLs, identifiers, configuration values, API fields, error messages, direct quotations, product names, or other protected technical content.
+- Preserve the source meaning and number. Do not introduce a pronoun when repeating the entity name is clearer.
+
+Task behavior:
+
+- **Writing:** use the convention in newly generated Chinese prose.
+- **Rewriting or translation:** normalize applicable narrative pronouns while preserving meaning and protected content.
+- **Proofreading:** correct applicable violations and retain the author's intent.
+- **Review only:** report the wording as a personal-style inconsistency without rewriting the source or calling it a universal grammar error.
+
+Clear antecedent: `该服务完成初始化后，他会开始监听请求。`
+
+Ambiguous actor: use `管理员启动系统后，系统会检查配置。`, not `管理员启动系统后，他会检查配置。`
 
 ## Strong recurring patterns
 
@@ -64,7 +95,6 @@ Apply these only when they suit the document type and user request.
 - Do not learn technical facts, commands, compatibility claims, versions, or recommendations from an example without independent task evidence.
 - Do not reproduce malformed code fences, excessive heading depth, multiple competing H1 headings, overlong sentences, or inconsistent spacing and punctuation.
 - Do not imitate promotional claims such as “最佳”“强大”“玩转” unless the user explicitly wants marketing language and can substantiate the claim.
-- Do not use colloquial substitutions such as “他” for products or systems in formal documentation.
 
 ## Observed conflicts with the formal guidelines
 

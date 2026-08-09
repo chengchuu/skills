@@ -94,9 +94,20 @@ async function main() {
     if (!/^### (Chinese|English|Japanese)$/m.test(block.body)) {
       report(`${block.heading} has no language block.`);
     }
+    for (const field of ["- Country:", "- Region:", "- City:", "- Location:"]) {
+      if (block.body.includes(field)) report(`${block.heading} contains forbidden real-life geography field ${field}`);
+    }
+    const isAiGenerated = block.body.includes("- Content type: AI-generated fictional scene");
+    const hasAiLocation = block.body.includes("- AI location:");
+    if (isAiGenerated && !hasAiLocation) report(`${block.heading} is AI-generated but is missing - AI location:`);
+    if (!isAiGenerated && hasAiLocation) report(`${block.heading} is not AI-generated but contains - AI location:`);
   }
 
   const manifest = await readFile(manifestPath, "utf8");
+  if (!manifest.includes("| AI location |")) report("Manifest is missing the AI location column.");
+  for (const column of ["| Country |", "| Region |", "| City |", "| Location |"]) {
+    if (manifest.includes(column)) report(`Manifest contains forbidden geography column ${column}`);
+  }
   const declaredCount = Number(/^- Curated examples: (\d+)$/m.exec(manifest)?.[1]);
   if (!Number.isInteger(declaredCount)) {
     report("Manifest is missing a valid curated example count.");

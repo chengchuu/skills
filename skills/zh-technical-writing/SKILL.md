@@ -1,5 +1,5 @@
 ---
-name: zh-cn-writing
+name: zh-technical-writing
 description: Write, rewrite, translate, proofread, and review Simplified Chinese (zh-CN) technical documentation and structured technical articles using formal rules and curated style examples. Use for Chinese or English-to-Chinese READMEs, API and configuration guides, tutorials, troubleshooting, technical analysis, reference documentation, release notes, help text, and reviews involving punctuation, spacing, sentence length, headings, paragraphs, terminology, structure, tone, or technical-writing style; keep unchanged code and wholly English sentences under their own conventions. Do not use for unrelated creative writing, restaurant reviews, or social posts.
 ---
 
@@ -13,7 +13,7 @@ description: Write, rewrite, translate, proofread, and review Simplified Chinese
 2. 技术正确性和受保护的技术内容。
 3. 正式写作规范。
 4. 与文档类型匹配的结构指导。
-5. 可选的个人风格倾向。
+5. 个人风格中的必要规则与可选倾向。
 
 ## 工作流程
 
@@ -23,7 +23,7 @@ description: Write, rewrite, translate, proofread, and review Simplified Chinese
 4. 阅读参考路由、正式规范、相关工作流和文档类型指导。
 5. 仅选择最相关的少量案例；从中抽取结构、语气和详略模式，不复制有辨识度的句子。
 6. 保留原意、限定条件、事实和技术行为，再改善结构、自然度、清晰度与一致性。
-7. 按正式规范处理中文标题、段落、句长、措辞、空格、标点、数字、单位和引用；仅在合适时应用个人风格倾向。
+7. 按正式规范处理中文标题、段落、Markdown 表格、句长、措辞、空格、标点、数字、单位和引用；应用个人风格中的必要规则，仅在合适时应用可选倾向。
 8. 复查结构、事实边界、术语一致性、受保护内容和用户要求，并报告未解决的冲突或不确定性。
 
 ## 内容边界

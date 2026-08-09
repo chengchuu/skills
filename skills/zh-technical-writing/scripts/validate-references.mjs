@@ -10,6 +10,8 @@ const repositoryDir = resolve(skillDir, '..', '..');
 const referencesDir = resolve(skillDir, 'references');
 const examplesDir = resolve(referencesDir, 'examples');
 const manifestPath = resolve(referencesDir, 'source-manifest.md');
+const writingGuidelinesPath = resolve(referencesDir, 'writing-guidelines.md');
+const outputWorkflowsPath = resolve(referencesDir, 'output-workflows.md');
 const errors = [];
 
 function fail(message) {
@@ -102,7 +104,29 @@ for (const path of curatedSources) {
   if (!uniqueManifestSources.has(path)) fail(`Curated source missing from manifest: ${path}`);
 }
 
-for (const path of [resolve(skillDir, 'SKILL.md'), resolve(referencesDir, 'README.md'), ...exampleFiles]) {
+const writingGuidelines = readFileSync(writingGuidelinesPath, 'utf8');
+for (const marker of [
+  '默认将所有表格列设为左对齐',
+  '在每个分隔单元格的开头添加冒号',
+  '规范为一致的显示宽度',
+  '使竖线在源码中垂直对齐',
+  '中日韩表意文字、假名、韩文音节和全角字符按 2 个显示宽度计算',
+  '分隔单元格必须与该列补齐后的单元格使用相同显示宽度',
+  '代码块、引用块、生成文件或受保护源内容中的表格',
+  '对于仅审阅任务',
+]) {
+  if (!writingGuidelines.includes(marker)) fail(`writing-guidelines.md 缺少 Markdown 表格规则: ${marker}`);
+}
+
+const outputWorkflows = readFileSync(outputWorkflowsPath, 'utf8');
+for (const marker of [
+  '[Markdown 表格对齐与宽度规则](writing-guidelines.md#表格)',
+  'for review-only work, report alignment or display-width violations without rewriting',
+]) {
+  if (!outputWorkflows.includes(marker)) fail(`output-workflows.md 缺少 Markdown 表格工作流规则: ${marker}`);
+}
+
+for (const path of [resolve(skillDir, 'SKILL.md'), resolve(referencesDir, 'README.md'), writingGuidelinesPath, outputWorkflowsPath, ...exampleFiles]) {
   validateLinks(path);
 }
 
