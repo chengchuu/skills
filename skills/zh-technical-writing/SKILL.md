@@ -1,5 +1,5 @@
 ---
-name: zh-cn-writing
+name: zh-technical-writing
 description: Write, rewrite, translate, proofread, and review Simplified Chinese (zh-CN) technical documentation and structured technical articles using formal rules and curated style examples. Use for Chinese or English-to-Chinese READMEs, API and configuration guides, tutorials, troubleshooting, technical analysis, reference documentation, release notes, help text, and reviews involving punctuation, spacing, sentence length, headings, paragraphs, terminology, structure, tone, or technical-writing style; keep unchanged code and wholly English sentences under their own conventions. Do not use for unrelated creative writing, restaurant reviews, or social posts.
 ---
 

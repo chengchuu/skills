@@ -46,4 +46,4 @@ For provenance and merge decisions, see [source-manifest.md](source-manifest.md)
 
 ## Maintenance
 
-Run `node ../scripts/validate-references.mjs` from this directory, or `node skills/zh-cn-writing/scripts/validate-references.mjs` from the repository root, after changing the corpus. The source-completeness check runs when `temp/writing-examples/` is available; all distributable-reference checks also work after installation without that directory.
+Run `node ../scripts/validate-references.mjs` from this directory, or `node skills/zh-technical-writing/scripts/validate-references.mjs` from the repository root, after changing the corpus. The source-completeness check runs when `temp/writing-examples/` is available; all distributable-reference checks also work after installation without that directory.

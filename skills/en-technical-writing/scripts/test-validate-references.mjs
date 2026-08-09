@@ -8,8 +8,10 @@ import { fileURLToPath } from 'node:url';
 
 const sourceRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const failures = [];
+let caseCount = 0;
 
 async function runCase(name, mutate, expected) {
+  caseCount += 1;
   const temporaryRoot = await mkdtemp(path.join(tmpdir(), 'en-technical-writing-validator-'));
   const fixtureRoot = path.join(temporaryRoot, 'skill');
 
@@ -208,6 +210,30 @@ await runCase(
     && output.includes('agents/openai.yaml contains a likely secret'),
 );
 
+await runCase(
+  'rejects the retired Simplified Chinese writing temporary path',
+  async fixtureRoot => {
+    await appendFile(
+      path.join(fixtureRoot, 'references/README.md'),
+      `\nLegacy source: temp/${'zh-cn'}-writing/private.md\n`,
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('references/README.md contains an obsolete temporary source path'),
+);
+
+await runCase(
+  'rejects the renamed Simplified Chinese writing temporary path',
+  async fixtureRoot => {
+    await appendFile(
+      path.join(fixtureRoot, 'references/README.md'),
+      '\nCurrent source: temp/zh-technical-writing/private.md\n',
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('references/README.md contains an obsolete temporary source path'),
+);
+
 if (failures.length > 0) {
   console.error(`Validator regression tests failed with ${failures.length} case${failures.length === 1 ? '' : 's'}:`);
   for (const failure of failures) {
@@ -215,5 +241,5 @@ if (failures.length > 0) {
   }
   process.exitCode = 1;
 } else {
-  console.log('Passed 17 en-technical-writing validator regression tests.');
+  console.log(`Passed ${caseCount} en-technical-writing validator regression tests.`);
 }

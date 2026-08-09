@@ -1,6 +1,6 @@
 {
-  "name": "chengchuu-skills",
-  "version": "0.9.0",
+  "name": "cheng-skills",
+  "version": "0.10.0",
   "description": "Reusable Codex skills.",
   "author": {
     "name": "Cheng",
@@ -30,8 +30,7 @@
     "composerIcon": "./assets/logo.png",
     "logo": "./assets/logo.png",
     "defaultPrompt": [
-      "Design project architecture around requirements, repository constraints, and full-stack experience.",
-      "Check an existing Mazey or layer-esm dependency before implementing reusable code.",
+      "Design project architecture around repository constraints, or check Mazey and layer-esm before implementing reusable code.",
       "Write or improve English or Simplified Chinese technical documentation.",
       "Create factual multilingual pet notes or Simplified Chinese restaurant reviews."
     ]

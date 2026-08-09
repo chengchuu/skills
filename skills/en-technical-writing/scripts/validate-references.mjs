@@ -344,7 +344,7 @@ for (const [relativePath, content] of markdownFiles) {
   if (/\b(?:TODO|TBD|FIXME)\b|\[TODO/i.test(content)) {
     errors.push(`${relativePath} contains placeholder text.`);
   }
-  if (/temp\/(?:writing-examples|zh-cn-writing|source-dump)\//.test(content)) {
+  if (/temp\/(?:writing-examples|zh-(?:cn|technical)-writing|source-dump)\//.test(content)) {
     errors.push(`${relativePath} contains an obsolete temporary source path.`);
   }
   if (/(?:^> .+\n){5,}/m.test(content)) {

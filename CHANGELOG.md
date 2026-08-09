@@ -2,6 +2,11 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.10.0 - 2026-08-09
+
+- Renamed the plugin to `cheng-skills`.
+- Renamed the Simplified Chinese technical-writing and restaurant-review skills to `zh-technical-writing` and `zh-restaurant-reviews`.
+
 ## 0.7.0 - 2026-08-03
 
 - Added consistent left-aligned Markdown table formatting and CJK-aware display-width guidance to the English and Simplified Chinese technical-writing skills.

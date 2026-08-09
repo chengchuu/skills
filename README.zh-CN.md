@@ -1,4 +1,4 @@
-# Codex Skills
+# 除除的 Skills
 
 本仓库将可复用的开发工作流技能发布为纯技能 Codex 插件。`.codex-plugin/plugin.json` 清单指向 `skills/` 下相互独立的技能，不配置应用、连接器、MCP 服务器或钩子。
 
@@ -19,8 +19,8 @@
   - [`design-project-architecture`](#design-project-architecture)
   - [`pet-diary-notes`](#pet-diary-notes)
   - [`en-technical-writing`](#en-technical-writing)
-  - [`zh-cn-writing`](#zh-cn-writing)
-  - [`zh-cn-restaurant-reviews`](#zh-cn-restaurant-reviews)
+  - [`zh-technical-writing`](#zh-technical-writing)
+  - [`zh-restaurant-reviews`](#zh-restaurant-reviews)
 - [开发与验证](#开发与验证)
 - [唯一事实来源](#唯一事实来源)
 - [贡献与许可证](#贡献与许可证)
@@ -34,8 +34,8 @@
 | `design-project-architecture` | 根据需求、仓库约束和 Cheng 的全栈经验设计项目架构。 |
 | `pet-diary-notes` | 根据用户提供的事实，生成多语言宠物文案以及简短的 Plog 或 Vlog 记录。 |
 | `en-technical-writing` | 根据分层的成熟规范和可选的生态系统配置，编写、翻译、润色和审阅美国英语技术文档。 |
-| `zh-cn-writing` | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。 |
-| `zh-cn-restaurant-reviews` | 根据精选人工撰写案例，生成和改写基于事实的简体中文餐厅评价。 |
+| `zh-technical-writing` | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。 |
+| `zh-restaurant-reviews` | 根据精选人工撰写案例，生成和改写基于事实的简体中文餐厅评价。 |
 
 ## 安装单个技能
 
@@ -54,11 +54,11 @@ $skill-installer install https://github.com/chengchuu/skills/tree/main/skills/pr
 将 `prefer-mazey` 安装到 GitHub Copilot app 的用户技能目录：
 
 ```bash
-git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/chengchuu-skills
+git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/cheng-skills
 mkdir -p "$HOME/Library/Application Support/com.github.githubapp/app-skills"
-cp -R /tmp/chengchuu-skills/skills/prefer-mazey \
+cp -R /tmp/cheng-skills/skills/prefer-mazey \
   "$HOME/Library/Application Support/com.github.githubapp/app-skills/"
-rm -rf /tmp/chengchuu-skills
+rm -rf /tmp/cheng-skills
 ```
 
 ### 手动安装
@@ -82,7 +82,7 @@ rm -rf /tmp/chengchuu-skills
 
 ```bash
 python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.py" \
-  chengchuu-skills \
+  cheng-skills \
   --with-marketplace \
   --with-skills \
   --category "Developer Tools"
@@ -91,8 +91,8 @@ python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.
 将插件复制到个人插件目录，然后安装插件：
 
 ```bash
-rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
-codex plugin add chengchuu-skills@personal
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/cheng-skills/"
+codex plugin add cheng-skills@personal
 ```
 
 ### 更新插件
@@ -100,10 +100,10 @@ codex plugin add chengchuu-skills@personal
 刷新已安装的源文件，替换 Codex 缓存破坏标记，然后重新安装插件：
 
 ```bash
-rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/chengchuu-skills/"
+rsync -a --delete --exclude .git --exclude node_modules ./ "$HOME/plugins/cheng-skills/"
 python3 "$HOME/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py" \
-  "$HOME/plugins/chengchuu-skills"
-codex plugin add chengchuu-skills@personal
+  "$HOME/plugins/cheng-skills"
+codex plugin add cheng-skills@personal
 ```
 
 安装或更新后，请新建一个 Codex 任务，以便 Codex 加载当前插件和技能。
@@ -233,21 +233,21 @@ Improve this React tutorial without changing its technical meaning.
 
 来源清单记录了用于提炼规则的官方页面。来源包括 [Google 开发者文档风格指南](https://developers.google.com/style)、[Microsoft 写作风格指南](https://learn.microsoft.com/en-us/style-guide/)和 [React 文档](https://react.dev/)。
 
-### `zh-cn-writing`
+### `zh-technical-writing`
 
 ```text
-$zh-cn-writing
+$zh-technical-writing
 
 Review and improve this Chinese technical document written in Markdown.
 ```
 
 ```text
-$zh-cn-writing
+$zh-technical-writing
 
 保持技术内容不变，参考我常用的故障排查文章结构重写这篇文章。
 ```
 
-以下请求可以激活 `zh-cn-writing`：
+以下请求可以激活 `zh-technical-writing`：
 
 ```text
 Review this README for Chinese punctuation, spacing, sentence length, heading structure, and technical-writing style.
@@ -261,10 +261,10 @@ Translate this English API guide into 规范、自然且准确的简体中文。
 根据以下信息写一篇结构清晰、可验证的简体中文技术教程。
 ```
 
-### `zh-cn-restaurant-reviews`
+### `zh-restaurant-reviews`
 
 ```text
-$zh-cn-restaurant-reviews
+$zh-restaurant-reviews
 
 根据以下信息生成一条大众点评评价：
 
@@ -277,7 +277,7 @@ $zh-cn-restaurant-reviews
 - 整体评价：满意
 ```
 
-以下请求可以激活 `zh-cn-restaurant-reviews`：
+以下请求可以激活 `zh-restaurant-reviews`：
 
 ```text
 根据这些用餐信息，写一条自然的中文 Google Maps 餐厅评价。

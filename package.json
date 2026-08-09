@@ -1,6 +1,6 @@
 {
-  "name": "chengchuu-skills",
-  "version": "0.9.0",
+  "name": "cheng-skills",
+  "version": "0.10.0",
   "type": "module",
   "description": "Reusable Codex skills.",
   "scripts": {

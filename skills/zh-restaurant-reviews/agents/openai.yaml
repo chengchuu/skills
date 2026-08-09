@@ -3,4 +3,4 @@ interface:
   short_description: "依据真实用餐信息和手写案例生成自然的简体中文餐厅评价"
   icon_small: "../../../assets/logo.png"
   icon_large: "../../../assets/logo.png"
-  default_prompt: "Use $zh-cn-restaurant-reviews to write a natural Simplified Chinese restaurant review from these dining facts."
+  default_prompt: "Use $zh-restaurant-reviews to write a natural Simplified Chinese restaurant review from these dining facts."

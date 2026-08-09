@@ -2,41 +2,64 @@
 
 ## Purpose
 
-This repository publishes seven reusable Codex skills as the skill-only `chengchuu-skills` plugin: `prefer-mazey`, `prefer-layer`, `design-project-architecture`, `pet-diary-notes`, `en-technical-writing`, `zh-cn-writing`, and `zh-cn-restaurant-reviews`. It has no application server, compile step, or runtime bundle. Codex discovers the manifest, evaluates skill metadata, and loads a matching skill on demand.
+This repository publishes seven reusable skills as the skill-only `cheng-skills` Codex plugin:
+
+- `prefer-mazey`
+- `prefer-layer`
+- `design-project-architecture`
+- `pet-diary-notes`
+- `en-technical-writing`
+- `zh-technical-writing`
+- `zh-restaurant-reviews`
+
+The repository has no application server, compile step, or runtime bundle. Codex reads the plugin manifest, evaluates skill metadata, and loads a matching `SKILL.md` and its linked resources on demand.
 
 ## Repository map
 
-- `.codex-plugin/plugin.json` is the plugin entry point. Preserve the `chengchuu-skills` name and `"skills": "./skills/"` path; keep its version aligned with `package.json`, keep interface metadata aligned with the public skills, and record releases in `CHANGELOG.md`.
-- `skills/<skill-name>/SKILL.md` is each skill's entry point. Its frontmatter `name` must match the kebab-case directory, and `description` controls activation.
-- `skills/*/agents/openai.yaml` contains user-facing metadata. `references/` holds API maps, rules, taxonomies, source manifests, and curated examples. `scripts/` contains corpus builders or reference validators.
-- `scripts/validate-skills.mjs` validates the plugin and every public skill. `npm run validate` runs it directly; `npm test` runs it and then executes the `en-technical-writing` validator regression suite.
-- `skills/en-technical-writing/scripts/` contains its reference validator and validator regression tests. `skills/pet-diary-notes/scripts/` contains its corpus builder and reference validator. `skills/zh-cn-writing/scripts/` contains its reference validator.
-- `skills/design-project-architecture/references/` contains Cheng's technical profile, architecture decision guidance, reusable package and project patterns, and relative provenance labels distilled from a private article corpus. Do not add the corpus's machine-specific source path or treat historical articles as current technical authority.
-- `README.md` defines shared documentation structure and behavior; `README.zh-CN.md` is its synchronized localization.
-- `assets/logo.png` is referenced by the plugin interface. Keep manifest asset paths repository-relative.
-- `.editorconfig` defines formatting. `.github/workflows/validate.yml` runs validation with Node.js 22 on pull requests and pushes to `main`.
+- `.codex-plugin/plugin.json` is the plugin entry point. Preserve the `cheng-skills` name and `"skills": "./skills/"` path. Keep its clean release version aligned with `package.json`, keep its interface metadata aligned with the public skills, and keep asset paths repository-relative.
+- `skills/<skill-name>/SKILL.md` is each public skill's entry point. The frontmatter `name` must match the kebab-case directory name, and `description` controls activation.
+- `skills/*/agents/openai.yaml` contains user-facing display metadata and optional icon paths. Keep prompts and descriptions consistent with the corresponding skill, and resolve icon paths from the metadata file without duplicating assets unnecessarily.
+- `skills/*/references/` contains API maps, routing indexes, rules, taxonomies, provenance manifests, and curated examples. `skills/*/scripts/` contains corpus builders and reference validators owned by the corresponding skill.
+- `scripts/validate-skills.mjs` validates the plugin path, public skill layout, frontmatter, local Markdown links, temporary files, symlinks, machine-specific paths, and likely secrets.
+- `README.md` documents skill discovery, individual installation, GitHub Copilot app installation, personal-marketplace plugin installation, usage, and contribution workflows. `README.zh-CN.md` is its synchronized Simplified Chinese localization.
+- `assets/logo.png` is the shared plugin logo and is also referenced by skill metadata where needed.
+- `.editorconfig` defines UTF-8, LF line endings, two-space indentation, and final-newline behavior. Markdown files may retain trailing whitespace when it is meaningful.
+- `.github/workflows/validate.yml` runs `npm run validate` with Node.js 22 for pull requests and pushes to `main`. It does not run the full local `npm test` command.
 
-## Startup and data flow
+## Skill ownership and generated content
+
+- `skills/prefer-mazey/` is synchronized from Mazey's `.agents/skills/prefer-mazey/` directory. Make canonical changes in Mazey first, run its synchronization command, and review the Mazey and skills repositories separately.
+- `skills/prefer-layer/` is synchronized from layer-esm's `.agents/skills/prefer-layer/` directory. Make canonical changes in layer-esm first, run its synchronization command, and review both repositories separately.
+- `skills/design-project-architecture/references/` is maintained in this repository. It contains Cheng's technical profile, architecture decision guidance, reusable package and project patterns, and relative provenance labels distilled from a private article corpus. Do not add the corpus's machine-specific path or treat historical articles as current technical authority.
+- `skills/pet-diary-notes/scripts/build-reference-corpus.mjs` owns the generated files under `skills/pet-diary-notes/references/examples/` and its `source-manifest.md`. The builder reads the ignored source at `temp/pet-examples/pet.md` and combines it with explicitly maintained supplemental examples. Do not hand-edit builder-owned output independently.
+- `skills/en-technical-writing/` keeps its layered rules and source provenance directly under `references/`. Its validator requires the router and source manifest to register future profiles and rejects a `references/examples/` directory.
+- `skills/zh-technical-writing/references/examples/` and `source-manifest.md` are directly curated distributable content. Its validator performs additional source-completeness checks when the full ignored `temp/writing-examples/` directory is present.
+- `skills/zh-restaurant-reviews/references/` is directly curated. Keep examples, routing, taxonomy, output formats, and `source-manifest.md` consistent. This skill currently has no standalone validator, so use the repository validator and targeted corpus checks.
+
+Files under `temp/` are read-only maintenance inputs, not distributable plugin content. Do not create, regenerate, or remove corpus data merely to validate an unrelated change.
+
+## Discovery and data flow
 
 Codex follows this path:
 
 `plugin.json` → `skills/` → `SKILL.md` frontmatter → selected `SKILL.md` body → linked `references/` or bundled `scripts/` → generated guidance or artifact
 
-Corpus-backed skills keep distributable examples and provenance under `references/examples/` and `source-manifest.md`. `pet-diary-notes` generates these files from its read-only source through `build-reference-corpus.mjs`; do not hand-edit builder-owned output independently. Other curated corpora may be maintained directly, but examples, taxonomy, routing, and source manifests must stay consistent. Run the relevant skill validator after any corpus or reference change.
+Keep each `SKILL.md` concise and focused on its decision workflow. Move detailed rules and catalogs into directly linked references, and use progressive disclosure so routine tasks load only the smallest relevant reference set.
 
 ## Change rules
 
-Keep `SKILL.md` concise and link detailed material directly from it. Do not add secrets, absolute machine-specific paths, symlinks, editor state, temporary files, or unrelated dependencies.
-
-`skills/prefer-mazey/` is synchronized from Mazey's `.agents/skills/prefer-mazey/`; `skills/prefer-layer/` is synchronized from layer-esm's `.agents/skills/prefer-layer/`. Change the owning repository first, run its synchronization command, and review each Git repository separately.
-
-Keep both README files aligned in heading order, examples, commands, URLs, and identifiers. Preserve fenced code blocks across translations unless the example itself changes. Never commit a local Codex cachebuster to the source manifest.
-
-Use only the builder and validator that belong to the skill being changed. Do not run a corpus builder merely to validate unrelated documentation, and do not assume local files under `temp/` are distributable skill content.
+- Keep public skills self-contained. Do not add secrets, credentials, private data, absolute machine-specific paths, symlinks, editor state, temporary files, copied source dumps, or unrelated dependencies.
+- Preserve code, commands, identifiers, paths, URLs, package names, API names, versions, and documented behavior unless the task explicitly changes them.
+- Keep `README.md` and `README.zh-CN.md` aligned in heading order, installation methods, examples, commands, URLs, and identifiers. Preserve corresponding fenced code blocks unless the example itself changes.
+- Keep `.codex-plugin/plugin.json` and `package.json` on the same clean release version, and record releases in `CHANGELOG.md`. Apply a Codex cachebuster only to the separate personal-marketplace copy during local installation; never commit it to this repository's manifest.
+- Use only the builder and validator owned by the skill being changed. Do not run a corpus builder as a generic formatting or validation step.
+- Keep changes narrow and preserve unrelated work. Never stage, commit, push, publish, or modify another repository automatically.
 
 ## Build and validation
 
-No dependency installation is required; all repository and skill maintenance scripts use Node.js built-ins. From the repository root, run:
+No dependency installation is required. Repository and skill maintenance scripts use Node.js built-in modules.
+
+Run the full repository checks from the repository root after changing `AGENTS.md`, plugin metadata, repository structure, a public skill, or shared documentation:
 
 ```bash
 npm run validate
@@ -44,16 +67,21 @@ npm test
 git diff --check
 ```
 
-The repository validator checks the manifest, skill layout, frontmatter, local Markdown links, temporary files, symlinks, machine-specific paths, and likely secrets. `npm test` additionally runs the `en-technical-writing` reference-validator regression suite.
+`npm test` reruns the repository validator and executes the `en-technical-writing` reference-validator regression suite.
 
-Run a skill-specific validator after changing its bundled references or corpus:
+After changing bundled references or corpus content, run the validator for the affected skill:
 
 ```bash
 node skills/en-technical-writing/scripts/validate-references.mjs
 node skills/pet-diary-notes/scripts/validate-references.mjs
-node skills/zh-cn-writing/scripts/validate-references.mjs
+node skills/zh-technical-writing/scripts/validate-references.mjs
 ```
 
-Corpus validators may compare ignored source material under `temp/` when it is present. In that mode, provide the complete source set named by the skill's manifest; do not weaken the validator or remove provenance entries merely to accommodate an incomplete local source directory.
+When the complete pet source is present and intentionally changed, rebuild and then validate its generated corpus:
 
-Never stage, commit, push, publish, or modify another repository automatically.
+```bash
+node skills/pet-diary-notes/scripts/build-reference-corpus.mjs
+node skills/pet-diary-notes/scripts/validate-references.mjs
+```
+
+If a validator enables source-completeness checks because an ignored `temp/` source directory exists, provide the complete source set named by the skill's manifest. Do not weaken the validator, delete provenance entries, or rebuild from an incomplete source directory merely to make validation pass.
