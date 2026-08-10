@@ -60,7 +60,8 @@ Do not choose a runtime before defining workload shape, concurrency, latency, de
 
 ### Build and Packaging
 
-- Reuse the repository's package manager, module format, bundler, linting, and test conventions when they meet the requirement.
+- For local Node.js development, recommend `pnpm`. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching; do not use `npm ci` or add a `packageManager` field. Preserve an existing lockfile policy, and ask the team to define one for a greenfield project instead of inferring it from these commands.
+- Reuse the repository's module format, bundler, linting, test, artifact, and script conventions when they meet the requirement.
 - When webpack is selected for a new project, prefer webpack 5. For an existing project, preserve its current webpack version unless upgrading to webpack 5 is in scope and configuration, loader and plugin compatibility, dependencies, tests, generated assets, and deployment have been verified.
 - Separate source configuration from generated output.
 - Identify the authority for each identity or configuration value and derive dependent values instead of repeating them. Keep values distinct when their formats or scopes differ, such as package name, repository slug, browser global, artifact filename, site base path, cache namespace, and display name.
@@ -101,6 +102,8 @@ Reject a boundary that only renames files or forwards calls without adding owner
 - Keep the static browser-color fallback, persisted preference, and resolved theme distinct. With the blue preset, prefer primary blue before initialization or on failure, then use the resolved surface color; preserve another maintained project contract when one exists.
 - For a greenfield PWA, prefer separate 192×192 and 512×512 standard PNGs plus a 512×512 maskable PNG. Adapt their names and URLs to the repository and deployment contract; preserve established icon assets in existing projects.
 - Keep manifest declarations aligned with actual files, optimize normal and maskable artwork independently, and validate the installed result rather than only the source images.
+- Define one canonical-route registry for indexable HTML pages. Derive titles, descriptions, self-canonicals, social metadata, structured data, `robots.txt`, and `sitemap.xml` from verified facts, then validate them in the final deployed artifact.
+- Include only stable public self-canonical routes in a sitemap. Keep production page origins distinct from deployment-relative asset paths, and omit unsupported claims or optional social and structured-data fields instead of inventing values.
 - Version static assets and preserve old assets when cached documents may still reference them.
 - Treat cache keys, invalidation, Service Worker updates, CDN behavior, and offline support as product decisions.
 - Include performance budgets or measurable targets when loading experience matters.

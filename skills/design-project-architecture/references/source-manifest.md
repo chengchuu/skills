@@ -109,6 +109,23 @@ The following current repository documents were reviewed on 2026-08-01 as a conc
 
 They support the reusable patterns in [package-project-patterns.md](package-project-patterns.md). Treat exact paths, commands, tools, output names, URLs, and deployment behavior as template-specific contracts rather than defaults for unrelated projects.
 
+The following maintained static-site sources were reviewed on 2026-08-10:
+
+- `mazey-npm-template/site/index.html`
+- `mazey-npm-template/examples/index.html`
+- `mazey-npm-template/project.config.js`
+- `mazey-npm-template/scripts/build-pages.js`
+- `mazey-npm-template/scripts/validate-seo.js`
+- `mazey-npm-template/test/seo.test.js`
+
+They support the SEO ownership and validation contract in [frontend-seo-delivery.md](frontend-seo-delivery.md). Treat the central canonical-route authority, deterministic generated-page metadata, crawler-file generation, deployment-base asset handling, and final-artifact validation as reusable architecture. Keep template titles, descriptions, routes, schema types, project names, claims, image assets, and implementation identifiers local to projects where they are verified.
+
+The following maintained GitHub Actions guide was reviewed on 2026-08-10:
+
+- `mazey-npm-template/guides/GITHUB_ACTIONS.md`
+
+It supports the workflow boundaries in [github-actions-delivery.md](github-actions-delivery.md). Treat validation before side effects, separated Pages and package publication, least privileges, protected triggers, and artifact verification as reusable architecture. Adapt versions, actions, branches, scripts, outputs, environments, registries, and authentication to the target repository; apply Cheng's directly supplied local `pnpm` and online `npm install` preferences.
+
 The following maintained frontend tooling guide was reviewed on 2026-08-09:
 
 - `mazey/guides/ESLINT_RULES.md`

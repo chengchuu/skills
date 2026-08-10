@@ -2,7 +2,7 @@
 
 ## Profile Status
 
-This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system and PWA icon conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
+This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture and static-site SEO conventions reviewed from Cheng's npm library template on 2026-08-01 and 2026-08-10, GitHub Actions conventions reviewed from the template on 2026-08-10, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system and PWA icon conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
 
 ## Directly Supplied Background
 
@@ -15,6 +15,7 @@ Cheng is an experienced full-stack developer with the following background:
 - React version preference: React 19 when React is selected and project constraints permit it.
 - UI library version preference: Bootstrap 5 when Bootstrap is selected and project constraints permit it.
 - Frontend build-tool version preference: webpack 5 when webpack is selected and project constraints permit it.
+- Package-manager preference: recommend `pnpm` for local development, use `npm install` in GitHub Actions, do not use `npm ci`, and do not add a `packageManager` field to `package.json`.
 - Frontend linting preference: for a greenfield JavaScript or TypeScript project without established conventions, start with the bundled framework-neutral ESLint formatting baseline at warning severity.
 - Theme color preference: when a greenfield frontend needs ready-made colors and has no established brand palette, use the bundled light and dark blue theme preset.
 - Browser theme-color preference: with the blue preset, use primary blue before initialization or on failure, then switch to the resolved light or dark surface.
@@ -30,7 +31,7 @@ The reviewed sources provide evidence of practical experience across these areas
 
 - Backend and data: Node.js services, URL-shortening design, SQL queries, MySQL operations, HTTP APIs, and Go packages and tools.
 - Frontend architecture: TypeScript project setup, browser APIs and compatibility, multi-page applications, multiple bundle configurations, CDN integration, responsive web experiences, semantic theme systems, PWA icon delivery, and desktop applications combining Go with a web frontend.
-- Build engineering: npm package workflows, TypeScript compilation, Babel, Webpack configuration composition, multi-compiler builds, bundle analysis, lint automation, generated documentation, and versioned static assets.
+- Build engineering: npm package workflows, TypeScript compilation, Babel, Webpack configuration composition, multi-compiler builds, bundle analysis, lint automation, generated documentation, static-site SEO assembly, and versioned assets.
 - Reusable library architecture: a framework-independent package core, a React 19 playground isolated to development, explicit public entry points and declarations, multi-format package output, and generated consumer documentation.
 - Performance and resilience: code splitting, dependency and image optimization, compression, caching, frontend monitoring, PWA and Service Worker lifecycle, offline behavior, and compatibility testing.
 - Delivery and collaboration: Git conventions, Conventional Commits, pull request and issue labeling, GitLab CI/CD, GitHub Actions, package publication, incremental deployment, and reversible changes.
@@ -53,6 +54,8 @@ Treat these as evidence-backed tendencies, not absolute rules:
 - Design for performance and loading experience, including bundle size, caching, compression, monitoring, and update behavior.
 - Keep theme values behind semantic roles, coordinate framework and browser theme state, and verify contrast and interaction states when adapting a palette.
 - Keep PWA icon canvases, artwork variants, manifest declarations, public URLs, and installed visual QA synchronized as one delivery contract.
+- Keep canonical routes, page metadata, crawler files, structured data, social previews, and deployed asset validation synchronized as one factual static-site contract.
+- Keep Pages deployment and package publication as separate side-effect boundaries with explicit triggers, least privileges, validation gates, and artifact ownership.
 - Favor versioned and reversible delivery, retain required old assets, and use rollback-safe Git operations.
 - Document setup, interfaces, failure modes, troubleshooting, and maintenance procedures.
 - Prefer practical, maintainable automation over repeated manual commands.
