@@ -2,7 +2,7 @@
 
 ## Profile Status
 
-This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
+This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system and PWA icon conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
 
 ## Directly Supplied Background
 
@@ -29,7 +29,7 @@ The ESLint baseline, blue theme palette, and brand-first browser fallback are co
 The reviewed sources provide evidence of practical experience across these areas:
 
 - Backend and data: Node.js services, URL-shortening design, SQL queries, MySQL operations, HTTP APIs, and Go packages and tools.
-- Frontend architecture: TypeScript project setup, browser APIs and compatibility, multi-page applications, multiple bundle configurations, CDN integration, responsive web experiences, semantic theme systems, and desktop applications combining Go with a web frontend.
+- Frontend architecture: TypeScript project setup, browser APIs and compatibility, multi-page applications, multiple bundle configurations, CDN integration, responsive web experiences, semantic theme systems, PWA icon delivery, and desktop applications combining Go with a web frontend.
 - Build engineering: npm package workflows, TypeScript compilation, Babel, Webpack configuration composition, multi-compiler builds, bundle analysis, lint automation, generated documentation, and versioned static assets.
 - Reusable library architecture: a framework-independent package core, a React 19 playground isolated to development, explicit public entry points and declarations, multi-format package output, and generated consumer documentation.
 - Performance and resilience: code splitting, dependency and image optimization, compression, caching, frontend monitoring, PWA and Service Worker lifecycle, offline behavior, and compatibility testing.
@@ -52,6 +52,7 @@ Treat these as evidence-backed tendencies, not absolute rules:
 - Consider browser, operating-system, CPU-architecture, line-ending, network, and legacy-runtime differences.
 - Design for performance and loading experience, including bundle size, caching, compression, monitoring, and update behavior.
 - Keep theme values behind semantic roles, coordinate framework and browser theme state, and verify contrast and interaction states when adapting a palette.
+- Keep PWA icon canvases, artwork variants, manifest declarations, public URLs, and installed visual QA synchronized as one delivery contract.
 - Favor versioned and reversible delivery, retain required old assets, and use rollback-safe Git operations.
 - Document setup, interfaces, failure modes, troubleshooting, and maintenance procedures.
 - Prefer practical, maintainable automation over repeated manual commands.

@@ -127,6 +127,12 @@ The following maintained browser theme-color guide was reviewed on 2026-08-10:
 
 It supports the lifecycle in [frontend-browser-theme-color.md](frontend-browser-theme-color.md). Treat the separation of default browser color, user preference, resolved theme, early initialization, failure handling, and dynamic synchronization as reusable architecture. Keep Polestar-specific markup, storage keys, templates, bundles, and component ownership local to that project.
 
+The following maintained PWA icon guide was reviewed on 2026-08-10:
+
+- `polestar/guides/PROJECT_ICON_RULES.md`
+
+It supports the greenfield contract and validation workflow in [frontend-project-icons.md](frontend-project-icons.md). Treat the three asset sizes and purposes, separate normal and maskable artwork, optical sizing, crop safety, and installed visual QA as reusable guidance. Adapt filenames, URLs, source ownership, and delivery paths to the target project.
+
 ## Interpretation Rules
 
 - Directly supplied background outranks source-derived inference.
