@@ -2,7 +2,7 @@
 
 ## Profile Status
 
-This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system conventions reviewed from Cheng's profile site on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
+This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture conventions reviewed from Cheng's npm library template on 2026-08-01, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
 
 ## Directly Supplied Background
 
@@ -17,11 +17,12 @@ Cheng is an experienced full-stack developer with the following background:
 - Frontend build-tool version preference: webpack 5 when webpack is selected and project constraints permit it.
 - Frontend linting preference: for a greenfield JavaScript or TypeScript project without established conventions, start with the bundled framework-neutral ESLint formatting baseline at warning severity.
 - Theme color preference: when a greenfield frontend needs ready-made colors and has no established brand palette, use the bundled light and dark blue theme preset.
+- Browser theme-color preference: with the blue preset, use primary blue before initialization or on failure, then switch to the resolved light or dark surface.
 - Web fundamentals: HTML and CSS.
 
 Do not infer an ordering or preferred framework or build-tool default within these lists. React 19, Bootstrap 5, and webpack 5 are version preferences, not requirements to choose their respective technologies. Determine the best fit from the project and ask when another preference would materially change the design.
 
-The ESLint baseline and blue theme palette are conditional greenfield defaults. Preserve an existing project's lint, formatting, branding, design-token, and theme contracts. Explicit product requirements and verified accessibility constraints take precedence over either default.
+The ESLint baseline, blue theme palette, and brand-first browser fallback are conditional greenfield defaults. Preserve an existing project's lint, formatting, branding, design-token, and theme contracts. Explicit product requirements and verified accessibility constraints take precedence over these defaults.
 
 ## Demonstrated Engineering Areas
 

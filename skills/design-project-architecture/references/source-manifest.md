@@ -121,6 +121,12 @@ The following maintained frontend theme guide was reviewed on 2026-08-10:
 
 It supports the reusable architecture in [frontend-theme-system.md](frontend-theme-system.md) and the exact colors in [frontend-blue-theme-preset.md](frontend-blue-theme-preset.md). Treat its semantic roles, theme coordination, framework mapping, and validation workflow as design evidence. The palette is Cheng's directly selected greenfield preset; preserve existing project branding and theme contracts, and keep unrelated site-specific behavior local to projects with the same requirements.
 
+The following maintained browser theme-color guide was reviewed on 2026-08-10:
+
+- `polestar/guides/PRIMARY_THEME_COLOR.md`
+
+It supports the lifecycle in [frontend-browser-theme-color.md](frontend-browser-theme-color.md). Treat the separation of default browser color, user preference, resolved theme, early initialization, failure handling, and dynamic synchronization as reusable architecture. Keep Polestar-specific markup, storage keys, templates, bundles, and component ownership local to that project.
+
 ## Interpretation Rules
 
 - Directly supplied background outranks source-derived inference.

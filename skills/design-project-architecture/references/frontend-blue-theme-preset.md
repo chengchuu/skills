@@ -43,14 +43,15 @@ Keep each RGB triplet synchronized with its hexadecimal primary value. Custom co
 
 ## Browser and PWA Colors
 
-Use the surface colors for browser chrome:
+Use the primary color as the initial browser-chrome fallback, then switch to the resolved surface:
 
-| Setting | Light | Dark |
+| Browser state | Color | Purpose |
 | :--- | :--- | :--- |
-| `<meta name="theme-color">` | `#ffffff` | `#141414` |
-| CSS `color-scheme` | `light` | `dark` |
+| Before initialization or initialization failure | `#4d8ffb` | Brand-first static fallback |
+| Resolved light theme | `#ffffff` | Match the light surface |
+| Resolved dark theme | `#141414` | Match the dark surface |
 
-Update runtime browser metadata from the resolved theme. For an installable app, choose manifest `background_color` and `theme_color` deliberately; the source preset uses the light surface, `#ffffff`, for both static manifest values.
+Set CSS `color-scheme` to the resolved `light` or `dark` value and update runtime browser metadata from the same resolved state. Use a light-surface static fallback instead when the product requires browser chrome to match the default page surface without JavaScript. For an installable app, choose manifest `background_color` and `theme_color` separately; the source preset uses the light surface, `#ffffff`, for both static manifest values.
 
 ## Contrast Constraints
 
