@@ -106,6 +106,14 @@ for (const path of curatedSources) {
 
 const writingGuidelines = readFileSync(writingGuidelinesPath, 'utf8');
 for (const marker of [
+  '创建纯文本围栏代码块时，使用 `plain` 信息字符串，不要使用 `text`',
+  '不得修改代码块中的内容',
+  '对于仅审阅任务，只报告不符合此约定的纯文本代码块',
+]) {
+  if (!writingGuidelines.includes(marker)) fail(`writing-guidelines.md 缺少纯文本内容块规则: ${marker}`);
+}
+
+for (const marker of [
   '默认将所有表格列设为左对齐',
   '在每个分隔单元格的开头添加冒号',
   '规范为一致的显示宽度',
