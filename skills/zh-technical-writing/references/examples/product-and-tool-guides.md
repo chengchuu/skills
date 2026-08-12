@@ -81,3 +81,23 @@ These normalized examples capture reusable structure and style without reproduci
 
 - 以使用任务串联功能，使用表格呈现方向、选项和优先级，同时保留命令、路径、参数及标识符的精确形式。
 - 明确区分便捷示例与推荐实践，并在凭据、主机验证和环境要求附近说明风险与限制。
+
+## Example: vue-screenfull 使用与集成指南
+
+- Document type: Product and tool guide
+- Subject: Frontend and web performance; JavaScript, TypeScript, and Node.js; APIs and developer tools
+- Audience: Frontend developers
+- Tone: Formal and explanatory
+- Formality: High
+- Length: Long
+- Source: `temp/writing-examples/vue-screenfull/README.md`
+
+### Structural characteristics
+
+- 以简短定位和快速开始建立入口，再按核心任务、组件与指令集成、非框架入口、运行环境限制、迁移、API 和开发流程展开。
+- 将基本使用放在前部，把移动端、iframe、SSR、浏览器支持和降级方案等边界条件放在对应任务附近。
+
+### Reusable style characteristics
+
+- 为每个使用场景提供就近的代码示例，并用表格对照迁移前后的概念；将可访问性、清理责任和失败边界与主流程同时说明。
+- 该来源全文为英文，仅用于信息架构和英译中组织证据；不作为中文句式、措辞或技术事实的范本。

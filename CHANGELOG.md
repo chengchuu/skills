@@ -2,6 +2,10 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.12.0 - 2026-08-12
+
+- Expanded `zh-technical-writing` with curated `scp-next`, macOS `scutil`, and `vue-screenfull` structure and style evidence.
+
 ## 0.11.0 - 2026-08-09
 
 - Added conditional greenfield ESLint defaults and formatter-compatibility guidance to `design-project-architecture`.

@@ -1,15 +1,12 @@
-# Optimize `zh-technical-writing` with new articles
-
-Replace `<ARTICLE_PATHS>` with the path to one Markdown article or a list of paths to multiple Markdown articles, then use the prompt below from the repository root.
-
-````plain
 Optimize the existing Codex skill at:
 
 skills/zh-technical-writing/
 
 Use the following Markdown article or articles as new style and structure evidence:
 
-<ARTICLE_PATHS>
+/Users/mazey/Web/web/npm/scp-next/guides/RELEASE_NOTES/introducing-scp-next-v1.0.19.zh-CN.md
+/Users/mazey/Web/learning/Blog/20260613-macOS-scutil.md
+/Users/mazey/Web/web/npm/vue-screenfull/README.md
 
 ## Goal
 
@@ -149,4 +146,3 @@ Provide:
 6. Conflicts with formal guidelines or uncertain classifications.
 7. Every modified file.
 8. Validation and test results, including any pre-existing incomplete-source limitation.
-````
