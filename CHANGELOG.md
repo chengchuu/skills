@@ -6,6 +6,7 @@ All notable changes to this repository will be documented here.
 
 - Expanded `zh-technical-writing` with curated `scp-next`, macOS `scutil`, and `vue-screenfull` structure and style evidence.
 - Added conditional Bootstrap Icons delivery, accessibility, and theme-control guidance to `design-project-architecture`.
+- Refined `design-project-architecture` to use pnpm only for local dependency operations and npm for local development commands.
 - Added a multilingual curious Vlog example to `pet-diary-notes`.
 
 ## 0.11.0 - 2026-08-09

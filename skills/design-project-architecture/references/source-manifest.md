@@ -125,7 +125,7 @@ The following maintained GitHub Actions guide was reviewed on 2026-08-10:
 
 - `mazey-npm-template/guides/GITHUB_ACTIONS.md`
 
-It supports the workflow boundaries in [github-actions-delivery.md](github-actions-delivery.md). Treat validation before side effects, separated Pages and package publication, least privileges, protected triggers, and artifact verification as reusable architecture. Adapt versions, actions, branches, scripts, outputs, environments, registries, and authentication to the target repository; apply Cheng's directly supplied local `pnpm` and online `npm install` preferences.
+It supports the workflow boundaries in [github-actions-delivery.md](github-actions-delivery.md). Treat validation before side effects, separated Pages and package publication, least privileges, protected triggers, and artifact verification as reusable architecture. Adapt versions, actions, branches, scripts, outputs, environments, registries, and authentication to the target repository; apply Cheng's directly supplied preference for local pnpm dependency operations, local npm development commands, and online `npm install` plus `npm run <script>`.
 
 The following maintained frontend tooling guide was reviewed on 2026-08-09:
 

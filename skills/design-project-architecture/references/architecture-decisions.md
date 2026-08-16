@@ -61,7 +61,7 @@ Do not choose a runtime before defining workload shape, concurrency, latency, de
 
 ### Build and Packaging
 
-- For local Node.js development, recommend `pnpm`. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching; do not use `npm ci` or add a `packageManager` field. Preserve an existing lockfile policy, and ask the team to define one for a greenfield project instead of inferring it from these commands.
+- For local Node.js dependency operations, use `pnpm install`, `pnpm add`, `pnpm update`, and `pnpm remove`. Use npm for local development and lifecycle commands, including `npm run <script>` and `npm pack`. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching; do not use `npm ci` or add a `packageManager` field. Preserve an existing lockfile policy, and ask the team to define one for a greenfield project instead of inferring it from these commands.
 - Reuse the repository's module format, bundler, linting, test, artifact, and script conventions when they meet the requirement.
 - When webpack is selected for a new project, prefer webpack 5. For an existing project, preserve its current webpack version unless upgrading to webpack 5 is in scope and configuration, loader and plugin compatibility, dependencies, tests, generated assets, and deployment have been verified.
 - Separate source configuration from generated output.

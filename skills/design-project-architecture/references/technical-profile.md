@@ -15,7 +15,7 @@ Cheng is an experienced full-stack developer with the following background:
 - React version preference: React 19 when React is selected and project constraints permit it.
 - UI library version preference: Bootstrap 5 when Bootstrap is selected and project constraints permit it.
 - Frontend build-tool version preference: webpack 5 when webpack is selected and project constraints permit it.
-- Package-manager preference: recommend `pnpm` for local development, use `npm install` in GitHub Actions, do not use `npm ci`, and do not add a `packageManager` field to `package.json`.
+- Package-manager preference: use `pnpm install`, `pnpm add`, `pnpm update`, and `pnpm remove` only for local dependency operations; use npm for local development commands such as `npm run <script>` and `npm pack`; in GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching. Do not use `npm ci` or add a `packageManager` field to `package.json`.
 - Frontend linting preference: for a greenfield JavaScript or TypeScript project without established conventions, start with the bundled framework-neutral ESLint formatting baseline at warning severity.
 - Theme color preference: when a greenfield frontend needs ready-made colors and has no established brand palette, use the bundled light and dark blue theme preset.
 - Browser theme-color preference: with the blue preset, use primary blue before initialization or on failure, then switch to the resolved light or dark surface.
