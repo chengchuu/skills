@@ -5,6 +5,7 @@
 - [Scope](#scope)
 - [Corpus Coverage](#corpus-coverage)
 - [Maintained Repository Sources](#maintained-repository-sources)
+- [Official Product Sources](#official-product-sources)
 - [Interpretation Rules](#interpretation-rules)
 
 ## Scope
@@ -149,6 +150,16 @@ The following maintained PWA icon guide was reviewed on 2026-08-10:
 - `polestar/guides/PROJECT_ICON_RULES.md`
 
 It supports the greenfield contract and validation workflow in [frontend-project-icons.md](frontend-project-icons.md). Treat the three asset sizes and purposes, separate normal and maskable artwork, optical sizing, crop safety, and installed visual QA as reusable guidance. Adapt filenames, URLs, source ownership, and delivery paths to the target project.
+
+## Official Product Sources
+
+The following official Bootstrap Icons pages were reviewed on 2026-08-16:
+
+- <https://icons.getbootstrap.com/>
+- <https://icons.getbootstrap.com/icons/sun-fill/>
+- <https://icons.getbootstrap.com/icons/moon-stars-fill/>
+
+They support the delivery choices, accessibility boundary, and selected theme-control glyphs in [frontend-website-icons.md](frontend-website-icons.md). Treat Bootstrap Icons as Cheng's conditional greenfield website preference. Verify the target's installed package, rendering method, asset pipeline, and accessibility behavior; do not treat a current package version or website implementation example as a permanent project default.
 
 ## Interpretation Rules
 

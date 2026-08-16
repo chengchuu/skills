@@ -57,6 +57,7 @@ Do not choose a runtime before defining workload shape, concurrency, latency, de
 - Treat Bootstrap and jQuery as valid tools for incremental, legacy, content-oriented, or compatibility-focused systems. Do not introduce or remove them automatically.
 - When Bootstrap is selected for a new project, prefer Bootstrap 5. For an existing project, preserve its current Bootstrap version unless upgrading to Bootstrap 5 is in scope and markup, JavaScript integrations, themes, browser support, visual regressions, and dependencies have been verified.
 - Keep HTML, CSS, accessibility, browser behavior, and progressive enhancement visible beneath framework choices.
+- Preserve an existing accessible website icon system. For a greenfield website without one, prefer locally bundled Bootstrap Icons and choose SVG, sprite, or web-font delivery from the target build, CSP, offline, and performance requirements.
 
 ### Build and Packaging
 
@@ -100,6 +101,8 @@ Reject a boundary that only renames files or forwards calls without adding owner
 - When a framework exposes theme variables, map them to the semantic contract instead of maintaining unrelated framework and custom palettes. Synchronize alternate color representations required by consumers.
 - Resolve theme preference once and coordinate the root selector, CSS `color-scheme`, browser metadata, accessible control state, and installable-app appearance where applicable. Recalculate contrast after visual inputs change.
 - Keep the static browser-color fallback, persisted preference, and resolved theme distinct. With the blue preset, prefer primary blue before initialization or on failure, then use the resolved surface color; preserve another maintained project contract when one exists.
+- For a greenfield Bootstrap Icons theme control, show `sun-fill` for resolved light and `moon-stars-fill` for resolved dark. Keep `system` as a separate user preference, synchronize visual and accessible control state with the theme lifecycle, and never communicate state or action through the icon alone.
+- Keep website icon dependencies and generated assets under the website build. Do not leak them into a reusable package runtime unless they are an intentional consumer contract.
 - For a greenfield PWA, prefer separate 192×192 and 512×512 standard PNGs plus a 512×512 maskable PNG. Adapt their names and URLs to the repository and deployment contract; preserve established icon assets in existing projects.
 - Keep manifest declarations aligned with actual files, optimize normal and maskable artwork independently, and validate the installed result rather than only the source images.
 - Define one canonical-route registry for indexable HTML pages. Derive titles, descriptions, self-canonicals, social metadata, structured data, `robots.txt`, and `sitemap.xml` from verified facts, then validate them in the final deployed artifact.

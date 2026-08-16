@@ -46,6 +46,7 @@ const groups = {
     ["25-0711 Loving Gaze from a Kitten", "Gaze and paw contact", "Unknown", "Looking and holding a hand"],
   ],
   "playful-and-funny.md": [
+    ["User-provided: 好奇雷达已开启", "Looking around curiously", "Unknown", "Looking around in different directions"],
     ["25-0825-Too-Cute", "Belly-up and tail flick", "Unknown", "Sprawling and flicking the tail"],
     ["26-0204-Curious-Kitty", "Curiosity", "Unknown", "Exploring; exact action unspecified"],
     ["25-1008 Playful Kitty", "Nibbling", "Unknown", "Playing near and nibbling feet"],
@@ -98,6 +99,26 @@ const groups = {
 };
 
 const supplementalExamples = [
+  {
+    heading: "User-provided: 好奇雷达已开启",
+    body: `zh:
+好奇雷达已开启
+东张西望地观察四周，好奇的小眼神一刻也闲不下来。
+BGM：biubiubiu
+#猫咪 #猫咪日常 #好奇猫咪
+
+en:
+Curious Eyes Everywhere
+Looking this way and that, she watches everything around her with bright curiosity.
+BGM: biubiubiu
+#Cat #CatLife #CuriousCat
+
+jp:
+きょろきょろ観察中
+あっちを見たりこっちを見たり、好奇心いっぱいに辺りを見渡している。
+BGM：biubiubiu
+#猫 #猫のいる暮らし #好奇心旺盛`,
+  },
   {
     heading: "User-provided: 好奇目光",
     body: `zh:
@@ -216,6 +237,7 @@ function parseSource(markdown) {
 }
 
 function parseDate(heading) {
+  if (heading === "User-provided: 好奇雷达已开启") return "2026-08-11";
   if (heading === "User-provided: 好奇目光") return "2026-08-08";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
@@ -285,6 +307,9 @@ function categoryFor(file) {
 }
 
 function dimensions(file, heading) {
+  if (heading === "User-provided: 好奇雷达已开启") {
+    return { mood: "Curious", tone: "Playful" };
+  }
   if (heading === "User-provided: 好奇目光") {
     return { mood: "Curious", tone: "Gentle" };
   }
@@ -332,6 +357,7 @@ function healthStatus(heading) {
 }
 
 function platformFor(heading) {
+  if (heading === "User-provided: 好奇雷达已开启") return "多平台";
   if (heading === "User-provided: 好奇目光") return "多平台";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
@@ -342,6 +368,7 @@ function platformFor(heading) {
 }
 
 function contentTypeFor(file, heading) {
+  if (heading === "User-provided: 好奇雷达已开启") return "Real-life";
   if (heading === "User-provided: 好奇目光") return "Real-life";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
@@ -358,6 +385,7 @@ function sourcePathFor(heading) {
 
 function petIdentityFor(heading) {
   return [
+    "User-provided: 好奇雷达已开启",
     "User-provided: 好奇目光",
     "User-provided: 圆眼睛里的好奇心",
     "User-provided: 猫砂盆里的乖巧日常",
@@ -367,6 +395,7 @@ function petIdentityFor(heading) {
 
 function formatFor(heading) {
   return [
+    "User-provided: 好奇雷达已开启",
     "User-provided: 好奇目光",
     "User-provided: 猫砂盆里的乖巧日常",
     "User-provided: 认真洗脸中",
@@ -455,7 +484,9 @@ function manifestMarkdown(examples) {
         ? "High for identity; medium for relationship"
         : "High";
     const notes = supplementalHeadings.has(example.heading)
-      ? example.heading === "User-provided: 好奇目光"
+      ? example.heading === "User-provided: 好奇雷达已开启"
+        ? "Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user"
+        : example.heading === "User-provided: 好奇目光"
         ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
         : example.heading === "User-provided: 猫砂盆里的乖巧日常"
         ? "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context"

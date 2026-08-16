@@ -2,7 +2,7 @@
 
 ## Profile Status
 
-This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture and static-site SEO conventions reviewed from Cheng's npm library template on 2026-08-01 and 2026-08-10, GitHub Actions conventions reviewed from the template on 2026-08-10, frontend linting conventions reviewed from Mazey on 2026-08-09, and theme-system and PWA icon conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
+This profile combines facts supplied directly by Cheng, durable themes extracted from 58 technical notes and articles, maintained architecture and static-site SEO conventions reviewed from Cheng's npm library template on 2026-08-01 and 2026-08-10, GitHub Actions conventions reviewed from the template on 2026-08-10, frontend linting conventions reviewed from Mazey on 2026-08-09, theme-system and PWA icon conventions reviewed from Cheng's profile site and Polestar theme on 2026-08-10, and official Bootstrap Icons guidance reviewed on 2026-08-16. Directly supplied facts are authoritative personal context. Source-derived themes indicate experience and working style; they are not mandatory technology choices or universal project rules.
 
 ## Directly Supplied Background
 
@@ -19,18 +19,19 @@ Cheng is an experienced full-stack developer with the following background:
 - Frontend linting preference: for a greenfield JavaScript or TypeScript project without established conventions, start with the bundled framework-neutral ESLint formatting baseline at warning severity.
 - Theme color preference: when a greenfield frontend needs ready-made colors and has no established brand palette, use the bundled light and dark blue theme preset.
 - Browser theme-color preference: with the blue preset, use primary blue before initialization or on failure, then switch to the resolved light or dark surface.
+- Website icon preference: for a greenfield website without an established icon system, use locally bundled Bootstrap Icons; show `sun-fill` for the resolved light theme and `moon-stars-fill` for the resolved dark theme.
 - Web fundamentals: HTML and CSS.
 
 Do not infer an ordering or preferred framework or build-tool default within these lists. React 19, Bootstrap 5, and webpack 5 are version preferences, not requirements to choose their respective technologies. Determine the best fit from the project and ask when another preference would materially change the design.
 
-The ESLint baseline, blue theme palette, and brand-first browser fallback are conditional greenfield defaults. Preserve an existing project's lint, formatting, branding, design-token, and theme contracts. Explicit product requirements and verified accessibility constraints take precedence over these defaults.
+The ESLint baseline, blue theme palette, brand-first browser fallback, and Bootstrap Icons website preference are conditional greenfield defaults. Preserve an existing project's lint, formatting, branding, design-token, theme, and accessible icon contracts. Explicit product requirements and verified accessibility constraints take precedence over these defaults.
 
 ## Demonstrated Engineering Areas
 
 The reviewed sources provide evidence of practical experience across these areas:
 
 - Backend and data: Node.js services, URL-shortening design, SQL queries, MySQL operations, HTTP APIs, and Go packages and tools.
-- Frontend architecture: TypeScript project setup, browser APIs and compatibility, multi-page applications, multiple bundle configurations, CDN integration, responsive web experiences, semantic theme systems, PWA icon delivery, and desktop applications combining Go with a web frontend.
+- Frontend architecture: TypeScript project setup, browser APIs and compatibility, multi-page applications, multiple bundle configurations, CDN integration, responsive web experiences, semantic theme systems, accessible website icon delivery, PWA icon delivery, and desktop applications combining Go with a web frontend.
 - Build engineering: npm package workflows, TypeScript compilation, Babel, Webpack configuration composition, multi-compiler builds, bundle analysis, lint automation, generated documentation, static-site SEO assembly, and versioned assets.
 - Reusable library architecture: a framework-independent package core, a React 19 playground isolated to development, explicit public entry points and declarations, multi-format package output, and generated consumer documentation.
 - Performance and resilience: code splitting, dependency and image optimization, compression, caching, frontend monitoring, PWA and Service Worker lifecycle, offline behavior, and compatibility testing.
@@ -53,6 +54,7 @@ Treat these as evidence-backed tendencies, not absolute rules:
 - Consider browser, operating-system, CPU-architecture, line-ending, network, and legacy-runtime differences.
 - Design for performance and loading experience, including bundle size, caching, compression, monitoring, and update behavior.
 - Keep theme values behind semantic roles, coordinate framework and browser theme state, and verify contrast and interaction states when adapting a palette.
+- Keep website interface icons accessible and owned by the site build; do not confuse control glyphs with product branding or installable-app artwork.
 - Keep PWA icon canvases, artwork variants, manifest declarations, public URLs, and installed visual QA synchronized as one delivery contract.
 - Keep canonical routes, page metadata, crawler files, structured data, social previews, and deployed asset validation synchronized as one factual static-site contract.
 - Keep Pages deployment and package publication as separate side-effect boundaries with explicit triggers, least privileges, validation gates, and artifact ownership.
