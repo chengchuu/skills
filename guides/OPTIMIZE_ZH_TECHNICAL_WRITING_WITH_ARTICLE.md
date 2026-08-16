@@ -4,9 +4,9 @@ skills/zh-technical-writing/
 
 Use the following Markdown article or articles as new style and structure evidence:
 
-/Users/mazey/Web/web/npm/scp-next/guides/RELEASE_NOTES/introducing-scp-next-v1.0.19.zh-CN.md
-/Users/mazey/Web/learning/Blog/20260613-macOS-scutil.md
-/Users/mazey/Web/web/npm/vue-screenfull/README.md
+```plain
+<ARTICLE_PATHS>
+```
 
 ## Goal
 
