@@ -2,6 +2,80 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: User-provided: 好奇雷达已开启
+
+- Source heading: `User-provided: 好奇雷达已开启`
+- Source date: 2026-08-11
+- Version: none
+- Category: Playful and funny
+- Secondary category: Looking around curiously
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: biubiubiu
+- Mood: Curious
+- Tone: Playful
+- Pet behavior: Looking around in different directions
+- Pet activity: Looking around in different directions
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: User-provided skill example
+
+### Chinese
+
+#### Title
+
+好奇雷达已开启
+
+#### Description
+
+东张西望地观察四周，好奇的小眼神一刻也闲不下来。
+
+#### BGM
+
+biubiubiu
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #好奇猫咪
+
+### English
+
+#### Title
+
+Curious Eyes Everywhere
+
+#### Description
+
+Looking this way and that, she watches everything around her with bright curiosity.
+
+#### BGM
+
+biubiubiu
+
+#### Hashtags
+
+#Cat #CatLife #CuriousCat
+
+### Japanese
+
+#### Title
+
+きょろきょろ観察中
+
+#### Description
+
+あっちを見たりこっちを見たり、好奇心いっぱいに辺りを見渡している。
+
+#### BGM
+
+biubiubiu
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #好奇心旺盛
+
 ## Example: 25-0825-Too-Cute
 
 - Source heading: `25-0825-Too-Cute`

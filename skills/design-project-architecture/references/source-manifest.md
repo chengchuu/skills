@@ -5,6 +5,7 @@
 - [Scope](#scope)
 - [Corpus Coverage](#corpus-coverage)
 - [Maintained Repository Sources](#maintained-repository-sources)
+- [Official Product Sources](#official-product-sources)
 - [Interpretation Rules](#interpretation-rules)
 
 ## Scope
@@ -108,6 +109,57 @@ The following current repository documents were reviewed on 2026-08-01 as a conc
 - `mazey-npm-template/guides/CUSTOMIZE.md`
 
 They support the reusable patterns in [package-project-patterns.md](package-project-patterns.md). Treat exact paths, commands, tools, output names, URLs, and deployment behavior as template-specific contracts rather than defaults for unrelated projects.
+
+The following maintained static-site sources were reviewed on 2026-08-10:
+
+- `mazey-npm-template/site/index.html`
+- `mazey-npm-template/examples/index.html`
+- `mazey-npm-template/project.config.js`
+- `mazey-npm-template/scripts/build-pages.js`
+- `mazey-npm-template/scripts/validate-seo.js`
+- `mazey-npm-template/test/seo.test.js`
+
+They support the SEO ownership and validation contract in [frontend-seo-delivery.md](frontend-seo-delivery.md). Treat the central canonical-route authority, deterministic generated-page metadata, crawler-file generation, deployment-base asset handling, and final-artifact validation as reusable architecture. Keep template titles, descriptions, routes, schema types, project names, claims, image assets, and implementation identifiers local to projects where they are verified.
+
+The following maintained GitHub Actions guide was reviewed on 2026-08-10:
+
+- `mazey-npm-template/guides/GITHUB_ACTIONS.md`
+
+It supports the workflow boundaries in [github-actions-delivery.md](github-actions-delivery.md). Treat validation before side effects, separated Pages and package publication, least privileges, protected triggers, and artifact verification as reusable architecture. Adapt versions, actions, branches, scripts, outputs, environments, registries, and authentication to the target repository; apply Cheng's directly supplied local `pnpm` and online `npm install` preferences.
+
+The following maintained frontend tooling guide was reviewed on 2026-08-09:
+
+- `mazey/guides/ESLINT_RULES.md`
+
+It supports the conditional defaults in [frontend-eslint-defaults.md](frontend-eslint-defaults.md). Treat the rule behavior as Cheng's greenfield preference; verify rule availability and integration against the target project's installed ESLint and formatter contracts.
+
+The following maintained frontend theme guide was reviewed on 2026-08-10:
+
+- `chengchuu.github.io/guides/THEME_COLOR_SCHEME.md`
+
+It supports the reusable architecture in [frontend-theme-system.md](frontend-theme-system.md) and the exact colors in [frontend-blue-theme-preset.md](frontend-blue-theme-preset.md). Treat its semantic roles, theme coordination, framework mapping, and validation workflow as design evidence. The palette is Cheng's directly selected greenfield preset; preserve existing project branding and theme contracts, and keep unrelated site-specific behavior local to projects with the same requirements.
+
+The following maintained browser theme-color guide was reviewed on 2026-08-10:
+
+- `polestar/guides/PRIMARY_THEME_COLOR.md`
+
+It supports the lifecycle in [frontend-browser-theme-color.md](frontend-browser-theme-color.md). Treat the separation of default browser color, user preference, resolved theme, early initialization, failure handling, and dynamic synchronization as reusable architecture. Keep Polestar-specific markup, storage keys, templates, bundles, and component ownership local to that project.
+
+The following maintained PWA icon guide was reviewed on 2026-08-10:
+
+- `polestar/guides/PROJECT_ICON_RULES.md`
+
+It supports the greenfield contract and validation workflow in [frontend-project-icons.md](frontend-project-icons.md). Treat the three asset sizes and purposes, separate normal and maskable artwork, optical sizing, crop safety, and installed visual QA as reusable guidance. Adapt filenames, URLs, source ownership, and delivery paths to the target project.
+
+## Official Product Sources
+
+The following official Bootstrap Icons pages were reviewed on 2026-08-16:
+
+- <https://icons.getbootstrap.com/>
+- <https://icons.getbootstrap.com/icons/sun-fill/>
+- <https://icons.getbootstrap.com/icons/moon-stars-fill/>
+
+They support the delivery choices, accessibility boundary, and selected theme-control glyphs in [frontend-website-icons.md](frontend-website-icons.md). Treat Bootstrap Icons as Cheng's conditional greenfield website preference. Verify the target's installed package, rendering method, asset pipeline, and accessibility behavior; do not treat a current package version or website implementation example as a permanent project default.
 
 ## Interpretation Rules
 

@@ -57,10 +57,12 @@ Do not choose a runtime before defining workload shape, concurrency, latency, de
 - Treat Bootstrap and jQuery as valid tools for incremental, legacy, content-oriented, or compatibility-focused systems. Do not introduce or remove them automatically.
 - When Bootstrap is selected for a new project, prefer Bootstrap 5. For an existing project, preserve its current Bootstrap version unless upgrading to Bootstrap 5 is in scope and markup, JavaScript integrations, themes, browser support, visual regressions, and dependencies have been verified.
 - Keep HTML, CSS, accessibility, browser behavior, and progressive enhancement visible beneath framework choices.
+- Preserve an existing accessible website icon system. For a greenfield website without one, prefer locally bundled Bootstrap Icons and choose SVG, sprite, or web-font delivery from the target build, CSP, offline, and performance requirements.
 
 ### Build and Packaging
 
-- Reuse the repository's package manager, module format, bundler, linting, and test conventions when they meet the requirement.
+- For local Node.js development, recommend `pnpm`. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching; do not use `npm ci` or add a `packageManager` field. Preserve an existing lockfile policy, and ask the team to define one for a greenfield project instead of inferring it from these commands.
+- Reuse the repository's module format, bundler, linting, test, artifact, and script conventions when they meet the requirement.
 - When webpack is selected for a new project, prefer webpack 5. For an existing project, preserve its current webpack version unless upgrading to webpack 5 is in scope and configuration, loader and plugin compatibility, dependencies, tests, generated assets, and deployment have been verified.
 - Separate source configuration from generated output.
 - Identify the authority for each identity or configuration value and derive dependent values instead of repeating them. Keep values distinct when their formats or scopes differ, such as package name, repository slug, browser global, artifact filename, site base path, cache namespace, and display name.
@@ -94,6 +96,17 @@ Reject a boundary that only renames files or forwards calls without adding owner
 ## Frontend and Delivery
 
 - Define routing, entry points, state ownership, data fetching, error states, accessibility, browser baseline, and rendering strategy.
+- Preserve an existing design-token and theme-selection contract. For a greenfield theme, define semantic roles and coordinated light and dark values before styling components.
+- When a greenfield frontend needs ready-made colors and has no established brand palette, prefer the bundled blue theme preset; adapt or reject it when product identity or verified accessibility requirements conflict.
+- When a framework exposes theme variables, map them to the semantic contract instead of maintaining unrelated framework and custom palettes. Synchronize alternate color representations required by consumers.
+- Resolve theme preference once and coordinate the root selector, CSS `color-scheme`, browser metadata, accessible control state, and installable-app appearance where applicable. Recalculate contrast after visual inputs change.
+- Keep the static browser-color fallback, persisted preference, and resolved theme distinct. With the blue preset, prefer primary blue before initialization or on failure, then use the resolved surface color; preserve another maintained project contract when one exists.
+- For a greenfield Bootstrap Icons theme control, show `sun-fill` for resolved light and `moon-stars-fill` for resolved dark. Keep `system` as a separate user preference, synchronize visual and accessible control state with the theme lifecycle, and never communicate state or action through the icon alone.
+- Keep website icon dependencies and generated assets under the website build. Do not leak them into a reusable package runtime unless they are an intentional consumer contract.
+- For a greenfield PWA, prefer separate 192×192 and 512×512 standard PNGs plus a 512×512 maskable PNG. Adapt their names and URLs to the repository and deployment contract; preserve established icon assets in existing projects.
+- Keep manifest declarations aligned with actual files, optimize normal and maskable artwork independently, and validate the installed result rather than only the source images.
+- Define one canonical-route registry for indexable HTML pages. Derive titles, descriptions, self-canonicals, social metadata, structured data, `robots.txt`, and `sitemap.xml` from verified facts, then validate them in the final deployed artifact.
+- Include only stable public self-canonical routes in a sitemap. Keep production page origins distinct from deployment-relative asset paths, and omit unsupported claims or optional social and structured-data fields instead of inventing values.
 - Version static assets and preserve old assets when cached documents may still reference them.
 - Treat cache keys, invalidation, Service Worker updates, CDN behavior, and offline support as product decisions.
 - Include performance budgets or measurable targets when loading experience matters.

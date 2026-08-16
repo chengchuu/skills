@@ -82,20 +82,20 @@ These normalized examples capture reusable structure and style without reproduci
 - Document type: Installation and configuration guide
 - Subject: macOS and networking
 - Audience: Developers and system administrators
-- Tone: Concise and reference-oriented
+- Tone: Practical and explanatory
 - Formality: Medium to high
-- Length: Short
+- Length: Medium
 - Source: `temp/writing-examples/26-0613-macOS-scutil.md`
 
 ### Structural characteristics
 
 - 先界定目标环境和预期状态，再给出步骤、配置、验证和必要的风险说明。
-- 围绕一个系统工具组织常用配置与检查步骤。
+- 先说明适用范围和名称字段的分工，再给出命名建议、修改与验证步骤、具体使用场景和常见问题。
 
 ### Reusable style characteristics
 
-- 命令和配置保持原样；每一步说明目的或可观察结果。
-- 命令精确，说明简短；在新内容中补足风险和恢复信息。
+- 先用并列小节区分易混淆概念，再用命令、场景示例和问答连接配置与使用结果。
+- 将命令和标识符保持原样，并在操作附近说明验证方式；新内容仍需根据事实补足风险和恢复信息。
 
 ## Example: 配置 GitLab Runner
 

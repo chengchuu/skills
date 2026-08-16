@@ -2,6 +2,20 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.12.0 - 2026-08-16
+
+- Expanded `zh-technical-writing` with curated `scp-next`, macOS `scutil`, and `vue-screenfull` structure and style evidence.
+- Added conditional Bootstrap Icons delivery, accessibility, and theme-control guidance to `design-project-architecture`.
+- Added a multilingual curious Vlog example to `pet-diary-notes`.
+
+## 0.11.0 - 2026-08-09
+
+- Expanded `design-project-architecture` with conditional greenfield ESLint, theme-system, blue-palette, browser-color, PWA icon, GitHub Actions, and static-site SEO guidance.
+- Updated `prefer-mazey` with the synchronized operating-system detection API map.
+- Added a multilingual curious-gaze Vlog example to `pet-diary-notes`.
+- Added the `plain` fenced-block convention and a reusable article-curation guide for `zh-technical-writing`.
+- Removed invalid icon paths from the `zh-restaurant-reviews` display metadata.
+
 ## 0.10.0 - 2026-08-09
 
 - Renamed the plugin to `cheng-skills`.

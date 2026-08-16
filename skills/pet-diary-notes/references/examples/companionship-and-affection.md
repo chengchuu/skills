@@ -2,6 +2,76 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: User-provided: 好奇目光
+
+- Source heading: `User-provided: 好奇目光`
+- Source date: 2026-08-08
+- Version: none
+- Category: Companionship and affection
+- Secondary category: Curious gaze
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: Somewhere Only We Know
+- Mood: Curious
+- Tone: Gentle
+- Pet behavior: Looking curiously at the owner
+- Pet activity: Looking curiously at the owner
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: User-provided skill example
+
+### Chinese
+
+#### Title
+
+好奇目光
+
+#### Description
+
+圆圆的眼睛好奇地看着我，这一刻也被轻轻记录下来。
+
+#### BGM
+
+Somewhere Only We Know
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #好奇猫咪 #宠物日记
+
+### English
+
+#### Title
+
+A Curious Look
+
+#### Description
+
+Round eyes meet mine with curiosity, captured in one simple little moment.
+
+#### BGM
+
+Somewhere Only We Know
+
+#### Hashtags
+
+#Cat #CatLife #CuriousCat #PetDiary
+
+### Japanese
+
+#### Title
+
+好奇心いっぱいのまなざし
+
+#### BGM
+
+Somewhere Only We Know
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #好奇心 #ペット日記
+
 ## Example: User-provided: 圆眼睛里的好奇心
 
 - Source heading: `User-provided: 圆眼睛里的好奇心`

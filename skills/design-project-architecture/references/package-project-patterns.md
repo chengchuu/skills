@@ -25,6 +25,8 @@ Do not collapse identifiers that have different constraints. Package names, repo
 
 Keep build-only configuration out of the published runtime. Provide a browser-safe subset through an explicit build boundary when a site needs configuration at runtime.
 
+For local Node.js development, recommend `pnpm` without adding a `packageManager` field or repository-owned installer. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching. Do not use `npm ci`. Preserve an existing lockfile policy, and leave a greenfield tracking policy as an explicit team decision rather than inferring it from the selected local or online command.
+
 ## Preserve the Consumer Contract
 
 Treat these as one coordinated contract when a public API changes:
@@ -54,6 +56,8 @@ maintained source and configuration
 
 Generated directories are outputs, not editing surfaces. Change their owning source or build step, regenerate them, and verify the final artifact.
 
+When a public site is part of the project, keep its canonical route registry in maintained configuration. Derive page metadata, generated-documentation metadata, `robots.txt`, and `sitemap.xml` from that registry. Do not infer indexable routes by scanning every generated HTML file, and keep production page URLs distinct from asset paths that must work under the deployment base path.
+
 ## Customize in Dependency Order
 
 For a template-derived project, customize in this order:
@@ -79,7 +83,7 @@ Choose checks that prove the actual contract:
 - confirm development-only frameworks and site code are absent from the runtime artifact;
 - test examples against the public API rather than duplicated behavior;
 - inspect generated documentation and hosted subpath links;
-- validate SEO, manifest, icons, service-worker scope, cache lifecycle, and update behavior when those features exist;
+- validate SEO titles, descriptions, self-canonicals, factual social and structured data, crawler files, manifest, icons, service-worker scope, cache lifecycle, and update behavior when those features exist;
 - preview the deployable output under its real base path;
 - verify release and deployment workflows without publishing or deploying unless authorized.
 
