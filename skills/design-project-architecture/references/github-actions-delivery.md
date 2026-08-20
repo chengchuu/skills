@@ -4,7 +4,9 @@ Use this guidance when an architecture defines GitHub Actions validation, GitHub
 
 ## Package-Manager Boundary
 
-Recommend `pnpm` for local development commands. Assume each developer provisions `pnpm`; do not add a `packageManager` field, Corepack bootstrap, or repository-owned package-manager installer merely to enforce the recommendation.
+Use `pnpm install`, `pnpm add`, `pnpm update`, and `pnpm remove` only for local dependency operations. Assume each developer provisions the required tools; do not add a `packageManager` field, Corepack bootstrap, or repository-owned package-manager installer merely to enforce the preference.
+
+Use npm for local development and lifecycle commands, such as `npm run <script>` and `npm pack`. Do not recommend `pnpm run`, `pnpm exec`, or generic local development with pnpm.
 
 In GitHub Actions, install dependencies with:
 
@@ -12,9 +14,9 @@ In GitHub Actions, install dependencies with:
 npm install
 ```
 
-Run package scripts with `npm run <script>`. Do not use `npm ci`, and do not enable the `actions/setup-node` npm cache. Keep scripts package-manager-independent so local `pnpm <script>` and online `npm run <script>` exercise the same maintained behavior.
+Run package scripts with `npm run <script>`. Do not use `npm ci`, and do not enable the `actions/setup-node` npm cache. Keep scripts package-manager-independent so local and online `npm run <script>` commands exercise the same maintained behavior.
 
-Preserve the target repository's lockfile policy. Do not require, generate, remove, or rewrite a lockfile solely to implement this split, and do not remove an existing `packageManager` field unless that cleanup is explicitly in scope. For a greenfield project with no lockfile policy, leave tracking as an explicit team decision; do not infer it from local `pnpm` or online `npm install` usage.
+Preserve the target repository's lockfile policy. Do not require, generate, remove, or rewrite a lockfile solely to implement this split, and do not remove an existing `packageManager` field unless that cleanup is explicitly in scope. For a greenfield project with no lockfile policy, leave tracking as an explicit team decision; do not infer it from local pnpm dependency operations or online `npm install` usage.
 
 ## Separate Side-Effect Boundaries
 
@@ -53,7 +55,7 @@ Derive Node.js versions, action versions, workflow filenames, triggers, branches
 
 Before enabling a workflow:
 
-- run every referenced script locally with `pnpm`;
+- run every referenced script locally with `npm run <script>`;
 - verify the generated Pages artifact under its production base path;
 - inspect the package with a non-publishing pack or dry-run command;
 - review branch and environment protection plus workflow permissions;

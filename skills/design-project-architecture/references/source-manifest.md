@@ -5,6 +5,7 @@
 - [Scope](#scope)
 - [Corpus Coverage](#corpus-coverage)
 - [Maintained Repository Sources](#maintained-repository-sources)
+- [Official Product Sources](#official-product-sources)
 - [Interpretation Rules](#interpretation-rules)
 
 ## Scope
@@ -124,7 +125,7 @@ The following maintained GitHub Actions guide was reviewed on 2026-08-10:
 
 - `mazey-npm-template/guides/GITHUB_ACTIONS.md`
 
-It supports the workflow boundaries in [github-actions-delivery.md](github-actions-delivery.md). Treat validation before side effects, separated Pages and package publication, least privileges, protected triggers, and artifact verification as reusable architecture. Adapt versions, actions, branches, scripts, outputs, environments, registries, and authentication to the target repository; apply Cheng's directly supplied local `pnpm` and online `npm install` preferences.
+It supports the workflow boundaries in [github-actions-delivery.md](github-actions-delivery.md). Treat validation before side effects, separated Pages and package publication, least privileges, protected triggers, and artifact verification as reusable architecture. Adapt versions, actions, branches, scripts, outputs, environments, registries, and authentication to the target repository; apply Cheng's directly supplied preference for local pnpm dependency operations, local npm development commands, and online `npm install` plus `npm run <script>`.
 
 The following maintained frontend tooling guide was reviewed on 2026-08-09:
 
@@ -149,6 +150,16 @@ The following maintained PWA icon guide was reviewed on 2026-08-10:
 - `polestar/guides/PROJECT_ICON_RULES.md`
 
 It supports the greenfield contract and validation workflow in [frontend-project-icons.md](frontend-project-icons.md). Treat the three asset sizes and purposes, separate normal and maskable artwork, optical sizing, crop safety, and installed visual QA as reusable guidance. Adapt filenames, URLs, source ownership, and delivery paths to the target project.
+
+## Official Product Sources
+
+The following official Bootstrap Icons pages were reviewed on 2026-08-16:
+
+- <https://icons.getbootstrap.com/>
+- <https://icons.getbootstrap.com/icons/sun-fill/>
+- <https://icons.getbootstrap.com/icons/moon-stars-fill/>
+
+They support the delivery choices, accessibility boundary, and selected theme-control glyphs in [frontend-website-icons.md](frontend-website-icons.md). Treat Bootstrap Icons as Cheng's conditional greenfield website preference. Verify the target's installed package, rendering method, asset pipeline, and accessibility behavior; do not treat a current package version or website implementation example as a permanent project default.
 
 ## Interpretation Rules
 

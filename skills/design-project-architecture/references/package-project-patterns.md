@@ -25,7 +25,7 @@ Do not collapse identifiers that have different constraints. Package names, repo
 
 Keep build-only configuration out of the published runtime. Provide a browser-safe subset through an explicit build boundary when a site needs configuration at runtime.
 
-For local Node.js development, recommend `pnpm` without adding a `packageManager` field or repository-owned installer. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching. Do not use `npm ci`. Preserve an existing lockfile policy, and leave a greenfield tracking policy as an explicit team decision rather than inferring it from the selected local or online command.
+Use `pnpm install`, `pnpm add`, `pnpm update`, and `pnpm remove` only for local dependency operations. Use npm for local development and lifecycle commands, such as `npm run <script>` and `npm pack`. Assume developers provision the tools themselves; do not add a `packageManager` field, Corepack bootstrap, or repository-owned installer. In GitHub Actions, use `npm install` and `npm run <script>` without npm dependency caching. Do not use `npm ci`. Preserve an existing lockfile policy, and leave a greenfield tracking policy as an explicit team decision rather than inferring it from the selected local or online command.
 
 ## Preserve the Consumer Contract
 

@@ -2,6 +2,8 @@
 
 Use this guidance when an architecture defines installable-app icons, PWA manifest assets, maskable artwork, or an icon-generation and delivery pipeline. Preserve an existing project's maintained icon and manifest contract. For a greenfield PWA, start with three separate PNG assets while adapting their names and URLs to the repository's asset conventions and deployment base path.
 
+Keep this installable-app contract separate from website interface icons. Bootstrap Icons and other control glyphs do not replace maintained product branding, favicons, or the 192×192, 512×512, and maskable manifest artwork.
+
 ## Three-Asset Contract
 
 Use this manifest shape as the greenfield default:
