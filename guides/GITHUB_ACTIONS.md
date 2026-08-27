@@ -14,9 +14,35 @@ Before adding the workflows, confirm that the project meets these requirements:
 - GitHub Pages uses **GitHub Actions** as its deployment source.
 - The repository has an `NPM_TOKEN` secret with permission to publish the package.
 
-These examples deliberately use `npm install` and do not enable the `actions/setup-node` npm cache.
-Adjust the Node.js version or script names only when the target project documents a different
-contract.
+These examples use Node.js 22 and `npm install`. They disable the `actions/setup-node` npm cache.
+Adjust script names only when the target project documents a different contract.
+
+## Use the common action versions
+
+When updating `.github/workflows/*.yml`, use these action versions. In a GitHub Pages workflow,
+keep the actions in this relative order:
+
+```yaml
+- uses: actions/checkout@v7
+- uses: actions/setup-node@v6
+- uses: actions/configure-pages@v6
+- uses: actions/upload-pages-artifact@v5
+- uses: actions/deploy-pages@v5
+```
+
+Place dependency installation, validation, and build steps after `actions/setup-node@v6` and
+before `actions/configure-pages@v6`.
+
+Configure `actions/setup-node@v6` to use Node.js 22 and disable automatic npm caching:
+
+```yaml
+- uses: actions/setup-node@v6
+  with:
+    node-version: "22"
+    package-manager-cache: false
+```
+
+Do not use `actions/cache`, the `cache` input, or `cache-dependency-path`.
 
 ## Deploy GitHub Pages
 
@@ -58,6 +84,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
 
       - name: Install dependencies
         run: npm install
@@ -125,6 +152,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
           registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
