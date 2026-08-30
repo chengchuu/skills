@@ -76,6 +76,72 @@ biubiubiu
 
 #猫 #猫のいる暮らし #好奇心旺盛
 
+## Example: User-provided: 咬住，再来一套兔子蹬！
+
+- Source heading: `User-provided: 咬住，再来一套兔子蹬！`
+- Source date: 2025-07-24
+- Version: none
+- Category: Playful and funny
+- Secondary category: Nibbling and bunny kicks
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: 甜甜弹跳
+- Mood: Lively
+- Tone: Playful
+- Pet behavior: Playing, nibbling, and kicking with the hind legs
+- Pet activity: Playing, nibbling, and kicking with the hind legs
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: User-provided skill example
+
+### Chinese
+
+#### Title
+
+咬住，再来一套兔子蹬！
+
+#### Description
+
+小猫玩闹，咬上一口，再活力十足地蹬起小后腿。
+
+#### BGM
+
+甜甜弹跳
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #兔子蹬 #猫咪玩耍 #宠物日记
+
+### English
+
+#### Title
+
+Bite, Kick, Repeat!
+
+#### Description
+
+Sprawled on the bed, she playfully nibbles at me before launching into a lively round of bunny kicks.
+
+#### Hashtags
+
+#Cat #CatLife #BunnyKicks #PlayfulCat #CatVlog
+
+### Japanese
+
+#### Title
+
+かじって、うさぎキック！
+
+#### Description
+
+ベッドに寝転んでじゃれつき、かじったあとは元気いっぱいに後ろ足でキック。
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #うさぎキック #猫と遊ぶ #猫Vlog
+
 ## Example: 25-0825-Too-Cute
 
 - Source heading: `25-0825-Too-Cute`

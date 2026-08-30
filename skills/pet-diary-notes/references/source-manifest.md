@@ -5,11 +5,11 @@ This manifest maps every pet diary source section in `temp/pet-examples/pet.md` 
 ## Coverage
 
 - Source sections from `temp/pet-examples/pet.md`: 60
-- Supplemental user-provided examples: 5
-- Curated examples: 65
+- Supplemental user-provided examples: 6
+- Curated examples: 66
 - Merge decisions: none; every distinct source section is retained.
-- Language availability: zh-CN 65, en 64, ja-JP 47.
-- Content types: real-life 55, AI-generated 10, unknown 0.
+- Language availability: zh-CN 66, en 65, ja-JP 48.
+- Content types: real-life 56, AI-generated 10, unknown 0.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
@@ -17,6 +17,7 @@ This manifest maps every pet diary source section in `temp/pet-examples/pet.md` 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `User-provided: 好奇雷达已开启` | 2026-08-11 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user |
+| `User-provided: 咬住，再来一套兔子蹬！` | 2025-07-24 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and playful nibbling and bunny-kick scene supplied by user |
 | `User-provided: 好奇目光` | 2026-08-08 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
 | `User-provided: 圆眼睛里的好奇心` | 2025-06-01 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; real-life status supplied by user |
 | `User-provided: 猫砂盆里的乖巧日常` | 2025-07-10 | none | Daily life and office | [daily-life-and-office.md](examples/daily-life-and-office.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context |

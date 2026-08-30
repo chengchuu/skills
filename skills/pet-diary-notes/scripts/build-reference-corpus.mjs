@@ -47,6 +47,7 @@ const groups = {
   ],
   "playful-and-funny.md": [
     ["User-provided: 好奇雷达已开启", "Looking around curiously", "Unknown", "Looking around in different directions"],
+    ["User-provided: 咬住，再来一套兔子蹬！", "Nibbling and bunny kicks", "Unknown", "Playing, nibbling, and kicking with the hind legs"],
     ["25-0825-Too-Cute", "Belly-up and tail flick", "Unknown", "Sprawling and flicking the tail"],
     ["26-0204-Curious-Kitty", "Curiosity", "Unknown", "Exploring; exact action unspecified"],
     ["25-1008 Playful Kitty", "Nibbling", "Unknown", "Playing near and nibbling feet"],
@@ -118,6 +119,24 @@ jp:
 あっちを見たりこっちを見たり、好奇心いっぱいに辺りを見渡している。
 BGM：biubiubiu
 #猫 #猫のいる暮らし #好奇心旺盛`,
+  },
+  {
+    heading: "User-provided: 咬住，再来一套兔子蹬！",
+    body: `zh:
+咬住，再来一套兔子蹬！
+小猫玩闹，咬上一口，再活力十足地蹬起小后腿。
+BGM: 甜甜弹跳
+#猫咪 #猫咪日常 #兔子蹬 #猫咪玩耍 #宠物日记
+
+en:
+Bite, Kick, Repeat!
+Sprawled on the bed, she playfully nibbles at me before launching into a lively round of bunny kicks.
+#Cat #CatLife #BunnyKicks #PlayfulCat #CatVlog
+
+jp:
+かじって、うさぎキック！
+ベッドに寝転んでじゃれつき、かじったあとは元気いっぱいに後ろ足でキック。
+#猫 #猫のいる暮らし #うさぎキック #猫と遊ぶ #猫Vlog`,
   },
   {
     heading: "User-provided: 好奇目光",
@@ -238,6 +257,7 @@ function parseSource(markdown) {
 
 function parseDate(heading) {
   if (heading === "User-provided: 好奇雷达已开启") return "2026-08-11";
+  if (heading === "User-provided: 咬住，再来一套兔子蹬！") return "2025-07-24";
   if (heading === "User-provided: 好奇目光") return "2026-08-08";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
@@ -310,6 +330,9 @@ function dimensions(file, heading) {
   if (heading === "User-provided: 好奇雷达已开启") {
     return { mood: "Curious", tone: "Playful" };
   }
+  if (heading === "User-provided: 咬住，再来一套兔子蹬！") {
+    return { mood: "Lively", tone: "Playful" };
+  }
   if (heading === "User-provided: 好奇目光") {
     return { mood: "Curious", tone: "Gentle" };
   }
@@ -358,6 +381,7 @@ function healthStatus(heading) {
 
 function platformFor(heading) {
   if (heading === "User-provided: 好奇雷达已开启") return "多平台";
+  if (heading === "User-provided: 咬住，再来一套兔子蹬！") return "多平台";
   if (heading === "User-provided: 好奇目光") return "多平台";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
@@ -369,6 +393,7 @@ function platformFor(heading) {
 
 function contentTypeFor(file, heading) {
   if (heading === "User-provided: 好奇雷达已开启") return "Real-life";
+  if (heading === "User-provided: 咬住，再来一套兔子蹬！") return "Real-life";
   if (heading === "User-provided: 好奇目光") return "Real-life";
   if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
   if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
@@ -386,6 +411,7 @@ function sourcePathFor(heading) {
 function petIdentityFor(heading) {
   return [
     "User-provided: 好奇雷达已开启",
+    "User-provided: 咬住，再来一套兔子蹬！",
     "User-provided: 好奇目光",
     "User-provided: 圆眼睛里的好奇心",
     "User-provided: 猫砂盆里的乖巧日常",
@@ -396,6 +422,7 @@ function petIdentityFor(heading) {
 function formatFor(heading) {
   return [
     "User-provided: 好奇雷达已开启",
+    "User-provided: 咬住，再来一套兔子蹬！",
     "User-provided: 好奇目光",
     "User-provided: 猫砂盆里的乖巧日常",
     "User-provided: 认真洗脸中",
@@ -486,6 +513,8 @@ function manifestMarkdown(examples) {
     const notes = supplementalHeadings.has(example.heading)
       ? example.heading === "User-provided: 好奇雷达已开启"
         ? "Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user"
+        : example.heading === "User-provided: 咬住，再来一套兔子蹬！"
+          ? "Pet identity supplied as 嘟嘟; Vlog format, real-life status, and playful nibbling and bunny-kick scene supplied by user"
         : example.heading === "User-provided: 好奇目光"
         ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
         : example.heading === "User-provided: 猫砂盆里的乖巧日常"
