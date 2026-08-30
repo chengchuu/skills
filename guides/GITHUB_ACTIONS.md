@@ -19,8 +19,7 @@ Adjust script names only when the target project documents a different contract.
 
 ## Use the common action versions
 
-When updating `.github/workflows/*.yml`, use these action versions. In a GitHub Pages workflow,
-keep the actions in this relative order:
+When updating `.github/workflows/*.yml`, use these action versions.
 
 ```yaml
 - uses: actions/checkout@v7
