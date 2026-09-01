@@ -17,13 +17,14 @@ The repository has no application server, compile step, runtime bundle, apps, co
 ## Repository map
 
 - `.codex-plugin/plugin.json` is the plugin entry point. Preserve the `cheng-skills` name and `"skills": "./skills/"` path. Keep its clean release version aligned with `package.json`, keep its interface metadata aligned with the public skills, and keep asset paths repository-relative.
-- `package.json` contains release metadata and the dependency-free `validate` and `test` commands. It defines no runtime dependencies or application build output.
+- `package.json` contains release metadata and the dependency-free `validate`, `validate:sources`, and `test` commands. It defines no runtime dependencies or application build output.
 - `skills/<skill-name>/SKILL.md` is each public skill's entry point. The frontmatter `name` must match the kebab-case directory name, and `description` controls activation.
 - `skills/*/agents/openai.yaml` contains user-facing display metadata and optional icon paths. Keep prompts and descriptions consistent with the corresponding skill, and resolve icon paths from the metadata file without duplicating assets unnecessarily.
 - `skills/*/references/` contains API maps, routing indexes, rules, taxonomies, provenance manifests, and curated examples. `skills/*/scripts/` contains corpus builders and reference validators owned by the corresponding skill.
 - `sources/SOURCE_MIGRATION_MAP.md` records the historical path, canonical tracked path, byte size, SHA-256, owning skill, and migration decision for approved local-source copies.
 - `sources/design-project-architecture/`, `sources/pet-diary-notes/`, `sources/zh-restaurant-reviews/`, and `sources/zh-technical-writing/` contain Git-tracked, approved public maintenance sources. Shared architecture and Chinese-writing articles have one canonical copy under the architecture source root. These directories sit outside `skills/` and are not required by individually installed skills.
 - `scripts/validate-skills.mjs` validates the plugin path and public skill layout. Within each public skill, it checks frontmatter, local Markdown links, temporary files, symlinks, machine-specific paths, and likely secrets; it also rejects public `SKILL.md` files outside `skills/` and applies the temporary-file, symlink, machine-path, and secret checks to public files under `sources/`.
+- `scripts/validate-source-migration.mjs` validates the approved source inventory and its tracked copies. The corresponding `scripts/test-validate-skills.mjs` and `scripts/test-validate-source-migration.mjs` files provide focused regression coverage for both root validators.
 - `guides/` contains standalone maintenance guidance for frontend ESLint rules, GitHub Actions, Node.js package-manager boundaries, Chinese technical-writing corpus curation, public source-file migration, theme color schemes, and theme-toggle implementation. These files are public repository documentation, not skill entry points or automatically loaded plugin resources.
 - `README.md` documents skill discovery, individual installation, GitHub Copilot app installation, personal-marketplace plugin installation, usage, and contribution workflows. `README.zh-CN.md` is the corresponding Simplified Chinese localization and must stay aligned as described below.
 - `CHANGELOG.md` records release-level changes. `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, and the files under `.github/` define the public contribution, reporting, and review workflows.
@@ -75,7 +76,7 @@ git diff --check
 
 `npm run validate` checks repository structure and all tracked-source invariants. `npm test` reruns those checks and executes all validator regression suites. Run `npm run validate:sources` directly when isolating migrated-source, manifest, or migration-map failures.
 
-After changing bundled references or corpus content, run the validator for the affected skill. The English skill also has a regression suite for its validator:
+After changing bundled references or corpus content, run the validator and regression suite for each affected skill:
 
 ```bash
 node skills/en-technical-writing/scripts/validate-references.mjs
@@ -99,4 +100,4 @@ node skills/pet-diary-notes/scripts/build-reference-corpus.mjs
 node skills/pet-diary-notes/scripts/validate-references.mjs
 ```
 
-If a validator enables source-completeness checks because an ignored `temp/` source directory exists, provide the complete source set named by the skill's manifest. Do not weaken the validator, delete provenance entries, or rebuild from an incomplete source directory merely to make validation pass.
+When ignored legacy originals exist under `temp/`, validators compare the available files with their canonical tracked copies. The restaurant validator additionally requires the complete historical set once `temp/examples/` exists. Do not weaken a validator, delete provenance entries, alter legacy inputs, or rebuild from incomplete sources merely to make validation pass.

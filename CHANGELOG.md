@@ -2,6 +2,14 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.13.0 - 2026-09-01
+
+- Migrated 133 approved maintenance sources into tracked, skill-owned directories with canonical path and hash records.
+- Added repository and skill-specific source validators with regression coverage while preserving standalone skill installation.
+- Expanded the architecture and maintenance guides for GitHub Actions, package-manager boundaries, ESLint, themes, and source migration.
+- Updated the `prefer-mazey` and `prefer-layer` guidance and API maps for their current public capabilities.
+- Refined the Chinese technical-writing, restaurant-review, and multilingual pet corpora with tracked provenance and new examples.
+
 ## 0.12.0 - 2026-08-16
 
 - Expanded `zh-technical-writing` with curated `scp-next`, macOS `scutil`, and `vue-screenfull` structure and style evidence.
