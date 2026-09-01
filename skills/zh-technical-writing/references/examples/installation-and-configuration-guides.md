@@ -22,20 +22,20 @@ These normalized examples capture reusable structure and style without reproduci
 - Document type: Installation and configuration guide
 - Subject: JavaScript, TypeScript, and Node.js
 - Audience: Frontend and Node.js developers
-- Tone: Practical and procedural
+- Tone: Practical and explanatory
 - Formality: Medium to high
-- Length: Medium
-- Source: `temp/writing-examples/20-0818_TypeScript_Project.md`
+- Length: Long
+- Source: `sources/zh-technical-writing/new-typescript-project/README.md`; `temp/writing-examples/20-0818_TypeScript_Project.md`
 
 ### Structural characteristics
 
-- 先界定目标环境和预期状态，再给出步骤、配置、验证和必要的风险说明。
-- 从目录、依赖和配置文件逐步建立可运行项目。
+- 开篇说明目标、构建路径和最终目录，再按环境、依赖、配置、编码、构建、代码检查和完整验证推进。
+- 先解释编译器与工具链的分工和兼容边界，再用并列路径区分必要构建与可选打包流程。
 
 ### Reusable style characteristics
 
-- 命令和配置保持原样；每一步说明目的或可观察结果。
-- 以文件和命令为骨架，解释配置项的作用。
+- 使用目录树、列表、配置、命令和预期输出串联步骤，使解释与可验证结果保持相邻。
+- 长篇流程使用目录导航和任务型标题；版本、兼容性和工具推荐仍需独立核实，不从案例中复用。
 
 ## Example: Babel 与 TypeScript 配置
 
@@ -85,7 +85,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/26-0613-macOS-scutil.md`
+- Source: `sources/zh-technical-writing/26-0613-macOS-scutil.md`
 
 ### Structural characteristics
 

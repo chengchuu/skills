@@ -12,6 +12,9 @@ const examplesDir = resolve(referencesDir, 'examples');
 const manifestPath = resolve(referencesDir, 'source-manifest.md');
 const writingGuidelinesPath = resolve(referencesDir, 'writing-guidelines.md');
 const outputWorkflowsPath = resolve(referencesDir, 'output-workflows.md');
+const sourceReferencePattern = '`((?:sources\\/zh-technical-writing|temp\\/writing-examples)\\/[^`]+\\.md)`';
+const trackedSourcePrefix = 'sources/zh-technical-writing/';
+const legacySourcePrefix = 'temp/writing-examples/';
 const errors = [];
 
 function fail(message) {
@@ -31,6 +34,21 @@ function markdownFiles(directory) {
 
 function relativePath(path) {
   return relative(repositoryDir, path).split('\\').join('/');
+}
+
+function sourceReferences(content) {
+  return [...content.matchAll(new RegExp(sourceReferencePattern, 'g'))].map((match) => match[1]);
+}
+
+function isNormalizedSourceReference(source) {
+  const prefix = source.startsWith(trackedSourcePrefix)
+    ? trackedSourcePrefix
+    : source.startsWith(legacySourcePrefix)
+      ? legacySourcePrefix
+      : undefined;
+  if (!prefix || source.includes('\\')) return false;
+  const segments = source.slice(prefix.length).split('/');
+  return segments.length > 0 && segments.every((segment) => segment !== '' && segment !== '.' && segment !== '..');
 }
 
 function validateLinks(path) {
@@ -67,20 +85,35 @@ for (const path of exampleFiles) {
     for (const label of ['Document type', 'Subject', 'Audience', 'Tone', 'Length', 'Source']) {
       if (!block.includes(`- ${label}:`)) fail(`${title} is missing ${label} metadata.`);
     }
-    for (const source of block.matchAll(/`(temp\/writing-examples\/[^`]+\.md)`/g)) {
-      curatedSources.add(source[1]);
+    for (const source of sourceReferences(block)) {
+      curatedSources.add(source);
     }
   });
 }
 
 const manifest = readFileSync(manifestPath, 'utf8');
 if (/\/Users\//.test(manifest)) fail('source-manifest.md contains a machine-specific path.');
-const manifestSources = [...manifest.matchAll(/`(temp\/writing-examples\/[^`]+\.md)`/g)].map((match) => match[1]);
+const manifestSources = sourceReferences(manifest);
 const uniqueManifestSources = new Set(manifestSources);
 if (manifestSources.length !== uniqueManifestSources.size) fail('source-manifest.md contains duplicate source paths.');
+const declaredSourceCount = Number(/^- Source Markdown files analyzed: \*\*(\d+)\*\*\.$/m.exec(manifest)?.[1]);
+if (!Number.isInteger(declaredSourceCount)) {
+  fail('source-manifest.md is missing a valid source count.');
+} else if (declaredSourceCount !== uniqueManifestSources.size) {
+  fail(`source-manifest.md declares ${declaredSourceCount} sources, found ${uniqueManifestSources.size}.`);
+}
+const declaredExampleCount = Number(/^- Curated normalized examples: \*\*(\d+)\*\*\.$/m.exec(manifest)?.[1]);
+if (!Number.isInteger(declaredExampleCount)) {
+  fail('source-manifest.md is missing a valid curated example count.');
+} else if (declaredExampleCount !== exampleTitles.size) {
+  fail(`source-manifest.md declares ${declaredExampleCount} curated examples, found ${exampleTitles.size}.`);
+}
+for (const source of uniqueManifestSources) {
+  if (!isNormalizedSourceReference(source)) fail(`source-manifest.md contains an invalid source path: ${source}`);
+}
 
 for (const line of manifest.split('\n')) {
-  const source = line.match(/^\| `(temp\/writing-examples\/[^`]+\.md)` \|/i)?.[1];
+  const source = line.match(new RegExp(`^\\| ${sourceReferencePattern} \\|`, 'i'))?.[1];
   if (!source || line.includes('| Not curated |')) continue;
   if (!curatedSources.has(source)) fail(`Curated manifest source missing from examples: ${source}`);
 }
@@ -89,14 +122,42 @@ for (const destination of manifest.matchAll(/`(references\/examples\/[^`]+\.md)`
   if (!existsSync(resolve(skillDir, destination[1]))) fail(`Missing manifest destination ${destination[1]}`);
 }
 
-const sourceDir = resolve(repositoryDir, 'temp', 'writing-examples');
-if (existsSync(sourceDir)) {
-  const actualSources = new Set(markdownFiles(sourceDir).map(relativePath));
+const trackedSourceDir = resolve(repositoryDir, 'sources', 'zh-technical-writing');
+const repositoryGitPath = resolve(repositoryDir, '.git');
+if (existsSync(trackedSourceDir)) {
+  const actualSources = new Set(markdownFiles(trackedSourceDir).map(relativePath));
   for (const path of actualSources) {
     if (!uniqueManifestSources.has(path)) fail(`Source missing from manifest: ${path}`);
   }
+}
+
+if (existsSync(repositoryGitPath) || existsSync(trackedSourceDir)) {
   for (const path of uniqueManifestSources) {
-    if (!actualSources.has(path)) fail(`Manifest source does not exist: ${path}`);
+    if (isNormalizedSourceReference(path) && path.startsWith(trackedSourcePrefix) && !existsSync(resolve(repositoryDir, path))) {
+      fail(`Manifest source does not exist: ${path}`);
+    }
+  }
+}
+
+const legacySourceDir = resolve(repositoryDir, 'temp', 'writing-examples');
+if (existsSync(legacySourceDir)) {
+  const actualSources = new Set(markdownFiles(legacySourceDir).map(relativePath));
+  for (const path of actualSources) {
+    const trackedEquivalent = path.replace(/^temp\/writing-examples\//, trackedSourcePrefix);
+    if (!uniqueManifestSources.has(path) && !uniqueManifestSources.has(trackedEquivalent)) {
+      fail(`Source missing from manifest: ${path}`);
+    } else if (uniqueManifestSources.has(trackedEquivalent) && existsSync(resolve(repositoryDir, trackedEquivalent))) {
+      const legacyContent = readFileSync(resolve(repositoryDir, path));
+      const trackedContent = readFileSync(resolve(repositoryDir, trackedEquivalent));
+      if (!legacyContent.equals(trackedContent)) {
+        fail(`Legacy source differs from tracked source: ${path}`);
+      }
+    }
+  }
+  for (const path of uniqueManifestSources) {
+    if (path.startsWith(legacySourcePrefix) && !actualSources.has(path)) {
+      fail(`Manifest source does not exist: ${path}`);
+    }
   }
 }
 
@@ -105,6 +166,15 @@ for (const path of curatedSources) {
 }
 
 const writingGuidelines = readFileSync(writingGuidelinesPath, 'utf8');
+for (const marker of [
+  '普通正文遵循“一段一行”',
+  '仅在 Markdown 语义需要时换行',
+  '不要使用 `<br>`、行尾双空格或单个源码换行实现视觉排版',
+  '内容过长时，拆分为新的语义段落，不要在同一段内插入硬换行',
+]) {
+  if (!writingGuidelines.includes(marker)) fail(`writing-guidelines.md 缺少正文换行规则: ${marker}`);
+}
+
 for (const marker of [
   '创建纯文本围栏代码块时，使用 `plain` 信息字符串，不要使用 `text`',
   '不得修改代码块中的内容',

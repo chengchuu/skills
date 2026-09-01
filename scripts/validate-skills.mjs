@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const manifestPath = path.join(repoRoot, ".codex-plugin", "plugin.json");
 const expectedSkillsDirectory = path.join(repoRoot, "skills");
+const publicSourcesDirectory = path.join(repoRoot, "sources");
 const ignoredPath = process.env.SKILLS_VALIDATOR_IGNORE_PATH
   ? path.resolve(process.env.SKILLS_VALIDATOR_IGNORE_PATH)
   : undefined;
@@ -273,6 +274,22 @@ async function validateSkill(skillRoot, directoryName) {
   });
 }
 
+async function validatePublicSource(absolutePath, entry) {
+  const relativePath = path.relative(repoRoot, absolutePath);
+  if (isTemporaryName(entry.name)) report(`${relativePath} is an obvious temporary or editor file.`);
+  if (entry.isSymbolicLink()) {
+    report(`${relativePath} is a symbolic link; public sources must contain regular files.`);
+    return;
+  }
+  if (!entry.isFile()) return;
+
+  const content = await readFile(absolutePath);
+  if (content.includes(0)) return;
+  const text = content.toString("utf8");
+  if (machineSpecificPath(text)) report(`${relativePath} contains an absolute machine-specific path.`);
+  if (containsLikelySecret(text)) report(`${relativePath} appears to contain a secret or private key.`);
+}
+
 async function loadManifest() {
   if (!(await pathExists(manifestPath))) {
     report("Missing .codex-plugin/plugin.json.");
@@ -333,6 +350,9 @@ async function main() {
   await walk(repoRoot, async (absolutePath, entry) => {
     if (entry.isFile() && entry.name === "SKILL.md" && !isInside(expectedSkillsDirectory, absolutePath)) {
       report(`${path.relative(repoRoot, absolutePath)} is a public skill outside the declared skills directory.`);
+    }
+    if (isInside(publicSourcesDirectory, absolutePath)) {
+      await validatePublicSource(absolutePath, entry);
     }
   });
 

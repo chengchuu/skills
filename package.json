@@ -5,7 +5,7 @@
   "description": "Reusable Codex skills.",
   "scripts": {
     "validate": "node ./scripts/validate-skills.mjs",
-    "test": "npm run validate && node ./skills/en-technical-writing/scripts/test-validate-references.mjs"
+    "test": "npm run validate && node ./scripts/test-validate-skills.mjs && node ./skills/en-technical-writing/scripts/test-validate-references.mjs && node ./skills/zh-technical-writing/scripts/test-validate-references.mjs"
   },
   "license": "MIT",
   "repository": {

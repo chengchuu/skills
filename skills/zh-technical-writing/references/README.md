@@ -1,6 +1,6 @@
 # Reference routing
 
-Use these references progressively. The example corpus is distributable style evidence; the original files under `temp/writing-examples/` are not runtime dependencies.
+Use these references progressively. The example corpus is distributable style evidence; tracked maintenance sources under `sources/zh-technical-writing/` and historical sources under `temp/writing-examples/` are not runtime dependencies.
 
 ## Routing order
 
@@ -46,4 +46,4 @@ For provenance and merge decisions, see [source-manifest.md](source-manifest.md)
 
 ## Maintenance
 
-Run `node ../scripts/validate-references.mjs` from this directory, or `node skills/zh-technical-writing/scripts/validate-references.mjs` from the repository root, after changing the corpus. The source-completeness check runs when `temp/writing-examples/` is available; all distributable-reference checks also work after installation without that directory.
+Run `node ../scripts/validate-references.mjs` from this directory, or `node skills/zh-technical-writing/scripts/validate-references.mjs` from the repository root, after changing the corpus. In a repository checkout, the validator checks tracked files under `sources/zh-technical-writing/`. It also supports historical `temp/writing-examples/` provenance and checks that legacy corpus when the directory is available. All distributable-reference checks work after installation without either source directory.

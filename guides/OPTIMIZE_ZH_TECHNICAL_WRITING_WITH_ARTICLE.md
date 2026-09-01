@@ -12,7 +12,7 @@ Use the following Markdown article or articles as new style and structure eviden
 
 Incorporate the articles into the curated, distributable references for `zh-technical-writing` so future writing, rewriting, translation, proofreading, and review tasks can benefit from their reusable structure and style.
 
-Treat each article as evidence of writing habits, not as an authoritative source for technical facts. Preserve the skill name and keep the skill independently installable without access to the original articles or `temp/`.
+Treat each article as evidence of writing habits, not as an authoritative source for technical facts. Preserve the skill name and keep the skill independently installable without access to the original articles, `sources/`, or `temp/`.
 
 ## Required inspection
 
@@ -35,9 +35,11 @@ Before editing:
 - Verify that every entry in `<ARTICLE_PATHS>` identifies a readable Markdown file. Report invalid, unreadable, duplicate, or non-Markdown inputs clearly; do not silently omit them.
 - Do not modify or delete the supplied articles.
 - Do not place an absolute machine-specific path in the skill or tracked documentation.
-- If an article is already under `temp/writing-examples/`, use its repository-relative path as provenance.
-- If an article is outside `temp/writing-examples/`, create a read-only maintenance copy under an appropriate subdirectory of `temp/writing-examples/`. Use a stable, collision-safe filename and record only that repository-relative `temp/writing-examples/...` path in curated references.
-- Treat maintenance copies as ignored source material. Do not add them to the distributable skill or commit them unless repository policy explicitly changes.
+- If an article is already under `sources/zh-technical-writing/`, use its repository-relative path as provenance.
+- If an article is recorded under the legacy `temp/writing-examples/` location, preserve that repository-relative provenance path unless the source is intentionally migrated.
+- If an article is outside both source locations and may be stored publicly, create a maintenance copy under an appropriate subdirectory of `sources/zh-technical-writing/`. Use a stable, collision-safe filename and record only that repository-relative path in curated references.
+- Confirm that a new external article may be published before adding its copy to the tracked source directory. Keep private or unapproved material outside tracked files.
+- Treat tracked maintenance copies as provenance material outside the distributable skill. Do not place complete source articles under `skills/zh-technical-writing/`.
 - Preserve the supplied order for reporting, but classify and curate each distinct source independently.
 
 ## Article analysis
@@ -128,7 +130,7 @@ Also verify:
 - no complete source article was copied into distributable references;
 - no distinctive sentence was promoted as reusable output;
 - no empty category directory exists;
-- the installed skill works without `temp/writing-examples/`.
+- the installed skill works without `sources/zh-technical-writing/` or `temp/writing-examples/`.
 
 If the direct reference validator fails only because the checkout contains an incomplete ignored `temp/writing-examples/` corpus, do not weaken the validator or alter unrelated provenance. Validate a clean temporary copy of `skills/zh-technical-writing/` without `temp/`, and report both results clearly.
 

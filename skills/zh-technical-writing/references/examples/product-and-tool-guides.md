@@ -70,7 +70,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/scp-next/introducing-scp-next-v1.0.19-zh.md`
+- Source: `sources/zh-technical-writing/scp-next/introducing-scp-next-v1.0.19-zh.md`
 
 ### Structural characteristics
 
@@ -82,6 +82,26 @@ These normalized examples capture reusable structure and style without reproduci
 - 以使用任务串联功能，使用表格呈现方向、选项和优先级，同时保留命令、路径、参数及标识符的精确形式。
 - 明确区分便捷示例与推荐实践，并在凭据、主机验证和环境要求附近说明风险与限制。
 
+## Example: layer-esm 使用与迁移指南
+
+- Document type: Product and tool guide
+- Subject: Frontend and web performance; JavaScript, TypeScript, and Node.js; APIs and developer tools
+- Audience: Frontend developers
+- Tone: Formal and explanatory
+- Formality: Medium to high
+- Length: Medium
+- Source: `sources/zh-technical-writing/layer-esm/introducing-layer-esm-v1.0.1.zh-CN.md`
+
+### Structural characteristics
+
+- 开篇概括工具定位和接入方式的变化，再按安装与导入、常用任务、旧版迁移和安全边界组织内容。
+- 以高频 API 为任务单元提供就近示例，再用迁移前后的成对代码说明变化，并以渐进迁移顺序和安全提醒收束正文。
+
+### Reusable style characteristics
+
+- 先给出最短可用路径，再从基本用法推进到迁移；使用短段落解释一个动作、结果或限制。
+- 保持包名、API 和代码精确，风险提示紧邻相关流程；版本能力、迁移建议和发布元数据不作为技术事实复用。
+
 ## Example: vue-screenfull 使用与集成指南
 
 - Document type: Product and tool guide
@@ -90,7 +110,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and explanatory
 - Formality: High
 - Length: Long
-- Source: `temp/writing-examples/vue-screenfull/README.md`
+- Source: `sources/zh-technical-writing/vue-screenfull/README.md`
 
 ### Structural characteristics
 
