@@ -4,8 +4,9 @@
   "type": "module",
   "description": "Reusable Codex skills.",
   "scripts": {
-    "validate": "node ./scripts/validate-skills.mjs",
-    "test": "npm run validate && node ./scripts/test-validate-skills.mjs && node ./skills/en-technical-writing/scripts/test-validate-references.mjs && node ./skills/zh-technical-writing/scripts/test-validate-references.mjs"
+    "validate": "node ./scripts/validate-skills.mjs && npm run validate:sources",
+    "validate:sources": "node ./scripts/validate-source-migration.mjs && node ./skills/design-project-architecture/scripts/validate-sources.mjs && node ./skills/pet-diary-notes/scripts/validate-references.mjs && node ./skills/zh-restaurant-reviews/scripts/validate-references.mjs && node ./skills/zh-technical-writing/scripts/validate-references.mjs",
+    "test": "npm run validate && node ./scripts/test-validate-skills.mjs && node ./scripts/test-validate-source-migration.mjs && node ./skills/design-project-architecture/scripts/test-validate-sources.mjs && node ./skills/en-technical-writing/scripts/test-validate-references.mjs && node ./skills/pet-diary-notes/scripts/test-validate-references.mjs && node ./skills/zh-restaurant-reviews/scripts/test-validate-references.mjs && node ./skills/zh-technical-writing/scripts/test-validate-references.mjs"
   },
   "license": "MIT",
   "repository": {

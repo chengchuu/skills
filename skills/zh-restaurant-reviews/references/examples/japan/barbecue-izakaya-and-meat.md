@@ -13,7 +13,7 @@
 - Occasion: Casual meal
 - Main topics: Location, chicken, side dish, atmosphere
 - Recommended dishes: 烧鸟、唐扬鸡块、前菜腌茄子
-- Source: `temp/examples/25-0303-1929-Food-Hibitoridori.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0303-1929-Food-Hibitoridori.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Two-person meal
 - Main topics: Location, walk-in, service, portion, beef, value
 - Recommended dishes: 双人烧肉拼盘
-- Source: `temp/examples/25-0304-1223-Food-味鉄.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0304-1223-Food-味鉄.md`
 
 ### Available facts
 
@@ -65,7 +65,7 @@
 - Occasion: Izakaya meal
 - Main topics: Chicken sashimi, grilled chicken, decor, atmosphere
 - Recommended dishes: 鸡肉刺身、烤鸡块
-- Source: `temp/examples/25-0306-2013-Food-Sakidoriya.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0306-2013-Food-Sakidoriya.md`
 
 ### Available facts
 
@@ -91,7 +91,7 @@
 - Occasion: After-work gathering
 - Main topics: Queue, dishes, speed, price, atmosphere
 - Recommended dishes: 冷豆腐、鸡肉串、烤香菇
-- Source: `temp/examples/25-0606-1919-Food-Rakugaki.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0606-1919-Food-Rakugaki.md`
 
 ### Available facts
 
@@ -117,7 +117,7 @@
 - Occasion: Sightseeing meal
 - Main topics: Location, crowd, steak, service, payment
 - Recommended dishes: unknown
-- Source: `temp/examples/25-1114-1711-Food-Kyoya.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1114-1711-Food-Kyoya.md`
 
 ### Available facts
 
@@ -142,7 +142,7 @@
 - Occasion: Drinks and gathering
 - Main topics: Service interaction, dishes, ordering, atmosphere
 - Recommended dishes: 铁板炭烤鸡、大葱鸡肉串、烤饭团
-- Source: `temp/examples/25-1115-1813-Food-Ahodori-Shogointen.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1115-1813-Food-Ahodori-Shogointen.md`
 
 ### Available facts
 
@@ -167,7 +167,7 @@
 - Occasion: Peak-hour meal
 - Main topics: Location, queue, ordering, beef, sides
 - Recommended dishes: 炸牛排
-- Source: `temp/examples/25-1116-1747-Food-京都勝牛.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1116-1747-Food-京都勝牛.md`
 
 ### Available facts
 

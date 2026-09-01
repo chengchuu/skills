@@ -2,9 +2,75 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
-## Example: User-provided: 好奇雷达已开启
+## Example: 25-0724-Bite-Kick-Repeat
 
-- Source heading: `User-provided: 好奇雷达已开启`
+- Source heading: `25-0724-Bite-Kick-Repeat`
+- Source date: 2025-07-24
+- Version: none
+- Category: Playful and funny
+- Secondary category: Nibbling and bunny kicks
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: 甜甜弹跳
+- Mood: Lively
+- Tone: Playful
+- Pet behavior: Playing, nibbling, and kicking with the hind legs
+- Pet activity: Playing, nibbling, and kicking with the hind legs
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+咬住，再来一套兔子蹬！
+
+#### Description
+
+小猫玩闹，咬上一口，再活力十足地蹬起小后腿。
+
+#### BGM
+
+甜甜弹跳
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #兔子蹬 #猫咪玩耍 #宠物日记
+
+### English
+
+#### Title
+
+Bite, Kick, Repeat!
+
+#### Description
+
+Sprawled on the bed, she playfully nibbles at me before launching into a lively round of bunny kicks.
+
+#### Hashtags
+
+#Cat #CatLife #BunnyKicks #PlayfulCat #CatVlog
+
+### Japanese
+
+#### Title
+
+かじって、うさぎキック！
+
+#### Description
+
+ベッドに寝転んでじゃれつき、かじったあとは元気いっぱいに後ろ足でキック。
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #うさぎキック #猫と遊ぶ #猫Vlog
+
+## Example: 26-0811-Curious-Eyes-Everywhere
+
+- Source heading: `26-0811-Curious-Eyes-Everywhere`
 - Source date: 2026-08-11
 - Version: none
 - Category: Playful and funny
@@ -20,7 +86,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: 多平台
-- Source path: User-provided skill example
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -76,72 +142,6 @@ biubiubiu
 
 #猫 #猫のいる暮らし #好奇心旺盛
 
-## Example: User-provided: 咬住，再来一套兔子蹬！
-
-- Source heading: `User-provided: 咬住，再来一套兔子蹬！`
-- Source date: 2025-07-24
-- Version: none
-- Category: Playful and funny
-- Secondary category: Nibbling and bunny kicks
-- Languages: zh-CN, en, ja-JP
-- Pet identity: 嘟嘟
-- Format: Vlog
-- BGM: 甜甜弹跳
-- Mood: Lively
-- Tone: Playful
-- Pet behavior: Playing, nibbling, and kicking with the hind legs
-- Pet activity: Playing, nibbling, and kicking with the hind legs
-- Health-related status: Not stated
-- Content type: Real-life
-- Platform: 多平台
-- Source path: User-provided skill example
-
-### Chinese
-
-#### Title
-
-咬住，再来一套兔子蹬！
-
-#### Description
-
-小猫玩闹，咬上一口，再活力十足地蹬起小后腿。
-
-#### BGM
-
-甜甜弹跳
-
-#### Hashtags
-
-#猫咪 #猫咪日常 #兔子蹬 #猫咪玩耍 #宠物日记
-
-### English
-
-#### Title
-
-Bite, Kick, Repeat!
-
-#### Description
-
-Sprawled on the bed, she playfully nibbles at me before launching into a lively round of bunny kicks.
-
-#### Hashtags
-
-#Cat #CatLife #BunnyKicks #PlayfulCat #CatVlog
-
-### Japanese
-
-#### Title
-
-かじって、うさぎキック！
-
-#### Description
-
-ベッドに寝転んでじゃれつき、かじったあとは元気いっぱいに後ろ足でキック。
-
-#### Hashtags
-
-#猫 #猫のいる暮らし #うさぎキック #猫と遊ぶ #猫Vlog
-
 ## Example: 25-0825-Too-Cute
 
 - Source heading: `25-0825-Too-Cute`
@@ -158,7 +158,7 @@ Sprawled on the bed, she playfully nibbles at me before launching into a lively 
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -212,7 +212,7 @@ The cat sprawls on its back, tail flicking, and looks at me with an innocent fac
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -272,7 +272,7 @@ Funny Song
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -332,7 +332,7 @@ This cheeky kitty can't stop nibbling on my feet—too cute to be mad at.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -392,7 +392,7 @@ Daily life of a cat with a touch of dominance.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -444,7 +444,7 @@ Eat, sleep, and drink my water.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -498,7 +498,7 @@ Is she calling out to me, or did she just uncover a secret?
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -570,7 +570,7 @@ Paused out of nowhere, as if pondering the secrets of the universe.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 

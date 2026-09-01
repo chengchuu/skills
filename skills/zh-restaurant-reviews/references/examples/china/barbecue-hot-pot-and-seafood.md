@@ -13,7 +13,7 @@
 - Occasion: Dinner
 - Main topics: Meat, sauce, charcoal aroma, environment, service
 - Recommended dishes: 特色瘦牛肉、雪花肋条、秘制牛五花
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Dinner
 - Main topics: Beef, rice, texture
 - Recommended dishes: 黑牛横膈膜、日式牛肉饭、雪花肥牛
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -65,7 +65,7 @@
 - Occasion: Dinner
 - Main topics: Broth, meat, snacks, closure, memory
 - Recommended dishes: 鸳鸯锅、肥牛、小酥肉、年糕
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -91,7 +91,7 @@
 - Occasion: Spring dinner
 - Main topics: Crowd, pricing method, seafood, portion, buffet items
 - Recommended dishes: 蒸海鲜、虾、蟹、龙虾
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 

@@ -18,7 +18,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pages/21-0217_CDN_Lib.md`
+- Source: `sources/design-project-architecture/articles/Pages/21-0217_CDN_Lib.md`
 
 ### Structural characteristics
 
@@ -38,7 +38,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/Pinned/22-0303-Git-Command.md`
+- Source: `sources/design-project-architecture/articles/Pinned/22-0303-Git-Command.md`
 
 ### Structural characteristics
 
@@ -58,7 +58,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/Pinned/22-0508_Banner.md`
+- Source: `sources/design-project-architecture/articles/Pinned/22-0508_Banner.md`
 
 ### Structural characteristics
 
@@ -78,7 +78,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pinned/22-1007_webpack_Basic.md`
+- Source: `sources/design-project-architecture/articles/Pinned/22-1007_webpack_Basic.md`
 
 ### Structural characteristics
 
@@ -98,7 +98,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/Pinned/26-0114-Docker.md`; `temp/writing-examples/TCloud/26-0114_Docker.md`
+- Source: `sources/design-project-architecture/articles/Pinned/26-0114-Docker.md`; `sources/zh-technical-writing/legacy/TCloud/26-0114_Docker.md`
 
 ### Structural characteristics
 

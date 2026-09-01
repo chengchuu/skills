@@ -18,23 +18,23 @@ async function copyTrackedSources(fixtureRoot) {
     path.join(fixtureRoot, 'sources/zh-technical-writing'),
     { recursive: true },
   );
+  await cp(
+    path.join(repositoryRoot, 'sources/design-project-architecture'),
+    path.join(fixtureRoot, 'sources/design-project-architecture'),
+    { recursive: true },
+  );
 }
 
 async function populateLegacySources(fixtureRoot) {
   const manifestPath = path.join(fixtureRoot, 'skills/zh-technical-writing/references/source-manifest.md');
   const manifest = await readFile(manifestPath, 'utf8');
-  const sources = [...manifest.matchAll(/`((?:sources\/zh-technical-writing|temp\/writing-examples)\/[^`]+\.md)`/g)]
-    .map(match => match[1]);
+  const mappings = [...manifest.matchAll(/^\| `(temp\/writing-examples\/[^`]+\.md)` \| `(sources\/[^`]+\.md)` \| `[a-f0-9]{64}` \|$/gm)]
+    .map(match => ({ legacy: match[1], source: match[2] }));
 
-  for (const source of sources) {
-    const legacy = source.replace(/^sources\/zh-technical-writing\//, 'temp/writing-examples/');
+  for (const { legacy, source } of mappings) {
     const destination = path.join(fixtureRoot, legacy);
     await mkdir(path.dirname(destination), { recursive: true });
-    if (source.startsWith('sources/zh-technical-writing/')) {
-      await writeFile(destination, await readFile(path.join(fixtureRoot, source)));
-    } else {
-      await writeFile(destination, '');
-    }
+    await writeFile(destination, await readFile(path.join(fixtureRoot, source)));
   }
 }
 
@@ -79,6 +79,16 @@ await runCase(
 );
 
 await runCase(
+  'rejects a missing shared architecture source in a source archive',
+  async fixtureRoot => {
+    await copyTrackedSources(fixtureRoot);
+    await rm(path.join(fixtureRoot, 'sources/design-project-architecture/articles/17-0714_SQLServer.md'));
+  },
+  (status, output) => status === 1
+    && output.includes('Manifest source does not exist: sources/design-project-architecture/articles/17-0714_SQLServer.md'),
+);
+
+await runCase(
   'rejects a missing tracked source directory in a Git checkout',
   async fixtureRoot => {
     await mkdir(path.join(fixtureRoot, '.git'));
@@ -111,10 +121,10 @@ await runCase(
   async fixtureRoot => {
     await copyTrackedSources(fixtureRoot);
     await populateLegacySources(fixtureRoot);
-    await appendFile(path.join(fixtureRoot, 'temp/writing-examples/26-0613-macOS-scutil.md'), '\nChanged legacy content.\n');
+    await appendFile(path.join(fixtureRoot, 'temp/writing-examples/17-0714_SQLServer.md'), '\nChanged legacy content.\n');
   },
   (status, output) => status === 1
-    && output.includes('Legacy source differs from tracked source: temp/writing-examples/26-0613-macOS-scutil.md'),
+    && output.includes('Legacy source differs from tracked source: temp/writing-examples/17-0714_SQLServer.md'),
 );
 
 await runCase(
@@ -127,6 +137,24 @@ await runCase(
   },
   (status, output) => status === 1
     && output.includes('source-manifest.md contains an invalid source path: sources/zh-technical-writing/../escape.md'),
+);
+
+await runCase(
+  'rejects a stale historical mapping hash',
+  async (fixtureRoot, fixtureSkillRoot) => {
+    await copyTrackedSources(fixtureRoot);
+    const manifestPath = path.join(fixtureSkillRoot, 'references/source-manifest.md');
+    const content = await readFile(manifestPath, 'utf8');
+    await writeFile(
+      manifestPath,
+      content.replace(
+        /^(\| `temp\/writing-examples\/[^`]+\.md` \| `sources\/[^`]+\.md` \| `)[a-f0-9]{64}(` \|)$/m,
+        `$1${'0'.repeat(64)}$2`,
+      ),
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('Historical mapping hash differs from tracked source:'),
 );
 
 await runCase(

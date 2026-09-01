@@ -1,27 +1,31 @@
 # Source manifest
 
-This manifest maps every pet diary source section in `temp/pet-examples/pet.md` and separately supplied user examples to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in `sources/pet-diary-notes/pet.md` to the self-contained curated corpus. The tracked source is a byte-identical migration of the historical `temp/pet-examples/pet.md` input. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
-- Source sections from `temp/pet-examples/pet.md`: 60
-- Supplemental user-provided examples: 6
+- Canonical source: `sources/pet-diary-notes/pet.md`
+- Historical source path: `temp/pet-examples/pet.md`
+- Source bytes: 40434
+- Source SHA-256: `f23de43f668b59f91db0d945a0f4fc7a5b68ebe90e403487c1777020fa992844`
+- Source sections: 66
+- Recovered former supplemental sections: 6; source headings are canonical.
 - Curated examples: 66
-- Merge decisions: none; every distinct source section is retained.
+- Merge decisions: no source sections are merged; every distinct source section is retained once.
 - Language availability: zh-CN 66, en 65, ja-JP 48.
-- Content types: real-life 56, AI-generated 10, unknown 0.
+- Content types: real-life 56, AI-generated 10.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `User-provided: 好奇雷达已开启` | 2026-08-11 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user |
-| `User-provided: 咬住，再来一套兔子蹬！` | 2025-07-24 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and playful nibbling and bunny-kick scene supplied by user |
-| `User-provided: 好奇目光` | 2026-08-08 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
-| `User-provided: 圆眼睛里的好奇心` | 2025-06-01 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; real-life status supplied by user |
-| `User-provided: 猫砂盆里的乖巧日常` | 2025-07-10 | none | Daily life and office | [daily-life-and-office.md](examples/daily-life-and-office.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context |
-| `User-provided: 认真洗脸中` | 2025-08-07 | none | Grooming and care | [grooming-and-care.md](examples/grooming-and-care.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
+| `25-0724-Bite-Kick-Repeat` | 2025-07-24 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and playful nibbling and bunny-kick scene supplied by user |
+| `26-0811-Curious-Eyes-Everywhere` | 2026-08-11 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user |
+| `26-0808-A-Curious-Look` | 2026-08-08 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
+| `25-0807-A-Very-Serious-Face-Washing-Routine` | 2025-08-07 | none | Grooming and care | [grooming-and-care.md](examples/grooming-and-care.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
+| `25-0710-A-Neat-Little-Litter-Box-Routine` | 2025-07-10 | none | Daily life and office | [daily-life-and-office.md](examples/daily-life-and-office.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context |
+| `25-0601-A-Quiet-Curious-Gaze` | 2025-06-01 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | BGM | High | Pet identity supplied as 嘟嘟; real-life status supplied by user |
 | `26-0407-A-Sleepy-Afternoon` | 2026-04-07 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | not applicable | Real-life | Repeated or versioned | Keep distinct | platform, BGM | High for identity; medium for relationship | Repeated Chinese title with 25-0707; different descriptions and English titles |
 | `26-0225-Blanket-Mode-Activated` | 2026-02-25 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | No duplicate detected |
 | `26-0225-Cozy-Blanket-Kitty` | 2026-02-25 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | platform | High | No duplicate detected |

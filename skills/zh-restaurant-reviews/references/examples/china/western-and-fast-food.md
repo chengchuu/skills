@@ -13,7 +13,7 @@
 - Occasion: Lunch
 - Main topics: Pizza, drink, environment
 - Recommended dishes: 德克萨斯风味烤肉披萨、柠檬茶
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Dinner
 - Main topics: Ingredients, cheese, flavor, crust
 - Recommended dishes: 夏威夷风情披萨、超级至尊披萨
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -65,7 +65,7 @@
 - Occasion: Lunch
 - Main topics: Pizza, pasta, crowd, service, value
 - Recommended dishes: 披萨、意大利面
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -91,7 +91,7 @@
 - Occasion: Dinner
 - Main topics: Dishes, environment, location, service, value
 - Recommended dishes: 多汁鸡堡、肉酱披萨
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -117,7 +117,7 @@
 - Occasion: Breakfast
 - Main topics: Congee, side dish, crowd, cleanliness
 - Recommended dishes: 雪菜笋丁鸡肉粥、油条
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -143,7 +143,7 @@
 - Occasion: Breakfast
 - Main topics: Congee, fried food, burgers
 - Recommended dishes: 雪菜笋丁鸡肉粥、油条、鸡腿堡、原味鸡
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -169,7 +169,7 @@
 - Occasion: Lunch
 - Main topics: Fried chicken, environment, facilities
 - Recommended dishes: 鸡腿堡、原味鸡、黄金鸡块
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -195,7 +195,7 @@
 - Occasion: Lunch
 - Main topics: Fried chicken, snack, texture, seasoning
 - Recommended dishes: 脆汁鸡、酥酥多笋卷
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -223,7 +223,7 @@
 - Occasion: Lunch
 - Main topics: Burgers, fried chicken, drink, texture, seasoning
 - Recommended dishes: 香辣鸡腿堡、泰式鸡腿肉霸堡、汁汁双层嫩牛堡、整只炸鸡
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 

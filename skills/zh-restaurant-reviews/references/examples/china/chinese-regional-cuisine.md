@@ -13,7 +13,7 @@
 - Occasion: Group meal
 - Main topics: Dishes, taste, service, environment
 - Recommended dishes: 油闷鸡、黑松露蒸蛋、肉沫茼蒿、碳烤包浆豆腐
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -41,7 +41,7 @@
 - Occasion: Lunch
 - Main topics: Dishes, taste, portion, service, environment
 - Recommended dishes: 鲜肉小笼包、鲜虾小馄饨、阳春面
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -67,7 +67,7 @@
 - Occasion: Lunch
 - Main topics: Dishes, taste, crowd, service, environment
 - Recommended dishes: 炝炒莲花白、砂窝老豆腐
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -93,7 +93,7 @@
 - Occasion: Lunch gathering
 - Main topics: Dishes, spice, environment, service
 - Recommended dishes: 干锅牛蛙、玉米烙
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -119,7 +119,7 @@
 - Occasion: Lunch
 - Main topics: Taste, texture, environment, hygiene, service
 - Recommended dishes: 黑松露炒饭
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -145,7 +145,7 @@
 - Occasion: Quick meal
 - Main topics: Crowd, dish, portion, value
 - Recommended dishes: 火腿土鸡蛋炒饭
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -171,7 +171,7 @@
 - Occasion: Dinner
 - Main topics: Dishes, taste, texture
 - Recommended dishes: 肥西老母鸡汤、卤鸡腿、番茄炒蛋、酸菜鱼、农家蒸蛋
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -196,7 +196,7 @@
 - Occasion: Quick meal
 - Main topics: Dishes, environment, table service
 - Recommended dishes: 番茄炒蛋、酸菜鱼、农家蒸蛋
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -221,7 +221,7 @@
 - Occasion: Dinner
 - Main topics: Dishes, taste, environment
 - Recommended dishes: 凯里酸汤鱼、烧椒鸡、酸萝卜
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -246,7 +246,7 @@
 - Occasion: Lunch
 - Main topics: Dishes, taste, texture
 - Recommended dishes: 冬阴功汤、咖喱牛腩、虾酱空心菜
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 

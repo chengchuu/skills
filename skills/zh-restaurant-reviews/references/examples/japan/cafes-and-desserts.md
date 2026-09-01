@@ -13,7 +13,7 @@
 - Occasion: Street snack
 - Main topics: Location, preparation, texture, filling
 - Recommended dishes: 烤红豆饼
-- Source: `temp/examples/25-0522-1539-Food-栉田茶屋.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0522-1539-Food-栉田茶屋.md`
 
 ### Available facts
 
@@ -38,7 +38,7 @@
 - Occasion: Street snack
 - Main topics: Queue, flavor, texture, sweetness, cleanliness, service
 - Recommended dishes: 经典红豆鲷鱼烧
-- Source: `temp/examples/25-0607-1042-Food-鸣门鲷焼本舗.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0607-1042-Food-鸣门鲷焼本舗.md`
 
 ### Available facts
 
@@ -63,7 +63,7 @@
 - Occasion: Sightseeing break
 - Main topics: Location, sweets, tea, noodles, seating, atmosphere
 - Recommended dishes: 梅枝饼、梅子昆布茶、阿龟乌冬面
-- Source: `temp/examples/25-0607-1412-Food-O-Ishi.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0607-1412-Food-O-Ishi.md`
 
 ### Available facts
 

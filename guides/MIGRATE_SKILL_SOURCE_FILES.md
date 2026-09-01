@@ -1,5 +1,11 @@
 # Migrate Skill Source Files
 
+## Migration status
+
+On 2026-09-01, publication was approved for all 133 recovered sources. The migration preserves one canonical tracked copy per file: 58 architecture articles, 25 additional Chinese-writing articles, 49 restaurant-review sources, and one complete pet-diary source. Every copy is recorded with its historical path, byte size, SHA-256, owner, and decision in `sources/SOURCE_MIGRATION_MAP.md`.
+
+No personal English sources are currently registered. All 58 architecture provenance articles are now recovered. The complete pet source was recovered from its tracked source repository using the explicitly approved uncommitted working-tree bytes; its 66 sections include the six cases formerly maintained as supplemental examples. The four historical Bootstrap lesson sources were recovered from the tracked `chengchuu/bootstrap-blueprints` checkout. The procedures below remain the recovery and future-maintenance contract.
+
 ## Objective
 
 Move approved public maintenance sources from ignored or device-local directories into Git-trackable directories under `sources/` without making individually installed skills depend on the original files.
@@ -23,21 +29,23 @@ sources/
 ├── design-project-architecture/
 ├── en-technical-writing/
 ├── pet-diary-notes/
-└── zh-restaurant-reviews/
+├── zh-restaurant-reviews/
+└── zh-technical-writing/
 ```
 
 Do not place complete maintenance sources under `skills/`. Files under `sources/` support repository maintenance and provenance; they are not runtime dependencies of the distributable skills.
 
-## Confirmed starting state
+## Confirmed source state
 
-Use the other device as the source of truth for the missing files, then verify the current repository before applying this plan.
+The migration status above is authoritative for this checkout. Use the other device only to recover sources still listed as unavailable, then inventory and approve them before any later migration.
 
 | Skill                         | Known source state                                                                                       | Primary risk                                                                                  |
 |:------------------------------|:---------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
-| `pet-diary-notes`             | `temp/pet-examples/pet.md` contains 60 source sections and drives generated examples and the manifest.   | The installed skill remains usable without it, but the corpus cannot be regenerated exactly. |
-| `zh-restaurant-reviews`       | The manifest records 49 Markdown files under `temp/examples/`; they are absent on the current device.    | Original provenance and excluded material cannot be recovered from curated examples alone.   |
-| `en-technical-writing`        | Its future customization workflow points to `temp/english-writing-examples/`.                            | The first personal-source import would recreate the same device-local dependency.             |
-| `design-project-architecture` | Its manifest records provenance labels for 58 historical notes and articles, not distributable sources. | Repository-only re-auditing is impossible unless approved originals are preserved.            |
+| `pet-diary-notes`             | The complete 66-section source is tracked at `sources/pet-diary-notes/pet.md`; six former supplemental examples now use their canonical source headings. | Preserve byte identity, source-heading coverage, and standalone-skill validation. |
+| `zh-restaurant-reviews`       | All 49 recorded Markdown files were recovered and migrated with historical compatibility mappings. | Future drift must be caught by the focused source validator. |
+| `zh-technical-writing`        | All 79 historical source records now have tracked canonical copies; 54 are shared architecture sources and 25 live under its own root. | Keep compatibility mappings and canonical paths aligned. |
+| `en-technical-writing`        | No personal English source directory is present; future approved inputs use `sources/en-technical-writing/`. | Do not create an empty source root or copy third-party documentation. |
+| `design-project-architecture` | All 58 provenance articles were recovered and migrated. | Historical claims remain provenance rather than current authority. |
 
 ## Safety requirements
 
@@ -105,7 +113,7 @@ Record every path change in a migration map:
 6. Keep standalone validation functional without `sources/`, but make it clear that source-to-corpus comparison was skipped when the original is unavailable.
 7. Preserve compatibility with historical `temp/pet-examples/pet.md` provenance.
 8. Regenerate builder-owned examples and `source-manifest.md` through the builder. Do not hand-edit generated output independently.
-9. Confirm that all 60 original source sections and all maintained supplemental examples remain represented.
+9. Confirm that all 66 source sections remain represented once, including the six former supplemental examples under their canonical source headings.
 
 ## Migrate `zh-restaurant-reviews`
 

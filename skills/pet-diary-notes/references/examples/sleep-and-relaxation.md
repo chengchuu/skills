@@ -18,7 +18,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -74,7 +74,7 @@ Belly up on the bed, she enjoys a lazy afternoon with the sleepiest little eyes.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: YouTube Shorts indicated by an additional #shorts hashtag variant
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -143,7 +143,7 @@ Somewhere Only We Know
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -211,7 +211,7 @@ Somewhere Only We Know
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -279,7 +279,7 @@ death bed (coffee for your head)
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -339,7 +339,7 @@ death bed (coffee for your head)
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -400,7 +400,7 @@ I know I should sleep but ...
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -450,7 +450,7 @@ A cat's joyful weekend.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -510,7 +510,7 @@ A heartwarming glimpse into a cat's peaceful slumber, with its fluffy white bell
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -564,7 +564,7 @@ Quiet Like a Painting.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -624,7 +624,7 @@ The kitty naps sweetly, still dreaming of her favourite tuna.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -688,7 +688,7 @@ A cat lost in the sweetest dreams.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -742,7 +742,7 @@ A soothing slice of daily life with a healing little cat.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 - Source preface: Guilin Park
 
 ### Chinese

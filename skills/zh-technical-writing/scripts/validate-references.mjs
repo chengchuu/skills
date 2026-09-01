@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,8 +13,11 @@ const examplesDir = resolve(referencesDir, 'examples');
 const manifestPath = resolve(referencesDir, 'source-manifest.md');
 const writingGuidelinesPath = resolve(referencesDir, 'writing-guidelines.md');
 const outputWorkflowsPath = resolve(referencesDir, 'output-workflows.md');
-const sourceReferencePattern = '`((?:sources\\/zh-technical-writing|temp\\/writing-examples)\\/[^`]+\\.md)`';
-const trackedSourcePrefix = 'sources/zh-technical-writing/';
+const sourceReferencePattern = '`((?:sources\\/(?:zh-technical-writing|design-project-architecture\\/articles)|temp\\/writing-examples)\\/[^`]+\\.md)`';
+const trackedSourcePrefixes = [
+  'sources/zh-technical-writing/',
+  'sources/design-project-architecture/articles/',
+];
 const legacySourcePrefix = 'temp/writing-examples/';
 const errors = [];
 
@@ -40,12 +44,13 @@ function sourceReferences(content) {
   return [...content.matchAll(new RegExp(sourceReferencePattern, 'g'))].map((match) => match[1]);
 }
 
+function sha256(content) {
+  return createHash('sha256').update(content).digest('hex');
+}
+
 function isNormalizedSourceReference(source) {
-  const prefix = source.startsWith(trackedSourcePrefix)
-    ? trackedSourcePrefix
-    : source.startsWith(legacySourcePrefix)
-      ? legacySourcePrefix
-      : undefined;
+  const prefix = trackedSourcePrefixes.find(candidate => source.startsWith(candidate))
+    ?? (source.startsWith(legacySourcePrefix) ? legacySourcePrefix : undefined);
   if (!prefix || source.includes('\\')) return false;
   const segments = source.slice(prefix.length).split('/');
   return segments.length > 0 && segments.every((segment) => segment !== '' && segment !== '.' && segment !== '..');
@@ -93,7 +98,14 @@ for (const path of exampleFiles) {
 
 const manifest = readFileSync(manifestPath, 'utf8');
 if (/\/Users\//.test(manifest)) fail('source-manifest.md contains a machine-specific path.');
-const manifestSources = sourceReferences(manifest);
+const fileMapping = manifest.slice(
+  manifest.indexOf('## File mapping'),
+  manifest.indexOf('## Historical path compatibility'),
+);
+const manifestSources = fileMapping
+  .split('\n')
+  .map(line => line.match(new RegExp(`^\\| ${sourceReferencePattern} \\|`, 'i'))?.[1])
+  .filter(Boolean);
 const uniqueManifestSources = new Set(manifestSources);
 if (manifestSources.length !== uniqueManifestSources.size) fail('source-manifest.md contains duplicate source paths.');
 const declaredSourceCount = Number(/^- Source Markdown files analyzed: \*\*(\d+)\*\*\.$/m.exec(manifest)?.[1]);
@@ -111,8 +123,11 @@ if (!Number.isInteger(declaredExampleCount)) {
 for (const source of uniqueManifestSources) {
   if (!isNormalizedSourceReference(source)) fail(`source-manifest.md contains an invalid source path: ${source}`);
 }
+for (const source of sourceReferences(manifest)) {
+  if (!isNormalizedSourceReference(source)) fail(`source-manifest.md contains an invalid source path: ${source}`);
+}
 
-for (const line of manifest.split('\n')) {
+for (const line of fileMapping.split('\n')) {
   const source = line.match(new RegExp(`^\\| ${sourceReferencePattern} \\|`, 'i'))?.[1];
   if (!source || line.includes('| Not curated |')) continue;
   if (!curatedSources.has(source)) fail(`Curated manifest source missing from examples: ${source}`);
@@ -133,8 +148,31 @@ if (existsSync(trackedSourceDir)) {
 
 if (existsSync(repositoryGitPath) || existsSync(trackedSourceDir)) {
   for (const path of uniqueManifestSources) {
-    if (isNormalizedSourceReference(path) && path.startsWith(trackedSourcePrefix) && !existsSync(resolve(repositoryDir, path))) {
+    if (
+      isNormalizedSourceReference(path)
+      && trackedSourcePrefixes.some(prefix => path.startsWith(prefix))
+      && !existsSync(resolve(repositoryDir, path))
+    ) {
       fail(`Manifest source does not exist: ${path}`);
+    }
+  }
+}
+
+const historicalMappings = [...manifest.matchAll(/^\| `(temp\/writing-examples\/[^`]+\.md)` \| `(sources\/[^`]+\.md)` \| `([a-f0-9]{64})` \|$/gm)]
+  .map(match => ({ historical: match[1], source: match[2], hash: match[3] }));
+const historicalCompatibility = new Map(historicalMappings.map(entry => [entry.historical, entry.source]));
+if (historicalMappings.length !== 79 || historicalCompatibility.size !== 79) {
+  fail(`source-manifest.md must record 79 unique migrated historical paths; found ${historicalMappings.length} rows and ${historicalCompatibility.size} unique paths.`);
+}
+for (const entry of historicalMappings) {
+  if (!uniqueManifestSources.has(entry.source)) {
+    fail(`Historical mapping destination is not registered: ${entry.source}`);
+    continue;
+  }
+  const sourcePath = resolve(repositoryDir, entry.source);
+  if ((existsSync(repositoryGitPath) || existsSync(trackedSourceDir)) && existsSync(sourcePath)) {
+    if (sha256(readFileSync(sourcePath)) !== entry.hash) {
+      fail(`Historical mapping hash differs from tracked source: ${entry.source}`);
     }
   }
 }
@@ -143,20 +181,19 @@ const legacySourceDir = resolve(repositoryDir, 'temp', 'writing-examples');
 if (existsSync(legacySourceDir)) {
   const actualSources = new Set(markdownFiles(legacySourceDir).map(relativePath));
   for (const path of actualSources) {
-    const trackedEquivalent = path.replace(/^temp\/writing-examples\//, trackedSourcePrefix);
-    if (!uniqueManifestSources.has(path) && !uniqueManifestSources.has(trackedEquivalent)) {
+    const trackedEquivalent = historicalCompatibility.get(path);
+    const designRelative = path
+      .replace(/^temp\/writing-examples\//, '')
+      .replace('Pinned/25-0111_Git_Label.md', 'Pinned/25-0111-Git-Label.md');
+    const designEquivalent = `sources/design-project-architecture/articles/${designRelative}`;
+    if (!trackedEquivalent && !existsSync(resolve(repositoryDir, designEquivalent))) {
       fail(`Source missing from manifest: ${path}`);
-    } else if (uniqueManifestSources.has(trackedEquivalent) && existsSync(resolve(repositoryDir, trackedEquivalent))) {
+    } else if (trackedEquivalent && existsSync(resolve(repositoryDir, trackedEquivalent))) {
       const legacyContent = readFileSync(resolve(repositoryDir, path));
       const trackedContent = readFileSync(resolve(repositoryDir, trackedEquivalent));
       if (!legacyContent.equals(trackedContent)) {
         fail(`Legacy source differs from tracked source: ${path}`);
       }
-    }
-  }
-  for (const path of uniqueManifestSources) {
-    if (path.startsWith(legacySourcePrefix) && !actualSources.has(path)) {
-      fail(`Manifest source does not exist: ${path}`);
     }
   }
 }

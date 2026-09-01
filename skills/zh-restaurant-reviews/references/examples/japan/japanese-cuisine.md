@@ -13,7 +13,7 @@
 - Occasion: unknown
 - Main topics: Location, decor, dishes, freshness, clientele
 - Recommended dishes: 定食
-- Source: `temp/examples/25-0307-1332-Food-Shokudo.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0307-1332-Food-Shokudo.md`
 
 ### Available facts
 
@@ -38,7 +38,7 @@
 - Occasion: unknown
 - Main topics: Location, dishes, ingredients, customization, service
 - Recommended dishes: 大阪烧、炒面
-- Source: `temp/examples/25-0307-1721-Food-Kameya.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0307-1721-Food-Kameya.md`
 
 ### Available facts
 
@@ -63,7 +63,7 @@
 - Occasion: unknown
 - Main topics: Location, space, ordering, seafood, price
 - Recommended dishes: 海鲜丼
-- Source: `temp/examples/25-0520-1957-Food-糸岛食堂.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0520-1957-Food-糸岛食堂.md`
 
 ### Available facts
 
@@ -88,7 +88,7 @@
 - Occasion: Dinner, takeaway
 - Main topics: Owners, atmosphere, soup, takeaway
 - Recommended dishes: 牛尾拉面、韩式饭团
-- Source: `temp/examples/25-0521-2002-Food-笑幸.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0521-2002-Food-笑幸.md`
 
 ### Available facts
 
@@ -113,7 +113,7 @@
 - Occasion: Off-peak meal
 - Main topics: Queue, seating, serving, batter, oiliness
 - Recommended dishes: 天妇罗
-- Source: `temp/examples/25-0522-1323-Food-Takao.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0522-1323-Food-Takao.md`
 
 ### Available facts
 
@@ -138,7 +138,7 @@
 - Occasion: Takeaway
 - Main topics: Queue, ordering, takeaway, seafood, waterfront atmosphere
 - Recommended dishes: 自选寿司
-- Source: `temp/examples/25-0607-1922-Food-博多豊一.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0607-1922-Food-博多豊一.md`
 
 ### Available facts
 
@@ -163,7 +163,7 @@
 - Occasion: unknown
 - Main topics: Store age claim, texture, sauce
 - Recommended dishes: 炸豆腐
-- Source: `temp/examples/25-0608-1252-Food-五木屋.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0608-1252-Food-五木屋.md`
 
 ### Available facts
 
@@ -188,7 +188,7 @@
 - Occasion: Quick meal
 - Main topics: Ordering, dishes, portion, service
 - Recommended dishes: 日式定食
-- Source: `temp/examples/25-0608-1855-Food-弥生轩.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0608-1855-Food-弥生轩.md`
 
 ### Available facts
 

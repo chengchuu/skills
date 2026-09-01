@@ -13,7 +13,7 @@
 - Occasion: Summer lunch
 - Main topics: Taste, ingredients, popularity
 - Recommended dishes: 霸气一桶西瓜
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Summer afternoon
 - Main topics: Location, drinks, desserts, environment, atmosphere
 - Recommended dishes: 拿铁、提拉米苏
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -65,7 +65,7 @@ DG COFFEE 位于徐家汇地铁站 2 号口，一楼紧凑，二楼则宽敞明�
 - Occasion: Summer afternoon
 - Main topics: Tea, snacks, environment, service
 - Recommended dishes: 红茶、甜点、咸点
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -91,7 +91,7 @@ DG COFFEE 位于徐家汇地铁站 2 号口，一楼紧凑，二楼则宽敞明�
 - Occasion: Afternoon tea
 - Main topics: Taste, packaging, environment, speed
 - Recommended dishes: 手打柠檬茶
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -117,7 +117,7 @@ DG COFFEE 位于徐家汇地铁站 2 号口，一楼紧凑，二楼则宽敞明�
 - Occasion: Lunch
 - Main topics: Texture, sauce, portion, price, atmosphere
 - Recommended dishes: 土笋冻
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 

@@ -10,7 +10,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/21-0128_Postman.md`
+- Source: `sources/design-project-architecture/articles/21-0128_Postman.md`
 
 ### Structural characteristics
 
@@ -30,7 +30,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Explanatory and practical
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/23-1023_EdgeOne.md`
+- Source: `sources/design-project-architecture/articles/23-1023_EdgeOne.md`
 
 ### Structural characteristics
 
@@ -50,7 +50,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and concise
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Go/23-1101_Go_Scripts.md`
+- Source: `sources/design-project-architecture/articles/Go/23-1101_Go_Scripts.md`
 
 ### Structural characteristics
 

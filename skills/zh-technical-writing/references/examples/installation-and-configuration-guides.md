@@ -25,7 +25,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `sources/zh-technical-writing/new-typescript-project/README.md`; `temp/writing-examples/20-0818_TypeScript_Project.md`
+- Source: `sources/zh-technical-writing/new-typescript-project/README.md`; `sources/design-project-architecture/articles/20-0818_TypeScript_Project.md`
 
 ### Structural characteristics
 
@@ -45,7 +45,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/20-0828_TypeScript_Babel.md`; `temp/writing-examples/TCloud/20-0828_Babel_TypeScript_TencentCloud.md`
+- Source: `sources/design-project-architecture/articles/20-0828_TypeScript_Babel.md`; `sources/zh-technical-writing/legacy/TCloud/20-0828_Babel_TypeScript_TencentCloud.md`
 
 ### Structural characteristics
 
@@ -65,7 +65,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/26-0612-macOS-LAN.md`
+- Source: `sources/design-project-architecture/articles/26-0612-macOS-LAN.md`
 
 ### Structural characteristics
 
@@ -105,7 +105,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Git/20-0911_GitLab_Runner.md`; `temp/writing-examples/TCloud/20-0911_GitLab_TencentCloud.md`
+- Source: `sources/design-project-architecture/articles/Git/20-0911_GitLab_Runner.md`; `sources/zh-technical-writing/legacy/TCloud/20-0911_GitLab_TencentCloud.md`
 
 ### Structural characteristics
 
@@ -125,7 +125,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Git/21-0225_GitHub_SSH_Keys.md`; `temp/writing-examples/TCloud/21-0225_GitHub_SSH_Keys.md`
+- Source: `sources/design-project-architecture/articles/Git/21-0225_GitHub_SSH_Keys.md`; `sources/zh-technical-writing/legacy/TCloud/21-0225_GitHub_SSH_Keys.md`
 
 ### Structural characteristics
 
@@ -145,7 +145,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Linux/17-0518_CentOS_PHP.md`; `temp/writing-examples/TCloud/17-0518_Linux_PHP_TCloud.md`
+- Source: `sources/design-project-architecture/articles/Linux/17-0518_CentOS_PHP.md`; `sources/zh-technical-writing/legacy/TCloud/17-0518_Linux_PHP_TCloud.md`
 
 ### Structural characteristics
 
@@ -165,7 +165,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Linux/23-0625_Debian_Docker.md`; `temp/writing-examples/TCloud/23-0625_Debian.md`
+- Source: `sources/design-project-architecture/articles/Linux/23-0625_Debian_Docker.md`; `sources/zh-technical-writing/legacy/TCloud/23-0625_Debian.md`
 
 ### Structural characteristics
 
@@ -185,7 +185,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/Linux/23-0708_Debian.md`; `temp/writing-examples/TCloud/23-0708_Debian.md`
+- Source: `sources/design-project-architecture/articles/Linux/23-0708_Debian.md`; `sources/zh-technical-writing/legacy/TCloud/23-0708_Debian.md`
 
 ### Structural characteristics
 
@@ -205,7 +205,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Linux/26-0104_Debian_Docker.md`; `temp/writing-examples/TCloud/26-0104_Debian_Docker.md`
+- Source: `sources/design-project-architecture/articles/Linux/26-0104_Debian_Docker.md`; `sources/zh-technical-writing/legacy/TCloud/26-0104_Debian_Docker.md`
 
 ### Structural characteristics
 
@@ -225,7 +225,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/PWA/26-0503_Workbox_ZH.md`; `temp/writing-examples/PWA/26-0503_Workbox_EN.md`
+- Source: `sources/design-project-architecture/articles/PWA/26-0503_Workbox_ZH.md`; `sources/design-project-architecture/articles/PWA/26-0503_Workbox_EN.md`
 
 ### Structural characteristics
 
@@ -245,7 +245,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/webpack/20-0828_webpack_Merge.md`; `temp/writing-examples/TCloud/20-0828_webpack_TencentCloud.md`
+- Source: `sources/design-project-architecture/articles/webpack/20-0828_webpack_Merge.md`; `sources/zh-technical-writing/legacy/TCloud/20-0828_webpack_TencentCloud.md`
 
 ### Structural characteristics
 

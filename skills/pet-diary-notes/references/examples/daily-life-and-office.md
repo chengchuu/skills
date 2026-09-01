@@ -2,9 +2,9 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
-## Example: User-provided: 猫砂盆里的乖巧日常
+## Example: 25-0710-A-Neat-Little-Litter-Box-Routine
 
-- Source heading: `User-provided: 猫砂盆里的乖巧日常`
+- Source heading: `25-0710-A-Neat-Little-Litter-Box-Routine`
 - Source date: 2025-07-10
 - Version: none
 - Category: Daily life and office
@@ -20,7 +20,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: 多平台
-- Source path: User-provided skill example
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -92,7 +92,7 @@ biubiubiu
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -150,7 +150,7 @@ Coffee Shop
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -210,7 +210,7 @@ That soft, perfect curve is irresistible—adorable from every angle.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -270,7 +270,7 @@ Chasing sunlight, watching the world, grooming fur—she's got her own schedule.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 - Source preface: 猫咪日常・嘟嘟
 
 ### Chinese

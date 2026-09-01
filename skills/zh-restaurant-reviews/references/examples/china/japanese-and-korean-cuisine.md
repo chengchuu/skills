@@ -13,7 +13,7 @@
 - Occasion: Neighborhood meal
 - Main topics: Dishes, portion, staff atmosphere, overall change
 - Recommended dishes: 蔬菜炒面、牛肉炒乌冬、日式炒饭
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Lunch
 - Main topics: Dishes, portion, environment
 - Recommended dishes: 牛肉饭、寿司、海鲜蒸蛋
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 

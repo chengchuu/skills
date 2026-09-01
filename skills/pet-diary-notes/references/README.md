@@ -1,6 +1,6 @@
 # Reference routing
 
-Use progressive disclosure. The files under `examples/` are distributable handwritten style evidence; `temp/pet-examples/pet.md` is not a runtime dependency.
+Use progressive disclosure. The files under `examples/` are distributable handwritten style evidence; repository maintenance uses the approved tracked source at `sources/pet-diary-notes/pet.md`, with `temp/pet-examples/pet.md` retained as historical compatibility provenance. Neither repository-level path is a runtime dependency of an individually installed skill.
 
 ## Routing order
 

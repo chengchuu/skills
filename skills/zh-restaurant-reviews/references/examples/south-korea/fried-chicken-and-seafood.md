@@ -13,7 +13,7 @@
 - Occasion: Takeaway
 - Main topics: Ordering, fried chicken, portion, environment
 - Recommended dishes: 炸鸡
-- Source: `temp/examples/25-0422_Food_77.md`
+- Source: `sources/zh-restaurant-reviews/south-korea/25-0422_Food_77.md`
 
 ### Available facts
 
@@ -38,7 +38,7 @@
 - Occasion: unknown
 - Main topics: Service, fish, soup, view, uncertainty
 - Recommended dishes: 鱼汤、烤鱼
-- Source: `temp/examples/25-0423_Food_Seafood.md`
+- Source: `sources/zh-restaurant-reviews/south-korea/25-0423_Food_Seafood.md`
 
 ### Available facts
 

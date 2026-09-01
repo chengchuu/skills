@@ -2,9 +2,9 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
-## Example: User-provided: 认真洗脸中
+## Example: 25-0807-A-Very-Serious-Face-Washing-Routine
 
-- Source heading: `User-provided: 认真洗脸中`
+- Source heading: `25-0807-A-Very-Serious-Face-Washing-Routine`
 - Source date: 2025-08-07
 - Version: none
 - Category: Grooming and care
@@ -20,7 +20,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: 多平台
-- Source path: User-provided skill example
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -92,7 +92,7 @@ Rock That Body
 - Health-related status: Unknown; source hashtags include sick-cat labels but give no condition
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -152,7 +152,7 @@ She quietly enjoys the warmth of my hands, her face calm and content.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -212,7 +212,7 @@ Fresh from her bath, she sits quietly in the dryer, soft and sweet.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
