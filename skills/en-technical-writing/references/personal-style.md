@@ -1,6 +1,6 @@
 # Personal style
 
-These are explicit personal overrides. Apply them after selecting the relevant foundation and ecosystem profile, and before lower-priority general rules. They never override technical accuracy, current user instructions, or discoverable project conventions.
+These are explicit personal overrides. Apply them after technical facts, current user instructions, and discoverable project conventions, but before an ecosystem profile, the general foundations, and `en-US` defaults. They never override a higher-priority layer.
 
 ## Language
 

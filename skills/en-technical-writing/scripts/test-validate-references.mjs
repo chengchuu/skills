@@ -33,6 +33,154 @@ async function runCase(name, mutate, expected) {
 await runCase('accepts the unmodified skill', async () => {}, status => status === 0);
 
 await runCase(
+  'rejects missing progressive-disclosure routing',
+  async fixtureRoot => {
+    const skillPath = path.join(fixtureRoot, 'SKILL.md');
+    const content = await readFile(skillPath, 'utf8');
+    await writeFile(skillPath, content.replace('Match every applicable router row', 'Read the router'));
+  },
+  (status, output) => status === 1
+    && output.includes('SKILL.md must preserve progressive disclosure: Match every applicable router row'),
+);
+
+await runCase(
+  'rejects a missing AGENTS.md router row',
+  async fixtureRoot => {
+    const routerPath = path.join(fixtureRoot, 'references/README.md');
+    const content = await readFile(routerPath, 'utf8');
+    await writeFile(routerPath, content.split('\n').filter(line => !line.startsWith('| `AGENTS.md` creation or update')).join('\n'));
+  },
+  (status, output) => status === 1
+    && output.includes('Reference router must include an AGENTS.md creation or update row'),
+);
+
+await runCase(
+  'rejects missing AGENTS.md deliverable rows',
+  async fixtureRoot => {
+    const documentTypesPath = path.join(fixtureRoot, 'references/document-types.md');
+    const content = await readFile(documentTypesPath, 'utf8');
+    await writeFile(documentTypesPath, content.split('\n').filter(line => !line.startsWith('| `AGENTS.md`')).join('\n'));
+  },
+  (status, output) => status === 1
+    && output.includes('Document types must include AGENTS.md in both deliverable tables; found 0 rows'),
+);
+
+await runCase(
+  'rejects missing AGENTS.md extraction guidance',
+  async fixtureRoot => {
+    const documentTypesPath = path.join(fixtureRoot, 'references/document-types.md');
+    const content = await readFile(documentTypesPath, 'utf8');
+    await writeFile(documentTypesPath, content.replace('`guides/<topic>.md`', 'a separate guide'));
+  },
+  (status, output) => status === 1
+    && output.includes('AGENTS.md document-type guidance must include: `guides/<topic>.md`'),
+);
+
+await runCase(
+  'rejects out-of-order style precedence',
+  async fixtureRoot => {
+    const precedencePath = path.join(fixtureRoot, 'references/rule-precedence.md');
+    const content = await readFile(precedencePath, 'utf8');
+    await writeFile(
+      precedencePath,
+      content.replace(
+        '1. **Current user instructions.**\n2. **Target repository or project conventions**',
+        '1. **Target repository or project conventions**\n2. **Current user instructions.**',
+      ),
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('Rule precedence layers must remain in the required order'),
+);
+
+await runCase(
+  'ignores precedence-layer terms outside the ordered section',
+  async fixtureRoot => {
+    const precedencePath = path.join(fixtureRoot, 'references/rule-precedence.md');
+    const content = await readFile(precedencePath, 'utf8');
+    await writeFile(precedencePath, `General American English defaults remain below Current user instructions.\n\n${content}`);
+  },
+  status => status === 0,
+);
+
+await runCase(
+  'ignores AGENTS.md table rows in fenced examples',
+  async fixtureRoot => {
+    await appendFile(
+      path.join(fixtureRoot, 'references/document-types.md'),
+      '\n```markdown\n| `AGENTS.md` | Example |\n|:------------|:--------|\n| Value       | Value   |\n```\n',
+    );
+  },
+  status => status === 0,
+);
+
+await runCase(
+  'rejects missing repository-convention guidance',
+  async fixtureRoot => {
+    const guidelinePath = path.join(fixtureRoot, 'references/writing-guidelines.md');
+    const content = await readFile(guidelinePath, 'utf8');
+    await writeFile(guidelinePath, content.replace('Do not invent conventional architecture layers', 'Do not invent architecture'));
+  },
+  (status, output) => status === 1
+    && output.includes('repository or protected-content rule marker: Do not invent conventional architecture layers'),
+);
+
+await runCase(
+  'rejects missing protected generated-content guidance',
+  async fixtureRoot => {
+    const guidelinePath = path.join(fixtureRoot, 'references/writing-guidelines.md');
+    const content = await readFile(guidelinePath, 'utf8');
+    await writeFile(guidelinePath, content.replace('quotations, generated content', 'quotations'));
+  },
+  (status, output) => status === 1
+    && output.includes('repository or protected-content rule marker: quotations, generated content'),
+);
+
+await runCase(
+  'rejects missing repository or user table-layout precedence',
+  async fixtureRoot => {
+    const guidelinePath = path.join(fixtureRoot, 'references/writing-guidelines.md');
+    const content = await readFile(guidelinePath, 'utf8');
+    await writeFile(guidelinePath, content.replace('user or target repository explicitly requires it', 'another table layout is valid'));
+  },
+  (status, output) => status === 1
+    && output.includes('repository or protected-content rule marker: user or target repository explicitly requires it'),
+);
+
+await runCase(
+  'rejects a missing repository-convention review classification',
+  async fixtureRoot => {
+    const workflowPath = path.join(fixtureRoot, 'references/output-workflows.md');
+    const content = await readFile(workflowPath, 'utf8');
+    await writeFile(workflowPath, content.replace('**Repository-convention issue**', '**Project issue**'));
+  },
+  (status, output) => status === 1
+    && output.includes('Review-only workflow must include the Repository-convention issue classification'),
+);
+
+await runCase(
+  'rejects missing AGENTS.md repository-edit routing',
+  async fixtureRoot => {
+    const workflowPath = path.join(fixtureRoot, 'references/output-workflows.md');
+    const content = await readFile(workflowPath, 'utf8');
+    await writeFile(workflowPath, content.replace('[document-type guidance](document-types.md#agentsmd)', 'document-type guidance'));
+  },
+  (status, output) => status === 1
+    && output.includes('Repository-edit workflow must include the AGENTS.md behavior marker: [document-type guidance](document-types.md#agentsmd)'),
+);
+
+await runCase(
+  'rejects personal style above repository conventions',
+  async fixtureRoot => {
+    const personalStylePath = path.join(fixtureRoot, 'references/personal-style.md');
+    const content = await readFile(personalStylePath, 'utf8');
+    await writeFile(personalStylePath, content.replace('before an ecosystem profile', 'after an ecosystem profile'));
+  },
+  (status, output) => status === 1
+    && output.includes('Personal style must remain below repository conventions and above lower-priority guidance'),
+);
+
+await runCase(
   'rejects missing Markdown table alignment guidance',
   async fixtureRoot => {
     const guidelinePath = path.join(fixtureRoot, 'references/writing-guidelines.md');

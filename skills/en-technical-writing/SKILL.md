@@ -1,6 +1,6 @@
 ---
 name: en-technical-writing
-description: Write, rewrite, translate, proofread, and review English technical documentation in American English using project conventions, protected technical facts, personal style overrides, mature developer-documentation guidance, and optional ecosystem profiles such as React. Use for READMEs, quickstarts, tutorials, how-to, installation, configuration, API, CLI, troubleshooting, migration, release, architecture, contributing, and Chinese-to-English technical content. Preserve code, commands, identifiers, paths, URLs, package names, API names, versions, and documented behavior unless the user explicitly requests technical changes. Do not use for marketing, creative writing, unrelated business communication, or code review.
+description: Write, rewrite, translate, proofread, and review English technical documentation in American English using project conventions, protected technical facts, personal style overrides, mature developer-documentation guidance, and optional ecosystem profiles such as React. Use for AGENTS.md files, READMEs, quickstarts, tutorials, how-to, installation, configuration, API, CLI, troubleshooting, migration, release, architecture, contributing, and Chinese-to-English technical content. Preserve code, commands, identifiers, paths, URLs, package names, API names, versions, and documented behavior unless the user explicitly requests technical changes. Do not use for marketing, creative writing, unrelated business communication, or code review.
 ---
 
 # English Technical Writing
@@ -13,10 +13,10 @@ Create accurate, clear, and usable technical documentation in American English. 
 2. Identify the audience, document type, technical level, target repository, ecosystem, required format, requested length, and existing style guide.
 3. Default to `en-US` unless the user or repository explicitly requires another variant.
 4. Extract technical facts and protected literals.
-5. Inspect the target repository for documentation rules, templates, terminology, and established patterns.
+5. Inspect only the target repository sources relevant to the document, such as local instructions, existing documentation, manifests, configuration, workflows, source entry points, and tests.
 6. Ask only for information whose absence would materially change the result. Otherwise, state a narrow assumption and proceed.
 7. Read [references/README.md](references/README.md), then read [references/rule-precedence.md](references/rule-precedence.md).
-8. Load only the relevant workflow, document type, foundation, profile, and personal-style sections.
+8. Match every applicable router row, then load only the relevant workflow, document type, foundation, profile, and personal-style sections.
 
 ## Apply rules in order
 
@@ -36,7 +36,7 @@ Never copy source prose merely to imitate style. Convert guidance into original 
 ## Produce the requested output
 
 - Default to en-US spelling, punctuation, and terminology unless the user or project specifies another variant.
-- Keep code, commands, identifiers, URLs, filenames, UI labels, and quoted text unchanged unless the task explicitly includes them.
+- Keep fenced and inline code, commands, CLI flags, environment variables, paths, URLs, identifiers, API and package names, versions, configuration values, error messages, quotations, and generated content unchanged unless the user explicitly requests changing that protected content.
 - Prefer active voice, present tense, direct second person, concise sentences, descriptive headings, and explicit actors.
 - Use imperative steps for procedures and put conditions before actions when they affect whether a step applies.
 - Use consistent terminology. Define necessary unfamiliar terms and remove avoidable jargon, idioms, and culture-specific references.

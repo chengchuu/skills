@@ -50,7 +50,7 @@ Do not edit files, replace the document, or claim to have fixed issues.
 - Distinguish confirmed defects from optional improvements.
 - Say explicitly when no confirmed issues are found.
 
-Classify findings as **Language issue**, **Structure issue**, **Terminology issue**, **Consistency issue**, **Potential technical conflict**, **Unsupported claim**, **Missing prerequisite**, or **Missing verification**. Use critical, major, minor, or suggestion severity only when it helps prioritization. Never present a possible technical conflict as a confirmed bug.
+When useful, classify findings as **Language issue**, **Structure issue**, **Formatting issue**, **Terminology issue**, **Consistency issue**, **Repository-convention issue**, **Potential technical conflict**, **Unsupported claim**, **Missing prerequisite**, or **Missing verification**. Use critical, major, minor, or suggestion severity only when it helps prioritization. Never present a possible technical conflict as a confirmed bug.
 
 Default output: findings first, followed by assumptions or residual risks.
 
@@ -64,7 +64,9 @@ Expand only from supported information. Mark requested placeholders and informat
 
 ## Repository edit
 
-Inspect repository instructions before editing. Preserve unrelated changes. Make narrow patches, run proportionate checks, inspect the final diff, and report modified files and validation. Do not stage, commit, publish, or modify external repositories unless explicitly authorized.
+Inspect the nearest repository instructions and only the files needed to establish the document's facts, structure, terminology, and validation commands. Preserve unrelated changes and valid local conventions. Reuse the current document and its existing sections when practical, make narrow patches, run proportionate checks, inspect the final diff, and report modified files and validation. Do not stage, commit, publish, or modify external repositories unless explicitly authorized.
+
+For `AGENTS.md`, apply the dedicated [document-type guidance](document-types.md#agentsmd). When updating an existing file, verify each affected statement against current code and configuration, preserve its useful structure, place additions in the relevant existing section, and remove obsolete guidance. When creating a file, document only applicable, inspected repository facts.
 
 ## Response modes
 

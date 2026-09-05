@@ -41,6 +41,13 @@ function stripMarkdownCode(markdown) {
   return stripFencedCode(markdown).replace(/`[^`\n]*`/g, '');
 }
 
+function markdownTableRows(markdown) {
+  return stripFencedCode(markdown)
+    .split(/\r?\n/)
+    .filter(line => /^\|.*\|$/.test(line))
+    .map(line => line.slice(1, -1).split('|').map(cell => cell.trim()));
+}
+
 function markdownAnchors(markdown) {
   const anchors = new Set();
   const counts = new Map();
@@ -164,6 +171,14 @@ if (!/^---\nname: en-technical-writing\n/m.test(skill)) {
 if (!/^description: .*(American English|en-US)/m.test(skill)) {
   errors.push('SKILL.md description must identify its American English or en-US scope.');
 }
+if (!/^description: .*AGENTS\.md/m.test(skill)) {
+  errors.push('SKILL.md description must include AGENTS.md documentation work.');
+}
+for (const marker of ['Match every applicable router row', 'load only the relevant workflow']) {
+  if (!skill.includes(marker)) {
+    errors.push(`SKILL.md must preserve progressive disclosure: ${marker}.`);
+  }
+}
 
 const agent = contents.get('agents/openai.yaml') ?? '';
 for (const value of [
@@ -191,12 +206,33 @@ for (const reference of [
     errors.push(`Reference router must link to ${reference}.`);
   }
 }
+const agentsRouterRow = markdownTableRows(router).find(row => row[0] === '`AGENTS.md` creation or update');
+if (!agentsRouterRow) {
+  errors.push('Reference router must include an AGENTS.md creation or update row.');
+} else {
+  for (const reference of ['document-types.md', 'output-workflows.md', 'writing-guidelines.md']) {
+    if (!agentsRouterRow.some(cell => cell.includes(`(${reference})`))) {
+      errors.push(`AGENTS.md router row must link to ${reference}.`);
+    }
+  }
+}
 
 const precedence = contents.get('references/rule-precedence.md') ?? '';
-for (const layer of ['Current user instructions', 'Target repository or project conventions', 'Personal style overrides', 'Selected ecosystem profile', 'Google developer documentation foundation', 'Microsoft editorial voice', 'General American English defaults']) {
-  if (!precedence.includes(layer)) {
+const precedenceLayers = ['Current user instructions', 'Target repository or project conventions', 'Personal style overrides', 'Selected ecosystem profile', 'Google developer documentation foundation', 'Microsoft editorial voice', 'General American English defaults'];
+const stylePrecedenceStart = precedence.indexOf('## Style precedence');
+const stylePrecedenceEnd = stylePrecedenceStart === -1 ? -1 : precedence.indexOf('\n## ', stylePrecedenceStart + 4);
+const stylePrecedence = stylePrecedenceStart === -1
+  ? ''
+  : precedence.slice(stylePrecedenceStart, stylePrecedenceEnd === -1 ? precedence.length : stylePrecedenceEnd);
+const listedPrecedenceLayers = [...stylePrecedence.matchAll(/^\d+\. \*\*([^*]+)\*\*/gm)]
+  .map(match => match[1].replace(/\.$/, ''));
+for (const layer of precedenceLayers) {
+  if (!listedPrecedenceLayers.includes(layer)) {
     errors.push(`Rule precedence must include the ${layer} layer.`);
   }
+}
+if (precedenceLayers.every(layer => listedPrecedenceLayers.includes(layer)) && precedenceLayers.some((layer, index) => listedPrecedenceLayers[index] !== layer)) {
+  errors.push('Rule precedence layers must remain in the required order.');
 }
 
 const terminology = contents.get('references/terminology.md') ?? '';
@@ -219,6 +255,41 @@ for (const marker of [
     errors.push(`Writing guidelines must include the Markdown table rule marker: ${marker}`);
   }
 }
+for (const marker of [
+  '## Repository conventions',
+  'inspect only sources that can establish the requested facts or conventions',
+  'Do not invent conventional architecture layers',
+  'quotations, generated content',
+  'user or target repository explicitly requires it',
+]) {
+  if (!writingGuidelines.includes(marker)) {
+    errors.push(`Writing guidelines must include the repository or protected-content rule marker: ${marker}`);
+  }
+}
+
+const documentTypes = contents.get('references/document-types.md') ?? '';
+const agentsDocumentRows = markdownTableRows(documentTypes).filter(row => row[0] === '`AGENTS.md`');
+if (agentsDocumentRows.length !== 2) {
+  errors.push(`Document types must include AGENTS.md in both deliverable tables; found ${agentsDocumentRows.length} rows.`);
+}
+const agentsSectionStart = documentTypes.indexOf('## `AGENTS.md`');
+const agentsSectionEnd = agentsSectionStart === -1 ? -1 : documentTypes.indexOf('\n## ', agentsSectionStart + 4);
+const agentsSection = agentsSectionStart === -1
+  ? ''
+  : documentTypes.slice(agentsSectionStart, agentsSectionEnd === -1 ? documentTypes.length : agentsSectionEnd);
+for (const marker of [
+  'When updating an existing file:',
+  'When creating a file',
+  'approximately 300 lines',
+  'approximately 500 lines',
+  '`guides/<topic>.md`',
+  'frontend component hierarchy',
+  'backend routing',
+]) {
+  if (!agentsSection.includes(marker)) {
+    errors.push(`AGENTS.md document-type guidance must include: ${marker}`);
+  }
+}
 
 const outputWorkflows = contents.get('references/output-workflows.md') ?? '';
 for (const marker of [
@@ -228,6 +299,25 @@ for (const marker of [
   if (!outputWorkflows.includes(marker)) {
     errors.push(`Output workflows must include the Markdown table behavior marker: ${marker}`);
   }
+}
+for (const classification of ['Language issue', 'Structure issue', 'Formatting issue', 'Terminology issue', 'Consistency issue', 'Repository-convention issue', 'Potential technical conflict', 'Unsupported claim', 'Missing prerequisite', 'Missing verification']) {
+  if (!outputWorkflows.includes(`**${classification}**`)) {
+    errors.push(`Review-only workflow must include the ${classification} classification.`);
+  }
+}
+for (const marker of [
+  '[document-type guidance](document-types.md#agentsmd)',
+  'When updating an existing file',
+  'When creating a file',
+]) {
+  if (!outputWorkflows.includes(marker)) {
+    errors.push(`Repository-edit workflow must include the AGENTS.md behavior marker: ${marker}`);
+  }
+}
+
+const personalStyle = contents.get('references/personal-style.md') ?? '';
+if (!personalStyle.includes('before an ecosystem profile') || !personalStyle.includes('They never override a higher-priority layer')) {
+  errors.push('Personal style must remain below repository conventions and above lower-priority guidance.');
 }
 
 const manifest = contents.get('references/source-manifest.md') ?? '';
