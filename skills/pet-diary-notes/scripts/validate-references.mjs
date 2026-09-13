@@ -163,8 +163,8 @@ async function main() {
       report(`Tracked source hash differs from manifest: ${trackedSource}`);
     }
     const originals = sourceHeadings(source);
-    if (originals.length !== 66 || new Set(originals).size !== 66) {
-      report(`Tracked source must contain 66 unique mapped sections; found ${originals.length} sections and ${new Set(originals).size} unique mapped headings.`);
+    if (originals.length !== 67 || new Set(originals).size !== 67) {
+      report(`Tracked source must contain 67 unique mapped sections; found ${originals.length} sections and ${new Set(originals).size} unique mapped headings.`);
     }
     const missing = originals.filter(heading => !headings.includes(heading));
     const extra = allBlocks.filter(block => !originals.includes(block.heading)).map(block => block.heading);

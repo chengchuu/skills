@@ -3,6 +3,7 @@
 
 **Table of Contents:**
 
+- [25-0703-A-Quiet-Grooming-Break](#25-0703-a-quiet-grooming-break)
 - [25-0724-Bite-Kick-Repeat](#25-0724-bite-kick-repeat)
 - [26-0811-Curious-Eyes-Everywhere](#26-0811-curious-eyes-everywhere)
 - [26-0808-A-Curious-Look](#26-0808-a-curious-look)
@@ -69,6 +70,25 @@
 - [26-0319 AI CEO v01](#26-0319-ai-ceo-v01)
 - [26-0319 AI Phone v03](#26-0319-ai-phone-v03)
 - [26-0318 AI Phone v01](#26-0318-ai-phone-v01)
+
+## 25-0703-A-Quiet-Grooming-Break
+
+zh:
+沙发上的舔毛时间
+躺在沙发上，低着头安静地舔毛，认真打理自己这一身毛茸茸。
+BGM: Funny Song
+#猫咪 #猫咪日常 #宠物日记
+
+en:
+A Quiet Grooming Break
+Lying on the sofa with her head lowered, she quietly tends to her fluffy coat.
+BGM: Funny Song
+#Cat #CatLife #PetDiary
+
+jp:
+ソファで毛づくろい
+ソファに寝そべって顔を下げ、静かにふわふわの毛をなめてお手入れ中。
+#猫 #猫のいる暮らし #毛づくろい #ペット日記
 
 ## 25-0724-Bite-Kick-Repeat
 

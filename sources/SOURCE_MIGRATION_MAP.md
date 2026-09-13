@@ -1,6 +1,6 @@
 # Skill Source Migration Map
 
-This map records the approved byte-identical repository copies created from historical local maintenance inputs. The original `temp/` files remain unchanged. Each approved source has exactly one canonical tracked destination.
+This map records the approved repository copies created from historical local maintenance inputs. The original `temp/` files remain unchanged. Each approved source has exactly one canonical tracked destination. Sizes and hashes describe current canonical files; post-migration additions are recorded in the row notes.
 
 Publication approval covers all 133 files. Automated review found no private-key, access-token, or hard-secret patterns. The pet source contains approved personal pet-history and health notes but no detected email address, phone number, government identifier, IP address, absolute user path, or hard-secret pattern. Restaurant files contain approved personal review text and business or location metadata. Historical technical articles retain their original claims as provenance rather than current technical authority.
 
@@ -20,7 +20,7 @@ Publication approval covers all 133 files. Automated review found no private-key
 
 | Original path | New repository path | Bytes | SHA-256 | Skill | Decision | Notes |
 | --- | --- | ---: | --- | --- | --- | --- |
-| `temp/pet-examples/pet.md` | `sources/pet-diary-notes/pet.md` | 40434 | `f23de43f668b59f91db0d945a0f4fc7a5b68ebe90e403487c1777020fa992844` | pet-diary-notes | Single canonical pet-diary maintenance source. | Byte-identical copy of the explicitly approved uncommitted source; all 66 source sections use their canonical headings. |
+| `temp/pet-examples/pet.md` | `sources/pet-diary-notes/pet.md` | 41046 | `79f3efda7230e9e1109ea2a54ed92709720287d0e7d059b1b2c66c29a2442002` | pet-diary-notes | Single canonical pet-diary maintenance source. | Initially migrated 66 sections (40434 bytes; SHA-256 f23de43f668b59f91db0d945a0f4fc7a5b68ebe90e403487c1777020fa992844); added the user-approved 25-0703-A-Quiet-Grooming-Break case, bringing the maintained source to 67 sections. |
 | `temp/examples/25-0302-1738-Food-神户-Gohanya.md` | `sources/zh-restaurant-reviews/japan/25-0302-1738-Food-神户-Gohanya.md` | 796 | `617e3f4c730ca194006c116a5da3f0e1cf07be86574f870e157cdef69d5c9fb6` | zh-restaurant-reviews | Single canonical restaurant-review maintenance source. | Original filename preserved; regional directory follows recorded provenance. |
 | `temp/examples/25-0303-1125-Food-Red-Rock.md` | `sources/zh-restaurant-reviews/japan/25-0303-1125-Food-Red-Rock.md` | 650 | `232dab7cceb8776dbbd231bc4f8acc3a85dad3556cc372e2bdd09a0ff9f1f784` | zh-restaurant-reviews | Single canonical restaurant-review maintenance source. | Original filename preserved; regional directory follows recorded provenance. |
 | `temp/examples/25-0303-1929-Food-Hibitoridori.md` | `sources/zh-restaurant-reviews/japan/25-0303-1929-Food-Hibitoridori.md` | 687 | `f2af0e8c128a1a09198ae73e09cd32896acd396421d8b000a7d4bd411c129e57` | zh-restaurant-reviews | Single canonical restaurant-review maintenance source. | Original filename preserved; regional directory follows recorded provenance. |

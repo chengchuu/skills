@@ -14,6 +14,12 @@ const trackedSourcePath = "sources/pet-diary-notes/pet.md";
 const historicalSourcePath = "temp/pet-examples/pet.md";
 
 const personalExampleMetadata = new Map([
+  ["25-0703-A-Quiet-Grooming-Break", {
+    mood: "Calm",
+    tone: "Gentle",
+    format: "Vlog",
+    note: "User-provided sofa grooming case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese BGM omitted as supplied",
+  }],
   ["25-0724-Bite-Kick-Repeat", {
     mood: "Lively",
     tone: "Playful",
@@ -104,6 +110,7 @@ const groups = {
     ["25-0721 Kitten Hiccups", "Chicken breast and hiccups", "Unknown", "Eating chicken breast and hiccuping"],
   ],
   "grooming-and-care.md": [
+    ["25-0703-A-Quiet-Grooming-Break", "Self-grooming on the sofa", "Unknown", "Lying on the sofa with head lowered and licking fur"],
     ["25-0807-A-Very-Serious-Face-Washing-Routine", "Face washing", "Unknown", "Washing the face with repeated paw movements"],
     ["25-0731 The Joy of Head Massage", "Head massage", "Unknown", "Receiving a head massage"],
     ["25-0921 Sticky Little Baby", "Bath and dryer", "Unknown", "Sitting in a dryer after a bath"],
@@ -388,7 +395,7 @@ function manifestMarkdown(examples, sourceBuffer) {
   });
   return `# Source manifest
 
-This manifest maps every pet diary source section in \`${trackedSourcePath}\` to the self-contained curated corpus. The tracked source is a byte-identical migration of the historical \`${historicalSourcePath}\` input. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in \`${trackedSourcePath}\` to the self-contained curated corpus. The tracked source was migrated from the historical \`${historicalSourcePath}\` input and is maintained with approved new cases. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
@@ -397,7 +404,7 @@ This manifest maps every pet diary source section in \`${trackedSourcePath}\` to
 - Source bytes: ${sourceBuffer.length}
 - Source SHA-256: \`${createHash("sha256").update(sourceBuffer).digest("hex")}\`
 - Source sections: ${examples.length}
-- Recovered former supplemental sections: ${personalExampleMetadata.size}; source headings are canonical.
+- Recovered former supplemental sections: 6; source headings are canonical.
 - Curated examples: ${examples.length}
 - Merge decisions: no source sections are merged; every distinct source section is retained once.
 - Language availability: zh-CN ${examples.filter(example => parseLanguages(example.body).includes("zh")).length}, en ${examples.filter(example => parseLanguages(example.body).includes("en")).length}, ja-JP ${examples.filter(example => parseLanguages(example.body).includes("jp")).length}.
