@@ -300,6 +300,33 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 
 住在附近就顺路来吃了。门口是自动售票机点单，买好再入座，店员会来收单，流程还挺顺。店里空间比想象中大，灯光也很亮，坐着不压抑。点了汤面和叉烧盖饭，拉面算是正常发挥，反倒是盖饭更对我胃口一点，吃得更香。整体不错，图个方便很合适。
 
+## Example: 福冈 Red Rock 烤牛肉饭
+
+- Country: Japan
+- Region: Fukuoka
+- Category: Rice bowls
+- Cuisine: Japanese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Location, ordering, Chinese interface, dish, doneness, texture, portion, serving time, miso soup
+- Recommended dishes: 烤牛肉饭
+- Source: User-provided review, 2026-09-14 (Red Rock 博多大名店)
+
+### Available facts
+
+- 餐厅为 Red Rock(博多大名店)，位于日本福冈，离天神池不远，店铺在一条小巷里且店面不大。
+- 门口设有点餐机，支持中文界面；自行下单后将餐票交给服务员，坐等出餐。
+- 烤牛肉饭端上来时看着不太熟，另外加了一个温泉蛋；牛肉口感嫩、入味，口味稍微带甜。
+- 份量适中，出餐稍慢，配的味增汤味道不会太浓。
+- 用户评价综合来说味道不错，值得一试。
+
+### Review
+
+这家店离天神池不远，藏在一条小巷里，店面不大。进门后在门口的点餐机上自行下单，机器有中文界面，选好餐把餐票交给服务员，坐着等餐就行。点了烤牛肉饭，刚端上来时看着有点不太熟，另外加了一个温泉蛋，牛肉吃起来很嫩，也很入味，口味稍微带点甜。份量适中，出餐稍慢。综合来说味道不错，值得一试。
+
 ## Example: 名古屋松屋早餐
 
 - Country: Japan

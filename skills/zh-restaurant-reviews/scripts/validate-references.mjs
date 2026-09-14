@@ -14,6 +14,8 @@ const manifestPath = resolve(referencesDir, 'source-manifest.md');
 const trackedSourceDir = resolve(repositoryDir, 'sources', 'zh-restaurant-reviews');
 const trackedPrefix = 'sources/zh-restaurant-reviews/';
 const historicalPrefix = 'temp/examples/';
+const expectedCuratedExamples = 88;
+const allowedLengthLabels = new Set(['One sentence', 'Short', 'Standard', 'Detailed', 'Metadata only']);
 const errors = [];
 
 function fail(message) {
@@ -73,6 +75,25 @@ for (const source of registrySources) {
   if (!normalizedSource(source, trackedPrefix)) fail(`Invalid tracked source path: ${source}`);
 }
 
+const userRegistrySection = manifest.slice(
+  manifest.indexOf('## 用户提供来源'),
+  manifest.indexOf('## 人工分类记录'),
+);
+const userRegistry = userRegistrySection
+  .split('\n')
+  .map(line => {
+    const cells = line.split('|').map(cell => cell.trim());
+    const source = /^(User-provided review, .+)$/.exec(cells[1] ?? '')?.[1];
+    const destination = /^`(references\/examples\/[^`]+\.md)`$/.exec(cells[2] ?? '')?.[1];
+    if (!source || !destination) return undefined;
+    return { source, destination, examples: Number(cells[3]) };
+  })
+  .filter(Boolean);
+const userRegistrySources = new Set(userRegistry.map(entry => entry.source));
+if (userRegistry.length !== userRegistrySources.size) {
+  fail('source-manifest.md contains duplicate user-provided source registrations.');
+}
+
 const historicalMappings = [...manifest.matchAll(/^\| `(temp\/examples\/[^`]+\.md)` \| `(sources\/zh-restaurant-reviews\/[^`]+\.md)` \| `([a-f0-9]{64})` \|$/gm)]
   .map(match => ({ historical: match[1], source: match[2], hash: match[3] }));
 const historicalPaths = new Set(historicalMappings.map(entry => entry.historical));
@@ -88,18 +109,44 @@ for (const entry of historicalMappings) {
 const exampleFiles = markdownFiles(examplesDir);
 const curatedSources = new Set();
 const curatedSourceCounts = new Map();
+const userCuratedSourceCounts = new Map();
+const userCuratedDestinations = new Map();
 let exampleCount = 0;
 for (const path of exampleFiles) {
   const content = readFileSync(path, 'utf8');
   if (/\/Users\//.test(content)) fail(`${repositoryPath(path)} contains a machine-specific path.`);
-  const headings = [...content.matchAll(/^## Example: /gm)];
-  exampleCount += headings.length;
-  for (const match of content.matchAll(/^- Source: `(sources\/zh-restaurant-reviews\/[^`]+\.md)`$/gm)) {
-    curatedSources.add(match[1]);
-    curatedSourceCounts.set(match[1], (curatedSourceCounts.get(match[1]) ?? 0) + 1);
+  const sections = content.split(/^## Example: /m).slice(1);
+  exampleCount += sections.length;
+  for (const section of sections) {
+    const title = section.slice(0, section.indexOf('\n')).trim();
+    const sourceMatches = [...section.matchAll(/^- Source: (.+)$/gm)];
+    if (sourceMatches.length !== 1) {
+      fail(`${repositoryPath(path)} example "${title}" must contain exactly one Source field.`);
+    } else {
+      const sourceValue = sourceMatches[0][1];
+      const trackedSource = /^`(sources\/zh-restaurant-reviews\/[^`]+\.md)`$/.exec(sourceValue)?.[1];
+      if (trackedSource) {
+        curatedSources.add(trackedSource);
+        curatedSourceCounts.set(trackedSource, (curatedSourceCounts.get(trackedSource) ?? 0) + 1);
+      } else if (sourceValue.startsWith('User-provided review, ')) {
+        userCuratedSourceCounts.set(sourceValue, (userCuratedSourceCounts.get(sourceValue) ?? 0) + 1);
+        userCuratedDestinations.set(sourceValue, relative(skillDir, path).split('\\').join('/'));
+      } else {
+        fail(`${repositoryPath(path)} example "${title}" has an invalid Source field: ${sourceValue}`);
+      }
+    }
+
+    const lengthMatches = [...section.matchAll(/^- Length: (.+)$/gm)];
+    if (lengthMatches.length !== 1) {
+      fail(`${repositoryPath(path)} example "${title}" must contain exactly one Length field.`);
+    } else if (!allowedLengthLabels.has(lengthMatches[0][1])) {
+      fail(`${repositoryPath(path)} example "${title}" has an invalid Length: ${lengthMatches[0][1]}`);
+    }
   }
 }
-if (exampleCount !== 85) fail(`Expected 85 curated examples, found ${exampleCount}.`);
+if (exampleCount !== expectedCuratedExamples) {
+  fail(`Expected ${expectedCuratedExamples} curated examples, found ${exampleCount}.`);
+}
 for (const source of curatedSources) {
   if (!registrySources.has(source)) fail(`Curated source missing from manifest: ${source}`);
 }
@@ -115,6 +162,22 @@ for (const entry of registry) {
   for (const destination of entry.destinationCell?.matchAll(/`(references\/examples\/[^`]+\.md)`/g) ?? []) {
     if (!existsSync(resolve(skillDir, destination[1]))) fail(`Missing manifest destination ${destination[1]}`);
   }
+}
+for (const source of userCuratedSourceCounts.keys()) {
+  if (!userRegistrySources.has(source)) fail(`Curated user source missing from manifest: ${source}`);
+}
+for (const entry of userRegistry) {
+  const actualExamples = userCuratedSourceCounts.get(entry.source) ?? 0;
+  if (!Number.isInteger(entry.examples) || entry.examples < 0) {
+    fail(`Manifest user source has an invalid example count: ${entry.source}`);
+  } else if (entry.examples !== actualExamples) {
+    fail(`Manifest user source ${entry.source} declares ${entry.examples} examples, found ${actualExamples}.`);
+  }
+  const actualDestination = userCuratedDestinations.get(entry.source);
+  if (actualDestination && entry.destination !== actualDestination) {
+    fail(`Manifest user source ${entry.source} points to ${entry.destination}, found ${actualDestination}.`);
+  }
+  if (!existsSync(resolve(skillDir, entry.destination))) fail(`Missing manifest destination ${entry.destination}`);
 }
 
 const repositoryCheckout = existsSync(resolve(repositoryDir, '.git'));
@@ -155,7 +218,7 @@ if (errors.length > 0) {
 }
 
 if (!repositoryCheckout && !existsSync(trackedSourceDir)) {
-  console.log('Validated 49 source registrations and 85 curated examples; skipped repository source comparison because sources are unavailable.');
+  console.log(`Validated 49 source registrations and ${expectedCuratedExamples} curated examples; skipped repository source comparison because sources are unavailable.`);
 } else {
-  console.log('Validated 49 tracked sources and 85 curated examples.');
+  console.log(`Validated 49 tracked sources and ${expectedCuratedExamples} curated examples.`);
 }

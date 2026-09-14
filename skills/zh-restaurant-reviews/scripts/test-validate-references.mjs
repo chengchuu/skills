@@ -96,6 +96,51 @@ await runCase(
 );
 
 await runCase(
+  'rejects an unregistered user-provided source',
+  async (fixtureRoot, fixtureSkillRoot) => {
+    const manifestPath = path.join(fixtureSkillRoot, 'references/source-manifest.md');
+    const content = await readFile(manifestPath, 'utf8');
+    await writeFile(
+      manifestPath,
+      content.replace(/^\| User-provided review, 2026-09-14 \(Red Rock 博多大名店\) \|.*\n/m, ''),
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('Curated user source missing from manifest: User-provided review, 2026-09-14 (Red Rock 博多大名店)'),
+);
+
+await runCase(
+  'rejects a curated example without a source field',
+  async (fixtureRoot, fixtureSkillRoot) => {
+    const examplePath = path.join(fixtureSkillRoot, 'references/examples/japan/noodles-and-rice.md');
+    const content = await readFile(examplePath, 'utf8');
+    await writeFile(
+      examplePath,
+      content.replace('- Source: User-provided review, 2026-09-14 (Red Rock 博多大名店)\n', ''),
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('example "福冈 Red Rock 烤牛肉饭" must contain exactly one Source field'),
+);
+
+await runCase(
+  'rejects an invalid curated length label',
+  async (fixtureRoot, fixtureSkillRoot) => {
+    const examplePath = path.join(fixtureSkillRoot, 'references/examples/japan/noodles-and-rice.md');
+    const content = await readFile(examplePath, 'utf8');
+    await writeFile(
+      examplePath,
+      content.replace(
+        '## Example: 福冈 Red Rock 烤牛肉饭\n\n- Country: Japan\n- Region: Fukuoka\n- Category: Rice bowls\n- Cuisine: Japanese\n- Platform: 大众点评\n- Sentiment: Positive\n- Tone: Natural conversational\n- Length: Standard',
+        '## Example: 福冈 Red Rock 烤牛肉饭\n\n- Country: Japan\n- Region: Fukuoka\n- Category: Rice bowls\n- Cuisine: Japanese\n- Platform: 大众点评\n- Sentiment: Positive\n- Tone: Natural conversational\n- Length: At least 100 characters',
+      ),
+    );
+  },
+  (status, output) => status === 1
+    && output.includes('example "福冈 Red Rock 烤牛肉饭" has an invalid Length: At least 100 characters'),
+);
+
+await runCase(
   'accepts historical temp provenance when bytes match',
   async fixtureRoot => {
     await copyTrackedSources(fixtureRoot);
