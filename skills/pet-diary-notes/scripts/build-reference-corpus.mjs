@@ -14,6 +14,13 @@ const trackedSourcePath = "sources/pet-diary-notes/pet.md";
 const historicalSourcePath = "temp/pet-examples/pet.md";
 
 const personalExampleMetadata = new Map([
+  ["25-0718-Mamamoomama", {
+    mood: "Lively",
+    tone: "Playful",
+    format: "Vlog",
+    bgm: "Mamamoomama",
+    note: "User-provided paw-reaching case; pet identity 嘟嘟, Vlog format, real-life status, platform, and BGM supplied in request context; no BGM line appears in the supplied language blocks",
+  }],
   ["25-0703-A-Quiet-Grooming-Break", {
     mood: "Calm",
     tone: "Gentle",
@@ -93,6 +100,7 @@ const groups = {
     ["25-0711 Loving Gaze from a Kitten", "Gaze and paw contact", "Unknown", "Looking and holding a hand"],
   ],
   "playful-and-funny.md": [
+    ["25-0718-Mamamoomama", "Reaching for a small object", "Unknown", "Extending a paw to grab a small object"],
     ["26-0811-Curious-Eyes-Everywhere", "Looking around curiously", "Unknown", "Looking around in different directions"],
     ["25-0724-Bite-Kick-Repeat", "Nibbling and bunny kicks", "Unknown", "Playing, nibbling, and kicking with the hind legs"],
     ["25-0825-Too-Cute", "Belly-up and tail flick", "Unknown", "Sprawling and flicking the tail"],
@@ -330,7 +338,10 @@ function exampleMarkdown(example) {
   const dims = dimensions(detail.file, example.heading);
   const { preface, blocks } = parseLanguageBlocks(example.body);
   const languages = Object.keys(blocks);
-  const bgm = [...new Set(Object.values(blocks).flatMap(block => block.bgm))];
+  const bgm = [...new Set([
+    ...Object.values(blocks).flatMap(block => block.bgm),
+    personalExampleMetadata.get(example.heading)?.bgm,
+  ].filter(Boolean))];
   const contentType = contentTypeFor(detail.file);
   const lines = [
     `## Example: ${example.heading}`,
@@ -374,7 +385,8 @@ function missingFields(example) {
   if (detail.file === "ai-storytelling.md" && (!detail.aiLocation || detail.aiLocation === "Unknown")) {
     missing.push("AI location");
   }
-  if (!Object.values(blocks).some(block => block.bgm.length)) missing.push("BGM");
+  if (!Object.values(blocks).some(block => block.bgm.length)
+    && !personalExampleMetadata.get(example.heading)?.bgm) missing.push("BGM");
   return missing.length ? missing.join(", ") : "none";
 }
 

@@ -4,6 +4,7 @@
 **Table of Contents:**
 
 - [25-0703-A-Quiet-Grooming-Break](#25-0703-a-quiet-grooming-break)
+- [25-0718-Mamamoomama](#25-0718-mamamoomama)
 - [25-0724-Bite-Kick-Repeat](#25-0724-bite-kick-repeat)
 - [26-0811-Curious-Eyes-Everywhere](#26-0811-curious-eyes-everywhere)
 - [26-0808-A-Curious-Look](#26-0808-a-curious-look)
@@ -89,6 +90,23 @@ jp:
 ソファで毛づくろい
 ソファに寝そべって顔を下げ、静かにふわふわの毛をなめてお手入れ中。
 #猫 #猫のいる暮らし #毛づくろい #ペット日記
+
+## 25-0718-Mamamoomama
+
+zh:
+Mamamoomama
+小爪子一伸，格外俏皮。
+#猫咪 #猫咪日常
+
+en:
+Mamamoomama
+A tiny paw reaches out to grab a little object, making this a playful moment.
+#Cat #CatVlog #Paw #Playful
+
+jp:
+Mamamoomama
+小さな前足を伸ばして小物をつかむ。
+#猫 #猫Vlog #小さな肉球 #元気な猫
 
 ## 25-0724-Bite-Kick-Repeat
 

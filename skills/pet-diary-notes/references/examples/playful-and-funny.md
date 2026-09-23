@@ -2,6 +2,68 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: 25-0718-Mamamoomama
+
+- Source heading: `25-0718-Mamamoomama`
+- Source date: 2025-07-18
+- Version: none
+- Category: Playful and funny
+- Secondary category: Reaching for a small object
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: Mamamoomama
+- Mood: Lively
+- Tone: Playful
+- Pet behavior: Extending a paw to grab a small object
+- Pet activity: Extending a paw to grab a small object
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+Mamamoomama
+
+#### Description
+
+小爪子一伸，格外俏皮。
+
+#### Hashtags
+
+#猫咪 #猫咪日常
+
+### English
+
+#### Title
+
+Mamamoomama
+
+#### Description
+
+A tiny paw reaches out to grab a little object, making this a playful moment.
+
+#### Hashtags
+
+#Cat #CatVlog #Paw #Playful
+
+### Japanese
+
+#### Title
+
+Mamamoomama
+
+#### Description
+
+小さな前足を伸ばして小物をつかむ。
+
+#### Hashtags
+
+#猫 #猫Vlog #小さな肉球 #元気な猫
+
 ## Example: 25-0724-Bite-Kick-Repeat
 
 - Source heading: `25-0724-Bite-Kick-Repeat`

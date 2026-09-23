@@ -6,14 +6,14 @@ This manifest maps every pet diary source section in `sources/pet-diary-notes/pe
 
 - Canonical source: `sources/pet-diary-notes/pet.md`
 - Historical source path: `temp/pet-examples/pet.md`
-- Source bytes: 41046
-- Source SHA-256: `79f3efda7230e9e1109ea2a54ed92709720287d0e7d059b1b2c66c29a2442002`
-- Source sections: 67
+- Source bytes: 41426
+- Source SHA-256: `e0674d365a918b943736d8eda0b96107da18805d57675c80a035ade6ef3582bc`
+- Source sections: 68
 - Recovered former supplemental sections: 6; source headings are canonical.
-- Curated examples: 67
+- Curated examples: 68
 - Merge decisions: no source sections are merged; every distinct source section is retained once.
-- Language availability: zh-CN 67, en 66, ja-JP 49.
-- Content types: real-life 57, AI-generated 10.
+- Language availability: zh-CN 68, en 67, ja-JP 50.
+- Content types: real-life 58, AI-generated 10.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
@@ -21,6 +21,7 @@ This manifest maps every pet diary source section in `sources/pet-diary-notes/pe
 | Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `25-0703-A-Quiet-Grooming-Break` | 2025-07-03 | none | Grooming and care | [grooming-and-care.md](examples/grooming-and-care.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided sofa grooming case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese BGM omitted as supplied |
+| `25-0718-Mamamoomama` | 2025-07-18 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided paw-reaching case; pet identity 嘟嘟, Vlog format, real-life status, platform, and BGM supplied in request context; no BGM line appears in the supplied language blocks |
 | `25-0724-Bite-Kick-Repeat` | 2025-07-24 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and playful nibbling and bunny-kick scene supplied by user |
 | `26-0811-Curious-Eyes-Everywhere` | 2026-08-11 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user |
 | `26-0808-A-Curious-Look` | 2026-08-08 | none | Companionship and affection | [companionship-and-affection.md](examples/companionship-and-affection.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user |
