@@ -192,3 +192,31 @@
 ### Review
 
 晚餐原价点了几样餐品，没有参加团购。烧鸟饭味道还蛮不错，里面有两个切开的肉丸子，配上溏心蛋很下饭，不过没有小菜。用餐环境相对整洁，桌上有小飞虫，大夏天又潮湿，这点可以理解。香煎三文鱼骨中规中矩，吃的时候要注意鱼刺。这顿吃下来属于中等水平，优点和需要注意的地方都比较明显。
+
+## Example: 维璟印象城滨寿司与担担面
+
+- Country: China
+- Region: Shanghai
+- Category: Japanese cuisine
+- Cuisine: Japanese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Sushi, freshness, salmon, eel, foie gras, noodles, environment, service, serving speed
+- Recommended dishes: 寿司、担担面
+- Source: User-provided review, 2026-10-01 (滨寿司维璟印象城店)
+
+### Available facts
+
+- 餐厅为滨寿司(维璟印象城店)，位于中国上海，类型为日料。
+- 点了焦糖火炙三拼、三文鱼寿司和火炙大烤鳗鱼，用户都喜欢并认为食材新鲜。
+- 大切三文鱼较厚且肥美，炙烤焦糖鹅肝入口即化，味道不错。
+- 日式担担面味道稍微偏重，但用户认为还可以。
+- 店内干净、灯光柔和，服务态度不错，上菜速度快。
+- 用户推荐寿司和担担面。
+
+### Review
+
+点了几款推荐寿司，焦糖火炙三拼、三文鱼寿司和火炙大烤鳗鱼都挺喜欢，食材很新鲜。大切三文鱼切得厚，吃起来很肥美，炙烤焦糖鹅肝入口即化，味道也不错。日式担担面稍微有点重口，不过吃着还可以。店里收拾得挺干净，灯光柔和，服务态度不错，上菜速度也快。

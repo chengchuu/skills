@@ -104,3 +104,32 @@
 ### Review
 
 海鲜一锅蒸，鲜得不讲理。春天晚上去的内林亚贵大排档，人不少，氛围热闹。海鲜是一锅蒸，按人头算价格，分量很足。虾和蟹特别鲜甜，肉质紧实，吃起来满口海味。扇贝和鲍鱼也处理得干净，蒸得刚好，不腥不柴。龙虾肉弹牙，蘸点酱刚刚好。后面还有自助皮皮虾和小馒头，能加能吃，补得很到位。蒸海鲜这种方式简单直接，吃得就是食材的新鲜和实在。
+
+## Example: 常州巴奴毛肚火锅
+
+- Country: China
+- Region: Jiangsu, Changzhou
+- Category: Hot pot
+- Cuisine: Chinese hot pot
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Service, broth, mushroom soup, freshness, tripe, beef, tofu skin, mushroom, noodles, environment, price, quality
+- Recommended dishes: 牛肉、毛肚
+- Source: User-provided review, 2026-10-01 (巴奴新北万达店)
+
+### Available facts
+
+- 餐厅为巴奴毛肚火锅(新北万达店)，位于中国江苏常州，类型为火锅。
+- 服务很好，店员态度热情。
+- 锅底偏清淡、比较健康，但味道并不平淡；菌菇汤较浓郁。
+- 食材新鲜，脆毛肚爽脆，肥牛切得不错，豆皮有奶香，绣球菌口感脆。
+- 面条很好吃。
+- 环境可以，品质比较稳定，用户认为价格和食材很合适。
+- 用户推荐牛肉和毛肚。
+
+### Review
+
+这次吃巴奴，服务是真的好，店员态度都很热情。锅底吃起来偏清淡，比较健康，但味道并不平淡，菌菇汤也挺浓郁。食材都很新鲜，脆毛肚口感爽脆，肥牛切得不错，豆皮有奶香，绣球菌是脆脆的。面条很好吃。环境可以，品质一直比较稳定，价格和食材也很合适。

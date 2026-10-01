@@ -14,7 +14,7 @@ const manifestPath = resolve(referencesDir, 'source-manifest.md');
 const trackedSourceDir = resolve(repositoryDir, 'sources', 'zh-restaurant-reviews');
 const trackedPrefix = 'sources/zh-restaurant-reviews/';
 const historicalPrefix = 'temp/examples/';
-const expectedCuratedExamples = 88;
+const expectedCuratedExamples = 92;
 const allowedLengthLabels = new Set(['One sentence', 'Short', 'Standard', 'Detailed', 'Metadata only']);
 const errors = [];
 

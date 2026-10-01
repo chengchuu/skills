@@ -129,6 +129,10 @@
 | User-provided review, 2026-09-14 (牛五花盖浇饭) | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 平成屋· Late Night食堂(平金中心店)；发布于大众点评，正文 106 个字符；保留牛五花盖浇饭浇头、酱料、分量、小菜和物美价廉信息；无重复。 |
 | User-provided review, 2026-09-14 (烧鸟饭与三文鱼骨) | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 披头士烧鸟居酒屋(莘庄维璟印象城店B1店)；发布于大众点评，正文 135 个字符；推荐菜已按用户更正为烧鸟饭，香煎三文鱼骨仅作为评价涉及的菜品；保留原价点单、未参加团购、无小菜、桌面小飞虫和鱼刺提醒；与同日期的平成屋案例事实不同，无重复。 |
 | User-provided review, 2026-09-14 (Red Rock 博多大名店) | `references/examples/japan/noodles-and-rice.md` | 1 | Japan, Fukuoka | Rice bowls | Red Rock(博多大名店)；发布于大众点评，正文 141 个字符；保留小巷位置、中文点餐机、烤牛肉饭、温泉蛋、熟度、分量、出餐速度和味增汤信息；与神户 Red Rock 案例分店、地点和事实不同，无重复。 |
+| User-provided review, 2026-10-01 (萨莉亚徐汇日月光店) | `references/examples/china/western-and-fast-food.md` | 1 | China, Shanghai | Western cuisine; Italian | 萨莉亚意式餐厅(徐汇日月光店)；发布于大众点评，正文 148 个字符；保留沿途有指示但不是很好找、牛排、披萨、空间、服务和性价比信息；与现有平价意式餐厅案例主题相近，但门店、菜品和位置事实不同，无重复。 |
+| User-provided review, 2026-10-01 (滨寿司维璟印象城店) | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 滨寿司(维璟印象城店)；发布于大众点评，正文 120 个字符；保留推荐寿司、三文鱼、鳗鱼、鹅肝、担担面、环境和服务信息；与现有日料案例门店和菜品事实不同，无重复。 |
+| User-provided review, 2026-10-01 (巴奴新北万达店) | `references/examples/china/barbecue-hot-pot-and-seafood.md` | 1 | China, Jiangsu, Changzhou | Hot pot | 巴奴毛肚火锅(新北万达店)；发布于大众点评，正文 118 个字符；保留服务、清淡锅底、菌菇汤、毛肚、肥牛、豆皮、绣球菌、面条、环境和价格评价；与现有火锅案例门店、地区和菜品事实不同，无重复。 |
+| User-provided review, 2026-10-01 (天乐大鱼头南山竹海店) | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Jiangsu, Changzhou | Chinese regional cuisine; Farmhouse cuisine | 天乐大鱼头(南山竹海店)；发布于大众点评，正文 128 个字符；保留农家乐环境、砂锅鱼头、天目野山笋、乌米饭、溧阳白芹和野菜煎蛋信息；与现有地方菜案例门店、地区和菜品事实不同，无重复。 |
 
 ## 人工分类记录
 
@@ -180,16 +184,20 @@
 | 牛五花盖浇饭 | User-provided review, 2026-09-14 (牛五花盖浇饭) | China; Shanghai; 大众点评; Japanese cuisine; Positive | Occasion unknown |
 | 烧鸟饭与香煎三文鱼骨 | User-provided review, 2026-09-14 (烧鸟饭与三文鱼骨) | China; Shanghai; 大众点评; Japanese cuisine; Mixed | Dinner |
 | 福冈 Red Rock 烤牛肉饭 | User-provided review, 2026-09-14 (Red Rock 博多大名店) | Japan; Fukuoka; 大众点评; Rice bowls; Positive | Occasion unknown |
+| 徐汇日月光萨莉亚牛排与披萨 | User-provided review, 2026-10-01 (萨莉亚徐汇日月光店) | China; Shanghai; 大众点评; Western cuisine; Italian; Positive | Occasion unknown |
+| 维璟印象城滨寿司与担担面 | User-provided review, 2026-10-01 (滨寿司维璟印象城店) | China; Shanghai; 大众点评; Japanese cuisine; Positive | Occasion unknown |
+| 常州巴奴毛肚火锅 | User-provided review, 2026-10-01 (巴奴新北万达店) | China; Jiangsu; Changzhou; 大众点评; Hot pot; Positive | Occasion unknown |
+| 常州南山竹海农家菜 | User-provided review, 2026-10-01 (天乐大鱼头南山竹海店) | China; Jiangsu; Changzhou; 大众点评; Chinese regional cuisine; Farmhouse cuisine; Positive | Occasion unknown |
 
 ## 汇总
 
 - 源文件: 49。
 - 单篇来源: 46，其中 44 个含评价正文，2 个仅含元数据。
 - 汇总文件中的餐饮评价: 36。
-- 最终规范案例: 88。
+- 最终规范案例: 92。
 - 完全或明确重复: 英文提示汇总中的 36 条餐饮翻译与 `Comments.md` 对应中文条目合并，不另建副本。
 - 近重复: 同一经历的 `Note` / `Comment` 长短版本合并为一个规范案例；和府捞面大师店的两条近重复短评合并。不同日期或不同菜品的同品牌评价保留，没有仅因结构相似而删除案例。
 - 国家或地区为 `unknown`: 0 条。
-- 平台包含 `大众点评`: 49 条；明细见案例字段与人工分类记录。
+- 平台包含 `大众点评`: 53 条；明细见案例字段与人工分类记录。
 - 平台包含 `小红书`: 3 条；明细见案例字段与人工分类记录。
 - 平台为 `unknown`: 其余 37 条，因为对应源文件均未明确标注发布平台。

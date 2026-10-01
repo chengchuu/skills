@@ -315,3 +315,32 @@
 ### Review
 
 这家煲仔饭制作过程看得见。到店不用等位，点单后等十几分钟就能上桌，时间不算久。煲仔饭用料很足，打开后能看到咸甜油润的腊肠，配料和米饭铺得很实在。香米煲得粒粒分明，淋上酱汁后仔细拌匀，酱汁融进米饭里，每一口都很入味。锅底一圈锅巴是亮点，焦脆却不硬，和上面的香米一起吃，能感受到两种不同口感。一份煲仔饭配上一盅汤，内容丰富，搭配也很合适，吃完很满足。
+
+## Example: 常州南山竹海农家菜
+
+- Country: China
+- Region: Jiangsu, Changzhou
+- Category: Chinese regional cuisine
+- Cuisine: Farmhouse cuisine
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Environment, fish head soup, bamboo shoots, black rice, local vegetables, omelet, wait, portion
+- Recommended dishes: 砂锅鱼头、天目野山笋、乌米饭
+- Source: User-provided review, 2026-10-01 (天乐大鱼头南山竹海店)
+
+### Available facts
+
+- 餐厅为天乐大鱼头(南山竹海店)，位于中国江苏常州，类型为农家菜。
+- 餐厅是比较典型的农家乐环境。
+- 砂锅鱼头需要等待；端上来时香味足，鱼头大，鱼汤奶白鲜美，分量足。
+- 天目野山笋很嫩，与咸菜同炒，不需要太多调味就很鲜。
+- 乌米饭糯中带韧，搭配白糖后味道甜，并带有杂粮香。
+- 溧阳白芹新鲜脆嫩，野菜煎蛋香且下饭。
+- 用户推荐砂锅鱼头、天目野山笋和乌米饭。
+
+### Review
+
+这家店属于比较典型的农家乐环境。砂锅鱼头需要等待，端上来一大锅香味很足，鱼头个头大，奶白的鱼汤喝起来很鲜，分量也足。天目野山笋很嫩，和咸菜一起炒，不用太多调味就很鲜。乌米饭糯中带点韧，配着白糖吃甜甜的，还有杂粮香。溧阳白芹新鲜脆嫩，野菜煎蛋也很香，很下饭。

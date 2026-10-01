@@ -240,3 +240,32 @@
 汁汁双层嫩牛堡的双层牛肉饼鲜嫩多汁，咬下去肉香四溢，搭配浓郁的酱料和新鲜蔬菜，口感层次非常丰富。面包松软，整体搭配让人吃得很满足，特别是牛肉的厚实感和多汁口感。
 
 整只炸鸡外皮金黄酥脆，肉质鲜嫩多汁，每一口都带着香辣的风味。搭配冰爽的可乐，解腻又提神，吃起来格外畅快。
+
+## Example: 徐汇日月光萨莉亚牛排与披萨
+
+- Country: China
+- Region: Shanghai
+- Category: Western cuisine
+- Cuisine: Italian
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Location, wayfinding, space, seating, pizza, steak, seasoning, service, price, value
+- Recommended dishes: 牛排、披萨
+- Source: User-provided review, 2026-10-01 (萨莉亚徐汇日月光店)
+
+### Available facts
+
+- 餐厅为萨莉亚意式餐厅(徐汇日月光店)，位于中国上海的徐汇日月光商场一楼。
+- 沿途设有指示，但用户认为门店不是很好找。
+- 店内空间比较大，座位较多。
+- 薄底披萨热的时候香脆并能拉丝。
+- 西冷烘烤牛排肉质嫩、带汁水，调味和各类酱汁加分；用户认为这个价位主打实惠和稳定，不必过度关注牛排品质。
+- 服务员态度不错，收拾桌子利索。
+- 价格亲民，味道适合国人口味，用户推荐披萨和牛排。
+
+### Review
+
+萨莉亚就在商场一楼，沿途有指示，不是很好找。店内空间比较大，座位也多。薄底披萨热的时候香香脆脆，还能拉丝；西冷烘烤牛排肉质挺嫩，带着汁水，调味和各类酱汁很加分。这个价位不用对牛排品质要求太高，吃的就是实惠和稳定。服务员态度不错，收拾桌子也很利索。价格亲民，味道也适合国人口味，披萨和牛排都值得点。
