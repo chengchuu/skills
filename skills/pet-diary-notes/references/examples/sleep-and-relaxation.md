@@ -2,6 +2,80 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: 25-0610-Little-Paws-Lazy-Lounging
+
+- Source heading: `25-0610-Little-Paws-Lazy-Lounging`
+- Source date: 2025-06-10
+- Version: none
+- Category: Sleep and relaxation
+- Secondary category: Lounging with paws stretched out
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: Blue
+- Mood: Relaxed
+- Tone: Cute
+- Pet behavior: Lying on the sofa with paws stretched out
+- Pet activity: Lying on the sofa with paws stretched out
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+伸伸小爪，继续躺着
+
+#### Description
+
+小猫躺在沙发上，放松地伸着小爪子。
+
+#### BGM
+
+Blue
+
+#### Hashtags
+
+#小猫 #猫咪日常 #宠物
+
+### English
+
+#### Title
+
+Little Paws, Lazy Lounging
+
+#### Description
+
+The kitten lounges on the sofa with her little paws stretched out.
+
+#### BGM
+
+Blue
+
+#### Hashtags
+
+#Kitten #CatLife #LittlePaws #PetDiary
+
+### Japanese
+
+#### Title
+
+前足を伸ばして、のんびり
+
+#### Description
+
+ソファに寝そべって前足をゆったり伸ばす姿は。
+
+#### BGM
+
+Blue
+
+#### Hashtags
+
+#子猫 #猫のいる暮らし #のんびり #ペット日記
+
 ## Example: 26-0407-A-Sleepy-Afternoon
 
 - Source heading: `26-0407-A-Sleepy-Afternoon`

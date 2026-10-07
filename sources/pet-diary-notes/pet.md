@@ -3,6 +3,7 @@
 
 **Table of Contents:**
 
+- [25-0610-Little-Paws-Lazy-Lounging](#25-0610-little-paws-lazy-lounging)
 - [25-0703-A-Quiet-Grooming-Break](#25-0703-a-quiet-grooming-break)
 - [25-0718-Mamamoomama](#25-0718-mamamoomama)
 - [25-0724-Bite-Kick-Repeat](#25-0724-bite-kick-repeat)
@@ -71,6 +72,26 @@
 - [26-0319 AI CEO v01](#26-0319-ai-ceo-v01)
 - [26-0319 AI Phone v03](#26-0319-ai-phone-v03)
 - [26-0318 AI Phone v01](#26-0318-ai-phone-v01)
+
+## 25-0610-Little-Paws-Lazy-Lounging
+
+zh:
+伸伸小爪，继续躺着
+小猫躺在沙发上，放松地伸着小爪子。
+BGM: Blue
+#小猫 #猫咪日常 #宠物
+
+en:
+Little Paws, Lazy Lounging
+The kitten lounges on the sofa with her little paws stretched out.
+BGM: Blue
+#Kitten #CatLife #LittlePaws #PetDiary
+
+jp:
+前足を伸ばして、のんびり
+ソファに寝そべって前足をゆったり伸ばす姿は。
+BGM: Blue
+#子猫 #猫のいる暮らし #のんびり #ペット日記
 
 ## 25-0703-A-Quiet-Grooming-Break
 
