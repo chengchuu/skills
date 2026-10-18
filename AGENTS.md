@@ -27,7 +27,7 @@ The repository has no application server, compile step, runtime bundle, apps, co
 - `scripts/validate-source-migration.mjs` validates the approved source inventory and its tracked copies. The corresponding `scripts/test-validate-skills.mjs` and `scripts/test-validate-source-migration.mjs` files provide focused regression coverage for both root validators.
 - `guides/` contains standalone maintenance guidance for frontend ESLint rules, GitHub Actions, Node.js package-manager boundaries, Chinese technical-writing corpus curation, public source-file migration, theme color schemes, and theme-toggle implementation. These files are public repository documentation, not skill entry points or automatically loaded plugin resources.
 - `README.md` documents skill discovery, individual installation, GitHub Copilot app installation, personal-marketplace plugin installation, usage, and contribution workflows. `README.zh-CN.md` is the corresponding Simplified Chinese localization and must stay aligned as described below.
-- `CHANGELOG.md` records release-level changes. `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, and the files under `.github/` define the public contribution, reporting, and review workflows.
+- `guides/CHANGELOG.md` records release-level changes. `guides/CONTRIBUTING.md`, `guides/SECURITY.md`, `guides/CODE_OF_CONDUCT.md`, and the files under `.github/` define the public contribution, reporting, and review workflows.
 - `assets/logo.png` is the shared plugin logo referenced by the plugin interface metadata in `.codex-plugin/plugin.json`.
 - `.editorconfig` defines UTF-8, LF line endings, two-space indentation, and final-newline behavior. Markdown files may retain trailing whitespace when it is meaningful.
 - `.gitattributes` excludes the standalone files under `guides/` from GitHub language detection.
@@ -58,7 +58,7 @@ Keep each `SKILL.md` concise and focused on its decision workflow. Move detailed
 - Keep public skills self-contained. Do not add secrets, credentials, private data, absolute machine-specific paths, symlinks, editor state, temporary files, or unrelated dependencies under any repository directory. Complete source copies are allowed only when they are explicitly approved for publication and stored under the appropriate `sources/<skill-name>/` directory; do not add other copied source dumps.
 - Preserve code, commands, identifiers, paths, URLs, package names, API names, versions, and documented behavior unless the task explicitly changes them.
 - Keep `README.md` and `README.zh-CN.md` aligned in heading order, installation methods, examples, commands, URLs, and identifiers. Preserve corresponding fenced code blocks unless the example itself changes.
-- Keep `.codex-plugin/plugin.json` and `package.json` on the same clean release version, and record releases in `CHANGELOG.md`. Apply a Codex cachebuster only to the separate personal-marketplace copy during local installation; never commit it to this repository's manifest.
+- Keep `.codex-plugin/plugin.json` and `package.json` on the same clean release version, and record releases in `guides/CHANGELOG.md`. Apply a Codex cachebuster only to the separate personal-marketplace copy during local installation; never commit it to this repository's manifest.
 - Use only the builder and validator owned by the skill being changed. Do not run a corpus builder as a generic formatting or validation step.
 - Keep changes narrow and preserve unrelated work. Never stage, commit, push, publish, or modify another repository automatically.
 

@@ -323,6 +323,6 @@ npm test
 
 ## 贡献与许可证
 
-命名、前置元数据、验证和唯一事实来源规则请参见 [CONTRIBUTING.md](CONTRIBUTING.md)。参与贡献时，请遵守 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。安全问题应通过 [SECURITY.md](SECURITY.md) 中说明的非公开流程报告。
+命名、前置元数据、验证和唯一事实来源规则请参见 [CONTRIBUTING.md](guides/CONTRIBUTING.md)。参与贡献时，请遵守 [CODE_OF_CONDUCT.md](guides/CODE_OF_CONDUCT.md)。安全问题应通过 [SECURITY.md](guides/SECURITY.md) 中说明的非公开流程报告。
 
 本仓库采用 [MIT License](LICENSE)。
