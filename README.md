@@ -310,6 +310,6 @@ The canonical `prefer-layer` skill is maintained in the layer-esm repository und
 
 ## Contributing and license
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for naming, frontmatter, validation, and source-of-truth rules. By participating, follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Security concerns belong in the private process described by [SECURITY.md](SECURITY.md).
+See [CONTRIBUTING.md](guides/CONTRIBUTING.md) for naming, frontmatter, validation, and source-of-truth rules. By participating, follow [CODE_OF_CONDUCT.md](guides/CODE_OF_CONDUCT.md). Security concerns belong in the private process described by [SECURITY.md](guides/SECURITY.md).
 
 This repository is available under the [MIT License](LICENSE).
