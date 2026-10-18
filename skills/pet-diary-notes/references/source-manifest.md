@@ -6,20 +6,21 @@ This manifest maps every pet diary source section in `sources/pet-diary-notes/pe
 
 - Canonical source: `sources/pet-diary-notes/pet.md`
 - Historical source path: `temp/pet-examples/pet.md`
-- Source bytes: 41992
-- Source SHA-256: `86156b704f8f3adfddce567386dcbe3e691b6b1b986427151d5ac36985997267`
-- Source sections: 69
+- Source bytes: 42587
+- Source SHA-256: `411e5757a1fe9aeea082ce25bdf6bbbfad0f76715e1c3f2de7c6b5d8a8b08439`
+- Source sections: 70
 - Recovered former supplemental sections: 6; source headings are canonical.
-- Curated examples: 69
+- Curated examples: 70
 - Merge decisions: no source sections are merged; every distinct source section is retained once.
-- Language availability: zh-CN 69, en 68, ja-JP 51.
-- Content types: real-life 59, AI-generated 10.
+- Language availability: zh-CN 70, en 69, ja-JP 52.
+- Content types: real-life 60, AI-generated 10.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `25-0603-Paw-Up-Playtime` | 2025-06-03 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided raised-paw playtime case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context |
 | `25-0610-Little-Paws-Lazy-Lounging` | 2025-06-10 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided sofa lounging case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese sentence fragment preserved as supplied |
 | `25-0703-A-Quiet-Grooming-Break` | 2025-07-03 | none | Grooming and care | [grooming-and-care.md](examples/grooming-and-care.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided sofa grooming case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese BGM omitted as supplied |
 | `25-0718-Mamamoomama` | 2025-07-18 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided paw-reaching case; pet identity 嘟嘟, Vlog format, real-life status, platform, and BGM supplied in request context; no BGM line appears in the supplied language blocks |

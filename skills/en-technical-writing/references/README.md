@@ -17,6 +17,12 @@ Read [rule-precedence.md](rule-precedence.md) for every task. Match every applic
 | API reference                       | [document-types.md](document-types.md), [terminology.md](terminology.md)                                                                                                                                                                                                                                                                     | [profiles/react-docs.md](profiles/react-docs.md) for React                      |
 | Source maintenance                  | [source-manifest.md](source-manifest.md)                                                                                                                                                                                                                                                                                                     | The affected foundation or profile                                              |
 
+## Pull request routing
+
+For any PR title or description task, load [pull-requests.md](pull-requests.md), [output-workflows.md](output-workflows.md), and the general writing or review references selected above. For React contributions or an explicit React-style PR request, also load [profiles/react-prs.md](profiles/react-prs.md). Do not select the React documentation profile merely because a PR concerns React.
+
+For source maintenance only, consult [the history analysis](react-pr-history-analysis.md) and [the evaluation record](pr-writing-evaluation.md). Neither is required for ordinary drafting.
+
 ## Layers
 
 - [foundations/google-style.md](foundations/google-style.md) defines the general documentation foundation.

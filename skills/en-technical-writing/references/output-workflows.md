@@ -68,6 +68,10 @@ Inspect the nearest repository instructions and only the files needed to establi
 
 For `AGENTS.md`, apply the dedicated [document-type guidance](document-types.md#agentsmd). When updating an existing file, verify each affected statement against current code and configuration, preserve its useful structure, place additions in the relevant existing section, and remove obsolete guidance. When creating a file, document only applicable, inspected repository facts.
 
+## Pull request content
+
+For PR writing, rewriting, translation, or prose review, combine the selected mode above with [the PR workflow](pull-requests.md). Return only the requested title, body, or findings. Inspecting a diff to establish writing facts is not a code correctness review. Drafting does not authorize changing code, running tests, or submitting the PR.
+
 ## Response modes
 
 Honor a user's output constraint over these defaults. In particular:

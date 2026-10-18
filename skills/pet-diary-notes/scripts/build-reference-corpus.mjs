@@ -14,6 +14,12 @@ const trackedSourcePath = "sources/pet-diary-notes/pet.md";
 const historicalSourcePath = "temp/pet-examples/pet.md";
 
 const personalExampleMetadata = new Map([
+  ["25-0603-Paw-Up-Playtime", {
+    mood: "Lively",
+    tone: "Playful",
+    format: "Vlog",
+    note: "User-provided raised-paw playtime case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context",
+  }],
   ["25-0610-Little-Paws-Lazy-Lounging", {
     mood: "Relaxed",
     tone: "Cute",
@@ -107,6 +113,7 @@ const groups = {
     ["25-0711 Loving Gaze from a Kitten", "Gaze and paw contact", "Unknown", "Looking and holding a hand"],
   ],
   "playful-and-funny.md": [
+    ["25-0603-Paw-Up-Playtime", "Raised-paw playtime", "Unknown", "Raising a paw while playing with the owner"],
     ["25-0718-Mamamoomama", "Reaching for a small object", "Unknown", "Extending a paw to grab a small object"],
     ["26-0811-Curious-Eyes-Everywhere", "Looking around curiously", "Unknown", "Looking around in different directions"],
     ["25-0724-Bite-Kick-Repeat", "Nibbling and bunny kicks", "Unknown", "Playing, nibbling, and kicking with the hind legs"],

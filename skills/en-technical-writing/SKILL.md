@@ -1,11 +1,11 @@
 ---
 name: en-technical-writing
-description: Write, rewrite, translate, proofread, and review English technical documentation in American English using project conventions, protected technical facts, personal style overrides, mature developer-documentation guidance, and optional ecosystem profiles such as React. Use for AGENTS.md files, READMEs, quickstarts, tutorials, how-to, installation, configuration, API, CLI, troubleshooting, migration, release, architecture, contributing, and Chinese-to-English technical content. Preserve code, commands, identifiers, paths, URLs, package names, API names, versions, and documented behavior unless the user explicitly requests technical changes. Do not use for marketing, creative writing, unrelated business communication, or code review.
+description: Write, rewrite, translate, proofread, and review English technical documentation and pull request (PR) titles and descriptions in American English using project conventions, protected technical facts, personal style overrides, mature developer-documentation guidance, and optional ecosystem profiles such as React. Use for AGENTS.md files, READMEs, quickstarts, tutorials, how-to, installation, configuration, API, CLI, troubleshooting, migration, release, architecture, contributing, and Chinese-to-English technical content. Preserve code, commands, identifiers, paths, URLs, package names, API names, versions, and documented behavior unless the user explicitly requests technical changes. Do not use for marketing, creative writing, unrelated business communication, or code review. PR language and structure review is supported; code correctness review is outside this skill.
 ---
 
 # English Technical Writing
 
-Create accurate, clear, and usable technical documentation in American English. Preserve technical meaning and repository conventions while applying only the guidance relevant to the requested document.
+Create accurate, clear, and usable technical documentation and PR content in American English. Preserve technical meaning and repository conventions while applying only the guidance relevant to the requested document.
 
 ## Resolve the task
 
@@ -32,6 +32,10 @@ Follow [references/rule-precedence.md](references/rule-precedence.md). In brief:
 8. Fall back to general `en-US` conventions.
 
 Never copy source prose merely to imitate style. Convert guidance into original wording, and do not invent product behavior, prerequisites, results, or citations.
+
+## Pull requests
+
+For PR titles and descriptions, use [references/pull-requests.md](references/pull-requests.md). Apply [the React PR profile](references/profiles/react-prs.md) only for contributions to React or explicit requests for React-style PR writing. A project using React does not by itself select this profile. Writing or reviewing PR prose does not authorize code changes, running checks, or submitting a PR.
 
 ## Produce the requested output
 
