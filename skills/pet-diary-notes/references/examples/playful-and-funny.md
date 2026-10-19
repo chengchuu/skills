@@ -2,6 +2,80 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: 25-0603-Paw-Up-Playtime
+
+- Source heading: `25-0603-Paw-Up-Playtime`
+- Source date: 2025-06-03
+- Version: none
+- Category: Playful and funny
+- Secondary category: Raised-paw playtime
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: Crazy Frog
+- Mood: Lively
+- Tone: Playful
+- Pet behavior: Raising a paw while playing with the owner
+- Pet activity: Raising a paw while playing with the owner
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+小爪子举起来！
+
+#### Description
+
+小猫举起毛茸茸的小爪子，活力十足地和我玩闹。
+
+#### BGM
+
+Crazy Frog
+
+#### Hashtags
+
+#小猫 #猫咪日常 #猫咪玩耍 #宠物日记
+
+### English
+
+#### Title
+
+Paw Up, Playtime!
+
+#### Description
+
+She raises a fluffy little paw as we share a lively playtime.
+
+#### BGM
+
+Crazy Frog
+
+#### Hashtags
+
+#Kitten #CatLife #PlayfulKitten #CatVlog
+
+### Japanese
+
+#### Title
+
+小さな前足、ぴょん！
+
+#### Description
+
+ふわふわの小さな前足を上げて、元気いっぱいに私とじゃれ合う子猫。
+
+#### BGM
+
+Crazy Frog
+
+#### Hashtags
+
+#子猫 #猫のいる暮らし #猫と遊ぶ #ペット日記
+
 ## Example: 25-0718-Mamamoomama
 
 - Source heading: `25-0718-Mamamoomama`

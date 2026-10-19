@@ -3,6 +3,7 @@
 
 **Table of Contents:**
 
+- [25-0603-Paw-Up-Playtime](#25-0603-paw-up-playtime)
 - [25-0610-Little-Paws-Lazy-Lounging](#25-0610-little-paws-lazy-lounging)
 - [25-0703-A-Quiet-Grooming-Break](#25-0703-a-quiet-grooming-break)
 - [25-0718-Mamamoomama](#25-0718-mamamoomama)
@@ -72,6 +73,26 @@
 - [26-0319 AI CEO v01](#26-0319-ai-ceo-v01)
 - [26-0319 AI Phone v03](#26-0319-ai-phone-v03)
 - [26-0318 AI Phone v01](#26-0318-ai-phone-v01)
+
+## 25-0603-Paw-Up-Playtime
+
+zh:
+小爪子举起来！
+小猫举起毛茸茸的小爪子，活力十足地和我玩闹。
+BGM: Crazy Frog
+#小猫 #猫咪日常 #猫咪玩耍 #宠物日记
+
+en:
+Paw Up, Playtime!
+She raises a fluffy little paw as we share a lively playtime.
+BGM: Crazy Frog
+#Kitten #CatLife #PlayfulKitten #CatVlog
+
+jp:
+小さな前足、ぴょん！
+ふわふわの小さな前足を上げて、元気いっぱいに私とじゃれ合う子猫。
+BGM: Crazy Frog
+#子猫 #猫のいる暮らし #猫と遊ぶ #ペット日記
 
 ## 25-0610-Little-Paws-Lazy-Lounging
 

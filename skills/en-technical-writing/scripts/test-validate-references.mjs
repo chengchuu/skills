@@ -33,6 +33,41 @@ async function runCase(name, mutate, expected) {
 await runCase('accepts the unmodified skill', async () => {}, status => status === 0);
 
 await runCase(
+  'rejects a missing PR workflow',
+  async fixtureRoot => {
+    await rm(path.join(fixtureRoot, 'references/pull-requests.md'));
+  },
+  (status, output) => status === 1
+    && output.includes('Missing required file: references/pull-requests.md'),
+);
+
+await runCase(
+  'rejects a missing React PR profile',
+  async fixtureRoot => {
+    await rm(path.join(fixtureRoot, 'references/profiles/react-prs.md'));
+  },
+  (status, output) => status === 1
+    && output.includes('Missing required file: references/profiles/react-prs.md'),
+);
+
+for (const [file, diagnostic] of [
+  ['references/README.md', 'Reference router'],
+  ['references/source-manifest.md', 'Source manifest'],
+]) {
+  await runCase(
+    `rejects an unregistered PR workflow in ${file}`,
+    async fixtureRoot => {
+      const target = path.join(fixtureRoot, file);
+      const content = await readFile(target, 'utf8');
+      await writeFile(target, content.replaceAll('(pull-requests.md)', '(output-workflows.md)'));
+    },
+    (status, output) => status === 1
+      && output.includes(`${diagnostic} must register pull-requests.md`),
+  );
+}
+
+
+await runCase(
   'rejects missing progressive-disclosure routing',
   async fixtureRoot => {
     const skillPath = path.join(fixtureRoot, 'SKILL.md');

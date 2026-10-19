@@ -27,15 +27,15 @@
 
 ## 可用技能
 
-| 技能 | 用途 |
-| --- | --- |
-| `prefer-mazey` | 实现可复用的前端或 TypeScript 辅助逻辑前，检查项目现有的 Mazey 依赖。 |
-| `prefer-layer` | 实现对话框和弹出式 UI 前，检查项目现有的 layer-esm 依赖。 |
-| `design-project-architecture` | 根据需求、仓库约束和 Cheng 的全栈经验设计项目架构。 |
-| `pet-diary-notes` | 根据用户提供的事实，生成多语言宠物文案以及简短的 Plog 或 Vlog 记录。 |
-| `en-technical-writing` | 根据分层的成熟规范和可选的生态系统配置，编写、翻译、润色和审阅美国英语技术文档。 |
-| `zh-technical-writing` | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。 |
-| `zh-restaurant-reviews` | 根据精选人工撰写案例，生成和改写基于事实的简体中文餐厅评价。 |
+| 技能                          | 用途                                                                                 |
+|:------------------------------|:-------------------------------------------------------------------------------------|
+| `prefer-mazey`                | 实现可复用的前端或 TypeScript 辅助逻辑前，检查项目现有的 Mazey 依赖。                |
+| `prefer-layer`                | 实现对话框和弹出式 UI 前，检查项目现有的 layer-esm 依赖。                            |
+| `design-project-architecture` | 根据需求、仓库约束和 Cheng 的全栈经验设计项目架构。                                  |
+| `pet-diary-notes`             | 根据用户提供的事实，生成多语言宠物文案以及简短的 Plog 或 Vlog 记录。                 |
+| `en-technical-writing`        | 根据分层规范和可选的生态系统配置，编写、翻译、润色和审阅美国英语技术文档及 PR 内容。 |
+| `zh-technical-writing`        | 根据正式规范和精选风格案例，编写、翻译、润色和审阅简体中文技术文章。                 |
+| `zh-restaurant-reviews`       | 根据精选人工撰写案例，生成和改写基于事实的简体中文餐厅评价。                         |
 
 ## 安装单个技能
 
@@ -184,7 +184,7 @@ Generate Chinese, English, and Japanese diary-style captions for photos and vide
 
 ### `en-technical-writing`
 
-`en-technical-writing` 用于编写、改写、翻译、校对和审阅技术文档。该技能默认使用美国英语。除非当前请求覆盖项目规范，否则遵循可发现的项目规范。技术事实和字面量保持不变。
+`en-technical-writing` 用于编写、改写、翻译、校对和审阅技术文档，以及 PR 标题和描述。该技能默认使用美国英语。除非当前请求覆盖项目规范，否则遵循可发现的项目规范。技术事实和字面量保持不变。
 
 Google 开发者文档提供主要技术写作基础。Microsoft 提供编辑语气。React 是可选的生态系统配置。受控的个人覆盖规则可以进一步调整结果。
 
@@ -217,6 +217,15 @@ Translate this Chinese deployment guide into natural American English.
 Preserve all commands, paths, environment variables, version numbers, and technical caveats.
 ```
 
+PR 写作遵循目标仓库的模板。变更和测试结论必须有依据。可选的 React PR 配置适用于 React 贡献，与 React 文档配置分开。应用使用 React 时，不会自动启用该配置。起草内容不会提交 PR。
+
+```text
+$en-technical-writing
+
+Write a PR title and description from this diff and the supplied test results.
+Follow the repository template and identify any missing verification evidence.
+```
+
 以下请求可以激活 `en-technical-writing`：
 
 ```text
@@ -231,7 +240,7 @@ Write a concise troubleshooting guide for this Node.js CLI.
 Improve this React tutorial without changing its technical meaning.
 ```
 
-来源清单记录了用于提炼规则的官方页面。来源包括 [Google 开发者文档风格指南](https://developers.google.com/style)、[Microsoft 写作风格指南](https://learn.microsoft.com/en-us/style-guide/)和 [React 文档](https://react.dev/)。
+来源清单记录了用于提炼规则的官方页面。来源包括 [Google 开发者文档风格指南](https://developers.google.com/style)、[Microsoft 写作风格指南](https://learn.microsoft.com/en-us/style-guide/)和 [React 文档](https://react.dev/)。清单还记录了固定快照的 React 提交历史分析、选定的公开 PR 核对结果，以及 PR 写作证据的适用边界。
 
 ### `zh-technical-writing`
 
