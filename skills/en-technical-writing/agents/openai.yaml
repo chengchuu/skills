@@ -1,4 +1,4 @@
 interface:
   display_name: "English Technical Writing"
-  short_description: "Write clear American English technical docs and PR content."
-  default_prompt: "Use $en-technical-writing to write or review accurate American English technical documentation or PR titles and descriptions."
+  short_description: "Write American English docs, issues, and PR content."
+  default_prompt: "Use $en-technical-writing to write or review accurate American English technical documentation, issue titles and bodies, or PR titles and descriptions."

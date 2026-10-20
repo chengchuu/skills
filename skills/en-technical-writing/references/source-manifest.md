@@ -1,11 +1,12 @@
 # Source manifest
 
-This manifest records the official sources used to derive the skill's operational guidance. It does not authorize copying source prose. All sources were reviewed on 2026-07-30 for the initial documentation layers; the React PR history extension was reviewed on 2026-10-17.
+This manifest records the sources used to derive the skill's operational guidance. It does not authorize copying source prose. All sources were reviewed on 2026-07-30 for the initial documentation layers; the React PR history extension was reviewed on 2026-10-17, and the issue-writing extension on 2026-10-20.
 
 - [Google developer documentation](#google-developer-documentation)
 - [Microsoft Writing Style Guide](#microsoft-writing-style-guide)
 - [React documentation](#react-documentation)
 - [React PR history](#react-pr-history)
+- [React issue history](#react-issue-history)
 - [Personal overrides](#personal-overrides)
 - [Maintenance](#maintenance)
 
@@ -259,3 +260,57 @@ Reserved before guidance was drafted; these examples were not used to derive the
 - H10: `0038f63c0d6f65236796b58e5753cca9fd2a3668`; 2026-06-15; compiler; [commit](https://github.com/chengchuu/react/commit/0038f63c0d6f65236796b58e5753cca9fd2a3668); [candidate PR #36731](https://github.com/react/react/pull/36731). Local commit only.
 - H11: `04ee54cd128a48cb3fdac7256e1a45d6d9743d8c`; 2025-11-11; tests; [commit](https://github.com/chengchuu/react/commit/04ee54cd128a48cb3fdac7256e1a45d6d9743d8c); [candidate PR #35095](https://github.com/react/react/pull/35095). Local commit only.
 - H12: `6c3bd60a90cde43e12a6c0021de8f1ecb69491b9`; 2026-08-24; revert; [commit](https://github.com/chengchuu/react/commit/6c3bd60a90cde43e12a6c0021de8f1ecb69491b9); [candidate PR #37363](https://github.com/react/react/pull/37363). Local commit only.
+
+## React issue history
+
+- Source type: Public React issue bodies, discussion comments, and official issue templates.
+- Last validation date: 2026-10-20; issue inventory retrieved 2026-10-19.
+- Coverage: 2023-10-19 through the partial day 2026-10-19; 2,300 issues inventoried, 24 learning examples, and six separately reserved evaluation examples.
+- Interpretation notes: Reports describe user observations and claims. They are writing evidence, not verified technical facts or proof that an open or closed issue was resolved. The [analysis and evaluation record](react-issue-history-analysis.md) describes selection, counterexamples, and coverage limits.
+- Confidence: High for the inspected template fields; limited qualitative support for editorial recommendations. No measured relationship between wording and maintainer response.
+- Distilled references: [Issue workflow](issues.md) and optional [React issue profile](profiles/react-issues.md). React documentation and PR profiles remain separate.
+- Template snapshot: `ba39b32a467ea462ffb06db242da2bfc09e23af8`, read from the public API without changing local refs.
+- [config.yml](https://github.com/react/react/blob/ba39b32a467ea462ffb06db242da2bfc09e23af8/.github/ISSUE_TEMPLATE/config.yml).
+- [bug_report.md](https://github.com/react/react/blob/ba39b32a467ea462ffb06db242da2bfc09e23af8/.github/ISSUE_TEMPLATE/bug_report.md).
+- [compiler_bug_report.yml](https://github.com/react/react/blob/ba39b32a467ea462ffb06db242da2bfc09e23af8/.github/ISSUE_TEMPLATE/compiler_bug_report.yml).
+- [devtools_bug_report.yml](https://github.com/react/react/blob/ba39b32a467ea462ffb06db242da2bfc09e23af8/.github/ISSUE_TEMPLATE/devtools_bug_report.yml).
+
+### Learning sample
+
+Entries record creation date, state at retrieval, and heuristic sampling bucket; the bucket is not an endorsed classification.
+
+- [#29902](https://github.com/react/react/issues/29902): 2024-06-14; open; core-other; period 1.
+- [#28817](https://github.com/react/react/issues/28817): 2024-04-10; closed; core-other; period 1.
+- [#29892](https://github.com/react/react/issues/29892): 2024-06-13; open; compiler; period 1.
+- [#29202](https://github.com/react/react/issues/29202): 2024-05-21; closed; compiler; period 1.
+- [#28787](https://github.com/react/react/issues/28787): 2024-04-09; open; devtools; period 1.
+- [#28323](https://github.com/react/react/issues/28323): 2024-02-14; closed; devtools; period 1.
+- [#29757](https://github.com/react/react/issues/29757): 2024-06-04; open; request; period 1.
+- [#28503](https://github.com/react/react/issues/28503): 2024-03-06; closed; request; period 1.
+- [#32478](https://github.com/react/react/issues/32478): 2025-02-26; open; core-other; period 2.
+- [#33337](https://github.com/react/react/issues/33337): 2025-05-22; closed; core-other; period 2.
+- [#33302](https://github.com/react/react/issues/33302): 2025-05-18; open; compiler; period 2.
+- [#33031](https://github.com/react/react/issues/33031): 2025-04-26; closed; compiler; period 2.
+- [#32418](https://github.com/react/react/issues/32418): 2025-02-18; open; devtools; period 2.
+- [#32964](https://github.com/react/react/issues/32964): 2025-04-19; closed; devtools; period 2.
+- [#33181](https://github.com/react/react/issues/33181): 2025-05-12; open; request; period 2.
+- [#32961](https://github.com/react/react/issues/32961): 2025-04-18; closed; request; period 2.
+- [#37078](https://github.com/react/react/issues/37078): 2026-07-20; open; core-other; period 3.
+- [#35678](https://github.com/react/react/issues/35678): 2026-02-03; closed; core-other; period 3.
+- [#36128](https://github.com/react/react/issues/36128): 2026-03-23; open; compiler; period 3.
+- [#35570](https://github.com/react/react/issues/35570): 2026-01-20; closed; compiler; period 3.
+- [#36937](https://github.com/react/react/issues/36937): 2026-07-06; open; devtools; period 3.
+- [#36375](https://github.com/react/react/issues/36375): 2026-04-30; closed; devtools; period 3.
+- [#35395](https://github.com/react/react/issues/35395): 2025-12-19; open; request; period 3.
+- [#36248](https://github.com/react/react/issues/36248): 2026-04-10; closed; request; period 3.
+
+### Reserved evaluation sample
+
+Entries record creation date, state at retrieval, and heuristic sampling bucket; the bucket is not an endorsed classification.
+
+- [#28884](https://github.com/react/react/issues/28884): 2024-04-20; closed; core-other; period 1.
+- [#28866](https://github.com/react/react/issues/28866): 2024-04-18; closed; request; period 1.
+- [#33057](https://github.com/react/react/issues/33057): 2025-04-29; closed; compiler; period 2.
+- [#32642](https://github.com/react/react/issues/32642): 2025-03-16; closed; devtools; period 2.
+- [#36419](https://github.com/react/react/issues/36419): 2026-05-05; closed; core-other; period 3.
+- [#35903](https://github.com/react/react/issues/35903): 2026-02-25; open; request; period 3.

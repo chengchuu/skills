@@ -2,6 +2,8 @@
 
 Whenever a workflow creates or edits Markdown tables, apply the [Markdown table alignment and width rule](writing-guidelines.md#lists-tables-and-notices). In review-only mode, report alignment or visual-width violations without rewriting the table or file.
 
+For issue tasks, combine the requested mode below with [the issue workflow](issues.md). A draft with unresolved required fields must identify those gaps rather than claim submission readiness.
+
 ## Write
 
 Gather the verified facts, audience, goal, document type, and constraints. Draft the smallest complete structure, then check accuracy and usability. Mark missing facts instead of inventing them.

@@ -2,6 +2,10 @@
 
 Classify content at two levels, then apply the matching deliverable pattern. Do not treat every document as a tutorial.
 
+## Issue content
+
+Issue titles and bodies describe an observed problem or a requested capability. Use [the issue workflow](issues.md) for bug reports, lightweight feature requests, and incomplete evidence. Follow the applicable template; otherwise keep the structure proportional to the available facts. Do not apply PR Summary/Testing defaults or tutorial recaps to issues.
+
 ## Pull request content
 
 PR titles and descriptions help reviewers assess a proposed change. Establish the requested output and enough change facts to support it. Use a repository template and verification evidence when available and relevant; neither is a prerequisite for a title-only request or drafting from sparse notes. Use [the PR workflow](pull-requests.md) for change scope, proportional detail, evidence gaps, and testing claims. For a body, follow the target template or requested format; otherwise use Summary and Testing. Report missing verification without inventing results. Do not apply tutorial learning objectives or recaps.

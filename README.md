@@ -27,15 +27,15 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 
 ## Available skills
 
-| Skill                         | Purpose                                                                                                                                              |
-|:------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| `prefer-mazey`                | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic.                                                 |
-| `prefer-layer`                | Check an existing layer-esm dependency before implementing dialog and popup UI.                                                                      |
-| `design-project-architecture` | Design project architecture around requirements, repository constraints, and Cheng's full-stack experience.                                          |
-| `pet-diary-notes`             | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples.                          |
-| `en-technical-writing`        | Write, translate, polish, and review American English technical documentation and PR content using layered guidance and optional ecosystem profiles. |
-| `zh-technical-writing`        | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples.                                         |
-| `zh-restaurant-reviews`       | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples.                                               |
+| Skill                         | Purpose                                                                                                                                                       |
+|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `prefer-mazey`                | Check an existing Mazey dependency before implementing reusable frontend or TypeScript helper logic.                                                          |
+| `prefer-layer`                | Check an existing layer-esm dependency before implementing dialog and popup UI.                                                                               |
+| `design-project-architecture` | Design project architecture around requirements, repository constraints, and Cheng's full-stack experience.                                                   |
+| `pet-diary-notes`             | Generate multilingual diary-style pet captions and short Plog or Vlog records from factual user input and curated examples.                                   |
+| `en-technical-writing`        | Write, translate, polish, and review American English technical documentation, issues, and PR content using layered guidance and optional ecosystem profiles. |
+| `zh-technical-writing`        | Write, translate, polish, and review zh-CN technical articles using formal rules and curated style examples.                                                  |
+| `zh-restaurant-reviews`       | Generate and rewrite factual Simplified Chinese restaurant reviews using curated handwritten examples.                                                        |
 
 ## Install an individual skill
 
@@ -184,7 +184,7 @@ Generate Chinese, English, and Japanese diary-style captions for photos and vide
 
 ### `en-technical-writing`
 
-`en-technical-writing` writes, rewrites, translates, proofreads, and reviews technical documentation and PR titles and descriptions. It defaults to American English, follows discoverable project conventions unless the current request overrides them, and preserves technical facts and literals. Google developer documentation provides the primary technical-writing foundation, Microsoft provides the editorial voice, React is an optional ecosystem profile, and controlled personal overrides can refine the result.
+`en-technical-writing` writes, rewrites, translates, proofreads, and reviews technical documentation, issue titles and bodies, and PR titles and descriptions. It defaults to American English, follows discoverable project conventions unless the current request overrides them, and preserves technical facts and literals. Google developer documentation provides the primary technical-writing foundation, Microsoft provides the editorial voice, React is an optional ecosystem profile, and controlled personal overrides can refine the result.
 
 The standalone skill is available at <https://github.com/chengchuu/skills/tree/main/skills/en-technical-writing>. Install it with:
 
@@ -224,6 +224,16 @@ Write a PR title and description from this diff and the supplied test results.
 Follow the repository template and identify any missing verification evidence.
 ```
 
+Issue writing separates observed behavior from suspected causes and supports a lightweight feature-request path. It follows the target template, flags missing evidence, and preserves exact errors and versions. The optional React issue profile applies to the React tracker or explicit React-style requests. Drafting does not post an issue.
+
+```text
+$en-technical-writing
+
+Write an issue title and body from these notes. Separate observed and expected
+behavior, preserve the reproduction details, and flag missing information.
+For a feature request, focus on the use case and desired outcome.
+```
+
 Codex may select `en-technical-writing` for requests such as:
 
 ```text
@@ -238,7 +248,7 @@ Write a concise troubleshooting guide for this Node.js CLI.
 Improve this React tutorial without changing its technical meaning.
 ```
 
-Its source manifest records the official [Google developer documentation style guide](https://developers.google.com/style), [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/), and [React documentation](https://react.dev/) pages used to derive the rules. It also records the pinned React commit-history study, selected public PR checks, and the limits of the PR-writing evidence.
+Its source manifest records the official [Google developer documentation style guide](https://developers.google.com/style), [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/), and [React documentation](https://react.dev/) pages used to derive the rules. It also records the pinned React commit-history study, selected public PR checks, and the limits of the PR-writing evidence. A separate three-year React issue study supports the issue workflow and optional profile.
 
 ### `zh-technical-writing`
 

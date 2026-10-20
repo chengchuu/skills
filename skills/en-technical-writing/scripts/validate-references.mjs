@@ -20,6 +20,8 @@ const requiredFiles = [
   'references/foundations/microsoft-voice.md',
   'references/profiles/react-docs.md',
   'references/pull-requests.md',
+  'references/issues.md',
+  'references/profiles/react-issues.md',
   'references/profiles/react-prs.md',
   'scripts/validate-references.mjs',
 ];
@@ -142,10 +144,10 @@ try {
   // The missing references directory is already reported through required files.
 }
 
-const layerReferencePaths = ['pull-requests.md'];
+const layerReferencePaths = ['pull-requests.md', 'issues.md'];
 for (const [directory, requiredEntries] of [
   ['references/foundations', ['google-style.md', 'microsoft-voice.md']],
-  ['references/profiles', ['react-docs.md', 'react-prs.md']],
+  ['references/profiles', ['react-docs.md', 'react-prs.md', 'react-issues.md']],
 ]) {
   try {
     const entries = (await readdir(path.join(skillRoot, directory))).sort();

@@ -66,6 +66,31 @@ for (const [file, diagnostic] of [
   );
 }
 
+for (const reference of ['issues.md', 'profiles/react-issues.md']) {
+  await runCase(
+    `rejects missing ${reference}`,
+    async fixtureRoot => {
+      await rm(path.join(fixtureRoot, 'references', reference));
+    },
+    (status, output) => status === 1
+      && output.includes(`Missing required file: references/${reference}`),
+  );
+  for (const [file, diagnostic] of [
+    ['references/README.md', 'Reference router'],
+    ['references/source-manifest.md', 'Source manifest'],
+  ]) {
+    await runCase(
+      `rejects unregistered ${reference} in ${file}`,
+      async fixtureRoot => {
+        const target = path.join(fixtureRoot, file);
+        const content = await readFile(target, 'utf8');
+        await writeFile(target, content.replaceAll(`(${reference})`, '(output-workflows.md)'));
+      },
+      (status, output) => status === 1
+        && output.includes(`${diagnostic} must register ${reference}`),
+    );
+  }
+}
 
 await runCase(
   'rejects missing progressive-disclosure routing',
