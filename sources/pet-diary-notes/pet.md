@@ -3,6 +3,7 @@
 
 **Table of Contents:**
 
+- [25-0601-A-Little-Belly-A-Lazy-Nap](#25-0601-a-little-belly-a-lazy-nap)
 - [25-0603-Paw-Up-Playtime](#25-0603-paw-up-playtime)
 - [25-0610-Little-Paws-Lazy-Lounging](#25-0610-little-paws-lazy-lounging)
 - [25-0703-A-Quiet-Grooming-Break](#25-0703-a-quiet-grooming-break)
@@ -73,6 +74,26 @@
 - [26-0319 AI CEO v01](#26-0319-ai-ceo-v01)
 - [26-0319 AI Phone v03](#26-0319-ai-phone-v03)
 - [26-0318 AI Phone v01](#26-0318-ai-phone-v01)
+
+## 25-0601-A-Little-Belly-A-Lazy-Nap
+
+zh:
+小猫慢慢睡
+懒懒地睡着午觉，圆圆的肚肚随着呼吸起伏。
+BGM：death bed
+#猫咪日常 #小猫 #睡觉的猫 #慵懒时光
+
+en:
+A Little Belly, a Lazy Nap
+The kitten naps through the afternoon, her little belly slowly rising and falling with each breath.
+BGM: death bed
+#CatNap #SleepyKitten #LazyAfternoon #CatLife
+
+jp:
+おなかがふわり、のんびりお昼寝
+子猫がのんびりお昼寝していて、呼吸に合わせて小さなおなかがゆっくり上下している。
+BGM: death bed
+#猫のいる暮らし #子猫 #お昼寝 #猫の日常
 
 ## 25-0603-Paw-Up-Playtime
 

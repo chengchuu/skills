@@ -6,20 +6,21 @@ This manifest maps every pet diary source section in `sources/pet-diary-notes/pe
 
 - Canonical source: `sources/pet-diary-notes/pet.md`
 - Historical source path: `temp/pet-examples/pet.md`
-- Source bytes: 42587
-- Source SHA-256: `411e5757a1fe9aeea082ce25bdf6bbbfad0f76715e1c3f2de7c6b5d8a8b08439`
-- Source sections: 70
+- Source bytes: 43283
+- Source SHA-256: `20f216e1afa93aa9165ffd475f837e3cd1789350367371931bb7d231db7b2f5d`
+- Source sections: 71
 - Recovered former supplemental sections: 6; source headings are canonical.
-- Curated examples: 70
+- Curated examples: 71
 - Merge decisions: no source sections are merged; every distinct source section is retained once.
-- Language availability: zh-CN 70, en 69, ja-JP 52.
-- Content types: real-life 60, AI-generated 10.
+- Language availability: zh-CN 71, en 70, ja-JP 53.
+- Content types: real-life 61, AI-generated 10.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
 
 | Original heading | Original date | Version | Final category | Final reference file | Languages | AI location | Content type | Duplicate status | Merge decision | Missing fields | Classification confidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `25-0601-A-Little-Belly-A-Lazy-Nap` | 2025-06-01 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-approved multilingual afternoon nap case; pet identity 嘟嘟, date, Vlog format, real-life status, platform, and BGM supplied in request context |
 | `25-0603-Paw-Up-Playtime` | 2025-06-03 | none | Playful and funny | [playful-and-funny.md](examples/playful-and-funny.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided raised-paw playtime case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context |
 | `25-0610-Little-Paws-Lazy-Lounging` | 2025-06-10 | none | Sleep and relaxation | [sleep-and-relaxation.md](examples/sleep-and-relaxation.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided sofa lounging case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese sentence fragment preserved as supplied |
 | `25-0703-A-Quiet-Grooming-Break` | 2025-07-03 | none | Grooming and care | [grooming-and-care.md](examples/grooming-and-care.md) | zh-CN, en, ja-JP | not applicable | Real-life | Unique | Keep distinct | none | High | User-provided sofa grooming case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese BGM omitted as supplied |

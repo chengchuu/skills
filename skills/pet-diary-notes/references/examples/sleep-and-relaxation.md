@@ -2,6 +2,80 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: 25-0601-A-Little-Belly-A-Lazy-Nap
+
+- Source heading: `25-0601-A-Little-Belly-A-Lazy-Nap`
+- Source date: 2025-06-01
+- Version: none
+- Category: Sleep and relaxation
+- Secondary category: Afternoon nap
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: death bed
+- Mood: Relaxed
+- Tone: Gentle
+- Pet behavior: Napping with the belly rising and falling with each breath
+- Pet activity: Napping with the belly rising and falling with each breath
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+小猫慢慢睡
+
+#### Description
+
+懒懒地睡着午觉，圆圆的肚肚随着呼吸起伏。
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#猫咪日常 #小猫 #睡觉的猫 #慵懒时光
+
+### English
+
+#### Title
+
+A Little Belly, a Lazy Nap
+
+#### Description
+
+The kitten naps through the afternoon, her little belly slowly rising and falling with each breath.
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#CatNap #SleepyKitten #LazyAfternoon #CatLife
+
+### Japanese
+
+#### Title
+
+おなかがふわり、のんびりお昼寝
+
+#### Description
+
+子猫がのんびりお昼寝していて、呼吸に合わせて小さなおなかがゆっくり上下している。
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#猫のいる暮らし #子猫 #お昼寝 #猫の日常
+
 ## Example: 25-0610-Little-Paws-Lazy-Lounging
 
 - Source heading: `25-0610-Little-Paws-Lazy-Lounging`
