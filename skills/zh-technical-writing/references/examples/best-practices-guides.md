@@ -10,7 +10,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Analytical and comparative
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/Frontend/21-0531_Frontend.md`; `temp/writing-examples/TCloud/21-0531_Frontend_TencentCloud.md`
+- Source: `sources/design-project-architecture/articles/Frontend/21-0531_Frontend.md`; `sources/zh-technical-writing/legacy/TCloud/21-0531_Frontend_TencentCloud.md`
 
 ### Structural characteristics
 
@@ -30,7 +30,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and explanatory
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/Git/24-0405_Git_Version.md`
+- Source: `sources/design-project-architecture/articles/Git/24-0405_Git_Version.md`
 
 ### Structural characteristics
 
@@ -50,7 +50,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pinned/25-0111_Git_Label.md`
+- Source: `sources/design-project-architecture/articles/Pinned/25-0111-Git-Label.md`
 
 ### Structural characteristics
 
@@ -70,7 +70,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/webpack/21-0104_webpack_Analyzer.md`; `temp/writing-examples/TCloud/21-0104_webpack_TCloud.md`
+- Source: `sources/design-project-architecture/articles/webpack/21-0104_webpack_Analyzer.md`; `sources/zh-technical-writing/legacy/TCloud/21-0104_webpack_TCloud.md`
 
 ### Structural characteristics
 

@@ -19,7 +19,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Diagnostic and restrained
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/Docker/23-0119_Docker.md`; `temp/writing-examples/TCloud/23-0119_Docker_TCloud.md`
+- Source: `sources/design-project-architecture/articles/Docker/23-0119_Docker.md`; `sources/zh-technical-writing/legacy/TCloud/23-0119_Docker_TCloud.md`
 
 ### Structural characteristics
 
@@ -39,7 +39,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Diagnostic and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/Docker/26-0305_Docker_Errors_ZH.md`; `temp/writing-examples/Docker/26-0305_Docker_Errors_EN.md`
+- Source: `sources/design-project-architecture/articles/Docker/26-0305_Docker_Errors_ZH.md`; `sources/design-project-architecture/articles/Docker/26-0305_Docker_Errors_EN.md`
 
 ### Structural characteristics
 
@@ -59,7 +59,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Diagnostic and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Frontend/24-1027_Frontend_iOS.md`
+- Source: `sources/design-project-architecture/articles/Frontend/24-1027_Frontend_iOS.md`
 
 ### Structural characteristics
 
@@ -79,7 +79,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Diagnostic and procedural
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/Git/23-0529_Git_Error.md`; `temp/writing-examples/TCloud/23-0529_Git_Error.md`
+- Source: `sources/design-project-architecture/articles/Git/23-0529_Git_Error.md`; `sources/zh-technical-writing/legacy/TCloud/23-0529_Git_Error.md`
 
 ### Structural characteristics
 
@@ -99,7 +99,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Diagnostic and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/PWA/26-0308_Workbox_Deps.md`
+- Source: `sources/design-project-architecture/articles/PWA/26-0308_Workbox_Deps.md`
 
 ### Structural characteristics
 
@@ -119,7 +119,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Concise and reference-oriented
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pinned/23-1017_npm.md`
+- Source: `sources/design-project-architecture/articles/Pinned/23-1017_npm.md`
 
 ### Structural characteristics
 

@@ -2,6 +2,8 @@
 
 Whenever a workflow creates or edits Markdown tables, apply the [Markdown table alignment and width rule](writing-guidelines.md#lists-tables-and-notices). In review-only mode, report alignment or visual-width violations without rewriting the table or file.
 
+For issue tasks, combine the requested mode below with [the issue workflow](issues.md). A draft with unresolved required fields must identify those gaps rather than claim submission readiness.
+
 ## Write
 
 Gather the verified facts, audience, goal, document type, and constraints. Draft the smallest complete structure, then check accuracy and usability. Mark missing facts instead of inventing them.
@@ -50,7 +52,7 @@ Do not edit files, replace the document, or claim to have fixed issues.
 - Distinguish confirmed defects from optional improvements.
 - Say explicitly when no confirmed issues are found.
 
-Classify findings as **Language issue**, **Structure issue**, **Terminology issue**, **Consistency issue**, **Potential technical conflict**, **Unsupported claim**, **Missing prerequisite**, or **Missing verification**. Use critical, major, minor, or suggestion severity only when it helps prioritization. Never present a possible technical conflict as a confirmed bug.
+When useful, classify findings as **Language issue**, **Structure issue**, **Formatting issue**, **Terminology issue**, **Consistency issue**, **Repository-convention issue**, **Potential technical conflict**, **Unsupported claim**, **Missing prerequisite**, or **Missing verification**. Use critical, major, minor, or suggestion severity only when it helps prioritization. Never present a possible technical conflict as a confirmed bug.
 
 Default output: findings first, followed by assumptions or residual risks.
 
@@ -64,7 +66,13 @@ Expand only from supported information. Mark requested placeholders and informat
 
 ## Repository edit
 
-Inspect repository instructions before editing. Preserve unrelated changes. Make narrow patches, run proportionate checks, inspect the final diff, and report modified files and validation. Do not stage, commit, publish, or modify external repositories unless explicitly authorized.
+Inspect the nearest repository instructions and only the files needed to establish the document's facts, structure, terminology, and validation commands. Preserve unrelated changes and valid local conventions. Reuse the current document and its existing sections when practical, make narrow patches, run proportionate checks, inspect the final diff, and report modified files and validation. Do not stage, commit, publish, or modify external repositories unless explicitly authorized.
+
+For `AGENTS.md`, apply the dedicated [document-type guidance](document-types.md#agentsmd). When updating an existing file, verify each affected statement against current code and configuration, preserve its useful structure, place additions in the relevant existing section, and remove obsolete guidance. When creating a file, document only applicable, inspected repository facts.
+
+## Pull request content
+
+For PR writing, rewriting, translation, or prose review, combine the selected mode above with [the PR workflow](pull-requests.md). Return only the requested title, body, or findings. Inspecting a diff to establish writing facts is not a code correctness review. Drafting does not authorize changing code, running tests, or submitting the PR.
 
 ## Response modes
 

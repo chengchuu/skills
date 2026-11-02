@@ -10,7 +10,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Analytical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/20-0619_Promise.md`
+- Source: `sources/design-project-architecture/articles/20-0619_Promise.md`
 
 ### Structural characteristics
 
@@ -30,7 +30,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Go/23-1024_Go_Library.md`; `temp/writing-examples/TCloud/23-1024_Go_Library.md`
+- Source: `sources/design-project-architecture/articles/Go/23-1024_Go_Library.md`; `sources/zh-technical-writing/legacy/TCloud/23-1024_Go_Library.md`
 
 ### Structural characteristics
 
@@ -50,7 +50,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Go/24-0219_Go_Wails.md`
+- Source: `sources/design-project-architecture/articles/Go/24-0219_Go_Wails.md`
 
 ### Structural characteristics
 
@@ -70,7 +70,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Explanatory and practical
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/PWA/21-0309_PWA.md`
+- Source: `sources/design-project-architecture/articles/PWA/21-0309_PWA.md`
 
 ### Structural characteristics
 
@@ -90,7 +90,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/bootstrap-blueprints/lesson-first-waterfall/README.md`
+- Source: `sources/zh-technical-writing/legacy/bootstrap-blueprints/lesson-first-waterfall/README.md`
 
 ### Structural characteristics
 
@@ -110,7 +110,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/bootstrap-blueprints/lesson-second-navigation/README.md`
+- Source: `sources/zh-technical-writing/legacy/bootstrap-blueprints/lesson-second-navigation/README.md`
 
 ### Structural characteristics
 
@@ -130,7 +130,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/bootstrap-blueprints/lesson-third-login/README.md`
+- Source: `sources/zh-technical-writing/legacy/bootstrap-blueprints/lesson-third-login/README.md`
 
 ### Structural characteristics
 
@@ -150,7 +150,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/bootstrap-blueprints/lesson-fourth-comment/README.md`
+- Source: `sources/zh-technical-writing/legacy/bootstrap-blueprints/lesson-fourth-comment/README.md`
 
 ### Structural characteristics
 

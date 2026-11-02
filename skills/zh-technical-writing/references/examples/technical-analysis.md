@@ -19,7 +19,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Explanatory and reference-oriented
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/17-0714_SQLServer.md`; `temp/writing-examples/TCloud/17-0714_SQLServer_TCloud.md`
+- Source: `sources/design-project-architecture/articles/17-0714_SQLServer.md`; `sources/zh-technical-writing/legacy/TCloud/17-0714_SQLServer_TCloud.md`
 
 ### Structural characteristics
 
@@ -39,7 +39,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Explanatory and educational
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/20-0422_Algorithm.md`; `temp/writing-examples/TCloud/20-0422_Algorithm.md`
+- Source: `sources/design-project-architecture/articles/20-0422_Algorithm.md`; `sources/zh-technical-writing/legacy/TCloud/20-0422_Algorithm.md`
 
 ### Structural characteristics
 
@@ -59,7 +59,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Analytical and explanatory
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/21-0110_Node.js_Short_Link.md`; `temp/writing-examples/TCloud/21-0110_Node.js_Short_Link.md`
+- Source: `sources/design-project-architecture/articles/21-0110_Node.js_Short_Link.md`; `sources/zh-technical-writing/legacy/TCloud/21-0110_Node.js_Short_Link.md`
 
 ### Structural characteristics
 
@@ -79,7 +79,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Analytical and comparative
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/25-0330_Video.md`
+- Source: `sources/design-project-architecture/articles/25-0330_Video.md`
 
 ### Structural characteristics
 
@@ -99,7 +99,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Analytical and explanatory
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/Frontend/21-1228_Frontend_Performance.md`
+- Source: `sources/design-project-architecture/articles/Frontend/21-1228_Frontend_Performance.md`
 
 ### Structural characteristics
 
@@ -119,7 +119,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and comparative
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/webpack/26-0418_webpack_ZH.md`; `temp/writing-examples/webpack/26-0418_webpack_EN.md`
+- Source: `sources/design-project-architecture/articles/webpack/26-0418_webpack_ZH.md`; `sources/design-project-architecture/articles/webpack/26-0418_webpack_EN.md`
 
 ### Structural characteristics
 

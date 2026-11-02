@@ -10,7 +10,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Conversational and reflective
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pages/26-0424_Happy.md`
+- Source: `sources/design-project-architecture/articles/Pages/26-0424_Happy.md`
 
 ### Structural characteristics
 

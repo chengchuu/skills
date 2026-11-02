@@ -13,7 +13,7 @@
 - Occasion: Theme park lunch
 - Main topics: Location, queue, set meal, taste, context
 - Recommended dishes: 披萨套餐
-- Source: `temp/examples/25-0306-1337-Food-USJ-Pizza.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0306-1337-Food-USJ-Pizza.md`
 
 ### Available facts
 
@@ -38,7 +38,7 @@ USJ 里玩到一半跑来吃这家，位置在纽约区那边，离小黄人区�
 - Occasion: unknown
 - Main topics: Discovery, vegetables, presentation, spices, comparison
 - Recommended dishes: 汤咖喱
-- Source: `temp/examples/25-1116-1217-Food-coconi.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1116-1217-Food-coconi.md`
 
 ### Available facts
 

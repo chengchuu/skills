@@ -18,7 +18,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Source states pododermatitis, daily spray medication, Elizabeth collar use, day three, and improving recovery
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 

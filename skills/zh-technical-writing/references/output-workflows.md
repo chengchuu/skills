@@ -2,6 +2,23 @@
 
 Apply the common safeguards first: establish the requested output, isolate protected technical content, distinguish supplied facts from assumptions, and report unresolved conflicts. For any workflow that creates, normalizes, proofreads, or assesses Chinese prose, read `personal-style.md`, apply its required conventions by default, and distinguish them from optional tendencies and universal grammar rules. When a workflow creates or edits a Markdown table, apply the [Markdown 表格对齐与宽度规则](writing-guidelines.md#表格); for review-only work, report alignment or display-width violations without rewriting the table or file.
 
+## Punctuation check before delivery
+
+Apply this check to Chinese headings, outlines, plans, prose, and proposed wording before delivery, including short replies. The normative rules are [冒号](writing-guidelines.md#冒号) and [引号](writing-guidelines.md#引号-1).
+
+1. Inspect editable prose for `：`, `“`, and `”`. Treat matches as candidates, not unconditional replacement targets. Exclude code blocks, inline code, commands, URLs, identifiers, punctuation demonstrations, and quotations that must remain verbatim.
+2. Normalize prose colons to `:` with one following space when text continues on the same line. Normalize prose quotation marks to straight ASCII double quotes. Preserve an explicit user instruction to retain different punctuation; the presence of full-width punctuation in a draft alone is not such an instruction.
+3. If heading spacing changes, check the document's table of contents and affected anchors. Update matching index labels only within the authorized scope. Check links after updating anchors.
+4. Review the final diff or proposed text. Confirm protected content stayed unchanged and every remaining candidate has a reason to remain. For review-only requests, report corrections without modifying files.
+
+Use these cases when evaluating changes to the skill; structural validators alone do not prove writing behavior:
+
+- A new tutorial with an icon section uses `## Icon: 消息图标` from the first draft.
+- Polishing `点击“继续”：完成操作。` produces `点击"继续": 完成操作。`.
+- A code example containing `console.log("昵称：", value)` stays byte-for-byte unchanged during a prose punctuation edit.
+- Changing `## Icon：消息图标` to `## Icon: 消息图标` also updates a local TOC target from `#icon消息图标` to `#icon-消息图标` when using GitHub-style anchors.
+- A review-only request identifies the same prose issues but leaves files unchanged. An explicit request to quote a title verbatim preserves its punctuation.
+
 ## Write a new article
 
 1. Confirm the purpose, document type, audience, scope, tone, and required facts from the prompt.

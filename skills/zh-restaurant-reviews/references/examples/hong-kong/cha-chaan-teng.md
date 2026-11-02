@@ -13,7 +13,7 @@
 - Occasion: Takeaway
 - Main topics: Portion, noodles, beef, service
 - Recommended dishes: 干炒牛河
-- Source: `temp/examples/25-0408_Food_金好.md`
+- Source: `sources/zh-restaurant-reviews/hong-kong/25-0408_Food_金好.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Breakfast
 - Main topics: Crowd, waiting, service, noodles, beef
 - Recommended dishes: 沙嗲牛肉公仔面
-- Source: `temp/examples/25-0409_Food_叉烧大王.md`
+- Source: `sources/zh-restaurant-reviews/hong-kong/25-0409_Food_叉烧大王.md`
 
 ### Available facts
 

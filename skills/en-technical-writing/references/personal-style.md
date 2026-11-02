@@ -1,6 +1,6 @@
 # Personal style
 
-These are explicit personal overrides. Apply them after selecting the relevant foundation and ecosystem profile, and before lower-priority general rules. They never override technical accuracy, current user instructions, or discoverable project conventions.
+These are explicit personal overrides. Apply them after technical facts, current user instructions, and discoverable project conventions, but before an ecosystem profile, the general foundations, and `en-US` defaults. They never override a higher-priority layer.
 
 ## Language
 
@@ -26,9 +26,9 @@ Prefer concrete verbs and specific nouns. Avoid inflated or promotional wording 
 
 Future updates can record preferred README openings, heading patterns, tutorial flow, API descriptions, troubleshooting structure, command presentation, release-note format, terminology, reusable patterns, and patterns that must not be reused.
 
-Personal Markdown examples can later be supplied under `temp/english-writing-examples/`; the directory is not a runtime dependency and must not be created empty. A future ingestion workflow should:
+Approved personal Markdown examples can later be stored under `sources/en-technical-writing/`; the repository-level directory is not a runtime dependency and must not be created empty. Private or unapproved local inputs may remain outside tracked files, but `temp/english-writing-examples/` is a legacy compatibility location rather than the destination for new public sources. A future ingestion workflow should:
 
-1. Read all supplied Markdown while preserving the originals.
+1. Confirm publication approval, scan each source for sensitive data, and preserve the original bytes.
 2. Extract document type, audience, tone, structure, and recurring patterns.
 3. Detect potentially outdated technical claims.
 4. Separate style evidence from technical facts.

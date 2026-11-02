@@ -13,7 +13,7 @@
 - Occasion: Neighborhood meal
 - Main topics: Dishes, portion, staff atmosphere, overall change
 - Recommended dishes: 蔬菜炒面、牛肉炒乌冬、日式炒饭
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Lunch
 - Main topics: Dishes, portion, environment
 - Recommended dishes: 牛肉饭、寿司、海鲜蒸蛋
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -61,7 +61,7 @@
 - Platform: 大众点评
 - Sentiment: Positive
 - Tone: Practical
-- Length: At least 100 characters
+- Length: Standard
 - Occasion: unknown
 - Main topics: Location, wait, environment, dishes, service
 - Recommended dishes: 烤牛舌、牛肉乌冬
@@ -138,3 +138,85 @@
 ### Review
 
 餐厅位于七宝领展地下层，到店不用等位，可以直接入座。店内采用传统日式风格，餐点既能单点，也可以选择自选套餐。米饭和汤都可以免费续，小料准备得比较齐全。上菜不是一次全部上齐，而是分段、比较零散地送上桌，每一份的呈现也比较讲究。不过卫生问题确实让人不适，汤品里面发现了小虫子，看到后很影响食欲。汤里的异物是不能忽略的问题，也让前面的优点大打折扣。希望店家认真检查汤品和出餐环节的卫生。
+
+## Example: 牛五花盖浇饭
+
+- Country: China
+- Region: Shanghai
+- Category: Japanese cuisine
+- Cuisine: Japanese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Dish, topping, sauce, portion, side dish, value
+- Recommended dishes: 牛五花盖浇饭
+- Source: User-provided review, 2026-09-14 (牛五花盖浇饭)
+
+### Available facts
+
+- 餐厅为平成屋· Late Night食堂(平金中心店)，位于中国上海，类型为日料。
+- 牛五花盖浇饭的浇头入味，酱料好吃，牛五花和配料给得足。
+- 用户将整碗吃光，餐厅还送了小菜。
+- 牛肉饭一个人吃分量足够，价格实惠，用户评价为满意、吃得开心。
+
+### Review
+
+这次点了牛五花盖浇饭，浇头很入味，酱料也好吃，牛五花和配料给得挺足，整碗吃到最后直接光盘。还送了小菜，牛肉饭一个人吃分量足够，基本不用担心吃不饱。价格也实惠，味道、分量和价格都挺合适，吃下来很开心，确实物美价廉。
+
+## Example: 烧鸟饭与香煎三文鱼骨
+
+- Country: China
+- Region: Shanghai
+- Category: Japanese cuisine
+- Cuisine: Japanese
+- Platform: 大众点评
+- Sentiment: Mixed
+- Tone: Restrained critical
+- Length: Standard
+- Occasion: Dinner
+- Main topics: Original-price meal, group-buying, dish, side dish, environment, hygiene, fish bones
+- Recommended dishes: 烧鸟饭
+- Source: User-provided review, 2026-09-14 (烧鸟饭与三文鱼骨)
+
+### Available facts
+
+- 餐厅为披头士烧鸟居酒屋(莘庄维璟印象城店B1店)，位于中国上海，类型为日料。
+- 晚餐原价点了几样餐品，没有参加团购。
+- 烧鸟饭味道不错，内有两个切开的肉丸子，搭配溏心蛋很下饭，但没有小菜。
+- 用餐环境相对整洁，桌上有小飞虫；原评价提到大夏天且潮湿，可以理解。
+- 香煎三文鱼骨中规中矩，食用时要注意鱼刺。
+- 用户认为这顿饭属于中等水平，优点和需要注意的地方都比较明显。
+
+### Review
+
+晚餐原价点了几样餐品，没有参加团购。烧鸟饭味道还蛮不错，里面有两个切开的肉丸子，配上溏心蛋很下饭，不过没有小菜。用餐环境相对整洁，桌上有小飞虫，大夏天又潮湿，这点可以理解。香煎三文鱼骨中规中矩，吃的时候要注意鱼刺。这顿吃下来属于中等水平，优点和需要注意的地方都比较明显。
+
+## Example: 维璟印象城滨寿司与担担面
+
+- Country: China
+- Region: Shanghai
+- Category: Japanese cuisine
+- Cuisine: Japanese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Sushi, freshness, salmon, eel, foie gras, noodles, environment, service, serving speed
+- Recommended dishes: 寿司、担担面
+- Source: User-provided review, 2026-10-01 (滨寿司维璟印象城店)
+
+### Available facts
+
+- 餐厅为滨寿司(维璟印象城店)，位于中国上海，类型为日料。
+- 点了焦糖火炙三拼、三文鱼寿司和火炙大烤鳗鱼，用户都喜欢并认为食材新鲜。
+- 大切三文鱼较厚且肥美，炙烤焦糖鹅肝入口即化，味道不错。
+- 日式担担面味道稍微偏重，但用户认为还可以。
+- 店内干净、灯光柔和，服务态度不错，上菜速度快。
+- 用户推荐寿司和担担面。
+
+### Review
+
+点了几款推荐寿司，焦糖火炙三拼、三文鱼寿司和火炙大烤鳗鱼都挺喜欢，食材很新鲜。大切三文鱼切得厚，吃起来很肥美，炙烤焦糖鹅肝入口即化，味道也不错。日式担担面稍微有点重口，不过吃着还可以。店里收拾得挺干净，灯光柔和，服务态度不错，上菜速度也快。

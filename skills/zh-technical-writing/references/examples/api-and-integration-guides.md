@@ -10,7 +10,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Explanatory and practical
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Frontend/18-0102_HTML5.md`; `temp/writing-examples/TCloud/18-0102_HTML5_TCloud.md`
+- Source: `sources/design-project-architecture/articles/Frontend/18-0102_HTML5.md`; `sources/zh-technical-writing/legacy/TCloud/18-0102_HTML5_TCloud.md`
 
 ### Structural characteristics
 
@@ -30,7 +30,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Short
-- Source: `temp/writing-examples/Go/23-0526_Go_TypeDoc.md`
+- Source: `sources/design-project-architecture/articles/Go/23-0526_Go_TypeDoc.md`
 
 ### Structural characteristics
 
@@ -50,7 +50,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pages/21-0825_Monitor.md`
+- Source: `sources/design-project-architecture/articles/Pages/21-0825_Monitor.md`
 
 ### Structural characteristics
 
@@ -70,7 +70,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and reference-oriented
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Pages/21-1103_API.md`
+- Source: `sources/design-project-architecture/articles/Pages/21-1103_API.md`
 
 ### Structural characteristics
 

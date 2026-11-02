@@ -19,7 +19,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -80,7 +80,7 @@ Amidst swirling leaves, the cat stands tall with a sword, cape billowing in the 
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -135,7 +135,7 @@ The cat transforms into a giant warrior, unleashing powerful energy waves to bat
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -190,7 +190,7 @@ In the rain, the cat ninja moves like a butterfly, cutting through the silence w
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -253,7 +253,7 @@ Meow Meow Summer
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -318,7 +318,7 @@ She stands up and dances with focus, tiny paws moving in perfect rhythm.
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -379,7 +379,7 @@ Looking down at the traffic and people, this giant cat gives off a slightly mena
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -416,7 +416,7 @@ Looking down at the traffic and people, this giant cat gives off a slightly mena
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -471,7 +471,7 @@ With a serious tone and constant paw gestures, this cat CEO surprisingly command
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -518,7 +518,7 @@ Caught scrolling at night, the cat panics and hides the phone in a split second.
 - Health-related status: Not stated
 - Content type: AI-generated fictional scene
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 

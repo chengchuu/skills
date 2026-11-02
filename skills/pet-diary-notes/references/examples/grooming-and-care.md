@@ -2,9 +2,79 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
-## Example: User-provided: 认真洗脸中
+## Example: 25-0703-A-Quiet-Grooming-Break
 
-- Source heading: `User-provided: 认真洗脸中`
+- Source heading: `25-0703-A-Quiet-Grooming-Break`
+- Source date: 2025-07-03
+- Version: none
+- Category: Grooming and care
+- Secondary category: Self-grooming on the sofa
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: Funny Song
+- Mood: Calm
+- Tone: Gentle
+- Pet behavior: Lying on the sofa with head lowered and licking fur
+- Pet activity: Lying on the sofa with head lowered and licking fur
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+沙发上的舔毛时间
+
+#### Description
+
+躺在沙发上，低着头安静地舔毛，认真打理自己这一身毛茸茸。
+
+#### BGM
+
+Funny Song
+
+#### Hashtags
+
+#猫咪 #猫咪日常 #宠物日记
+
+### English
+
+#### Title
+
+A Quiet Grooming Break
+
+#### Description
+
+Lying on the sofa with her head lowered, she quietly tends to her fluffy coat.
+
+#### BGM
+
+Funny Song
+
+#### Hashtags
+
+#Cat #CatLife #PetDiary
+
+### Japanese
+
+#### Title
+
+ソファで毛づくろい
+
+#### Description
+
+ソファに寝そべって顔を下げ、静かにふわふわの毛をなめてお手入れ中。
+
+#### Hashtags
+
+#猫 #猫のいる暮らし #毛づくろい #ペット日記
+
+## Example: 25-0807-A-Very-Serious-Face-Washing-Routine
+
+- Source heading: `25-0807-A-Very-Serious-Face-Washing-Routine`
 - Source date: 2025-08-07
 - Version: none
 - Category: Grooming and care
@@ -20,7 +90,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: 多平台
-- Source path: User-provided skill example
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -92,7 +162,7 @@ Rock That Body
 - Health-related status: Unknown; source hashtags include sick-cat labels but give no condition
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -152,7 +222,7 @@ She quietly enjoys the warmth of my hands, her face calm and content.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -212,7 +282,7 @@ Fresh from her bath, she sits quietly in the dryer, soft and sweet.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 

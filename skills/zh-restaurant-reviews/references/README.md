@@ -54,3 +54,7 @@
 - 其他平台: 先遵循用户给出的字数与格式限制，再匹配最接近的案例。
 
 完整标签定义见 [taxonomy.md](taxonomy.md)，来源对应关系见 [source-manifest.md](source-manifest.md)。
+
+## 来源维护
+
+已批准公开的完整维护源文件位于仓库级 `sources/zh-restaurant-reviews/`，不属于可分发技能的运行时依赖。`source-manifest.md` 保留原 `temp/examples/` 路径到规范来源的兼容映射。修改来源、案例或清单后，从仓库根目录运行 `node skills/zh-restaurant-reviews/scripts/validate-references.mjs`；独立安装的技能在没有仓库级来源时仍可完成案例与清单验证。

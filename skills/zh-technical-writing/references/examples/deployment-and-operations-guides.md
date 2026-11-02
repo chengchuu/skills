@@ -10,7 +10,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/21-0716_Node.js_SCP.md`; `temp/writing-examples/TCloud/21-0716_Node.js_SCP.md`
+- Source: `sources/design-project-architecture/articles/21-0716_Node.js_SCP.md`; `sources/zh-technical-writing/legacy/TCloud/21-0716_Node.js_SCP.md`
 
 ### Structural characteristics
 
@@ -30,7 +30,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/Git/20-0820_GitLab_CLI.md`; `temp/writing-examples/TCloud/20-0820_GitLab_CLI_TencentCloud.md`
+- Source: `sources/design-project-architecture/articles/Git/20-0820_GitLab_CLI.md`; `sources/zh-technical-writing/legacy/TCloud/20-0820_GitLab_CLI_TencentCloud.md`
 
 ### Structural characteristics
 
@@ -50,7 +50,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Formal and procedural
 - Formality: Medium to high
 - Length: Long
-- Source: `temp/writing-examples/Git/25-0927_GitHub_Action.md`; `temp/writing-examples/TCloud/25-0927_Git_TencentCloud.md`
+- Source: `sources/design-project-architecture/articles/Git/25-0927_GitHub_Action.md`; `sources/zh-technical-writing/legacy/TCloud/25-0927_Git_TencentCloud.md`
 
 ### Structural characteristics
 
@@ -70,7 +70,7 @@ These normalized examples capture reusable structure and style without reproduci
 - Tone: Practical and procedural
 - Formality: Medium to high
 - Length: Medium
-- Source: `temp/writing-examples/webpack/20-0824_webpack_GitLab.md`
+- Source: `sources/design-project-architecture/articles/webpack/20-0824_webpack_GitLab.md`
 
 ### Structural characteristics
 

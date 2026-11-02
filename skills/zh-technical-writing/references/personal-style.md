@@ -27,7 +27,7 @@ Treat these names as writing-style context, not as general biographical data:
 Examples:
 
 ```markdown
-作者：除除
+作者: 除除
 ```
 
 ```markdown
@@ -35,7 +35,7 @@ Written by Cheng
 ```
 
 ```markdown
-作者：除除 (Cheng)
+作者: 除除 (Cheng)
 ```
 
 ## Required personal convention: software-entity pronouns

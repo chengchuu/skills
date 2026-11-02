@@ -2,6 +2,7 @@
 
 - [Technical accuracy](#technical-accuracy)
 - [Audience and purpose](#audience-and-purpose)
+- [Repository conventions](#repository-conventions)
 - [Sentences and voice](#sentences-and-voice)
 - [Headings and organization](#headings-and-organization)
 - [Procedures](#procedures)
@@ -16,7 +17,7 @@
 
 - Do not invent behavior, results, prerequisites, compatibility, or evidence.
 - Do not silently fix or remove a technical claim because it appears wrong.
-- Do not change version requirements, commands, code, identifiers, or other protected literals unless requested.
+- Do not change fenced or inline code, commands, CLI flags, environment variables, paths, URLs, identifiers, API or package names, version strings, configuration values, error messages, quotations, generated content, or other protected literals unless the user explicitly requests changing them.
 - Preserve caveats, conditions, uncertainty, and the strength of each claim.
 - Report suspected technical conflicts separately.
 - Label confirmed issues separately from possible issues and unsupported claims.
@@ -28,6 +29,14 @@
 - Write for the reader by using **you** when addressing them directly.
 - Use third person for software behavior or a distinct end user.
 - Avoid unnecessary first-person plural language such as *we* and *our*.
+
+## Repository conventions
+
+- Before editing repository documentation, inspect only sources that can establish the requested facts or conventions. Relevant sources can include the nearest `AGENTS.md`, existing documentation, architecture or guide documents, manifests, build configuration, CI workflows, relevant source directories and entry points, and test configuration.
+- Preserve valid repository-specific heading hierarchy, section order, terminology, list and Markdown style, command presentation, directory naming, and level of detail.
+- Distinguish incorrect or outdated content from a valid local style. Make targeted corrections, and do not normalize formatting merely because another style is also valid.
+- Reuse existing documentation files, sections, and directories before creating a new structure.
+- Do not invent conventional architecture layers, components, directories, commands, or data flows that the inspected repository does not contain.
 
 ## Sentences and voice
 
@@ -85,7 +94,7 @@ Passive voice is appropriate when the actor is unknown or irrelevant, when the r
   | Service | Backend service  |
   ```
 
-- Preserve another table alignment when the user or target repository explicitly requires it.
+- Preserve another table alignment or layout when the user or target repository explicitly requires it.
 - Do not alter tables inside fenced code blocks, block quotations, generated files, or protected source content.
 - For review-only requests, report inconsistent display widths or separator alignment without rewriting the table or file.
 - Minimize notices. Use:

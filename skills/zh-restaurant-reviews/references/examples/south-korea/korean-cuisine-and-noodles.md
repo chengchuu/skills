@@ -13,7 +13,7 @@
 - Occasion: unknown
 - Main topics: Location, menu, fish, tofu, view, service, language
 - Recommended dishes: 嫩豆腐、烤鱼
-- Source: `temp/examples/25-0423_Food_北仓洞嫩豆腐.md`
+- Source: `sources/zh-restaurant-reviews/south-korea/25-0423_Food_北仓洞嫩豆腐.md`
 
 ### Available facts
 
@@ -38,7 +38,7 @@
 - Occasion: Quick meal or gathering
 - Main topics: Location, payment, fried rice, atmosphere
 - Recommended dishes: 火腿和鸡蛋炒饭
-- Source: `temp/examples/25-0424_Food_Song.md`
+- Source: `sources/zh-restaurant-reviews/south-korea/25-0424_Food_Song.md`
 
 ### Available facts
 
@@ -63,7 +63,7 @@
 - Occasion: unknown
 - Main topics: Location, ordering, price, food, environment
 - Recommended dishes: 石锅拌饭
-- Source: `temp/examples/25-0425_Food_Gimbap.md`
+- Source: `sources/zh-restaurant-reviews/south-korea/25-0425_Food_Gimbap.md`
 
 ### Available facts
 
@@ -88,7 +88,7 @@
 - Occasion: Before boarding
 - Main topics: Ordering, noodles, personal preference
 - Recommended dishes: unknown
-- Source: `temp/examples/25-0425_Food_PLE.md`
+- Source: `sources/zh-restaurant-reviews/south-korea/25-0425_Food_PLE.md`
 
 ### Available facts
 

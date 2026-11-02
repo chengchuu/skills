@@ -2,9 +2,9 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
-## Example: User-provided: 好奇目光
+## Example: 26-0808-A-Curious-Look
 
-- Source heading: `User-provided: 好奇目光`
+- Source heading: `26-0808-A-Curious-Look`
 - Source date: 2026-08-08
 - Version: none
 - Category: Companionship and affection
@@ -20,7 +20,7 @@ Handwritten examples are preserved as style evidence. Metadata uses `unknown` wh
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: 多平台
-- Source path: User-provided skill example
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -72,16 +72,16 @@ Somewhere Only We Know
 
 #猫 #猫のいる暮らし #好奇心 #ペット日記
 
-## Example: User-provided: 圆眼睛里的好奇心
+## Example: 25-0601-A-Quiet-Curious-Gaze
 
-- Source heading: `User-provided: 圆眼睛里的好奇心`
+- Source heading: `25-0601-A-Quiet-Curious-Gaze`
 - Source date: 2025-06-01
 - Version: none
 - Category: Companionship and affection
 - Secondary category: Curious gaze
 - Languages: zh-CN, en, ja-JP
 - Pet identity: 嘟嘟
-- BGM: Every Second
+- BGM: Not supplied
 - Mood: Healing
 - Tone: Cute and gentle
 - Pet behavior: Showing a curious, round-eyed expression
@@ -89,7 +89,7 @@ Somewhere Only We Know
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: 多平台
-- Source path: User-provided skill example
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -100,10 +100,6 @@ Somewhere Only We Know
 #### Description
 
 好奇又软萌的小表情，让这一刻格外治愈。
-
-#### BGM
-
-Every Second
 
 #### Hashtags
 
@@ -119,10 +115,6 @@ A Quiet, Curious Gaze
 
 The quiet curiosity in this little moment feels soft and comforting.
 
-#### BGM
-
-Every Second
-
 #### Hashtags
 
 #Cat #CuteCat #CatLife #CuriousCat #Gentle
@@ -136,10 +128,6 @@ Every Second
 #### Description
 
 好奇心が伝わる表情に、そっと癒やされるひとときです。
-
-#### BGM
-
-Every Second
 
 #### Hashtags
 
@@ -161,7 +149,7 @@ Every Second
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -229,7 +217,7 @@ Stay With Me - CHANYEOL, Punch
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -289,7 +277,7 @@ Every Second
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -357,7 +345,7 @@ Somewhere Only We Know
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -425,7 +413,7 @@ Blue
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -493,7 +481,7 @@ You Are My Sunshine
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -553,7 +541,7 @@ The cat gazes ahead with eyes full of gentle warmth.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -613,7 +601,7 @@ Don't stay awake for too long.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -673,7 +661,7 @@ The cat gazes at me with eyes full of gentle warmth.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -733,7 +721,7 @@ Like a tiny angel, she brings warmth and quiet love.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -793,7 +781,7 @@ Such a gentle moment, as if love quietly lingers here.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -853,7 +841,7 @@ The cat lies peacefully in my arms, softly kneading with love.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -913,7 +901,7 @@ Like a tiny angel, she brings warmth and quiet love.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -973,7 +961,7 @@ She never says a word, but every time she gets close, it's her way of saying "I 
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 
@@ -1033,7 +1021,7 @@ The cat says nothing, just quietly stays by my side.
 - Health-related status: Not stated
 - Content type: Real-life
 - Platform: unknown
-- Source path: `temp/pet-examples/pet.md`
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
 
 ### Chinese
 

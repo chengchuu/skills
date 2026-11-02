@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -6,12 +7,85 @@ const skillRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..
 const repoRoot = path.resolve(skillRoot, "..", "..");
 const sourcePath = process.argv[2]
   ? path.resolve(process.argv[2])
-  : path.join(repoRoot, "temp", "pet-examples", "pet.md");
+  : path.join(repoRoot, "sources", "pet-diary-notes", "pet.md");
 const examplesRoot = path.join(skillRoot, "references", "examples");
 const manifestPath = path.join(skillRoot, "references", "source-manifest.md");
+const trackedSourcePath = "sources/pet-diary-notes/pet.md";
+const historicalSourcePath = "temp/pet-examples/pet.md";
+
+const personalExampleMetadata = new Map([
+  ["25-0601-A-Little-Belly-A-Lazy-Nap", {
+    mood: "Relaxed",
+    tone: "Gentle",
+    format: "Vlog",
+    note: "User-approved multilingual afternoon nap case; pet identity 嘟嘟, date, Vlog format, real-life status, platform, and BGM supplied in request context",
+  }],
+  ["25-0603-Paw-Up-Playtime", {
+    mood: "Lively",
+    tone: "Playful",
+    format: "Vlog",
+    note: "User-provided raised-paw playtime case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context",
+  }],
+  ["25-0610-Little-Paws-Lazy-Lounging", {
+    mood: "Relaxed",
+    tone: "Cute",
+    format: "Vlog",
+    note: "User-provided sofa lounging case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese sentence fragment preserved as supplied",
+  }],
+  ["25-0718-Mamamoomama", {
+    mood: "Lively",
+    tone: "Playful",
+    format: "Vlog",
+    bgm: "Mamamoomama",
+    note: "User-provided paw-reaching case; pet identity 嘟嘟, Vlog format, real-life status, platform, and BGM supplied in request context; no BGM line appears in the supplied language blocks",
+  }],
+  ["25-0703-A-Quiet-Grooming-Break", {
+    mood: "Calm",
+    tone: "Gentle",
+    format: "Vlog",
+    note: "User-provided sofa grooming case; pet identity 嘟嘟, date, Vlog format, real-life status, and platform supplied in request context; Japanese BGM omitted as supplied",
+  }],
+  ["25-0724-Bite-Kick-Repeat", {
+    mood: "Lively",
+    tone: "Playful",
+    format: "Vlog",
+    note: "Pet identity supplied as 嘟嘟; Vlog format, real-life status, and playful nibbling and bunny-kick scene supplied by user",
+  }],
+  ["26-0811-Curious-Eyes-Everywhere", {
+    mood: "Curious",
+    tone: "Playful",
+    format: "Vlog",
+    note: "Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user",
+  }],
+  ["26-0808-A-Curious-Look", {
+    mood: "Curious",
+    tone: "Gentle",
+    format: "Vlog",
+    note: "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user",
+  }],
+  ["25-0807-A-Very-Serious-Face-Washing-Routine", {
+    mood: "Diligent",
+    tone: "Well-behaved and cute",
+    format: "Vlog",
+    note: "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user",
+  }],
+  ["25-0710-A-Neat-Little-Litter-Box-Routine", {
+    mood: "Calm",
+    tone: "Well-behaved and cute",
+    format: "Vlog",
+    note: "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context",
+  }],
+  ["25-0601-A-Quiet-Curious-Gaze", {
+    mood: "Healing",
+    tone: "Cute and gentle",
+    note: "Pet identity supplied as 嘟嘟; real-life status supplied by user",
+  }],
+]);
 
 const groups = {
   "sleep-and-relaxation.md": [
+    ["25-0601-A-Little-Belly-A-Lazy-Nap", "Afternoon nap", "Unknown", "Napping with the belly rising and falling with each breath"],
+    ["25-0610-Little-Paws-Lazy-Lounging", "Lounging with paws stretched out", "Unknown", "Lying on the sofa with paws stretched out"],
     ["26-0407-A-Sleepy-Afternoon", "Belly-up and drowsiness", "Unknown", "Belly-up on a bed"],
     ["26-0225-Blanket-Mode-Activated", "Blanket", "Unknown", "Burrowing and peeking"],
     ["26-0225-Cozy-Blanket-Kitty", "Blanket", "Unknown", "Burrowing with half the face visible"],
@@ -27,8 +101,8 @@ const groups = {
     ["25-0602 Tired All the Time", "Sofa nap", "Unknown", "Sleeping on a sofa"],
   ],
   "companionship-and-affection.md": [
-    ["User-provided: 圆眼睛里的好奇心", "Curious gaze", "Unknown", "Showing a curious, round-eyed expression"],
-    ["User-provided: 好奇目光", "Curious gaze", "Unknown", "Looking curiously at the owner"],
+    ["25-0601-A-Quiet-Curious-Gaze", "Curious gaze", "Unknown", "Showing a curious, round-eyed expression"],
+    ["26-0808-A-Curious-Look", "Curious gaze", "Unknown", "Looking curiously at the owner"],
     ["26-0207-Completely-Unguarded", "Tucked paws and gaze", "Unknown", "Sitting with paws tucked and looking"],
     ["25-1126-The-Most-Healing-Kitten-in-the-World", "Healing portrait", "Unknown", "Unspecified"],
     ["25-1121-A-Cat-Loves-You", "Affection and companionship", "Unknown", "Small affectionate and companionable moments"],
@@ -46,7 +120,10 @@ const groups = {
     ["25-0711 Loving Gaze from a Kitten", "Gaze and paw contact", "Unknown", "Looking and holding a hand"],
   ],
   "playful-and-funny.md": [
-    ["User-provided: 好奇雷达已开启", "Looking around curiously", "Unknown", "Looking around in different directions"],
+    ["25-0603-Paw-Up-Playtime", "Raised-paw playtime", "Unknown", "Raising a paw while playing with the owner"],
+    ["25-0718-Mamamoomama", "Reaching for a small object", "Unknown", "Extending a paw to grab a small object"],
+    ["26-0811-Curious-Eyes-Everywhere", "Looking around curiously", "Unknown", "Looking around in different directions"],
+    ["25-0724-Bite-Kick-Repeat", "Nibbling and bunny kicks", "Unknown", "Playing, nibbling, and kicking with the hind legs"],
     ["25-0825-Too-Cute", "Belly-up and tail flick", "Unknown", "Sprawling and flicking the tail"],
     ["26-0204-Curious-Kitty", "Curiosity", "Unknown", "Exploring; exact action unspecified"],
     ["25-1008 Playful Kitty", "Nibbling", "Unknown", "Playing near and nibbling feet"],
@@ -62,7 +139,8 @@ const groups = {
     ["25-0721 Kitten Hiccups", "Chicken breast and hiccups", "Unknown", "Eating chicken breast and hiccuping"],
   ],
   "grooming-and-care.md": [
-    ["User-provided: 认真洗脸中", "Face washing", "Unknown", "Washing the face with repeated paw movements"],
+    ["25-0703-A-Quiet-Grooming-Break", "Self-grooming on the sofa", "Unknown", "Lying on the sofa with head lowered and licking fur"],
+    ["25-0807-A-Very-Serious-Face-Washing-Routine", "Face washing", "Unknown", "Washing the face with repeated paw movements"],
     ["25-0731 The Joy of Head Massage", "Head massage", "Unknown", "Receiving a head massage"],
     ["25-0921 Sticky Little Baby", "Bath and dryer", "Unknown", "Sitting in a dryer after a bath"],
     ["25-0703 Relaxed Moments for This Cat", "Head scratches", "Unknown", "Receiving head scratches"],
@@ -74,7 +152,7 @@ const groups = {
     ["25-1026 From Kitten to Boss Cat", "Growth comparison", "Unknown", "Kitten-to-cat comparison"],
   ],
   "daily-life-and-office.md": [
-    ["User-provided: 猫砂盆里的乖巧日常", "Litter box routine", "Unknown", "Using the litter box and covering it afterward"],
+    ["25-0710-A-Neat-Little-Litter-Box-Routine", "Litter box routine", "Unknown", "Using the litter box and covering it afterward"],
     ["25-0901-Keyboard-Guardian", "Office cat", "Unknown", "Patrolling a desk"],
     ["25-1106 Round Little Head", "Physical detail", "Unknown", "Showing the back of the head"],
     ["25-1028 A Busy Little Life", "Daily routine", "Unknown", "Chasing sunlight, watching outside, and grooming"],
@@ -98,108 +176,7 @@ const groups = {
   ],
 };
 
-const supplementalExamples = [
-  {
-    heading: "User-provided: 好奇雷达已开启",
-    body: `zh:
-好奇雷达已开启
-东张西望地观察四周，好奇的小眼神一刻也闲不下来。
-BGM：biubiubiu
-#猫咪 #猫咪日常 #好奇猫咪
-
-en:
-Curious Eyes Everywhere
-Looking this way and that, she watches everything around her with bright curiosity.
-BGM: biubiubiu
-#Cat #CatLife #CuriousCat
-
-jp:
-きょろきょろ観察中
-あっちを見たりこっちを見たり、好奇心いっぱいに辺りを見渡している。
-BGM：biubiubiu
-#猫 #猫のいる暮らし #好奇心旺盛`,
-  },
-  {
-    heading: "User-provided: 好奇目光",
-    body: `zh:
-好奇目光
-圆圆的眼睛好奇地看着我，这一刻也被轻轻记录下来。
-BGM: Somewhere Only We Know
-#猫咪 #猫咪日常 #好奇猫咪 #宠物日记
-
-en:
-A Curious Look
-Round eyes meet mine with curiosity, captured in one simple little moment.
-BGM: Somewhere Only We Know
-#Cat #CatLife #CuriousCat #PetDiary
-
-jp:
-好奇心いっぱいのまなざし
-BGM: Somewhere Only We Know
-#猫 #猫のいる暮らし #好奇心 #ペット日記`,
-  },
-  {
-    heading: "User-provided: 圆眼睛里的好奇心",
-    body: `zh:
-圆眼睛里的好奇心
-好奇又软萌的小表情，让这一刻格外治愈。
-BGM: Every Second
-#猫咪 #可爱猫咪 #猫咪日常 #好奇心 #治愈
-
-en:
-A Quiet, Curious Gaze
-The quiet curiosity in this little moment feels soft and comforting.
-BGM: Every Second
-#Cat #CuteCat #CatLife #CuriousCat #Gentle
-
-jp:
-まんまるな瞳の好奇心
-好奇心が伝わる表情に、そっと癒やされるひとときです。
-BGM: Every Second
-#猫 #かわいい猫 #猫のいる暮らし #好奇心 #癒し`,
-  },
-  {
-    heading: "User-provided: 猫砂盆里的乖巧日常",
-    body: `zh:
-猫砂盆里的乖巧日常
-安静地上完厕所，再认真地把猫砂埋好，乖乖完成自己的小日常。
-BGM：biubiubiu
-#猫咪 #猫咪日常 #猫砂盆 #乖巧猫咪 #宠物日记
-
-en:
-A Neat Little Litter Box Routine
-A quiet trip to the litter box ends with carefully covering everything up like a well-behaved little cat.
-BGM: biubiubiu
-#Cat #CatLife #LitterBoxRoutine #WellBehavedCat #PetDiary
-
-jp:
-おりこうさんのトイレ時間
-静かにトイレを済ませたあとは、きちんと砂をかけて、今日もおりこうさんにできました。
-BGM：biubiubiu
-#猫 #猫のいる暮らし #猫トイレ #おりこうさん #ペット日記`,
-  },
-  {
-    heading: "User-provided: 认真洗脸中",
-    body: `zh:
-认真洗脸中
-小爪子一下又一下地擦着脸，努力完成今天的洗脸日常。
-BGM: Rock That Body
-#猫咪 #猫咪日常 #猫咪洗脸 #乖巧猫咪
-
-en:
-A Very Serious Face-Washing Routine
-One careful paw swipe at a time, this cat works hard through the face-washing routine.
-BGM: Rock That Body
-#Cat #CatLife #FaceWashing #GroomingTime
-
-jp:
-一生懸命、顔洗い中
-小さな前足で何度も顔をこすりながら、一生懸命にお手入れしています。
-BGM：Rock That Body
-#猫 #猫のいる暮らし #顔洗い #毛づくろい`,
-  },
-];
-const supplementalHeadings = new Set(supplementalExamples.map(example => example.heading));
+const sourceBackedPersonalHeadings = new Set(personalExampleMetadata.keys());
 
 const repeatedGroups = new Map([
   ["26-0407-A-Sleepy-Afternoon", "Repeated Chinese title with 25-0707; different descriptions and English titles"],
@@ -237,11 +214,6 @@ function parseSource(markdown) {
 }
 
 function parseDate(heading) {
-  if (heading === "User-provided: 好奇雷达已开启") return "2026-08-11";
-  if (heading === "User-provided: 好奇目光") return "2026-08-08";
-  if (heading === "User-provided: 圆眼睛里的好奇心") return "2025-06-01";
-  if (heading === "User-provided: 猫砂盆里的乖巧日常") return "2025-07-10";
-  if (heading === "User-provided: 认真洗脸中") return "2025-08-07";
   const match = /^(\d{2})-(\d{2})(\d{2})/.exec(heading);
   return match ? `20${match[1]}-${match[2]}-${match[3]}` : "unknown";
 }
@@ -307,15 +279,8 @@ function categoryFor(file) {
 }
 
 function dimensions(file, heading) {
-  if (heading === "User-provided: 好奇雷达已开启") {
-    return { mood: "Curious", tone: "Playful" };
-  }
-  if (heading === "User-provided: 好奇目光") {
-    return { mood: "Curious", tone: "Gentle" };
-  }
-  if (heading === "User-provided: 圆眼睛里的好奇心") {
-    return { mood: "Healing", tone: "Cute and gentle" };
-  }
+  const personal = personalExampleMetadata.get(heading);
+  if (personal) return { mood: personal.mood, tone: personal.tone };
   if (file === "ai-storytelling.md") {
     if (heading === "26-0323 AI Ninja v01") {
       return { mood: "Dramatic", tone: "Cinematic" };
@@ -324,12 +289,6 @@ function dimensions(file, heading) {
   }
   if (heading === "25-0602 Tired All the Time") {
     return { mood: "Relaxed", tone: "Gentle" };
-  }
-  if (heading === "User-provided: 猫砂盆里的乖巧日常") {
-    return { mood: "Calm", tone: "Well-behaved and cute" };
-  }
-  if (heading === "User-provided: 认真洗脸中") {
-    return { mood: "Diligent", tone: "Well-behaved and cute" };
   }
   const presets = {
     "sleep-and-relaxation.md": ["Healing", "Gentle"],
@@ -357,49 +316,26 @@ function healthStatus(heading) {
 }
 
 function platformFor(heading) {
-  if (heading === "User-provided: 好奇雷达已开启") return "多平台";
-  if (heading === "User-provided: 好奇目光") return "多平台";
-  if (heading === "User-provided: 圆眼睛里的好奇心") return "多平台";
-  if (heading === "User-provided: 猫砂盆里的乖巧日常") return "多平台";
-  if (heading === "User-provided: 认真洗脸中") return "多平台";
+  if (personalExampleMetadata.has(heading)) return "多平台";
   return heading === "26-0225-Blanket-Mode-Activated"
     ? "YouTube Shorts indicated by an additional #shorts hashtag variant"
     : "unknown";
 }
 
-function contentTypeFor(file, heading) {
-  if (heading === "User-provided: 好奇雷达已开启") return "Real-life";
-  if (heading === "User-provided: 好奇目光") return "Real-life";
-  if (heading === "User-provided: 圆眼睛里的好奇心") return "Real-life";
-  if (heading === "User-provided: 猫砂盆里的乖巧日常") return "Real-life";
-  if (heading === "User-provided: 认真洗脸中") return "Real-life";
-  if (supplementalHeadings.has(heading)) return "unknown";
+function contentTypeFor(file) {
   return file === "ai-storytelling.md" ? "AI-generated fictional scene" : "Real-life";
 }
 
-function sourcePathFor(heading) {
-  return supplementalHeadings.has(heading)
-    ? "User-provided skill example"
-    : "`temp/pet-examples/pet.md`";
+function sourcePathFor() {
+  return `\`${trackedSourcePath}\` (historical path: \`${historicalSourcePath}\`)`;
 }
 
 function petIdentityFor(heading) {
-  return [
-    "User-provided: 好奇雷达已开启",
-    "User-provided: 好奇目光",
-    "User-provided: 圆眼睛里的好奇心",
-    "User-provided: 猫砂盆里的乖巧日常",
-    "User-provided: 认真洗脸中",
-  ].includes(heading) ? "嘟嘟" : null;
+  return personalExampleMetadata.has(heading) ? "嘟嘟" : null;
 }
 
 function formatFor(heading) {
-  return [
-    "User-provided: 好奇雷达已开启",
-    "User-provided: 好奇目光",
-    "User-provided: 猫砂盆里的乖巧日常",
-    "User-provided: 认真洗脸中",
-  ].includes(heading) ? "Vlog" : null;
+  return personalExampleMetadata.get(heading)?.format ?? null;
 }
 
 function formatLanguage(label, block) {
@@ -423,8 +359,11 @@ function exampleMarkdown(example) {
   const dims = dimensions(detail.file, example.heading);
   const { preface, blocks } = parseLanguageBlocks(example.body);
   const languages = Object.keys(blocks);
-  const bgm = [...new Set(Object.values(blocks).flatMap(block => block.bgm))];
-  const contentType = contentTypeFor(detail.file, example.heading);
+  const bgm = [...new Set([
+    ...Object.values(blocks).flatMap(block => block.bgm),
+    personalExampleMetadata.get(example.heading)?.bgm,
+  ].filter(Boolean))];
+  const contentType = contentTypeFor(detail.file);
   const lines = [
     `## Example: ${example.heading}`,
     "",
@@ -445,7 +384,7 @@ function exampleMarkdown(example) {
     `- Health-related status: ${healthStatus(example.heading)}`,
     `- Content type: ${contentType}`,
     `- Platform: ${platformFor(example.heading)}`,
-    `- Source path: ${sourcePathFor(example.heading)}`,
+    `- Source path: ${sourcePathFor()}`,
   ];
   if (preface) lines.push(`- Source preface: ${preface.replace(/\n+/g, " / ")}`);
   lines.push("");
@@ -467,48 +406,42 @@ function missingFields(example) {
   if (detail.file === "ai-storytelling.md" && (!detail.aiLocation || detail.aiLocation === "Unknown")) {
     missing.push("AI location");
   }
-  if (!Object.values(blocks).some(block => block.bgm.length)) missing.push("BGM");
-  if (contentTypeFor(detail.file, example.heading) === "unknown") missing.push("real-life or AI-generated status");
+  if (!Object.values(blocks).some(block => block.bgm.length)
+    && !personalExampleMetadata.get(example.heading)?.bgm) missing.push("BGM");
   return missing.length ? missing.join(", ") : "none";
 }
 
-function manifestMarkdown(examples) {
+function manifestMarkdown(examples, sourceBuffer) {
   const rows = examples.map(example => {
     const detail = detailsFor(example.heading);
     const languages = parseLanguages(example.body).map(language => ({ zh: "zh-CN", en: "en", jp: "ja-JP" })[language]).join(", ");
     const repeated = repeatedGroups.get(example.heading);
-    const contentType = contentTypeFor(detail.file, example.heading);
-    const confidence = supplementalHeadings.has(example.heading)
+    const contentType = contentTypeFor(detail.file);
+    const confidence = sourceBackedPersonalHeadings.has(example.heading)
       ? "High"
       : repeated
         ? "High for identity; medium for relationship"
         : "High";
-    const notes = supplementalHeadings.has(example.heading)
-      ? example.heading === "User-provided: 好奇雷达已开启"
-        ? "Pet identity supplied as 嘟嘟; Vlog format, real-life status, and looking-around scene supplied by user"
-        : example.heading === "User-provided: 好奇目光"
-        ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
-        : example.heading === "User-provided: 猫砂盆里的乖巧日常"
-        ? "Pet identity supplied as 嘟嘟; Vlog format and real-life scene supplied in the request context"
-        : example.heading === "User-provided: 认真洗脸中"
-          ? "Pet identity supplied as 嘟嘟; Vlog format and real-life status supplied by user"
-          : "Pet identity supplied as 嘟嘟; real-life status supplied by user"
-      : repeated ?? "No duplicate detected";
+    const notes = personalExampleMetadata.get(example.heading)?.note ?? repeated ?? "No duplicate detected";
     const aiLocation = detail.aiLocation ?? "not applicable";
     return `| \`${example.heading}\` | ${parseDate(example.heading)} | ${parseVersion(example.heading)} | ${categoryFor(detail.file)} | [${detail.file}](examples/${detail.file}) | ${languages} | ${aiLocation} | ${contentType} | ${repeated ? "Repeated or versioned" : "Unique"} | Keep distinct | ${missingFields(example)} | ${confidence} | ${notes} |`;
   });
   return `# Source manifest
 
-This manifest maps every pet diary source section in \`temp/pet-examples/pet.md\` and separately supplied user examples to the self-contained curated corpus. The handwritten source is preserved unchanged. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
+This manifest maps every pet diary source section in \`${trackedSourcePath}\` to the self-contained curated corpus. The tracked source was migrated from the historical \`${historicalSourcePath}\` input and is maintained with approved new cases. Dates are expanded from source-heading prefixes; no publication date is inferred beyond that notation.
 
 ## Coverage
 
-- Source sections from \`temp/pet-examples/pet.md\`: ${examples.length - supplementalExamples.length}
-- Supplemental user-provided examples: ${supplementalExamples.length}
+- Canonical source: \`${trackedSourcePath}\`
+- Historical source path: \`${historicalSourcePath}\`
+- Source bytes: ${sourceBuffer.length}
+- Source SHA-256: \`${createHash("sha256").update(sourceBuffer).digest("hex")}\`
+- Source sections: ${examples.length}
+- Recovered former supplemental sections: 6; source headings are canonical.
 - Curated examples: ${examples.length}
-- Merge decisions: none; every distinct source section is retained.
+- Merge decisions: no source sections are merged; every distinct source section is retained once.
 - Language availability: zh-CN ${examples.filter(example => parseLanguages(example.body).includes("zh")).length}, en ${examples.filter(example => parseLanguages(example.body).includes("en")).length}, ja-JP ${examples.filter(example => parseLanguages(example.body).includes("jp")).length}.
-- Content types: real-life ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "Real-life").length}, AI-generated ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "AI-generated fictional scene").length}, unknown ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file, example.heading) === "unknown").length}.
+- Content types: real-life ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file) === "Real-life").length}, AI-generated ${examples.filter(example => contentTypeFor(detailsFor(example.heading).file) === "AI-generated fictional scene").length}.
 - Geography policy: real-life entries omit geography; AI location is retained for generated examples only.
 
 ## Section mapping
@@ -541,10 +474,16 @@ ${rows.join("\n")}
 }
 
 async function main() {
-  const source = await readFile(sourcePath, "utf8");
-  const examples = [...supplementalExamples, ...parseSource(source)];
+  const sourceBuffer = await readFile(sourcePath);
+  const source = sourceBuffer.toString("utf8");
+  const examples = parseSource(source);
   const classified = new Set(Object.values(groups).flat().map(([heading]) => heading));
-  const sourceHeadings = new Set(examples.map(example => example.heading));
+  const headingList = examples.map(example => example.heading);
+  const sourceHeadings = new Set(headingList);
+  if (sourceHeadings.size !== headingList.length) {
+    const duplicates = headingList.filter((heading, index) => headingList.indexOf(heading) !== index);
+    throw new Error(`Duplicate source headings: ${[...new Set(duplicates)].join(", ")}.`);
+  }
   const missing = examples.filter(example => !classified.has(example.heading)).map(example => example.heading);
   const extra = [...classified].filter(heading => !sourceHeadings.has(heading));
   if (missing.length || extra.length) {
@@ -559,7 +498,7 @@ async function main() {
     const content = `# ${title} examples\n\nHandwritten examples are preserved as style evidence. Metadata uses \`unknown\` when the source does not support a narrower value. Do not transfer example facts into a new entry.\n\n${selected.map(exampleMarkdown).join("\n\n")}\n`;
     await writeFile(path.join(examplesRoot, file), content);
   }
-  await writeFile(manifestPath, manifestMarkdown(examples));
+  await writeFile(manifestPath, manifestMarkdown(examples, sourceBuffer));
   console.log(`Built ${examples.length} examples across ${Object.keys(groups).length} files.`);
 }
 

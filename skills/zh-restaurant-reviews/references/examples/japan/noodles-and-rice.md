@@ -13,7 +13,7 @@
 - Occasion: unknown
 - Main topics: Ordering, dishes, taste, portion, price
 - Recommended dishes: ローストビーフ丼、ごぼうの唐揚げ
-- Source: `temp/examples/25-0302-1738-Food-神户-Gohanya.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0302-1738-Food-神户-Gohanya.md`
 
 ### Available facts
 
@@ -38,7 +38,7 @@
 - Occasion: unknown
 - Main topics: Location, ordering, crowd, beef, portion
 - Recommended dishes: 烧牛肉盖饭
-- Source: `temp/examples/25-0303-1125-Food-Red-Rock.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0303-1125-Food-Red-Rock.md`
 
 ### Available facts
 
@@ -63,7 +63,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Queue, ordering, broth, toppings
 - Recommended dishes: unknown
-- Source: `temp/examples/25-0304-1920-Food-贺正轩.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0304-1920-Food-贺正轩.md`
 
 ### Available facts
 
@@ -88,7 +88,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Owner, decor, menu, food, atmosphere
 - Recommended dishes: 豚肉丼、豆腐定食
-- Source: `temp/examples/25-0305-1457-Food-Takei.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0305-1457-Food-Takei.md`
 
 ### Available facts
 
@@ -113,7 +113,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Atmosphere, broth, saltiness, memorability
 - Recommended dishes: unknown
-- Source: `temp/examples/25-0308-1346-Food-无限拉面.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0308-1346-Food-无限拉面.md`
 
 ### Available facts
 
@@ -138,7 +138,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: Lunch
 - Main topics: Queue, eel, sauce, bones, service
 - Recommended dishes: 鳗鱼饭
-- Source: `temp/examples/25-0519-1858-Food-鳗之成濑.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0519-1858-Food-鳗之成濑.md`
 
 ### Available facts
 
@@ -163,7 +163,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Portion, flavor, noodles, reheating, finishing rice
 - Recommended dishes: 二郎风沾面
-- Source: `temp/examples/25-0520-1201-Food-Fujiyama-55.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0520-1201-Food-Fujiyama-55.md`
 
 ### Available facts
 
@@ -188,7 +188,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Location, queue, ordering, broth, noodles
 - Recommended dishes: 浓厚鱼介沾面
-- Source: `temp/examples/25-0606-1257-Food-兼虎.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0606-1257-Food-兼虎.md`
 
 ### Available facts
 
@@ -213,7 +213,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Decor, ordering, broth, toppings, local specialty
 - Recommended dishes: 传统熊本蒜香豚骨拉面、马肉丼
-- Source: `temp/examples/25-0608-1152-Food-伝.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0608-1152-Food-伝.md`
 
 ### Available facts
 
@@ -238,7 +238,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: Before boarding
 - Main topics: Location, dish, taste, texture, price, travel ending
 - Recommended dishes: 乌冬面配明太子
-- Source: `temp/examples/25-0609-1140-Food-釜喜利.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-0609-1140-Food-釜喜利.md`
 
 ### Available facts
 
@@ -263,7 +263,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: unknown
 - Main topics: Location, ordering, dish, revisit intent
 - Recommended dishes: 拉面、饺子
-- Source: `temp/examples/25-1022_Food_Hibiki.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1022_Food_Hibiki.md`
 
 ### Available facts
 
@@ -288,7 +288,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: Convenient meal
 - Main topics: Ordering, space, dishes, convenience
 - Recommended dishes: 叉烧盖饭
-- Source: `temp/examples/25-1022_Food_Kujira-Sakae.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1022_Food_Kujira-Sakae.md`
 
 ### Available facts
 
@@ -299,6 +299,33 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 ### Review
 
 住在附近就顺路来吃了。门口是自动售票机点单，买好再入座，店员会来收单，流程还挺顺。店里空间比想象中大，灯光也很亮，坐着不压抑。点了汤面和叉烧盖饭，拉面算是正常发挥，反倒是盖饭更对我胃口一点，吃得更香。整体不错，图个方便很合适。
+
+## Example: 福冈 Red Rock 烤牛肉饭
+
+- Country: Japan
+- Region: Fukuoka
+- Category: Rice bowls
+- Cuisine: Japanese
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Standard
+- Occasion: unknown
+- Main topics: Location, ordering, Chinese interface, dish, doneness, texture, portion, serving time, miso soup
+- Recommended dishes: 烤牛肉饭
+- Source: User-provided review, 2026-09-14 (Red Rock 博多大名店)
+
+### Available facts
+
+- 餐厅为 Red Rock(博多大名店)，位于日本福冈，离天神池不远，店铺在一条小巷里且店面不大。
+- 门口设有点餐机，支持中文界面；自行下单后将餐票交给服务员，坐等出餐。
+- 烤牛肉饭端上来时看着不太熟，另外加了一个温泉蛋；牛肉口感嫩、入味，口味稍微带甜。
+- 份量适中，出餐稍慢，配的味增汤味道不会太浓。
+- 用户评价综合来说味道不错，值得一试。
+
+### Review
+
+这家店离天神池不远，藏在一条小巷里，店面不大。进门后在门口的点餐机上自行下单，机器有中文界面，选好餐把餐票交给服务员，坐着等餐就行。点了烤牛肉饭，刚端上来时看着有点不太熟，另外加了一个温泉蛋，牛肉吃起来很嫩，也很入味，口味稍微带点甜。份量适中，出餐稍慢。综合来说味道不错，值得一试。
 
 ## Example: 名古屋松屋早餐
 
@@ -313,7 +340,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: Breakfast
 - Main topics: Ordering, portion, dish, service, brand familiarity
 - Recommended dishes: 双蛋热狗定食
-- Source: `temp/examples/25-1022_Food_松屋.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1022_Food_松屋.md`
 
 ### Available facts
 
@@ -338,7 +365,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: Airport meal
 - Main topics: Presentation, beef, doneness, portion, provenance claim
 - Recommended dishes: 知多牛烤肉盖饭
-- Source: `temp/examples/25-1023-1301-Food-Maruichi.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1023-1301-Food-Maruichi.md`
 
 ### Available facts
 
@@ -363,7 +390,7 @@ Red Rock 在三宫站附近的小巷里，第一次找的时候差点走过头�
 - Occasion: Lunch
 - Main topics: Location, view, waiting, broth, recommendation
 - Recommended dishes: unknown
-- Source: `temp/examples/25-1114-1439-Food-大力邸.md`
+- Source: `sources/zh-restaurant-reviews/japan/25-1114-1439-Food-大力邸.md`
 
 ### Available facts
 

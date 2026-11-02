@@ -13,7 +13,7 @@
 - Occasion: Dinner
 - Main topics: Crowd, service, noodles, broth
 - Recommended dishes: 一根面
-- Source: `temp/examples/25-0503_Food_潘周家一根面.md`
+- Source: `sources/zh-restaurant-reviews/china/25-0503_Food_潘周家一根面.md`
 
 ### Available facts
 
@@ -39,7 +39,7 @@
 - Occasion: Dinner, solo dining
 - Main topics: Noodles, side dish, drink, environment, service
 - Recommended dishes: 野笋当归骨汤面、脆皮黄金鸡肉块
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -66,7 +66,7 @@
 - Occasion: Lunch
 - Main topics: Broth, noodles, seafood, environment
 - Recommended dishes: 海鲜沙茶面
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -92,7 +92,7 @@
 - Occasion: Dinner, solo dining
 - Main topics: Noodles, side dish, drink, environment, service
 - Recommended dishes: 特调油拌面、白小螺
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -118,7 +118,7 @@
 - Occasion: Quick meal
 - Main topics: Broth, meat, noodles, location, service
 - Recommended dishes: unknown
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -144,7 +144,7 @@
 - Occasion: Peak-hour meal
 - Main topics: Broth, noodles, portion, service, environment
 - Recommended dishes: 草本骨汤软骨面、北海道风味肉酱拌面
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
@@ -170,7 +170,7 @@
 - Occasion: Dinner
 - Main topics: Filling, texture, broth
 - Recommended dishes: 玉米鲜肉云吞、鸡肉云吞
-- Source: `temp/examples/Comments.md`
+- Source: `sources/zh-restaurant-reviews/china/Comments.md`
 
 ### Available facts
 
