@@ -3,6 +3,7 @@
 
 **Table of Contents:**
 
+- [25-0601-A-Little-Sofa-Nap](#25-0601-a-little-sofa-nap)
 - [25-0601-A-Little-Belly-A-Lazy-Nap](#25-0601-a-little-belly-a-lazy-nap)
 - [25-0603-Paw-Up-Playtime](#25-0603-paw-up-playtime)
 - [25-0610-Little-Paws-Lazy-Lounging](#25-0610-little-paws-lazy-lounging)
@@ -74,6 +75,26 @@
 - [26-0319 AI CEO v01](#26-0319-ai-ceo-v01)
 - [26-0319 AI Phone v03](#26-0319-ai-phone-v03)
 - [26-0318 AI Phone v01](#26-0318-ai-phone-v01)
+
+## 25-0601-A-Little-Sofa-Nap
+
+zh:
+沙发午睡时间
+小猫在沙发上睡午觉，一只小爪子伸在软软的毯子上。
+BGM: death bed
+#小猫 #猫咪日常 #猫咪午睡 #宠物日记
+
+en:
+A Little Sofa Nap
+She naps on the sofa with one little paw stretched out on the soft blanket.
+BGM: death bed
+#Kitten #CatLife #KittenNap #PetDiary
+
+jp:
+ソファでお昼寝
+子猫がソファでお昼寝中、ふわふわの毛布に小さな前足を伸ばしている。
+BGM: death bed
+#子猫 #猫のいる暮らし #お昼寝猫 #ペット日記
 
 ## 25-0601-A-Little-Belly-A-Lazy-Nap
 

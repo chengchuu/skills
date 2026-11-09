@@ -2,6 +2,80 @@
 
 Handwritten examples are preserved as style evidence. Metadata uses `unknown` when the source does not support a narrower value. Do not transfer example facts into a new entry.
 
+## Example: 25-0601-A-Little-Sofa-Nap
+
+- Source heading: `25-0601-A-Little-Sofa-Nap`
+- Source date: 2025-06-01
+- Version: none
+- Category: Sleep and relaxation
+- Secondary category: Sofa nap
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: death bed
+- Mood: Relaxed
+- Tone: Gentle
+- Pet behavior: Napping on the sofa with a paw stretched out on a blanket
+- Pet activity: Napping on the sofa with a paw stretched out on a blanket
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+沙发午睡时间
+
+#### Description
+
+小猫在沙发上睡午觉，一只小爪子伸在软软的毯子上。
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#小猫 #猫咪日常 #猫咪午睡 #宠物日记
+
+### English
+
+#### Title
+
+A Little Sofa Nap
+
+#### Description
+
+She naps on the sofa with one little paw stretched out on the soft blanket.
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#Kitten #CatLife #KittenNap #PetDiary
+
+### Japanese
+
+#### Title
+
+ソファでお昼寝
+
+#### Description
+
+子猫がソファでお昼寝中、ふわふわの毛布に小さな前足を伸ばしている。
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#子猫 #猫のいる暮らし #お昼寝猫 #ペット日記
+
 ## Example: 25-0601-A-Little-Belly-A-Lazy-Nap
 
 - Source heading: `25-0601-A-Little-Belly-A-Lazy-Nap`

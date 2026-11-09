@@ -14,6 +14,12 @@ const trackedSourcePath = "sources/pet-diary-notes/pet.md";
 const historicalSourcePath = "temp/pet-examples/pet.md";
 
 const personalExampleMetadata = new Map([
+  ["25-0601-A-Little-Sofa-Nap", {
+    mood: "Relaxed",
+    tone: "Gentle",
+    format: "Vlog",
+    note: "User-approved multilingual sofa nap case; pet identity 嘟嘟, date, Vlog format, real-life status, platform, and BGM supplied in request context",
+  }],
   ["25-0601-A-Little-Belly-A-Lazy-Nap", {
     mood: "Relaxed",
     tone: "Gentle",
@@ -84,6 +90,7 @@ const personalExampleMetadata = new Map([
 
 const groups = {
   "sleep-and-relaxation.md": [
+    ["25-0601-A-Little-Sofa-Nap", "Sofa nap", "Unknown", "Napping on the sofa with a paw stretched out on a blanket"],
     ["25-0601-A-Little-Belly-A-Lazy-Nap", "Afternoon nap", "Unknown", "Napping with the belly rising and falling with each breath"],
     ["25-0610-Little-Paws-Lazy-Lounging", "Lounging with paws stretched out", "Unknown", "Lying on the sofa with paws stretched out"],
     ["26-0407-A-Sleepy-Afternoon", "Belly-up and drowsiness", "Unknown", "Belly-up on a bed"],
