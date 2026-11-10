@@ -117,11 +117,22 @@ Passive voice is appropriate when the actor is unknown or irrelevant, when the r
 - Explain code immediately before or after it; do not make readers infer why it exists.
 - Keep examples minimal but runnable when practical.
 - Never invent command output or imply that unrun code was verified.
-- Use placeholders that are clearly distinguishable from literal values and explain them when ambiguity is possible.
 - Add an accurate language identifier to fenced code blocks.
 - Keep commands copyable and separate commands from output.
 - Do not add a shell prompt marker unless the project requires one.
 - Do not wrap a command in a prose sentence.
+
+### Command placeholders
+
+For placeholders you author in command references and technical articles, use angle brackets and lowercase names, separating words with hyphens: `<template-directory>`, `<repository-url>`, `<branch-name>`, and `<commit-message>`. Single-word names such as `<directory>` are fine. Use inline code in Markdown prose and show placeholders literally in fenced code blocks. This house style follows the angle-bracket notation in [Git’s command reference](https://git-scm.com/docs/git-clone.html); it is not a universal documentation standard.
+
+Before running this example, replace the entire `<directory>` placeholder, including the angle brackets, with the target directory. Keep the surrounding shell quotes.
+
+```bash
+cd "<directory>"
+```
+
+Unquoted angle brackets can be interpreted as shell redirection. Quoting prevents that interpretation but passes the unsubstituted placeholder as a literal argument, so it still must be replaced. Leave actual variables, template expressions, literal values, and verbatim upstream syntax unchanged.
 
 ## Accessibility and global English
 
