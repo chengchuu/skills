@@ -9,6 +9,7 @@
 - [安装单个技能](#安装单个技能)
   - [Codex Skill Installer](#codex-skill-installer)
   - [GitHub Copilot app](#github-copilot-app)
+  - [WorkBuddy AI](#workbuddy-ai)
   - [手动安装](#手动安装)
 - [安装或更新 Codex 插件](#安装或更新-codex-插件)
   - [安装插件](#安装插件)
@@ -60,6 +61,22 @@ cp -R /tmp/cheng-skills/skills/prefer-mazey \
   "$HOME/Library/Application Support/com.github.githubapp/app-skills/"
 rm -rf /tmp/cheng-skills
 ```
+
+### WorkBuddy AI
+
+将 `prefer-mazey` 安装到 WorkBuddy AI 的用户级技能目录：
+
+```bash
+git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/cheng-skills
+mkdir -p "$HOME/.workbuddy-ai/skills"
+cp -R /tmp/cheng-skills/skills/prefer-mazey \
+  "$HOME/.workbuddy-ai/skills/"
+rm -rf /tmp/cheng-skills
+```
+
+如需安装到项目范围，请将目标路径替换为 `<workspace>/.workbuddy-ai/skills/<skill-name>`。用户级技能在所有项目中可用；项目级技能仅在该项目的工作区内可见。
+
+技能结构（`SKILL.md` 及 YAML 前置元数据、`references/`、`scripts/`）与 WorkBuddy AI 直接兼容，无需额外的清单文件或格式转换。安装后请新建一个 WorkBuddy AI 对话，以便发现并加载该技能。
 
 ### 手动安装
 

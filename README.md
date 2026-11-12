@@ -9,6 +9,7 @@ Reusable developer workflow skills packaged as a skill-only Codex plugin. The `.
 - [Install an individual skill](#install-an-individual-skill)
   - [Codex skill installer](#codex-skill-installer)
   - [GitHub Copilot app](#github-copilot-app)
+  - [WorkBuddy AI](#workbuddy-ai)
   - [Manual installation](#manual-installation)
 - [Install or update the Codex plugin](#install-or-update-the-codex-plugin)
   - [Install the plugin](#install-the-plugin)
@@ -60,6 +61,22 @@ cp -R /tmp/cheng-skills/skills/prefer-mazey \
   "$HOME/Library/Application Support/com.github.githubapp/app-skills/"
 rm -rf /tmp/cheng-skills
 ```
+
+### WorkBuddy AI
+
+Install `prefer-mazey` into WorkBuddy AI's user-level skill directory:
+
+```bash
+git clone --depth 1 https://github.com/chengchuu/skills.git /tmp/cheng-skills
+mkdir -p "$HOME/.workbuddy-ai/skills"
+cp -R /tmp/cheng-skills/skills/prefer-mazey \
+  "$HOME/.workbuddy-ai/skills/"
+rm -rf /tmp/cheng-skills
+```
+
+For project-scoped installation, replace the target path with `<workspace>/.workbuddy-ai/skills/<skill-name>`. User-level skills are available across all projects; project-level skills are visible only within that project's workspace.
+
+The skill structure (`SKILL.md` with YAML frontmatter, `references/`, `scripts/`) is directly compatible with WorkBuddy AI. No additional manifest or conversion is required. Start a new WorkBuddy AI conversation after installation so the skill is discovered and loaded.
 
 ### Manual installation
 
