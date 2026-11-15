@@ -2,6 +2,10 @@
 
 All notable changes to this repository will be documented here.
 
+## 0.14.0 - 2026-11-15
+
+- Refined `en-technical-writing` with concise PR, issue, and reproduction guidance, relevant validation reporting, and personal style preferences.
+
 ## 0.13.0 - 2026-09-01
 
 - Migrated 133 approved maintenance sources into tracked, skill-owned directories with canonical path and hash records.
