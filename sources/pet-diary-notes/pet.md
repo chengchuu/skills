@@ -5,6 +5,7 @@
 
 - [25-0601-A-Little-Sofa-Nap](#25-0601-a-little-sofa-nap)
 - [25-0601-A-Little-Belly-A-Lazy-Nap](#25-0601-a-little-belly-a-lazy-nap)
+- [25-0602-A-Sleepy-Peek](#25-0602-a-sleepy-peek)
 - [25-0603-Paw-Up-Playtime](#25-0603-paw-up-playtime)
 - [25-0610-Little-Paws-Lazy-Lounging](#25-0610-little-paws-lazy-lounging)
 - [25-0703-A-Quiet-Grooming-Break](#25-0703-a-quiet-grooming-break)
@@ -115,6 +116,26 @@ jp:
 子猫がのんびりお昼寝していて、呼吸に合わせて小さなおなかがゆっくり上下している。
 BGM: death bed
 #猫のいる暮らし #子猫 #お昼寝 #猫の日常
+
+## 25-0602-A-Sleepy-Peek
+
+zh:
+午睡时，耳朵动了动
+小猫在沙发上睡午觉，微微睁开眼。
+BGM: death bed
+#小猫 #猫咪日常 #猫咪午睡 #宠物日记
+
+en:
+A Sleepy Peek
+Mid-nap on the sofa, the kitten opens her eyes just a sliver and gives her ears a little twitch.
+BGM: death bed
+#Kitten #CatLife #CatNap #PetDiary
+
+jp:
+お昼寝中に耳がぴくり
+ソファでお昼寝中の子猫が、うっすら目を開けて耳をぴくっと動かした。
+BGM: death bed
+#子猫 #猫のいる暮らし #お昼寝猫 #ペット日記
 
 ## 25-0603-Paw-Up-Playtime
 

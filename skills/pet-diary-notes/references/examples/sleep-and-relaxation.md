@@ -150,6 +150,80 @@ death bed
 
 #猫のいる暮らし #子猫 #お昼寝 #猫の日常
 
+## Example: 25-0602-A-Sleepy-Peek
+
+- Source heading: `25-0602-A-Sleepy-Peek`
+- Source date: 2025-06-02
+- Version: none
+- Category: Sleep and relaxation
+- Secondary category: Sofa nap
+- Languages: zh-CN, en, ja-JP
+- Pet identity: 嘟嘟
+- Format: Vlog
+- BGM: death bed
+- Mood: Relaxed
+- Tone: Gentle
+- Pet behavior: Opening the eyes slightly and twitching the ears mid-nap on the sofa
+- Pet activity: Opening the eyes slightly and twitching the ears mid-nap on the sofa
+- Health-related status: Not stated
+- Content type: Real-life
+- Platform: 多平台
+- Source path: `sources/pet-diary-notes/pet.md` (historical path: `temp/pet-examples/pet.md`)
+
+### Chinese
+
+#### Title
+
+午睡时，耳朵动了动
+
+#### Description
+
+小猫在沙发上睡午觉，微微睁开眼。
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#小猫 #猫咪日常 #猫咪午睡 #宠物日记
+
+### English
+
+#### Title
+
+A Sleepy Peek
+
+#### Description
+
+Mid-nap on the sofa, the kitten opens her eyes just a sliver and gives her ears a little twitch.
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#Kitten #CatLife #CatNap #PetDiary
+
+### Japanese
+
+#### Title
+
+お昼寝中に耳がぴくり
+
+#### Description
+
+ソファでお昼寝中の子猫が、うっすら目を開けて耳をぴくっと動かした。
+
+#### BGM
+
+death bed
+
+#### Hashtags
+
+#子猫 #猫のいる暮らし #お昼寝猫 #ペット日記
+
 ## Example: 25-0610-Little-Paws-Lazy-Lounging
 
 - Source heading: `25-0610-Little-Paws-Lazy-Lounging`
