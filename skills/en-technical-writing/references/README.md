@@ -19,6 +19,8 @@ Read [rule-precedence.md](rule-precedence.md) for every task. Match every applic
 
 ## Issue routing
 
+For bug-reproduction instructions, including reproduction READMEs, load [the reproduction guidance](issues.md#reproduction-instructions-and-readmes), [output-workflows.md](output-workflows.md), and the general layers for the requested mode. A standalone reproduction README does not by itself select an issue-form profile.
+
 For issue titles, bodies, or prose review, load [issues.md](issues.md), [output-workflows.md](output-workflows.md), and the general layers for the requested mode above. For the React tracker or an explicit React-style request, also load [profiles/react-issues.md](profiles/react-issues.md). A React application alone does not select this profile. Keep documentation and PR profiles separate. For maintenance only, consult [the issue-history analysis](react-issue-history-analysis.md).
 
 ## Pull request routing

@@ -35,7 +35,7 @@ Never copy source prose merely to imitate style. Convert guidance into original 
 
 ## Issues
 
-For bug reports and feature requests, use [references/issues.md](references/issues.md). Apply [the React issue profile](references/profiles/react-issues.md) only for the React tracker or explicit React-style requests. Draft from available evidence, preserve uncertainty, and flag missing required fields. Writing or reviewing issue prose does not itself authorize running reproductions or posting issues.
+For bug reports, feature requests, and bug-reproduction instructions (including reproduction READMEs), use [references/issues.md](references/issues.md). Apply [the React issue profile](references/profiles/react-issues.md) only to issue content for the React tracker or explicit React-style issue requests. Draft from available evidence, preserve uncertainty, and flag missing required fields. Writing or reviewing this content does not itself authorize running reproductions or posting issues.
 
 ## Pull requests
 
@@ -51,6 +51,7 @@ For PR titles and descriptions, use [references/pull-requests.md](references/pul
 - Make headings, links, lists, tables, notices, and callouts accessible and scannable.
 - Preserve uncertainty. Flag unverifiable claims instead of silently strengthening them.
 - Do not add introductions, summaries, callouts, examples, or sections unless they help the document's purpose.
+- Select detail for the reader's task: assessing a change, reproducing a problem, or following instructions. Remove repetition without dropping necessary evidence or caveats.
 - Detect unsupported claims and ambiguities instead of converting them into facts.
 
 ## Complete the workflow

@@ -28,7 +28,13 @@ Describe the final change. Remove abandoned approaches and review chronology unl
 
 ## Report verification faithfully
 
-State the actual commands or manual scenarios, results, and relevant scope. Preserve distinctions such as focused versus full-suite checks, development versus production, baseline failures versus new failures, and fixture comparison versus browser execution. Attribute a pre-existing failure to the baseline only when a comparison supports it.
+Select commands or manual scenarios that meaningfully validate the changed behavior, and state their results and relevant scope. The description need not inventory every check performed; this selection does not change required repository checks or the complete validation record. Omit routine formatting and whitespace checks, including `git diff --check`, unless requested by the user or target template.
+
+Keep necessary commands copyable, with their working directory, setup, fixture filters, and backend flags. For compiler validation, retain the command block needed to explain the reported coverage rather than replacing it with a result alone. Include environment selection, dependencies, and builds when giving fresh-clone instructions; verify project requirements before adding or removing commands. Distinguish instructions for repeating checks from the exact commands actually executed. Keep environment-specific workarounds in supporting notes unless needed to reproduce the checks or explain an unresolved failure.
+
+Use one concise result sentence when the listed commands establish the scope. Include counts, dependency versions, or mock-versus-integration details only when they clarify coverage, compatibility, or a material gap. Distinguish observed checks from user-reported results. Preserve focused versus full-suite checks, development versus production, baseline failures versus new failures, and fixture comparison versus browser execution. Attribute a pre-existing failure to the baseline only when a comparison supports it.
+
+Retain failures and material limitations. Mention skipped or unrun checks when they leave a meaningful gap for this change, without cataloging unrelated omissions. If a test-first commit split matters, explain its verified outcomes under the existing testing heading; distinguish an intentional regression failure from a baseline mismatch or a failure that prevented baseline generation.
 
 If verification was not provided, say that it was not provided. Say tests were not run only when that is known; give the reason when supplied. Keep proposed testing separate from completed testing. Do not turn a documentation-only change into a claim that checks are unnecessary.
 

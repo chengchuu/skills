@@ -5,7 +5,7 @@ These are explicit personal overrides. Apply them after technical facts, current
 ## Language
 
 - Use American English.
-- Prefer concise, direct technical prose.
+- Prefer natural, direct technical prose. Remove repetition and unnecessary formality.
 - Avoid marketing language.
 - Preserve exact technical identifiers.
 - Do not over-explain basic concepts to experienced developers.
@@ -17,6 +17,9 @@ These are explicit personal overrides. Apply them after technical facts, current
 - Use examples only when they clarify behavior.
 - Avoid repetitive summaries.
 - Prefer practical, production-oriented guidance.
+- For PR descriptions, issue reports, and short reproduction READMEs, aim for readers to understand the core content in under 60 seconds. This is a flexible reading goal, not a word limit or a limit on reproduction execution time; preserve required template fields and material details.
+- Prefer a paragraph for one validation result; use a list when it makes multiple results easier to scan. Avoid prose that merely repeats commands, output, or an expectation already stated.
+- Keep detail proportional to the reader's task. Follow [the PR workflow](pull-requests.md) for review evidence and [the issue workflow](issues.md) for reproduction evidence.
 
 ## Vocabulary
 

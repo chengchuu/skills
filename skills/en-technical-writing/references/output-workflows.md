@@ -14,7 +14,9 @@ Default output: publication-ready content.
 
 Preserve meaning, constraints, code, identifiers, and useful structure. Change organization or voice only as much as needed to meet the request. If the original is ambiguous, retain the ambiguity or flag it; do not silently choose a new technical meaning.
 
-Default output: revised content, with a short change summary only when useful or requested.
+For small wording improvements, remove repetition and unnecessary formality while preserving format, scope, claims, caveats, and uncertainty. Do not turn polishing into structural redesign or code-example simplification.
+
+Default output: revised content only. Add a change summary when requested; repository edits still follow the reporting requirements below.
 
 ## Translate to English
 

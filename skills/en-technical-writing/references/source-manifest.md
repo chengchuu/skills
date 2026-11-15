@@ -121,11 +121,19 @@ Conflicts: React tutorial patterns are not universal English rules and do not ap
 - Source organization: User-maintained project guidance
 - Source type: Personal override
 - Scope: Concision, structure, vocabulary, and future learned preferences
-- Rules derived: The initial explicit rules in [personal-style.md](personal-style.md)
+- Rules derived: Explicit preferences in [personal-style.md](personal-style.md), with task-specific applications in [pull-requests.md](pull-requests.md), [issues.md](issues.md), and [output-workflows.md](output-workflows.md)
 - Interpretation notes: Apply only below user and project rules and above ecosystem and foundation layers
 - Conflicts: Never overrides technical accuracy or protected literals
 - Confidence: High for explicitly recorded preferences; not applicable to future inferred patterns until curated
-- Last validation date: 2026-07-30
+- Last validation date: 2026-11-15
+
+User-supplied guidance reviewed on 2026-11-15:
+
+- Server documentation repository, `docs/LLM/README.md`: Pull Request, Issue and Reproduction Wording, and Polish Prose prompts. Supports natural wording, proportionate detail, faithful validation claims, and artifact-only polishing output.
+- Server documentation repository, `docs/PR/AGENTS.md`: Draft structure and style, protected content, and validation evidence. Supports relevant validation commands, concise result summaries, and separation of PR prose from complete validation records.
+- Reproduction repository, `AGENTS.md`: README and issue writing style, with validation interpretation. Supports one clear reproduction workflow, observable behavior, proportional environment evidence, and preservation of unusual exit-code meanings.
+
+These are user-approved personal preferences, not universal community requirements or verified facts about current upstream tools. The skill distills the supplied guidance without copying complete source files or requiring those repositories at runtime. The short-artifact reading target is flexible. Local file layouts, form wrappers, pinned revisions, exact build commands, and submission-specific wording remain project conventions rather than general rules.
 
 ## Maintenance
 
