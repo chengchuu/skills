@@ -133,6 +133,10 @@
 | User-provided review, 2026-10-01 (滨寿司维璟印象城店) | `references/examples/china/japanese-and-korean-cuisine.md` | 1 | China, Shanghai | Japanese cuisine | 滨寿司(维璟印象城店)；发布于大众点评，正文 120 个字符；保留推荐寿司、三文鱼、鳗鱼、鹅肝、担担面、环境和服务信息；与现有日料案例门店和菜品事实不同，无重复。 |
 | User-provided review, 2026-10-01 (巴奴新北万达店) | `references/examples/china/barbecue-hot-pot-and-seafood.md` | 1 | China, Jiangsu, Changzhou | Hot pot | 巴奴毛肚火锅(新北万达店)；发布于大众点评，正文 118 个字符；保留服务、清淡锅底、菌菇汤、毛肚、肥牛、豆皮、绣球菌、面条、环境和价格评价；与现有火锅案例门店、地区和菜品事实不同，无重复。 |
 | User-provided review, 2026-10-01 (天乐大鱼头南山竹海店) | `references/examples/china/chinese-regional-cuisine.md` | 1 | China, Jiangsu, Changzhou | Chinese regional cuisine; Farmhouse cuisine | 天乐大鱼头(南山竹海店)；发布于大众点评，正文 128 个字符；保留农家乐环境、砂锅鱼头、天目野山笋、乌米饭、溧阳白芹和野菜煎蛋信息；与现有地方菜案例门店、地区和菜品事实不同，无重复。 |
+| User-provided review, 2026-11-20 (汉堡王上海七宝宝龙城市广场店) | `references/examples/china/western-and-fast-food.md` | 1 | China, Shanghai | Fast food | 汉堡王(上海七宝宝龙城市广场店)；大众点评评价，正文 100 个字符；推荐菜为麦芬和豆浆，王道嫩香鸡块是正文提到的常买小食；无重复。 |
+| User-provided review, 2026-11-20 (麦当劳融信上坤中心店) | `references/examples/china/western-and-fast-food.md` | 1 | China, Shanghai | Fast food | 麦当劳(融信上坤中心店)；大众点评评价，正文 91 个字符；推荐两款汉堡，薯条是搭配；与现有麦当劳小食案例的菜品不同，无重复。 |
+| User-provided review, 2026-11-20 (麦当劳航华店) | `references/examples/china/western-and-fast-food.md` | 1 | China, Shanghai | Fast food | 麦当劳(航华店)；大众点评评价，定稿正文 95 个字符；推荐巨无霸汉堡，正文保留用户对牛肉饼和酸黄瓜的描述；与融信上坤中心店案例的门店和菜品不同，无重复。 |
+| User-provided review, 2026-11-20 (肯德基万象中心店) | `references/examples/china/western-and-fast-food.md` | 1 | China, Shanghai | Fast food | 肯德基(万象中心店)；大众点评评价，正文 104 个字符；记录原味鸡的部位偏好、活动变化和新奥尔良烤鸡腿堡的口感；无重复。 |
 
 ## 人工分类记录
 
@@ -188,16 +192,20 @@
 | 维璟印象城滨寿司与担担面 | User-provided review, 2026-10-01 (滨寿司维璟印象城店) | China; Shanghai; 大众点评; Japanese cuisine; Positive | Occasion unknown |
 | 常州巴奴毛肚火锅 | User-provided review, 2026-10-01 (巴奴新北万达店) | China; Jiangsu; Changzhou; 大众点评; Hot pot; Positive | Occasion unknown |
 | 常州南山竹海农家菜 | User-provided review, 2026-10-01 (天乐大鱼头南山竹海店) | China; Jiangsu; Changzhou; 大众点评; Chinese regional cuisine; Farmhouse cuisine; Positive | Occasion unknown |
+| 上海七宝汉堡王早餐与鸡块 | User-provided review, 2026-11-20 (汉堡王上海七宝宝龙城市广场店) | China; Shanghai; 大众点评; Fast food; Positive | Occasion unknown |
+| 上海融信上坤中心麦当劳两款汉堡 | User-provided review, 2026-11-20 (麦当劳融信上坤中心店) | China; Shanghai; 大众点评; Fast food; Positive | Occasion unknown |
+| 上海航华麦当劳巨无霸汉堡 | User-provided review, 2026-11-20 (麦当劳航华店) | China; Shanghai; 大众点评; Fast food; Positive | Occasion unknown |
+| 上海万象中心肯德基原味鸡与鸡腿堡 | User-provided review, 2026-11-20 (肯德基万象中心店) | China; Shanghai; 大众点评; Fast food; Positive | Occasion unknown |
 
 ## 汇总
 
 - 源文件: 49。
 - 单篇来源: 46，其中 44 个含评价正文，2 个仅含元数据。
 - 汇总文件中的餐饮评价: 36。
-- 最终规范案例: 92。
+- 最终规范案例: 96。
 - 完全或明确重复: 英文提示汇总中的 36 条餐饮翻译与 `Comments.md` 对应中文条目合并，不另建副本。
 - 近重复: 同一经历的 `Note` / `Comment` 长短版本合并为一个规范案例；和府捞面大师店的两条近重复短评合并。不同日期或不同菜品的同品牌评价保留，没有仅因结构相似而删除案例。
 - 国家或地区为 `unknown`: 0 条。
-- 平台包含 `大众点评`: 53 条；明细见案例字段与人工分类记录。
+- 平台包含 `大众点评`: 57 条；明细见案例字段与人工分类记录。
 - 平台包含 `小红书`: 3 条；明细见案例字段与人工分类记录。
 - 平台为 `unknown`: 其余 37 条，因为对应源文件均未明确标注发布平台。

@@ -269,3 +269,108 @@
 ### Review
 
 萨莉亚就在商场一楼，沿途有指示，不是很好找。店内空间比较大，座位也多。薄底披萨热的时候香香脆脆，还能拉丝；西冷烘烤牛排肉质挺嫩，带着汁水，调味和各类酱汁很加分。这个价位不用对牛排品质要求太高，吃的就是实惠和稳定。服务员态度不错，收拾桌子也很利索。价格亲民，味道也适合国人口味，披萨和牛排都值得点。
+
+## Example: 上海七宝汉堡王早餐与鸡块
+
+- Country: China
+- Region: Shanghai
+- Category: Fast food
+- Cuisine: American fast food
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Short
+- Occasion: unknown
+- Main topics: Breakfast menu, muffin, soy milk, burger, chicken nuggets, cleanliness, decor
+- Recommended dishes: 麦芬、豆浆
+- Source: User-provided review, 2026-11-20 (汉堡王上海七宝宝龙城市广场店)
+
+### Available facts
+
+- 餐厅为汉堡王(上海七宝宝龙城市广场店)，位于中国上海，类型为快餐。
+- 店里供应早餐，可以点麦芬和豆浆；用户觉得麦芬味道还可以。
+- 汉堡好吃，牛肉饼现烤，面包松软。
+- 用户更喜欢王道嫩香鸡块，每次都买；鸡块外皮香脆，鸡肉很嫩。
+- 店内干净，布置简单大方。
+
+### Review
+
+这家汉堡王有早餐，麦芬味道还可以，早餐可以点麦芬和豆浆。汉堡挺好吃，牛肉饼是现烤的，面包也松软。小食里我更喜欢王道嫩香鸡块，外皮香脆，里面的鸡肉很嫩，是我每次都买的。店里收拾得挺干净，布置也简单大方。
+
+## Example: 上海融信上坤中心麦当劳两款汉堡
+
+- Country: China
+- Region: Shanghai
+- Category: Fast food
+- Cuisine: American fast food
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Short
+- Occasion: unknown
+- Main topics: Burgers, portion, beef flavor, bacon, fries
+- Recommended dishes: 安格斯MAX厚牛培根堡、双层吉士汉堡
+- Source: User-provided review, 2026-11-20 (麦当劳融信上坤中心店)
+
+### Available facts
+
+- 餐厅为麦当劳(融信上坤中心店)，位于中国上海，类型为西式快餐。
+- 安格斯MAX厚牛培根堡分量挺足，肉饼厚，烤得香，牛肉味浓，带有培根的香味。
+- 双层吉士汉堡是用户一直喜欢的味道，牛肉挺多，肉质不错。
+- 用户搭配了一份薯条，吃得开心。
+
+### Review
+
+安格斯MAX厚牛培根堡分量挺足，肉饼厚，烤得也香，咬下去牛肉味很浓，带点培根的香味。双层吉士汉堡还是我一直喜欢的那个味道，里面牛肉挺多，肉质也不错。再配一份薯条，吃下来挺开心快乐的。
+
+## Example: 上海航华麦当劳巨无霸汉堡
+
+- Country: China
+- Region: Shanghai
+- Category: Fast food
+- Cuisine: American fast food
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Short
+- Occasion: unknown
+- Main topics: Burger, ingredients, beef patty texture, pickles, repeat orders
+- Recommended dishes: 巨无霸汉堡
+- Source: User-provided review, 2026-11-20 (麦当劳航华店)
+
+### Available facts
+
+- 餐厅为麦当劳(航华店)，位于中国上海，类型为西式快餐。
+- 巨无霸汉堡是用户每次都点的，三层面包夹着两片牛肉饼，肉饼嫩而多汁。
+- 汉堡还有芝士片、生菜丝、洋葱粒、沙拉酱和酸黄瓜。
+- 用户最喜欢里面的酸黄瓜，觉得酸黄瓜和牛肉一起吃很对胃口。
+
+### Review
+
+巨无霸汉堡是我每次都要点的。三层面包夹着两片牛肉饼，肉饼吃起来挺嫩，而且汁水多。里面还有芝士片、生菜丝、洋葱粒和沙拉酱。我最喜欢的是里面的酸黄瓜，咬到那一口酸酸的，和牛肉一起吃特别对我胃口。
+
+## Example: 上海万象中心肯德基原味鸡与鸡腿堡
+
+- Country: China
+- Region: Shanghai
+- Category: Fast food
+- Cuisine: American fast food
+- Platform: 大众点评
+- Sentiment: Positive
+- Tone: Natural conversational
+- Length: Short
+- Occasion: unknown
+- Main topics: Fried chicken cuts, sweet chili sauce, promotions, value, chicken burger, texture
+- Recommended dishes: 原味鸡、新奥尔良烤鸡腿堡
+- Source: User-provided review, 2026-11-20 (肯德基万象中心店)
+
+### Available facts
+
+- 餐厅为肯德基(万象中心店)，位于中国上海，类型为西式快餐。
+- 用户每次都会点原味鸡，最喜欢旁肋，觉得吃着香，蘸甜辣酱更好吃。
+- 之前有活动时用户会买好几份，觉得划算，并提到现在活动比以前少。
+- 用户喜欢新奥尔良烤鸡腿堡，觉得鸡腿肉嫩而多汁，面包松软，吃完不觉得油腻。
+
+### Review
+
+原味鸡是我每次都会点的，比起其他部位，我更喜欢旁肋，吃着香，蘸点甜辣酱更好吃。之前有活动会买好几份，挺划算的，现在活动少了些。新奥尔良烤鸡腿堡也很对我胃口，鸡腿肉嫩，咬下去有汁水，面包松软，吃完也不觉得油腻。
