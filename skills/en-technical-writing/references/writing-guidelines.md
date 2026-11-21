@@ -132,7 +132,11 @@ Before running this example, replace the entire `<directory>` placeholder, inclu
 cd "<directory>"
 ```
 
-Unquoted angle brackets can be interpreted as shell redirection. Quoting prevents that interpretation but passes the unsubstituted placeholder as a literal argument, so it still must be replaced. Leave actual variables, template expressions, literal values, and verbatim upstream syntax unchanged.
+Distinguish command-reference notation from shell-ready examples. In shell examples you author, quote placeholder arguments using the target shell's syntax, including values attached to options such as `--template="<template-directory>"`. Do not add shell quotes to a verbatim upstream synopsis.
+
+Unquoted angle brackets can be interpreted as shell redirection. Quoting prevents that interpretation but passes the unsubstituted placeholder as a literal argument; it does not make the command safe to run before replacement. In Bash, double quotes still allow variable and command substitution. For literal replacement values containing `$`, backticks, backslashes, or quote characters, use appropriate escaping or quoting for the target shell; single quotes preserve literal text in Bash, but a literal single quote must be handled outside the single-quoted segment. Do not assume Bash quoting works in PowerShell or `cmd.exe`.
+
+Leave actual variables, template expressions, literal values, and verbatim upstream syntax unchanged. Do not normalize existing protected commands without explicit permission; in review-only tasks, report issues without rewriting them.
 
 ## Accessibility and global English
 
